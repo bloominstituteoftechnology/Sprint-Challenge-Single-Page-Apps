@@ -25,13 +25,14 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+> Answer: Client-side routing handles mapping between URL bar and the content a user sees via browser rather than via server. Sites that exclusively use client-side routing are single-page applications. We use JavaScript to manipulate the URL bar with a Web API called History. 
+
 - [ ] What does AJAX stand for?
-> Answer:
+> Answer: asynchronous JavaScript and XML
 - [ ] What are `controlled components` in React?
-> Answer:
+> Answer:We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
 - [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+> Answer:Fetch API,Axios,jQuery
 
 
 ## Project Set Up
@@ -102,9 +103,7 @@ Add a Router to this application by using [React Router](https://reacttraining.c
 ### Stretch
 
 Add a search component to your pages.
-
-- [ ] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
-  - [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
+ e `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
   - [ ] _Remember:_ `useEffect` must reference any state on which it _depends_.
 - [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
 
