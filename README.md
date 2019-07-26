@@ -30,8 +30,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
   > Answer:_Asynchronous Javascript and XML_
 - [x] What are `controlled components` in React?
   > Answer:_when the output of the component is controlled, or provided by, React versus it's internal state._
-- [ ] Name three tools/libraries for making AJAX requests.
-  > Answer:
+- [x] Name three tools/libraries for making AJAX requests.
+  > Answer: _get, fetch, and Axios_
 
 ## Project Set Up
 
