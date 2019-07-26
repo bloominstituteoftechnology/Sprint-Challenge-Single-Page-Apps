@@ -18,7 +18,7 @@ In case you ever need to return to old code. Remember your **ABC: Always Be Comm
 
 ## Description
 
-In this challenge, you will create a Single Page Application complete with Client-Side Routing and components that are built to consume a 3rd party Web Server (API). Your handle and display data from the [Rick and Morty API](https://rickandmortyapi.com/documentation). You will design, architect, and develop a React Based SPA web app.
+In this challenge, you will create a Single Page Application complete with Client-Side Routing. It must consume a 3rd party API service (based on the TV show [Rick and Morty](https://rickandmortyapi.com/documentation).)
 
 ## Self-Study/Essay Questions
 
