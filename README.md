@@ -14,7 +14,7 @@ You have **three hours to complete** this challenge. **Plan your time accordingl
 
 ## Commits
 
-In case you ever need to return to old code. Remember your ABC: Always Be Commiting!
+In case you ever need to return to old code. Remember your **ABC: Always Be Committing!**
 
 ## Description
 
