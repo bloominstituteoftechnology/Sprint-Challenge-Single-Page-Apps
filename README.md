@@ -25,7 +25,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+> Answer: A major benefit of client side routing is that it is faster because you don't always have to wait for a server to respond to a request for content. When you update the URL and content, the page doesn't reload, which also contributes to speed.
 - [ ] What does AJAX stand for?
 > Answer:
 - [ ] What are `controlled components` in React?
