@@ -5,7 +5,7 @@ import LocationCard from './LocationCard.js';
 
 export default function LocationsList() {
 
-    const [location, setLocation] = useState([]);
+    const [locationData, setLocation] = useState([]);
 
     useEffect(() => {
 
@@ -24,8 +24,7 @@ export default function LocationsList() {
 
         <div>
 
-{location.map(locations => (
-                <LocationCard
+<h2> {locationData.map(location => <LocationCard
 
                 name={location.name}
                 type={location.type}
@@ -34,7 +33,7 @@ export default function LocationsList() {
                 
                 
                 />
-            ))}
+            )} </h2>
 
 
         </div>

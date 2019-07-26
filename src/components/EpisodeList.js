@@ -8,7 +8,7 @@ export default function EpisodeList(props) {
 
     useEffect(() => {
 
-        axios.get('https://rickandmortyapi.com/api/episode?page=2')
+        axios.get('https://rickandmortyapi.com/api/episode/')
         .then(res => {
             console.log('working', res.data.results);
 
@@ -24,7 +24,7 @@ export default function EpisodeList(props) {
     return (
 
         <div>
-            {episode.map(episodes => (
+            {episode.map(episode => (
                 <EpisodeCard
 
                 episode={episode}
