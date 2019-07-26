@@ -6,13 +6,13 @@ export default function EpisodesList(props) {
     const [episodes, setEpisodes ] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://rickandmortyapi.com/api/episode/`)
+        axios.get("https://rickandmortyapi.com/api/episode?page=2")
             .then(res => {
                 console.log('Yahtzee!', res.data.results);
                 setEpisodes(res.data.results)
             })
             .catch(error => {
-                console.error('No Go!', error)
+                console.error('No go!', error)
             })
     },[]);
 
@@ -28,3 +28,4 @@ export default function EpisodesList(props) {
             ))}
         </section>
     );
+}
