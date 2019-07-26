@@ -3,10 +3,18 @@ import TabNav from './components/TabNav.js';
 import Header from './components/Header.js';
 import AppRouter from './components/AppRouter.js';
 
+// import CharacterCard from './components/CharacterCard.js';
+
+
 export default function App() {
+
+ 
+
+
   return <main>
     <Header />
-    <TabNav />
+    <TabNav />    
+    {/* <CharacterCard /> */}
     <AppRouter />
   </main>
 }
