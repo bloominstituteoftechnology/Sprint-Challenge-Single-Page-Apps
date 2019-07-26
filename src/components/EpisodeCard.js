@@ -1,13 +1,21 @@
 import React from 'react'
+import { Card } from 'semantic-ui-react'
 
 export default function EpisodeCard (props) {
 //   console.log(props.id)
 
   return (
     <div>
-        <h2>{props.name}</h2>
-        <h3>{props.episode}</h3>
-        <h3>Air Date: {props.air_date}</h3>
+        <Card.Group>
+             <Card>
+                <Card.Content>
+                    <Card.Header content={props.name} />
+                    <Card.Meta content={props.episode} />
+                    <Card.Description content={props.air_date}/>
+                </Card.Content>
+            </Card>
+        </Card.Group>
     </div>
   );
 }
+
