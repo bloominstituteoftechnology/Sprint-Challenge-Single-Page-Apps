@@ -22,7 +22,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 ## Self-Study/Essay Questions
 
-Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
+Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
 > Answer:
@@ -124,7 +124,7 @@ There's a range of difficulty included. 😈
 
 ## Completing
 
-> Follow these steps for completing your project:
+> Follow these steps to complete your project:
 
 - [ ] Submit a Pull Request to merge `<firstName-lastName>` branch into master (student's repo).
 - [ ] Add your TL as a Reviewer on the Pull Request.
