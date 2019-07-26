@@ -11,7 +11,7 @@ export default function LocationCard (props) {
     //   <p>Dimension: {props.dimension}</p>
     // </span>
 
-    <Card
+    <Card className='location-card'
     header={props.name}
     meta={props.type}
     description={props.dimension} />

@@ -8,7 +8,7 @@ export default function EpisodeCard (props) {
         //     <h4>Episode number: {props.number}</h4>
         //       <p>Air Date: {props.airDate}</p>
         //    </span>
-        <Card
+        <Card className='episode-card'
         header={props.name}
         meta={props.number}
         description={props.airDate} />

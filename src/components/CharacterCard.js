@@ -15,7 +15,7 @@ export default function CharacterCard (props) {
   // }
 
 
-  <Card
+  <Card className='character-card'
     image={props.img} alt='rick and morty characters'
     header={props.name}
     meta={props.status}
