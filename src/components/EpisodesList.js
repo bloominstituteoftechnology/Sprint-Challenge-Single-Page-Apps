@@ -1,25 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import EpisodeCard from './EpisodeCard'
 import axios from 'axios';
+import Buttons from "./Buttons"
 
 export default function EpisodeList() {
-  // TODO: Add useState to track data from useEffect
   const [episodes, setEpisodes] = useState([]);
-  // TODO: Add AJAX/API Request here - must run in `useEffect`
-  //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+  const [page, setPage] = useState(1)
+
+  const pageUp = () => {
+    setPage(page => page + 1);
+    console.log('Page Up');
+  }
+  const pageDown = () => {
+    setPage(page => page - 1);
+    console.log('Page Down');
+  }
+
 
   useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/episode/')
+    axios.get(`https://rickandmortyapi.com/api/episode?page=${page}`)
       .then(results => {
-        console.log('results', results.data.results)
         setEpisodes(results.data.results)
       })
-  }, [])
+  }, [page])
 
   return <section className='character-list grid-view'>
       { episodes.map(episode => {
         return <EpisodeCard key={episode.id} {...episode} />;
       })}
+      <Buttons
+        pageUp={pageUp}
+        pageDown={pageDown}
+      />
     </section>
 
 }
