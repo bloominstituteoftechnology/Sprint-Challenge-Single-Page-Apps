@@ -1,13 +1,13 @@
 import React from 'react'
+import { Card } from 'semantic-ui-react'
 
-export default function EpisodeCard ({ id, name, air_date, episode }) {
+export default function EpisodeCard ({ id, name, air_date, episode, url }) {
 
   return (
-    <div>
-      {name}
-      {episode}
-      {id}
-      {air_date}
-    </div>
+    <Card
+      header=<a href={`https://rickandmortyapi.com/api/episode/${id}`} target='_blank'>{name}</a>
+      description={episode}
+      extra={air_date}
+    />
   )
 }
