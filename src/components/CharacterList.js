@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
 
-export default function CharacterList() {
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
 
-  const [characterData, setCharacterData] = useState();
+  const [characterData, setCharacterData] = useState([]);
 
   useEffect(() => {
 
