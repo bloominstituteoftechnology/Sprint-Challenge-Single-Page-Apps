@@ -137,3 +137,5 @@ If the [main API service](https://rickandmortyapi.com/documentation) goes down, 
 
 **Backup URL:** https://rick-and-morty-learning-api.herokuapp.com/api/
 
+initial commit.
+
