@@ -36,5 +36,10 @@ main {
 
 header h1 {
   text-align: center;
+}
 
+.cards {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 15px;
 }
