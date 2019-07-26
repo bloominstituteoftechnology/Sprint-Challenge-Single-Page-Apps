@@ -122,7 +122,7 @@ There's a range of difficulty included. 😈
 
 > 💡**reminder:** `git commit -am 'Extra Stretch Progress 💪'`
 
-## To Complete
+## Completing
 
 > Follow these steps for completing your project:
 
