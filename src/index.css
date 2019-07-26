@@ -38,3 +38,9 @@ header h1 {
   text-align: center;
 
 }
+
+.buttonWrapper {
+  display: inline-block;
+  margin-left: 350px;
+
+}

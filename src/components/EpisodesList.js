@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import CharacterCard from './CharacterCard'
+import EpisodeCard from './EpisodeCard'
 import axios from 'axios';
 import Buttons from "./Buttons"
 
-export default function CharacterList() {
-
-  const [characters, setCharacters] = useState([]);
-  const [page, setPage] = useState(4)
+export default function EpisodeList() {
+  const [episodes, setEpisodes] = useState([]);
+  const [page, setPage] = useState(1)
 
   const pageUp = () => {
     setPage(page => page + 1);
@@ -18,19 +17,18 @@ export default function CharacterList() {
   }
 
 
-
   useEffect(() => {
-    axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
+    axios.get(`https://rickandmortyapi.com/api/episode?page=${page}`)
       .then(results => {
-        setCharacters(results.data.results)
-      });
+        setEpisodes(results.data.results)
+      })
   }, [page])
 
   return (
     <div>
       <section className='character-list grid-view'>
-        { characters.map(character => {
-          return <CharacterCard key={character.id} {...character} />;
+        { episodes.map(episode => {
+          return <EpisodeCard key={episode.id} {...episode} />;
       })}
       </section>
       <div className="buttons">
