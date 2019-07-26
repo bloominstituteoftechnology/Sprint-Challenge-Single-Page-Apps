@@ -1,9 +1,27 @@
-import { Tab } from 'semantic-ui-react'
+import React from 'react'
+import { Tab, Menu, Icon } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
+
+const Nav = props => (
+	<NavLink
+		exact
+		{...props}
+		activeClassName="active"
+	/>
+);
+
+const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labelText}</span>
+
+const welcomeLabel = createLabel("home", "Home Page")
+const characterLabel = createLabel("users", "Characters")
+const locationsLabel = createLabel("map outline", "Locations")
+const episodesLabel = createLabel("video", "Episodes")
 
 const panes = [
-  { menuItem: 'Tab 1', pane: 'Tab 1 Content' },
-  { menuItem: 'Tab 2', pane: 'Tab 2 Content' },
-  { menuItem: 'Tab 3', pane: 'Tab 3 Content' },
+  { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
+  { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> },
+  { menuItem: <Menu.Item key='locations' as={Nav} to={`/locations`} content={locationsLabel} /> },
+  { menuItem: <Menu.Item key='episodes' as={Nav} to={`/episodes`} content={episodesLabel} /> }
 ]
 
 const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />

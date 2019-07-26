@@ -78,7 +78,7 @@ Create 3 page components to display data from 3 API endpoints:
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
   - [ ] Display API results using a [card](https://material-ui.com/components/cards/#media), [grid](https://material-ui.com/components/grid-list/#grid-list-with-titlebars) or [list](https://material-ui.com/components/lists/#align-list-items) UI on the page.
   - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
-  - [ ] Use a styling or component library. (Pick at least 1 of: [ReactStrap](https://reactstrap.github.io), [Semantic-UI](https://react.semantic-ui.com), [Material-UI](https://material-ui.com/). Or [styled-components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
+  - [ ] Use a styling or component library. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [ReactStrap](https://reactstrap.github.io), [Material-UI](https://material-ui.com/). Or [styled-components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
   - [ ] Test each component manually by importing into `App.js` and adding to JSX.
 
 ### Stage 2

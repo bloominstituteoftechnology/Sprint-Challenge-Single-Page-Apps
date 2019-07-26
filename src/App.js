@@ -1,13 +1,14 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
-import CharacterList from './components/CharacterList.js'
+import TabNav from './components/TabNav.js';
+import Header from './components/Header.js';
 
 import './App.css';
+import AppRouter from './components/AppRouter.js';
 
 export default function App() {
-  return <Switch>
-    <Route path="/character" component={CharacterList} />
-    <Route path="/locations" component={CharacterList} />
-    <Route path="/episodes" component={CharacterList} />
-  </Switch>
+  return <main>
+    <Header />
+    <TabNav />
+    <AppRouter />
+  </main>
 }
