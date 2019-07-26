@@ -28,8 +28,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
   > Answer:_No reloading of the page thereby reducing load time and bandwidth usage. It also supports lazy loading sections of your App._
 - [x] What does AJAX stand for?
   > Answer:_Asynchronous Javascript and XML_
-- [ ] What are `controlled components` in React?
-  > Answer:
+- [x] What are `controlled components` in React?
+  > Answer:_when the output of the component is controlled, or provided by, React versus it's internal state._
 - [ ] Name three tools/libraries for making AJAX requests.
   > Answer:
 
