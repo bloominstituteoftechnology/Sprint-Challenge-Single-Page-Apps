@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
@@ -8,7 +8,8 @@ export default function CharacterList() {
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    Axios.get("https://rickandmortyapi.com/api/character/")
+    axios
+      .get("https://rickandmortyapi.com/api/character/")
       .then(res => {
         console.log("testing the res", res.data.results);
         setCharacter(res.data.results);
