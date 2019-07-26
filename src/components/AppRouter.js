@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import CharacterList from "./CharacterList";
+import EpisodesList from "./EpisodesList";
 import LocationsList from "./LocationsList";
 import WelcomePage from "./WelcomePage";
 
@@ -10,8 +11,8 @@ export default function AppRouter() {
       <Switch>
         <Route path="/characters" component={CharacterList} />
         <Route path="/locations" component={LocationsList} />
+        <Route path="/episodes" component={EpisodesList} />
         <Route exact path="/" component={WelcomePage} />
-        {/* <Route path="/episodes" component={} /> */}
       </Switch>
     </div>
   );

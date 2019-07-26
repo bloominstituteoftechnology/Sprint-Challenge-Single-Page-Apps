@@ -1,15 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 
-const LocationCard = props => {
+const Cards = styled.div`
+  margin: 20px;
+  border: 1px solid black;
+  padding: 15px;
+`;
+
+export default function LocationCard({ name, type, dimension }) {
   return (
-    <div className="cards">
-      <h2>{props.name}</h2>
-      <p>type: {props.type}</p>
-      <p>Dimension: {props.dimension}</p>
-    </div>
+    <Cards>
+      <h2>{name}</h2>
+      <p>type: {type}</p>
+      <p>Dimension: {dimension}</p>
+    </Cards>
   );
-};
-export default LocationCard;
+}
 
 // export default function LocationCard({ name, type, dimension, residents }) {
 //   // image={image}

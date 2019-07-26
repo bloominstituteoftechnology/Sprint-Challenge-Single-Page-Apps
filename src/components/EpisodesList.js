@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import EpisodeCard from "./EpisodeCard.js";
 
-export default function CharacterList() {
+export default function EpisodesList() {
   // TODO: Add useState to track data from useEffect
   const [episode, setEpisode] = useState([]);
 
@@ -23,14 +23,16 @@ export default function CharacterList() {
 
   return (
     <section className="character-list grid-view">
-      {episode.map((props, index) => (
-        <EpisodeCard
-          key={props.id}
-          name={props.name}
-          air={props.air_date}
-          episode={props.episode}
-        />
-      ))}
+      {episode.map(props => {
+        return (
+          <EpisodeCard
+            key={props.id}
+            name={props.name}
+            air={props.air_date}
+            episode={props.episode}
+          />
+        );
+      })}
     </section>
   );
 }
