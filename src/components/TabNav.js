@@ -10,7 +10,9 @@ const Nav = props => (
 		{...props}
 		activeClassName="active"
 	/>
-);
+); 
+
+
 
 const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labelText}</span>
 

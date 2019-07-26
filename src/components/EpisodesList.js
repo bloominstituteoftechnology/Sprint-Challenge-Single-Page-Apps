@@ -6,7 +6,7 @@ export default function EpisodesList(props) {
     const [episodes, setEpisodes ] = useState([]);
 
     useEffect(() => {
-        axios.get("https://rickandmortyapi.com/api/episode?page=2")
+        axios.get("https://rickandmortyapi.com/api/episode/")
             .then(res => {
                 console.log('Yahtzee!', res.data.results);
                 setEpisodes(res.data.results)
@@ -29,3 +29,4 @@ export default function EpisodesList(props) {
         </section>
     );
 }
+
