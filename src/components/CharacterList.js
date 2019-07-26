@@ -21,11 +21,18 @@ export default function CharacterList(props) {
   }, [])
 
 
-  const { id, name, location, origin, img } = characterData;
+  const { name, species, status, image, gender } = characterData;
 
   return <section className='character-list grid-view'>
 
-      <h2>{characterData.map((character, index) => <CharacterCard character={character} key={index} />)}</h2>
+      <h2>{characterData.map((character, index) => <CharacterCard       
+      image={character.image}
+      name= {character.name}
+      species= {character.species}
+      gender= {character.gender}
+      status= {character.status}
+      
+       />)}</h2>
     </section>
 
 }
