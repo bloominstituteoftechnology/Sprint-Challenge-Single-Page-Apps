@@ -102,9 +102,10 @@ Add a search component to your pages.
 
 ## _MOAR_ STRETCH 💪
 
-There's a range of difficulty included.
+There's a range of difficulty included. 😈
 
 - [ ] Animate page transition and/or card loading.
+- [ ] Add paging support (next/previous links).
 - [ ] Add additional fields to search form. They are unique for each endpoint. See [**Available parameters**.](https://rickandmortyapi.com/documentation/#filter-characters), etc..
 - [ ] Add a [modal](https://material-ui.com/components/modal/) component view to show more details of each type of record. See if you can use a nested route for it.
 - [ ] Use the [GraphQL Endpoint](https://rickandmortyapi.com/documentation/#graphql) with multiple search fields.
