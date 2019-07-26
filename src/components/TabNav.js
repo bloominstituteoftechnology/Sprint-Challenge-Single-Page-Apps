@@ -15,8 +15,8 @@ const createLabel = (iconName, labelText) => (
 
 const welcomeLabel = createLabel("home", "Home Page");
 const characterLabel = createLabel("users", "Characters");
-const locationLabel = createLabel("users", "locations");
-const episodeLabel = createLabel("users", "episodes");
+const locationLabel = createLabel("hand rock outline", "locations");
+const episodeLabel = createLabel("paperclip", "episodes");
 
 const panes = [
   {
