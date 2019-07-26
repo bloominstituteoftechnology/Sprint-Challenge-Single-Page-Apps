@@ -25,13 +25,13 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+> Answer: client-side routing is a way for refreshing/loading content that a user would want (while they are in a specific webpage). For example, this means that there is no need to refresh the entire webpage if the user goes to the "contact us" section. 
 - [ ] What does AJAX stand for?
-> Answer:
+> Answer: AJAX is shorthand for Asynchronous JavaScript and XML (Extensible markup language)!
 - [ ] What are `controlled components` in React?
-> Answer:
+> Answer: controlled componenets are componenets that React has COMPLETE control over in terms of displaying data. This is what makes React useful for UIs, and is possible because of "state." 
 - [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+> Answer: axios , fetch API, jQuery.
 
 
 ## Project Set Up
@@ -70,8 +70,8 @@ You can test them individually before adding in the Router (Part 2).
 Create 3 page components to display data from 3 API endpoints:
 
 - `https://rickandmortyapi.com/api/character/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-characters)
-- `https://rickandmortyapi.com/api/locations/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
-- `https://rickandmortyapi.com/api/episodes/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
+- `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
+- `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 
 - [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
 - [ ] Create a component to show a grid of data from the API.
@@ -136,4 +136,6 @@ There's a range of difficulty included. 😈
 If the [main API service](https://rickandmortyapi.com/documentation) goes down, or you exceed rate limits, you can try the following backup URL:
 
 **Backup URL:** https://rick-and-morty-learning-api.herokuapp.com/api/
+
+initial commit.
 
