@@ -70,8 +70,8 @@ You can test them individually before adding in the Router (Part 2).
 Create 3 page components to display data from 3 API endpoints:
 
 - `https://rickandmortyapi.com/api/character/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-characters)
-- `https://rickandmortyapi.com/api/locations/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
-- `https://rickandmortyapi.com/api/episodes/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
+- `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
+- `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 
 - [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
 - [ ] Create a component to show a grid of data from the API.
