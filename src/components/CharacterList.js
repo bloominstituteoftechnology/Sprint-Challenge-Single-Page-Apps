@@ -10,8 +10,11 @@ export default function CharacterList() {
       //  Important: verify the 2nd `useEffect` parameter: the dependancies array!	      
         .then(results => {
           console.log('results', results.data.results)
-          setCharacters(results.data.results)
-        })
+          getCharacter(results.data.results)
+        });
+      }
+      getCharacter();
+    }, []);
         
    
   
