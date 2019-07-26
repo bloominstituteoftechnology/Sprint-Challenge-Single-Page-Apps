@@ -6,7 +6,11 @@ export default function LocationCard({
   dimension,
   residents,
 }) {
-  // image={image}
-  return (<span>todo: location</span>
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>{`${type} - ${dimension}`}</p>
+      <div>{`${residents.length} residents`}</div>
+    </div>
   );
 }

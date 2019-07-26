@@ -1,18 +1,18 @@
 import React from 'react';
 
 export default function CharacterCard({
-  created,
-  episodes,
-  gender,
-  id,
+  // created,
+  // episodes,
+  // gender,
+  // id,
   image,
   location,
   name,
   origin,
   species,
   status,
-  type,
-  url,
+  // type,
+  // url,
 }) {
   return (
     <div>

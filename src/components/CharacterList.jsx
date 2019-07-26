@@ -3,15 +3,16 @@ import Axios from 'axios';
 import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
-  const [characterList, setCharacterList] = useState();
+  const [characterList, setCharacterList] = useState(undefined);
 
   const retrieveCharacters = () => {
     (async () => {
       try {
         const response = await Axios.get('https://rickandmortyapi.com/api/character/');
         setCharacterList(response.data.results);
-      } catch (e) {}
+      } catch (e) {
+        // console.log(e);
+      }
     })();
   };
   useEffect(retrieveCharacters, []);
@@ -22,7 +23,8 @@ export default function CharacterList() {
       {
         characterList
           ? characterList.map(character => (<CharacterCard {...character} />))
-          : <h2>Loading Characters...</h2>
+          // : <h2>Loading Characters...</h2>
+          : <img src="https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif" alt="loading" />
       }
     </section>
   );
