@@ -25,14 +25,19 @@ export default function LocationList() {
       })
   }, [page])
 
-  return <section className='character-list grid-view'>
-      { locations.map(location => {
-        return <LocationCard key={location.id} {...location} />;
+  return (
+    <div>
+      <section className='character-list grid-view'>
+        { locations.map(location => {
+          return <LocationCard key={location.id} {...location} />;
       })}
-      <Buttons
-        pageUp={pageUp}
-        pageDown={pageDown}
-       />
-    </section>
-
+      </section>
+      <div className="buttons">
+        <Buttons
+          pageUp={pageUp}
+          pageDown={pageDown}
+      />
+      </div>
+    </div>
+  )
 }

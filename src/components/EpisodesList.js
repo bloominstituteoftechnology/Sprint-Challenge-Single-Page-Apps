@@ -24,14 +24,19 @@ export default function EpisodeList() {
       })
   }, [page])
 
-  return <section className='character-list grid-view'>
-      { episodes.map(episode => {
-        return <EpisodeCard key={episode.id} {...episode} />;
+  return (
+    <div>
+      <section className='character-list grid-view'>
+        { episodes.map(episode => {
+          return <EpisodeCard key={episode.id} {...episode} />;
       })}
-      <Buttons
-        pageUp={pageUp}
-        pageDown={pageDown}
+      </section>
+      <div className="buttons">
+        <Buttons
+          pageUp={pageUp}
+          pageDown={pageDown}
       />
-    </section>
-
+      </div>
+    </div>
+  )
 }

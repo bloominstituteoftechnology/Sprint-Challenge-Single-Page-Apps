@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components"
+import { Button, Icon } from 'semantic-ui-react'
 
 const StyledButton = styled.button`
   border: 5px solid black;
@@ -19,17 +20,18 @@ export default function Buttons (props) {
 
   return (
     <div className = "buttonWrapper">
-      <StyledButton onClick= {() =>
-        props.pageDown()
-      }>
-        Previous Page
-      </StyledButton>
-      <StyledButton onClick= {() =>
-        props.pageUp()
-      }>
-        Next Page
-      </StyledButton>
-    </div>
-
+      <Button icon labelPosition='left'
+        onClick= {() =>
+          props.pageDown()}>
+        Previous
+        <Icon name='left arrow' />
+      </Button>
+      <Button icon labelPosition='right'
+        onClick= {() =>
+          props.pageUp()}>
+        Next
+        <Icon name='right arrow' />
+      </Button>
+  </div>
   )
 }

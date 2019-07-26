@@ -26,14 +26,19 @@ export default function CharacterList() {
       });
   }, [page])
 
-  return <section className='character-list grid-view'>
-      { characters.map(character => {
-        return <CharacterCard key={character.id} {...character} />;
+  return (
+    <div>
+      <section className='character-list grid-view'>
+        { characters.map(character => {
+          return <CharacterCard key={character.id} {...character} />;
       })}
-      <Buttons
-        pageUp={pageUp}
-        pageDown={pageDown}
+      </section>
+      <div className="buttons">
+        <Buttons
+          pageUp={pageUp}
+          pageDown={pageDown}
       />
-    </section>
-
+      </div>
+    </div>
+  )
 }
