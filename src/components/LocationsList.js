@@ -22,7 +22,7 @@ export default function LocationsList() {
     return (
       <section className='location-list grid-view'>
         {locAPI.map((item) => <LocationCard key={item.id} 
-                                                       {...item}/>
+                                                {...item}/>
   
         )}
   
