@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import EpisdodeCard from './EpisdodeCard'
 import axios from 'axios';
+import {Card, Icon, Image} from 'semantic-ui-react'
 
 function EpisodesList() {
 
@@ -33,10 +34,12 @@ function EpisodeDetails ({ char }) {
 
     return (
       <section className='episode-list grid-view'>
+        <Card>
         <div>
         <h1>{char.name}</h1>
-        <p>{'episode:', char.episode + ''}</p>
+        <il>{char.episode }</il>
         </div>
+        </Card>
       </section>
     );
   }

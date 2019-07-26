@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LocationCard from './LocationCard'
+import {Card, Icon, Image} from 'semantic-ui-react'
 import axios from 'axios';
 
 function LocationsList() {
@@ -35,8 +36,11 @@ function CharDetails ({ char }) {
     return (
       <section className='character-list grid-view'>
         <div>
-        <h1>{char.name}</h1>
-        <p>{'location:', char.location.name}</p>
+            <Card>
+                 <h1>{char.name}</h1>
+
+                <p>{char.location.name}</p> 
+            </Card>
         </div>
       </section>
     );
