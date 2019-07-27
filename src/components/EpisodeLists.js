@@ -2,34 +2,34 @@ import React, { useEffect, useState } from "react";
 
 import axios from 'axios'
 
-import LocationCard from './LocationCard'
+import EpisodeCard from './EpisodeCard'
 
 export default function LocationsList() {
-    const [locationList, setLocationList] = useState(null);
+    const [episodeList, setEpisodeList] = useState(null);
 
     useEffect(() => {
         axios
-            .get("https://rickandmortyapi.com/api/location/")
+            .get("https://rickandmortyapi.com/api/episode/")
             .then(response => {
-                setLocationList(response.data.results);
+                setEpisodeList(response.data.results);
                 console.log(response.data.results);
             });
     }, []);
 
-    if (!locationList) {
+    if (!episodeList) {
         return (
             <div>
-                <h1>Loading List...please wait</h1>
+                <h1>Loading Episode List...</h1>
             </div>
         );
     }
 
     return (
         <section className="character-list grid-view">
-            {locationList.map((location, i) => (
-                <LocationCard
+            {episodeList.map((episode, i) => (
+                <EpisodeCard
                 key={i} 
-                location={location}
+                episode={episode}
                 />
             ))}
         </section>
