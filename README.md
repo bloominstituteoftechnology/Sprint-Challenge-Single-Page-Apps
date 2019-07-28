@@ -98,21 +98,19 @@ Create 3 page components to display data from 3 API endpoints:
   - [ ] Use a styling or component library. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [ReactStrap](https://reactstrap.github.io), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
   - [ ] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
 
-> 💡**reminder:** `git commit -am 'Part 1 Completed'`
+> 💡**Reminder:** `git commit -am 'Part 1 Completed'`
 
 ### Part 2
 
 Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
 
 - [ ] Start by wrapping your `root` component in the `BrowserRouter` component.
-- [ ] Declare your 3 routes with `<Route>` components for each component created above..
-- [ ] Include `/character`, `/location` and `/episode` routes.
-- [ ] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Use React Routers `NavLink` to link to your different pages.)
-- [ ] Make sure to use `<Link>` component instead of `<a>` elements.
+- [ ] Declare your routes with `<Route>` components (for each component created above.)
+  - [ ] Include `/character`, `/location` and `/episode` routes.
+- [ ] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
+- [ ] If you have any `<a>` tags, replace them with `<Link>` or `<NavLink>` components.
 
-- [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
-
-> 💡**reminder:** `git commit -am 'MVP Completed'`
+> 💡**Reminder:** `git commit -am 'MVP Completed'`
 
 ### Part 3
 
@@ -123,11 +121,14 @@ Add a search component to your list views.
   - [ ] _Remember:_ `useEffect` must reference any state on which it _depends_.
 - [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
 
+- [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
+
+
 > ❌ **If you finish EARLY**, it's highly recommended you complete as many stretch goals as you can. They are going to require research!
 > ❌ **If you DIDN'T finish**, it's highly recommended you complete as many stretch goals as you can. They are going to require research!
 
 
-> 💡**reminder:** `git commit -am 'Stretch Progress'`
+> 💡**Reminder:** `git commit -am 'Stretch Progress'`
 
 ## STRETCH GOALS 💪
 
@@ -148,7 +149,7 @@ Start with the most _familiar sounding_ stretch goal. Then _most fun_. After tha
 - [ ] Add additional fields to search form. They are unique for each endpoint. See [**Available parameters**.](https://rickandmortyapi.com/documentation/#filter-characters), etc..
 - [ ] Use the [GraphQL Endpoint](https://rickandmortyapi.com/documentation/#graphql) with multiple search fields.
 
-> 💡**reminder:** `git commit -am 'Extra Stretch Progress 💪'`
+> 💡**Reminder:** `git commit -am 'Extra Stretch Progress 💪'`
 
 ## Completing
 
