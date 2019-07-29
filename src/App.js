@@ -1,12 +1,30 @@
-import React from 'react';
-import TabNav from './components/TabNav.js';
-import Header from './components/Header.js';
-import AppRouter from './components/AppRouter.js';
+import React from 'react'
+import { Tab, Menu, Icon } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
-export default function App() {
-  return <main>
-    <Header />
-    <TabNav />
-    <AppRouter />
-  </main>
-}
+// TODO: Add missing tabs below
+
+const Nav = props => (
+	<NavLink
+		exact
+		{...props}
+		activeClassName="active"
+	/>
+);
+
+const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labelText}</span>
+
+const welcomeLabel = createLabel("home", "Home Page")
+const characterLabel = createLabel("users", "Characters")
+const locationLabel = createLabel('map outline', "Locations")
+const episodesLabel =  createLabel('video', "Episodes")
+const panes = [
+  { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
+  { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> },
+  { menuItem: <Menu.Item key='locations' as={Nav} to={`/locations`} content={locationLabel} /> },
+  { menuItem: <Menu.Item key='episodes' as={Nav} to={`/episodes`} content={episodesLabel} /> }  
+]
+
+const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />
+
+export default TabNav
