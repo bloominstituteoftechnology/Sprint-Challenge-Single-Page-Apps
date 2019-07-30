@@ -1,4 +1,5 @@
-# Sprint Challenge: Single Page Applications - Rick & Morty
+# Sprint Challenge: Single Page Applications
+## Rick & Morty Edition
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Single Page Applications, React Router I - II, React Forms, and Hooks.
 
@@ -48,27 +49,29 @@ Follow these steps to set up and work on your project:
 - [ ] **RUN** `yarn start` or `npm start` to fire up your React application.
 
 
-## Backup API URL
+#### Exceeded rate limits?
 
-> If you are reading through this the first time - skip ahead.
-> This is here so you don't forget there's an alternative backup API server.
+<details>
+  <summary>⚠️ Expand for alternate API URL</summary>
 
-If the [main API service](https://rickandmortyapi.com/documentation) goes down, or you exceed rate limits, you can try the following backup URL:
+If the [main API service](https://rickandmortyapi.com/documentation) goes down, or you exceed rate limits, try the following URL:
 
-**Backup URL:** https://rick-and-morty-learning-api.herokuapp.com/api/
+[**Backup URL:**](https://rick-api.herokuapp.com/api/) `https://rick-api.herokuapp.com/api/`
 
-You can still be locked out, make sure you don't see similar repeated lines in your [chrome devtools' network panel](https://lmgtfy.com/?q=chrome%20devtools%20network%20panel).
+You can still be locked out - watch your [chrome devtools' network panel](https://developers.google.com/web/tools/chrome-devtools/network/reference) to make sure you aren't making too many requests.
+</details>
+
 
 [Instructions to completing](#completing)
 
 ## Minimum Viable Product (MVP)
 
-> The MVP of this project will be broken up between a couple parts.
+> The MVP of this project is broken up between a couple parts.
 
 1. Plan: Divide your allowed time, use either 15, 30 or 60 minute intervals.
-  - Plan estimated targets or waypoints ("By the half-time mark I'll have 1 component functionally completed & styled"). **This is mostly about timeboxing.**
-  - If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
-1. Follow each part.
+    1. Plan estimated targets or waypoints ("By the '1 hour' mark I'll have 1 component functionally completed & styled"). **This is mostly about time-boxing.**
+    1. If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
+1. Follow [each part](#part-1).
 1. Find design resources OR use your design skills make the application look professional.
 
 #### MVP Preview:
@@ -80,6 +83,7 @@ You can still be locked out, make sure you don't see similar repeated lines in y
 Construct a Single Page Application with React incorporating multiple components.
 
 Keep your components separate and design them before adding in your Router.
+
 You can test them individually before adding in the Router ([Part 2](#part-2)).
 
 Create 3 page components to display data from 3 API endpoints:
@@ -104,6 +108,8 @@ Create 3 page components to display data from 3 API endpoints:
 
 Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
 
+> **Tip:** Review the [examples on the React Router site.](https://reacttraining.com/react-router/web/guides/quick-start)
+
 - [ ] Start by wrapping your `root` component in the `BrowserRouter` component.
 - [ ] Declare your routes with `<Route>` components (for each component created above.)
   - [ ] Include `/character`, `/location` and `/episode` routes.
@@ -123,12 +129,14 @@ Add a search component to your list views.
 
 - [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
 
-
-> ❌ **If you finish EARLY**, it's highly recommended you complete as many stretch goals as you can. They are going to require research!
-> ❌ **If you DIDN'T finish**, it's highly recommended you complete as many stretch goals as you can. They are going to require research!
-
-
 > 💡**Reminder:** `git commit -am 'Stretch Progress'`
+
+
+---------------------------------------------------------
+
+
+> 🚀 It's highly recommended you try complete as many stretch goals as you can. Even following the Sprint Challenge! They will give you a head start on some upcoming concepts & give you extra practice sourcing solutions.
+
 
 ## STRETCH GOALS 💪
 
@@ -141,11 +149,11 @@ Start with the most _familiar sounding_ stretch goal. Then _most fun_. After tha
 
 
 - [ ] Animate page transition and/or card loading.
-- [ ] Add error handling for all async (axios) calls. Including some styled UI.
+- [ ] Add error handling for all async (axios/AJAX) calls. (Including some styled UI.)
 - [ ] Add a "details view" and route to show more details for each type of record. (Hint: Look into route parameters or nested routes.)
   - [ ] Similar to the "details view" now with a UI twist: use a [modal](https://react.semantic-ui.com/modules/modal/#variations-size) component to show item view. (If you can, build [modal with routes](https://codesandbox.io/s/react-router-modal-gallery-classes-example-z98l5).)
-  - [ ] Refactor to use as few Components as possible - while still readable to a React Dev. (Hint: think HoC, render props, FaaC.)
 - [ ] Add [paging support](https://react.semantic-ui.com/addons/pagination/#types-pagination) (next/previous links.)
+- [ ] Refactor to use as few Components as possible - while still readable to a React Dev. (Hint: research these patterns: HoC, render props, FaaC.)
 - [ ] Add additional fields to search form. They are unique for each endpoint. See [**Available parameters**.](https://rickandmortyapi.com/documentation/#filter-characters), etc..
 - [ ] Use the [GraphQL Endpoint](https://rickandmortyapi.com/documentation/#graphql) with multiple search fields.
 
