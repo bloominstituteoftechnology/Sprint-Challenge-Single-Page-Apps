@@ -18,6 +18,7 @@ const charLabel = LabelMaker("users", "Characters");
 
 const panes = [
 
+
     { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
   
     { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={charLabel} /> },
@@ -25,7 +26,9 @@ const panes = [
     { menuItem: <Menu.Item key='locations' as={Nav} to={`/locations`} content={locLabel} /> },
   
     { menuItem: <Menu.Item key='episodes' as={Nav} to={`/episodes`} content={epLabel} /> }
-  ]
+  
+
+]
 
 const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />;
 
