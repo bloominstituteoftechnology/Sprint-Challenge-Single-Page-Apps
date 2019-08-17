@@ -4,15 +4,12 @@ import Axios from 'axios';
 
 import CharacterCard from './CharacterCard';
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+export default function CharacterList() {  
   
   const[cartoonChar,setCartoonChar] = useState();
 
   useEffect(() => {
-    // TODO: Add AJAX/API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-   
+     
   Axios
   .get(`https://rickandmortyapi.com/api/character/`) // JSON object here
   .then( response => {
