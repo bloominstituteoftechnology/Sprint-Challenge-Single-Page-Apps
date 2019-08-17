@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
 export default function SearchForm({ onSearch }) {
-  const [search, setSearch] = useState({
-    name: ""
-  })
+  const [search, setSearch] = useState({name: ""});
+  
   const handleInputChange = (event) => {
     setSearch({ ...search, name: event.target.value })
   }
