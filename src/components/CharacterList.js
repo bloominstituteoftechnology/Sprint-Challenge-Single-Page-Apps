@@ -39,15 +39,16 @@ export default function CharacterList() {
 
   else {
 
-    return 
-    <section> <h1> 
-      {cartoonChar.map((oneperson) => 
+    return <section className='character-list grid-view'>
+
+      <div className='theCharacters'>
+
+        {cartoonChar.map((oneperson) => 
           <CharacterCard tileData = {oneperson}/> 
         )}
-    </h1></section>
 
+      </div>
+    </section>
 
-  }
-
-
+       }
 }

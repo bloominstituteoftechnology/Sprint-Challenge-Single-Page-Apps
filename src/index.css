@@ -22,18 +22,67 @@ main {
 
 .page-view {
   min-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
-.main-img {
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto;
-} */
+
+.character-list .grid-view{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
 
 header h1 {
   text-align: center;
+}
+
+
+
+h1 {
+
+  font-size: 1.25rem;
+
+}
+
+h2 {
+
+  font-size: 1rem;
+
+
+}
+
+#root {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.theCharacters {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.theLocations {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.residents {
+  float: right;
+  background-color: rgb(165, 168, 168);
 }
