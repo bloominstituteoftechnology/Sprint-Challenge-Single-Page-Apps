@@ -13,7 +13,7 @@ function EpisodesCard (props) {
         <Card.Header>{props.tileData.name} - {props.tileData.episode}</Card.Header>
     
         <Card.Meta>
-          <span className='episodes'><b> {props.tileData.characters.length}</b>  Characters</span>
+          <div className='episodes'><b> {props.tileData.characters.length}</b>  Characters</div>
         </Card.Meta>
        
       </Card.Content>

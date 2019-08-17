@@ -20,17 +20,17 @@ export default function LocationCard (props) {
         
         <Card.Meta>
         
-          <span className='date'>Type: {props.tileData.type}</span>
+          <div className='date'>Type: {props.tileData.type}</div>
         
         </Card.Meta>
         
         <Card.Meta>
-          <span className='date'>Dimension: {props.tileData.dimension}</span>
+          <div className='date'>Dimension: {props.tileData.dimension}</div>
         </Card.Meta> 
         
         <Card.Meta>
 
-          <span className='residents'><b>{props.tileData.residents.length}</b> Residents </span>
+          <div className='residents'><b>{props.tileData.residents.length}</b> Residents </div>
         
         </Card.Meta>  
 

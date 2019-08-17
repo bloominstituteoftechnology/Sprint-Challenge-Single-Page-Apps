@@ -18,31 +18,31 @@ function CharacterCard (props) {
      
         <Card.Meta>
      
-          <span className='char'>{props.tileData.species} - {props.tileData.status}</span>
+          <div className='char'>{props.tileData.species} - {props.tileData.status}</div>
      
         </Card.Meta>
      
         <Card.Meta>
      
-          <span className='char'>Type: {props.tileData.type}</span>
+          <div className='char'>Type: {props.tileData.type}</div>
      
         </Card.Meta>
      
         <Card.Meta>
      
-          <span className='char'>Origin: {props.tileData.origin.name}</span>
+          <div className='char'>Origin: {props.tileData.origin.name}</div>
      
         </Card.Meta>  
      
         <Card.Meta>
      
-          <span className='char'>Location: {props.tileData.location.name}</span>
+          <div className='char'>Location: {props.tileData.location.name}</div>
      
         </Card.Meta>  
 
         <Card.Meta>
      
-          <span className='charEpisodes'><img src='https://image.flaticon.com/icons/png/128/181/181549.png'></img>  <b>Episodes</b></span>
+          <div className='charEpisodes'><img src='https://image.flaticon.com/icons/png/128/181/181549.png'></img>  <b>Episodes</b></div>
      
         </Card.Meta> 
      
