@@ -11,7 +11,7 @@ export default function SearchForm({ onSearch }) {
   
   return (
     <div className="search-form">
-      <form onSubmit={() => onSearch(search)}>
+      <form onSubmit={() => onSearch(search.name)}>
         <input
           
           onChange={handleInputChange}
