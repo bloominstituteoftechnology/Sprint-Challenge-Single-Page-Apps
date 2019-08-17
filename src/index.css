@@ -72,3 +72,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.episodes img{
+  width: 20px;
+  height: auto;
+}

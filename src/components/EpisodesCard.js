@@ -10,7 +10,7 @@ function EpisodesCard (props) {
      
       <Card.Content>
         
-        <Card.Header>{props.tileData.name} <b>***</b> {props.tileData.episode}</Card.Header>
+        <Card.Header><div className='episodes'>{props.tileData.name} <img src="https://png.pngtree.com/element_our/sm/20180308/sm_5aa0ff0e28a15.png"></img> {props.tileData.episode}</div></Card.Header>
     
         <Card.Meta>
           <div className='episodes'><b> {props.tileData.characters.length}</b>  Characters</div>
