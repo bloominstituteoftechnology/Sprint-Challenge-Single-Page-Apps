@@ -1,16 +1,51 @@
 import React, { useEffect, useState } from "react";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+import Axios from 'axios';
+
+import CharacterCard from './CharacterCard';
+
+export default function CharacterList() {  
+  
+  const[cartoonChar,setCartoonChar] = useState();
 
   useEffect(() => {
-    // TODO: Add AJAX/API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+     
+  Axios
+  .get(`https://rickandmortyapi.com/api/character/`) // JSON object here
+  .then( response => {
+
+    setCartoonChar(response.data.results);
+
+  })   
+  .catch( error =>{
+
+    console.log("Another Error?, WT...?", error); // Another Error? 
+
+  });
+
+
   }, []);
 
-  return (
-    <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+  
+  // Check for a valid character
+  if (!cartoonChar) {
+
+    return <div>Loading....</div>
+
+  }
+
+  else {
+
+    return <section className='character-list grid-view'>
+
+      <div className='theCharacters'>
+
+        {cartoonChar.map((oneperson) => 
+          <CharacterCard tileData = {oneperson}/> 
+        )}
+
+      </div>
     </section>
-  );
+
+       }
 }

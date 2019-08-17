@@ -24,29 +24,35 @@ In this challenge, you will create a Single Page Application complete with Clien
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
-
-- [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
-- [ ] What does AJAX stand for?
-> Answer:
-- [ ] What are `controlled components` in React?
-> Answer:
-- [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+- [x] Explain benefit(s) using `client-side routing`?
+> 
+  Answer: Dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
+- 
+  [x] What does AJAX stand for?
+> 
+  Answer: Asyncronous Java and XML.
+- 
+  [x] What are `controlled components` in React?
+> 
+  Answer: Form elements such as <input>, <textarea>, and <select> that maintain their own state and can update their state via user input. 
+- 
+[x] Name three tools/libraries for making AJAX requests.
+ 
+> Answer: JQery, Axios, and the Fetch API.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on GitHub.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on this branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ] **RUN** `yarn start` or `npm start` to fire up your React application.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on GitHub.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x] Implement the project on this branch, committing changes regularly.
+- [x] Push commits: `git push origin <firstName-lastName>`.
+- [x] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [x] **RUN** `yarn start` or `npm start` to fire up your React application.
 
 
 #### Exceeded rate limits?
@@ -92,15 +98,15 @@ Create 3 page components to display data from 3 API endpoints:
 - `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
 - `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 
-- [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
-- [ ] Create a component to show a grid of data from the API.
-  - [ ] Include `useState`, `useEffect`.
-  - [ ] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
+- [x] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
+- [x] Create a component to show a grid of data from the API.
+  - [x] Include `useState`, `useEffect`.
+  - [X] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
-  - [ ] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
-  - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
-  - [ ] Use a styling or component library. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [ReactStrap](https://reactstrap.github.io), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
-  - [ ] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
+  - [x] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
+  - [x] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
+  - [x] Use a styling or component library. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [ReactStrap](https://reactstrap.github.io), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
+  - [x] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
 
 > 💡**Reminder:** `git commit -am 'Part 1 Completed'`
 
@@ -110,11 +116,11 @@ Add a Router to this application using [React Router](https://reacttraining.com/
 
 > **Tip:** Review the [examples on the React Router site.](https://reacttraining.com/react-router/web/guides/quick-start)
 
-- [ ] Start by wrapping your `root` component in the `BrowserRouter` component.
-- [ ] Declare your routes with `<Route>` components (for each component created above.)
-  - [ ] Include `/character`, `/location` and `/episode` routes.
-- [ ] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
-- [ ] If you have any `<a>` tags, replace them with `<Link>` or `<NavLink>` components.
+- [x] Start by wrapping your `root` component in the `BrowserRouter` component.
+- [x] Declare your routes with `<Route>` components (for each component created above.)
+  - [x] Include `/character`, `/location` and `/episode` routes.
+- [x] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
+- [x] If you have any `<a>` tags, replace them with `<Link>` or `<NavLink>` components.
 
 > 💡**Reminder:** `git commit -am 'MVP Completed'`
 
@@ -122,12 +128,12 @@ Add a Router to this application using [React Router](https://reacttraining.com/
 
 Add a search component to your list views.
 
-- [ ] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
-  - [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
-  - [ ] _Remember:_ `useEffect` must reference any state on which it _depends_.
-- [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
+- [x] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
+  - [x] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
+  - [x] _Remember:_ `useEffect` must reference any state on which it _depends_.
+- [x] Persist search form field(s) by using the custom hook `useLocalStorage`.
 
-- [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
+- [x] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
 
 > 💡**Reminder:** `git commit -am 'Stretch Progress'`
 
