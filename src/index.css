@@ -67,3 +67,8 @@ h2 {
   width: 15px;
   height: auto;
 }
+.anEpisode {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

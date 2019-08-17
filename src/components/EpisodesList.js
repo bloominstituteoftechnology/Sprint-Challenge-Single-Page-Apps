@@ -1,4 +1,4 @@
-import EpisodeCard from "./EpisodeCard"
+import EpisodesCard from "./EpisodesCard"
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 
@@ -10,7 +10,7 @@ export default function EpisodesList() {
       Axios
         .get(`https://rickandmortyapi.com/api/episode/`)
         .then(response => {
-          setEpisode(response.data.results);
+          setTheEpisode(response.data.results);
         })
         .catch(error => {
 
@@ -34,7 +34,7 @@ export default function EpisodesList() {
         <div className="anEpisode">
           
           {theEpisode.map((oneepisode) => 
-            <EpisodeCard tileData = {oneepisode}/> 
+            <EpisodesCard tileData = {oneepisode}/> 
           )}
   
         </div>

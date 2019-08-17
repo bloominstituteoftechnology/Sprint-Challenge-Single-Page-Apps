@@ -8,6 +8,8 @@ import LocationsList from './LocationsList';
 
 import CharacterList from './CharacterList'
 
+import EpisodesList from './EpisodesList';
+
 
 // Router 
 
@@ -17,6 +19,8 @@ export default function AppRouter() {
     
     <Switch>
       
+      <Route path='/episodes' component={EpisodesList} />
+
       <Route path='/characters' component={CharacterList} />
       
       <Route path='/locations' component={LocationsList} />
