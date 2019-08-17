@@ -37,6 +37,10 @@ header {
 header h1 {
   text-align: center; 
 }
+header img{
+  width: 50%;
+  height: auto;
+}
 h1 {
   font-size: 1.25rem;
 }
