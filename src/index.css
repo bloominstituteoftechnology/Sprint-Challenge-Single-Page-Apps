@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
 main {
   width: 85vw;
   min-height: 80vh;
@@ -13,84 +12,58 @@ main {
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-
 .grid-view {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
 .page-view {
   min-height: 40vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-
 .character-list .grid-view{
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
-
+header {
+  margin: 0 auto;
+}
 header h1 {
-  text-align: center;
+  text-align: center; 
 }
-
-
-
 h1 {
-
   font-size: 1.25rem;
-
 }
-
 h2 {
-
   font-size: 1rem;
-
-
 }
-
 #root {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
-
 .theCharacters {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
-
 .theLocations {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
-
 .residents {
   float: right;
   background-color: rgb(165, 168, 168);
   color: black;
 }
-
 .charEpisodes img{
-
   width: 15px;
   height: auto;
-
 }
