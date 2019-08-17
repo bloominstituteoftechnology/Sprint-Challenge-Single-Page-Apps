@@ -39,10 +39,16 @@ function CharacterCard (props) {
           <span className='char'>Location: {props.tileData.location.name}</span>
      
         </Card.Meta>  
+
+        <Card.Meta>
+     
+          <span className='charEpisodes'><img src='https://image.flaticon.com/icons/png/128/181/181549.png'></img>  <b>Episodes</b></span>
+     
+        </Card.Meta> 
      
       </Card.Content>
    
-   
+      
     </Card>
 
   )

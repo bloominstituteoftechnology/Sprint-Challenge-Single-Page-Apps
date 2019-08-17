@@ -85,4 +85,12 @@ h2 {
 .residents {
   float: right;
   background-color: rgb(165, 168, 168);
+  color: black;
+}
+
+.charEpisodes img{
+
+  width: 15px;
+  height: auto;
+
 }
