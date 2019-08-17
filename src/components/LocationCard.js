@@ -1,7 +1,9 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
-
 //import Axios from 'axios';
+
+
+
 
 // Build card
 export default function LocationCard (props) {
