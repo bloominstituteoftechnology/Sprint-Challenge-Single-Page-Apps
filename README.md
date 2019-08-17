@@ -133,7 +133,7 @@ Add a search component to your list views.
   - [x] _Remember:_ `useEffect` must reference any state on which it _depends_.
 - [x] Persist search form field(s) by using the custom hook `useLocalStorage`.
 
-- [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
+- [x] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
 
 > 💡**Reminder:** `git commit -am 'Stretch Progress'`
 
