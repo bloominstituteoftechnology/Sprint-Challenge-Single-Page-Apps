@@ -11,7 +11,7 @@ export default function SearchForm({ onSearch }) {
   
   
   return (
-    <section className="search-form">
+    <div className="search-form">
       <form onSubmit={() => onSearch(search)}>
         <input
           
@@ -25,6 +25,6 @@ export default function SearchForm({ onSearch }) {
         />
         <button type="submit">Search</button>
       </form>
-    </section>
+    </div>
   );
 }
