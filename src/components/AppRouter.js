@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import LocationsList from './LocationsList';
 import WelcomePage from './WelcomePage';
+import EpisodeList from './EpisodeList';
 
 const AppRouter = () => {
     return (

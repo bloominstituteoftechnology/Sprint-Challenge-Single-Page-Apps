@@ -8,7 +8,7 @@ export default function LocationCard(props) {
   return (
     <Card 
       header={episode.name}
-      meta={episode.date}
+      meta={episode.air_date}
       description={episode.episode}
       />
   );

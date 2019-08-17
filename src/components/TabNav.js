@@ -15,6 +15,9 @@ export default function TabNav() {
             <Menu.Item>
                 <NavLink to="/locations">Locations</NavLink>
             </Menu.Item>
+            <Menu.Item>
+                <NavLink to="/episodes">Episodes</NavLink>
+            </Menu.Item>
         </Menu>
     )
 };
