@@ -25,7 +25,7 @@ export default function EpisodesList() {
   
     if (!theEpisode){
 
-      return <div>Loading Page....</div>
+      return <div>Loading...</div>
     }
   
     else{
