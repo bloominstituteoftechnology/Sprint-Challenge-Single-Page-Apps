@@ -1,4 +1,5 @@
 # Sprint Challenge: Single Page Applications
+
 ## Rick & Morty Edition
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Single Page Applications, React Router I - II, React Forms, and Hooks.
@@ -26,13 +27,13 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+  > Answer: You don't have to render the entire page each time there is user interaction.
 - [ ] What does AJAX stand for?
-> Answer:
+  > Answer: asynchronous javascript and xml
 - [ ] What are `controlled components` in React?
-> Answer:
+  > Answer: Is when react handles all the data flow, and the value attribute overrides the value in the DOM
 - [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+  > Answer: Axios, fetch API, Request
 
 ## Project Set Up
 
@@ -48,7 +49,6 @@ Follow these steps to set up and work on your project:
 - [ ] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
 - [ ] **RUN** `yarn start` or `npm start` to fire up your React application.
 
-
 #### Exceeded rate limits?
 
 <details>
@@ -59,8 +59,8 @@ If the [main API service](https://rickandmortyapi.com/documentation) goes down, 
 [**Backup URL:**](https://rick-api.herokuapp.com/api/) `https://rick-api.herokuapp.com/api/`
 
 You can still be locked out - watch your [chrome devtools' network panel](https://developers.google.com/web/tools/chrome-devtools/network/reference) to make sure you aren't making too many requests.
-</details>
 
+</details>
 
 [Instructions to completing](#completing)
 
@@ -69,8 +69,8 @@ You can still be locked out - watch your [chrome devtools' network panel](https:
 > The MVP of this project is broken up between a couple parts.
 
 1. Plan: Divide your allowed time, use either 15, 30 or 60 minute intervals.
-    1. Plan estimated targets or waypoints ("By the '1 hour' mark I'll have 1 component functionally completed & styled"). **This is mostly about time-boxing.**
-    1. If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
+   1. Plan estimated targets or waypoints ("By the '1 hour' mark I'll have 1 component functionally completed & styled"). **This is mostly about time-boxing.**
+   1. If you get stuck - maximize your time: try building another part, going back to previous working commit, or asking your TL for help.
 1. Follow [each part](#part-1).
 1. Find design resources OR use your design skills make the application look professional.
 
@@ -131,22 +131,17 @@ Add a search component to your list views.
 
 > 💡**Reminder:** `git commit -am 'Stretch Progress'`
 
-
----------------------------------------------------------
-
+---
 
 > 🚀 It's highly recommended you try complete as many stretch goals as you can. Even following the Sprint Challenge! They will give you a head start on some upcoming concepts & give you extra practice sourcing solutions.
 
-
 ## STRETCH GOALS 💪
-
 
 There's a range of difficulty in the options below. 😈
 
 Some of the stretch goals below would likely take an expert at least an hour or more. They are provided for extra learning on your own time.
 
 Start with the most _familiar sounding_ stretch goal. Then _most fun_. After that, _roll dice?_
-
 
 - [ ] Animate page transition and/or card loading.
 - [ ] Add error handling for all async (axios/AJAX) calls. (Including some styled UI.)
@@ -167,10 +162,8 @@ Start with the most _familiar sounding_ stretch goal. Then _most fun_. After tha
 - [ ] Add your TL as a Reviewer on the Pull Request.
 - [ ] TL then will count the HW as done by merging the branch into master.
 
-
 <!-- TLs: NOTE: use resources to coach, or share over zoom - avoid sharing entire solution folder. Share preview links if available. -->
 
 > **Note:** AFTER Sprint Challenge: [Solutions to many stretch goals](https://github.com/LambdaSchool/Sprint-Challenge-Single-Page-Apps-Solution/pulls) (and live demo URLs) are available from TLs (or GitHub admins.)
 
 There are many ways to implement each of these requirements!
-
