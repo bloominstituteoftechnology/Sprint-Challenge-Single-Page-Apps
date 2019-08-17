@@ -20,7 +20,7 @@ export default function EpisodesList() {
   
   
   
-    }, [])
+    }, []); // Marker so I don't get confued regarding end of call. 
  
   
     if (!theEpisode){
@@ -40,6 +40,6 @@ export default function EpisodesList() {
         </div>
       </section>
   
-    }
+    };
     
-  }
+  };

@@ -10,7 +10,7 @@ function EpisodesCard (props) {
      
       <Card.Content>
         
-        <Card.Header>{props.tileData.name} - {props.tileData.episode}</Card.Header>
+        <Card.Header>{props.tileData.name} <b>***</b> {props.tileData.episode}</Card.Header>
     
         <Card.Meta>
           <div className='episodes'><b> {props.tileData.characters.length}</b>  Characters</div>
