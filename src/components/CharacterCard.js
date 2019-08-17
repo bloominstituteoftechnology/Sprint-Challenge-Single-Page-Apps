@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import LocationCard from "./LocationCard";
+import LocationsList from "./LocationsList";
 
 export default function CharacterCard(props) {
   console.log(props);
@@ -18,7 +19,9 @@ export default function CharacterCard(props) {
         <Card.Meta>
           {props.characters.species} {props.characters.status}
         </Card.Meta>
-        <Card.Meta>{LocationCard}</Card.Meta>
+        <Card.Meta>
+          <LocationsList />
+        </Card.Meta>
         <Card.Description />
       </Card.Content>
       <Card.Content extra>
