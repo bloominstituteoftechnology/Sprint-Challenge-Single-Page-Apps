@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function CharacterCard() {
+import {Card, Icon, Image} from 'semantic-ui-react'
+
+export default function CharacterCard({name, image, location, origin, species, id}) {
   return <span>todo: character</span>;
 }
