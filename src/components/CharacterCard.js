@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
-import LocationCard from "./LocationCard";
-import LocationsList from "./LocationsList";
+import { Link } from "react-router-dom";
 
 export default function CharacterCard(props) {
   console.log(props);
@@ -27,10 +26,10 @@ export default function CharacterCard(props) {
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
+        <Link exact to="/episode">
           <Icon name="user" />
           Episodes
-        </a>
+        </Link>
       </Card.Content>
     </Card>
   );

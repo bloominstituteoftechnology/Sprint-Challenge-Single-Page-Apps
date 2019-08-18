@@ -27,8 +27,8 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
-.main-img {
+
+/* .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
@@ -56,4 +56,17 @@ header h1 {
 
 .episode-card {
   padding: 20px;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links:hover {
+  color: black;
+}
+
+.nav-links.active {
+  color: blue;
 }
