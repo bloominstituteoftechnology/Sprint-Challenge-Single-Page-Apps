@@ -15,9 +15,11 @@ export default function EpisodesList() {
   }, []);
 
   return (
-    <div>
+    <div className="episode-lists">
       {episode.map(episode => (
-        <EpisodeCard key={episode.id} episode={episode} />
+        <div className="episode-card">
+          <EpisodeCard key={episode.id} episode={episode} />
+        </div>
       ))}
     </div>
   );

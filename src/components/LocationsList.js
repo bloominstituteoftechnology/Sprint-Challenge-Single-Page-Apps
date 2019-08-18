@@ -15,10 +15,10 @@ export default function LocationsList() {
   }, []);
 
   return (
-    <div>
+    <div className="location-lists">
       {location.map(location => {
         return (
-          <div>
+          <div className="location-card">
             <LocationCard location={location} />
           </div>
         );

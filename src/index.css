@@ -37,3 +37,23 @@ main {
 header h1 {
   text-align: center;
 }
+
+.location-lists {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.location-card {
+  padding: 20px;
+}
+
+.episode-lists {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.episode-card {
+  padding: 20px;
+}
