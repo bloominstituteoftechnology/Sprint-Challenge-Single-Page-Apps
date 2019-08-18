@@ -15,10 +15,14 @@ export default function LocationsList() {
   }, []);
 
   return (
-    <span>
+    <div>
       {location.map(location => {
-        return <LocationCard key={location.id} location={location} />;
+        return (
+          <div>
+            <LocationCard location={location} />
+          </div>
+        );
       })}
-    </span>
+    </div>
   );
 }

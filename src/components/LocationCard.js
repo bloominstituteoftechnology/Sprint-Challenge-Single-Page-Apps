@@ -1,5 +1,17 @@
 import React from "react";
+import { Card, CardContent, CardHeader } from "semantic-ui-react";
 
 export default function LocationCard(props) {
-  return <div>{props.location.name}</div>;
+  console.log("props", props);
+  return (
+    <Card>
+      <Card.Content>
+        <Card.Header>{props.location.name}</Card.Header>
+        <Card.Meta>Planet {props.location.dimension}</Card.Meta>
+      </Card.Content>
+      <Card.Content extra>
+        <a>{props.location.residents.length} Residents</a>
+      </Card.Content>
+    </Card>
+  );
 }

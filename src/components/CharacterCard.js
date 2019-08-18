@@ -19,10 +19,12 @@ export default function CharacterCard(props) {
         <Card.Meta>
           {props.characters.species} {props.characters.status}
         </Card.Meta>
-        <Card.Meta>
-          <LocationsList />
-        </Card.Meta>
-        <Card.Description />
+        <Card.Description>
+          Location: {props.characters.location.name}
+        </Card.Description>
+        <Card.Description>
+          Origin: {props.characters.origin.name}
+        </Card.Description>
       </Card.Content>
       <Card.Content extra>
         <a>
