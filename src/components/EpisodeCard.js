@@ -1,4 +1,12 @@
-import react from 'react';
+import React from "react";
+import styled from "styled-components";
+
+const Cards = styled.div`
+  margin: 20px;
+  border: 1px solid black;
+  padding: 15px;
+`;
+
 
 const EpisodeCard = ({ name, air, episode}) => {
     return (
@@ -9,3 +17,5 @@ const EpisodeCard = ({ name, air, episode}) => {
     </Cards>
     );
 }
+
+export default EpisodeCard;

@@ -9,10 +9,10 @@ const AppRouter = () => {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={WelcomePage} />
-        <Route path="/characters" component={CharacterList} />
-        <Route path="/locations" component={LocationsList} />
-        <Route path="/episodes" component={EpisodesList} />
+        <Route exact path="/" component = {WelcomePage} />
+        <Route path="/characters" component = {CharacterList} />
+        <Route path="/locations" component = {LocationsList} />
+        <Route path="/episodes" component = {EpisodesList} />
       </Switch>
     </div>
   );
