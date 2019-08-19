@@ -5,14 +5,18 @@ import WelcomePage from "./WelcomePage";
 import CharacterList from "./CharacterList";
 import LocationsList from "./LocationsList";
 import EpisodesList from "./EpisodesList";
+import SearchForm from "./SearchForm";
+import SearchData from "./SearchData";
+import CharacterCard from "./CharacterCard";
 
 function AppRouter() {
   return (
     <div>
       <Route exact path="/" component={WelcomePage} />
-      <Route path="/character" component={CharacterList} />
-      <Route path="/location" component={LocationsList} />
-      <Route path="/episode" component={EpisodesList} />
+      <Route exact path="/search" component={SearchForm} />
+      <Route exact path="/character" component={CharacterList} />
+      <Route exact path="/location" component={LocationsList} />
+      <Route exact path="/episode" component={EpisodesList} />
     </div>
   );
 }

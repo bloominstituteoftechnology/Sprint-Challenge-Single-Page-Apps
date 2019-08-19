@@ -8,6 +8,7 @@ import AppRouter from "./components/AppRouter.js";
 import LocationsList from "./components/LocationsList.js";
 import EpisodesList from "./components/EpisodesList.js";
 import WelcomePage from "./components/WelcomePage.js";
+import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
   return (

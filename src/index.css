@@ -41,7 +41,7 @@ header h1 {
 .location-lists {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  margin-top: 20px;
 }
 
 .location-card {
@@ -51,22 +51,34 @@ header h1 {
 .episode-lists {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  margin-top: 20px;
 }
 
 .episode-card {
   padding: 20px;
 }
 
+.search-form {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.search-form form {
+  position: absolute;
+  top: 60px;
+}
+
+.search-form .search-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ui.card {
+  margin-top: 10px;
+}
+
 .nav-links {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-links:hover {
-  color: black;
-}
-
-.nav-links.active {
-  color: blue;
+  color: red;
 }
