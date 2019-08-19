@@ -6,8 +6,6 @@ import CharacterList from "./CharacterList";
 import LocationsList from "./LocationsList";
 import EpisodesList from "./EpisodesList";
 import SearchForm from "./SearchForm";
-import SearchData from "./SearchData";
-import CharacterCard from "./CharacterCard";
 
 function AppRouter() {
   return (

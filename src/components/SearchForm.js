@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { Card, Icon, Image } from "semantic-ui-react";
-import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
-import SearchData from "./SearchData";
-import ResultCharacterCard from "./CharacterCard";
 
 export default function SearchForm({ onSearch }) {
   // TODO: Add stateful logic for query/form data
