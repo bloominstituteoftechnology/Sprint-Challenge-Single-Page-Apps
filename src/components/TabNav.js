@@ -1,29 +1,40 @@
  import React from "react";
- import { Tab, Menu, Icon } from "semantic-ui-react";
- import { NavLink } from "react-router-dom";
+ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+//  import { Tab, Menu, Icon } from "semantic-ui-react";
+ import CharacterPage from './CharacterPage';
+ import LocationPage from './LocationPage';
+ import EpisodePage from './EpisodePage'
 
 // // TODO: Add missing tabs below
-const panes = [
-    { menuItem: 'HomePage', render: () => <Tab.Pane>Home Page</Tab.Pane> },
-    { menuItem: 'Character', render: () => <Tab.Pane>Character</Tab.Pane> },
-    { menuItem: 'Location', render: () => <Tab.Pane>Location</Tab.Pane> },
-    { menuItem: 'Episodes', render: () => <Tab.Pane>Episodes</Tab.Pane> },
-  ]
-  
 
 function TabNav() {
+    return (
+<div>
+<ul>
+  <li>
+    <NavLink exact to="/">
+      Home
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/Character" >Character</NavLink>
+  </li>
+  <li>
+    <NavLink to="/Episodes"> Episodes</NavLink>
+  </li>
+  <li>
+    <NavLink to="/Location"> Location </NavLink>
+  </li>
+</ul>
 
-    return(
-    <div>
-     <Tab panes={panes} />
-     </div>
+     {/* <Route exact path="/" component={WelcomePage} /> */}
+     <Route exact path="/Character" component={CharacterPage} />
+     <Route path="/Location" component={LocationPage} />
+     <Route path="/Episodes" component={EpisodePage} />
 
-    )
-};
+    </div>
+  );
+}
 
-
-
-
-// const TabExampleBasic = () => <Tab panes={panes} />
 
  export default TabNav;
