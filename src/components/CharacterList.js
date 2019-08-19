@@ -16,6 +16,7 @@ const [character, setCharacter]= useState({});
       console.log (apiObject);
       return(
       setCharacter(apiObject.results)
+      
       )
     }
 )
