@@ -1,10 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import WelcomePage from './WelcomePage';
+import CharacterList from './CharacterList';
+import { Route } from 'react-router-dom';
 
 function AppRouter(){
     return(
-        <Route path="/" component={WelcomePage} />
+        <div className="app-router">
+            <Route exact path="/" component={WelcomePage} />
+            <Route path="/characters" component={CharacterList} />
+        </div>
     );
 }
 

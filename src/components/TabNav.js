@@ -41,7 +41,7 @@ export default class TabNav extends Component {
             onClick={this.handleItemClick}
         >
             <Icon name="video camera" />
-            <NavLink to="episodes">Episodes</NavLink>
+            <NavLink to="/episodes">Episodes</NavLink>
         </Menu.Item>
       </Menu>
     )
