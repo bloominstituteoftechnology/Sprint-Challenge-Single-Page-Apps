@@ -1,48 +1,27 @@
-import React, { useEffect, useState } from 'react';
-	// import EpisdodeCard from './EpisdodeCard'
-    import axios from 'axios';
-import { Card} from 'semantic-ui-react'
+	import React, { useEffect, useState } from "react";
+	import axios from "axios";
+	import EpisodeCard from "./EpisodeCard";
 	
-	function EpisodesList() {
+	export default function EpisodeList() {
+	  const [episodes, setEpisodes] = useState([]);
 	
-	    const [episodeList, setEpisodeList] = useState([]);
+	  useEffect(() => {
+	    axios
+	      .get("https://rickandmortyapi.com/api/episode/")
+	      .then(res => {
+	        console.log("episode data:", res.data.results);
+	        setEpisodes(res.data.results);
+	      })
+	      .catch(err => {
+        console.error(err);
+      });
+	  }, []);
 	
-	    useEffect(() => {
-	        const getEpisode = () => {
-	         axios.get('https://rickandmortyapi.com/api/character/')
-	         .then(function (response) {
-	          setEpisodeList(response.data.results);
-	           console.log('in episodes list' ,response.data.results);
-	         })
-	        }
-	
-	        getEpisode();
-	
-	     }, [])
-	
-	    return <section className='location-list grid-view'>
-	        {episodeList.map( char => (
-	        <EpisodeDetails key={char.id} char={char}/>
-	      ))}
-	      </section>
-	}
-	
-	
-	function EpisodeDetails ({ char }) {
-	
-	    const { image, name, species, origin } = char;
-	
-	    return (
-	      <section className='episode-list grid-view'>
-          <Card>
-	        <div>
-	        <h1>{char.name}</h1>
-	        <il>{char.episode}</il>
-	        </div>
-            </Card>
-	      </section>
-	    );
-	  }
-	
-	
-	  export default EpisodesList 
+	  return (
+	    <section className="episode-list grid-view">
+	      {episodes.map(epi => {
+	        return <EpisodeCard key={epi.id} epi={epi} />;
+	      })}
+	    </section>
+	  );
+}
