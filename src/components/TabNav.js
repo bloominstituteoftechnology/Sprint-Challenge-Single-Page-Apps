@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import { NavLink, Tab, Menu, Icon } from "semantic-ui-react";
+import {  Tab, Menu, Icon } from "semantic-ui-react";
 import Character from './CharacterPage';
 import LocationPage from './LocationPage';
 import EpisodePage from './EpisodePage';
