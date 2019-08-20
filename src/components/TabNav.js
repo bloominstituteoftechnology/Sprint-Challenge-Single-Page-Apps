@@ -1,42 +1,91 @@
 import React from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Tab, Menu, Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import Character from './CharacterPage';
+import LocationPage from './LocationPage';
+import EpisodePage from './EpisodePage';
+import WelcomePage from './WelcomePage';
 
-// TODO: Add missing tabs below
-const panes = [
-    { menuItem: 'Tab 1', pane: { key: 'tab1', content: 'This is massive tab', size: 'massive' } },
-    {
-      menuItem: 'Tab 2',
-      pane: { key: 'tab2', content: 'This tab has a center aligned text', textAlign: 'center' },
-    },
-    {
-      menuItem: 'Tab 3',
-      pane: {
-        key: 'tab3',
-        content: (
-          <div>
-            This tab contains an <Label>JSX</Label> element
-          </div>
-        ),
-      },
-    },
-    {
-      menuItem: 'Tab 4',
-      pane: (
-        <Tab.Pane key='tab4'>
-          <p>This tab has a complex content</p>
+function TabNav() {
+   return (
+<div>
+<ul>
+ <li>
+   <NavLink exact to="/">
+     Home
+   </NavLink>
+ </li>
+ <li>
+   <NavLink to="/CharacterPage" >
+   Character
+   </NavLink>
+ </li>
+ <li>
+   <NavLink to="/EpisodePage">
+    Episodes
+    </NavLink>
+ </li>
+ <li>
+   <NavLink to="/LocationPage"> 
+   Location 
+   </NavLink>
+ </li>
+</ul>
+   
+   </div>
+ );
+}
+export default TabNav;
+
+
+// // function TabNav() {
+// //     const [key, setKey] = useState('home');
   
-          <List>
-            <List.Item>Apples</List.Item>
-            <List.Item>Pears</List.Item>
-            <List.Item>Oranges</List.Item>
-          </List>
-        </Tab.Pane>
-      ),
-    },
-  ]
+// //     return (
+// //       <Tabs id="controlled-tab-example" activeKey={key} onSelect={k => setKey(k)}>
+// //         <Tab eventKey="home" title="Home">
+// //           <Sonnet />
+// //         </Tab>
+// //         <Tab eventKey="profile" title="Profile">
+// //           <Sonnet />
+// //         </Tab>
+// //         <Tab eventKey="contact" title="Contact" disabled>
+// //           <Sonnet />
+// //         </Tab>
+// //       </Tabs>
+// //     );
+// //   }
   
-  const NavLink = () => <Tab panes={panes} renderActiveOnly={false} />
+// //   render(<TabNav />);
+
+// // export default TabNav;
+// // const panes = [
+// //     { menuItem: 'Tab 1', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
+// //     { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+// //     { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+// //   ]
   
-  export default NavLink
+// //   const TabExampleBasic = () => <Tab panes={panes} />
   
+// //   export default TabExampleBasic;
+
+
+
+
+// function TabNav(props) {
+//     const [nav, setNav] = useState('home');
+  
+//     useEffect(() => {
+//       document.title = `You clicked ${count} times`;
+//     });
+  
+//     return (
+//       <div>
+//         <p>You clicked {count} times</p>
+//         <button onClick={() => setNav()}>
+//           Click me
+//         </button>
+//       </div>
+//     );
+//   }
+//   export default TabNav;

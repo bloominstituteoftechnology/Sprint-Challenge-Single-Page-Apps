@@ -1,25 +1,31 @@
 import React  from "react";
-// import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
+import TabNav from "./components/TabNav.js";
+import WelcomePage from "./components/WelcomePage";
+import CharacterPage from "./components/CharacterPage.js";
 import LocationPage from "./components/LocationPage.js";
-import CharacterList from "./components/CharacterList.js";
+import EpisodePage from "./components/EpisodePage";
+import { Route } from "react-router-dom";
 
 
 
-export default function App() {
+
+ function App() {
   
   return (
     <main>
       <div className="App">
 
       <Header />
-      {/* <TabNav /> */}
-      {/* <AppRouter /> */}
-    <Route path="/" component={WelcomePage} />
-    <Route path="./components/LocationPage" component={LocationPage} />
-    <Route path="./components/EpisodePage" component={EpisodePage} />
-    <Route path="./components/CharacterPage" component={CharacterPage} />
+      <TabNav />
+      
+          <Route exact path="/" component={WelcomePage} />
+    <Route path="/LocationPage" component={LocationPage} />
+    <Route path="/EpisodePage" component={EpisodePage} />
+    <Route path="/CharacterPage" component={CharacterPage} />
+   
     </div>
+   
     </main>
 
     
@@ -28,5 +34,5 @@ export default function App() {
 
 
 
-
+export default App;
 // import AppRouter from "./components/AppRouter.js";

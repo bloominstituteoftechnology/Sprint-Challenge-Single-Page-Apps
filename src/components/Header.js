@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
-      {/* <nav>
+      <nav>
         
         {/* <div className="nav-links">
           <NavLink exact className="some-link" to="/">
@@ -12,9 +12,9 @@ export default function Header() {
           </NavLink>
           <NavLink className="some-link" to="/location-card">
             Shop
-          </NavLink> */}
-        {/* </div> */}
-      {/* </nav> */} */}
+          </NavLink> 
+        </div> */}
+      </nav>
     </header>
   );
 }
