@@ -78,3 +78,4 @@ return (
 );
 }
 export default CharacterPage;
+  
