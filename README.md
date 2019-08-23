@@ -9,8 +9,7 @@ This challenge allows you to practice the concepts and techniques learned over t
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate with students during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL and Instructor in your cohort help channel on Slack.
-
+You are not allowed to collaborate with students during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support through DM from your TL. 
 You have **three hours to complete** this challenge. **Plan your time accordingly.**
 
 ## Commits
@@ -98,7 +97,7 @@ Create 3 page components to display data from 3 API endpoints:
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
   - [ ] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
   - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
-  - [ ] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [ReactStrap](https://reactstrap.github.io), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)).
+  - [ ] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)), etc.
   - [ ] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
 
 > 💡**Reminder:** `git commit -am 'Card UI Loading Data Successfully'`
