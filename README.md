@@ -1,7 +1,7 @@
 # Sprint Challenge: Single Page Applications
 ## Rick & Morty Edition
 
-This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Single Page Applications, React Router I - II, React Forms, and Hooks.
+This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Single Page Applications, React Router I - II, and React Forms.
 
 ## Instructions
 
@@ -31,8 +31,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 > Answer:
 - [ ] What are `controlled components` in React?
 > Answer:
-- [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+
 
 ## Project Set Up
 
@@ -91,7 +90,7 @@ Create 3 page components to display data from 3 API endpoints:
 - `https://rickandmortyapi.com/api/character/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-characters)
 - `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
 - `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
-
+- You will need to add a EpisodeList and EpisodeCard component yourself.
 - [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
 - [ ] Create a component to show a grid of data from the API.
   - [ ] Include `useState`, `useEffect`.
@@ -110,7 +109,6 @@ Add a Router to this application using [React Router](https://reacttraining.com/
 
 > **Tip:** Review the [examples on the React Router site.](https://reacttraining.com/react-router/web/guides/quick-start)
 
-- [ ] Start by wrapping your `root` component in the `BrowserRouter` component.
 - [ ] Declare your routes with `<Route>` components (for each component created above.)
   - [ ] Include `/character`, `/location` and `/episode` routes.
 - [ ] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
