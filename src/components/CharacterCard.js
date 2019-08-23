@@ -5,8 +5,8 @@ export default function CharacterCard() {
   return <span> todo: character
 
 
-{/* <Card>
-    <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
+<Card>
+    {/* <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} /> */}
     <Card.Content>
       <Card.Header>Matthew</Card.Header>
       <Card.Meta>
@@ -22,7 +22,7 @@ export default function CharacterCard() {
         22 Friends
       </a>
     </Card.Content>
-  </Card> */}
+  </Card>
 
 
   </span>;
