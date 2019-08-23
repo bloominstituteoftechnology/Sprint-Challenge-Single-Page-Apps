@@ -31,14 +31,14 @@ export default function CharacterList() {
   return (
     <section className="character-list grid-view">
       {/* <h2>TODO: `array.map()` over your state here!Characters</h2> */}
-      {/* {characters.map(character => (
+       {/* {characters.map(character => (
         
         
         
         
-      ))} */}
-
+        
     
+      ))}  */}
 
     </section>
   );

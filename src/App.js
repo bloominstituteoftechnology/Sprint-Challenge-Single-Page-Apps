@@ -6,6 +6,7 @@ import { Route, NavLink } from "react-router-dom";
 import CharacterList from "./components/CharacterList";
 import CharacterCard from "./components/CharacterCard";
 import LocationList from "./components/LocationsList";
+import EpisodeList from "./components/EpisodeList";
 
 
 
