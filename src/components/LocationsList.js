@@ -22,8 +22,10 @@ axios
 }, []);
 
 return (
-    <section>
-        
+    <section className="Location-list grid-view">
+
+        <h2>Locations</h2>
+
     </section>
 );
 

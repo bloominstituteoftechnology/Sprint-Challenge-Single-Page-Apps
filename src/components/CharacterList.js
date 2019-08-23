@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import axios from "axios";
 
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
    
@@ -29,10 +30,10 @@ export default function CharacterList() {
 
   return (
     <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>TODO: `array.map()` over your state here!Characters</h2>
       {/* {characters.map(character => (
         
-        <CharacterCard/>
+        // <CharacterCard/>
         // <Link to={`/components/${character.id}`}>
         // <MovieDetails key={character.id} movie={character} />
         // </Link>
