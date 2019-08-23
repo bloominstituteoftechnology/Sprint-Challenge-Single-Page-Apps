@@ -2,6 +2,7 @@ import React from "react";
 import LocationsList from './LocationsList.js';
 import WelcomePage from './WelcomePage.js';
 import CharacterList from './CharacterList.js';
+import EpisodeList from './EpisodeList.js';
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
@@ -13,6 +14,7 @@ export default function TabNav() {
         {menuItem: 'Home', render: () => <WelcomePage />},
         {menuItem: 'Locations', render: () => <LocationsList />},
         {menuItem: 'Characters', render: () => <CharacterList />},
+        {menuItem: 'Episodes', render: () => <EpisodeList />},
 
     ]
     return(
