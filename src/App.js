@@ -30,21 +30,15 @@ export default function App() {
   return (
     <main>
       
-      {/* <NavLink exact path="/" render={props => <MovieList {...props} movies={MovieList}/>} /> */}
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/character">Characters</NavLink>
-      <NavLink to="/location">Locations</NavLink>
-      <NavLink to="/episode">Episodes</NavLink>
-
-      {/* <TabExampleBasicAll/> */}
+     
       <Header/>
-
+      <TabNav/>
       <Route exact path="/"   component={WelcomePage}/>
       <Route path="/character" component={CharacterList}/>
       
       <Route exact path="/location" component={LocationList}/>
       <Route path="/episode" component={EpisodeList}/>
-      {/* <TabNav /> */}
+      
     </main>
   );
 }
