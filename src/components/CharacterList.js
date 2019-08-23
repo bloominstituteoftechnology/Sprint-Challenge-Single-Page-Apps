@@ -4,7 +4,7 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
-    // TODO: Add AJAX/API Request here - must run in `useEffect`
+    // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
