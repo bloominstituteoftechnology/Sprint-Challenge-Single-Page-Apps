@@ -6,36 +6,39 @@ import { NavLink } from "react-router-dom";
 // Take a look at React Semantic UI tabs 
 // https://react.semantic-ui.com/modules/tab/
 
-const panes = [
-    { menuItem: 'Home', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
-    { menuItem: 'Characters', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
-    { menuItem: 'Locations', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-    { menuItem: 'Episodes', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
-  ]
+// const panes = [
+   
+//     { menuItem: 'Home', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
+//     { menuItem: 'Characters', render: () => <Tab.Pane><NavLink to="/character">Characters</NavLink></Tab.Pane> },
+//     { menuItem: 'Locations', render: () => <Tab.Pane><NavLink to="/location">Locations</NavLink></Tab.Pane> },
+//     { menuItem: "/episode", render: () => <Tab.Pane><NavLink to="/episode">Episodes</NavLink></Tab.Pane> },
+    
+//   ]
+ 
+
+//   const TabExampleBasic = () => <Tab panes={panes} />
   
-  const TabExampleBasic = () => <Tab panes={panes} />
-  
-  export default TabExampleBasic
+//   export default TabExampleBasic
 
-// export default function TabNav() {
+export default function TabNav() {
 
-//     return (
-// <nav>
+    return (
+<nav>
 
-//       <NavLink to="/">HOME</NavLink>
-//       <NavLink to="/character">Characters</NavLink>
-//       <NavLink to="/location">Locations</NavLink>
-//       <NavLink to="/episode">Episodes</NavLink>
+      <NavLink to="/">HOME</NavLink>
+      <NavLink to="/character">Characters</NavLink>
+      <NavLink to="/location">Locations</NavLink>
+      <NavLink to="/episode">Episodes</NavLink>
 
-// </nav>
+</nav>
         
 
 
-//     )};
+    )};
 
     
 
  
     
-    // 
+
     
