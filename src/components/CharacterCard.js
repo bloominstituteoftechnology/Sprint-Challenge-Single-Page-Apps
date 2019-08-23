@@ -1,19 +1,25 @@
-import React from 'react';import { Card, Image } from 'semantic-ui-react';
-export default function CharacterCard ( props ) {
+import React from 'react'; 
+import { Card, Icon, Image } from 'semantic-ui-react'; 
 
- return (
-<Card className='character-card'>
-    <Image src={props.picture} alt={'Drawing of Character'} />
-  <Card.Content>
-    <Card.Header>Name: {props.name}</Card.Header>
-    <Card.Meta>Species: {props.species}</Card.Meta>
-    <Card.Meta>Status: {props.status}</Card.Meta>
-    <Card.Description>Origin: {props.origin}</Card.Description>
-  </Card.Content>
-</Card>
+export default function CharacterCard({ char }) { 
+ return ( 
+  <Card> 
+      <Image src={char.image} wrapped ui={false} /> 
+        <Card.Content> 
+        <Card.Header>{char.name}</Card.Header> 
+        <Card.Meta>{char.species}</Card.Meta> 
+        <Card.Description>{char.location.name}</Card.Description> 
+        </Card.Content> 
+        <Card.Content extra> 
+        <a> 
+            <Icon name='user' /> 
+            episodes 
+        </a> 
+        </Card.Content> 
+  </Card> 
+); 
 
-    
 
-    )
+} 
 
-}
+
