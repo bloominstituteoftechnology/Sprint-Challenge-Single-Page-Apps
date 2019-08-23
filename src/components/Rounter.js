@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import CharacterList from './CharacterList';
 import WelcomePage from './WelcomePage';
 import LocationList from './LocationsList';
-import EpisodesList from '.EpisodesList';
-import CharacterList from './CharacterList';
+import EpisodesList from './EpisodesList';
+
 
 export default function  Rounter() {
 
