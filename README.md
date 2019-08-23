@@ -26,10 +26,18 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Explain benefit(s) using `client-side routing`?
 > Answer:
+<!-- Faster routing between views> It immediately both viewable and interactable -->
+
 - [ ] What does AJAX stand for?
+<!-- Asynchronus JavaScript and XML.  -->
+
 > Answer:
+
 - [ ] What are `controlled components` in React?
-> Answer:
+
+> Answer: 
+<!-- To control data on the DOM though state. -->
+<!-- Passing input and other elements dynamic values from out state. -->
 
 
 ## Project Set Up
