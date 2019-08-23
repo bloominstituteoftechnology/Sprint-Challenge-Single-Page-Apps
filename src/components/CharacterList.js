@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
+import { Card, Image } from 'semantic-ui-react'
 
 
 export default function CharacterList(props) {
@@ -26,14 +27,14 @@ export default function CharacterList(props) {
     <section className="character-list grid-view">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
 
-      <h2>{characterData.map((character, index) => <CharacterCard       
+      <Card.Group>{characterData.map((character, index) => <CharacterCard       
       image={character.image}
       name= {character.name}
       species= {character.species}
       gender= {character.gender}
       status= {character.status}
       
-       />)}</h2>
+       />)}</Card.Group>
 
        
     </section>

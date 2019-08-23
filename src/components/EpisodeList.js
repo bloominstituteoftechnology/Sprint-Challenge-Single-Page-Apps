@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import EpisodeCard from './EpisodeCard.js';
+import { Card } from 'semantic-ui-react'
 
 export default function EpisodeList(props) {
 
@@ -23,7 +24,7 @@ export default function EpisodeList(props) {
 
     return (
 
-        <div>
+        <Card.Group>
             {episode.map(episode => (
                 <EpisodeCard
 
@@ -35,6 +36,6 @@ export default function EpisodeList(props) {
                 
                 />
             ))}
-        </div>
+        </Card.Group>
     )
 }

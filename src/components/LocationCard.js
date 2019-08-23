@@ -1,9 +1,10 @@
 import React from "react";
+import { Card } from 'semantic-ui-react'
 
 export default function LocationCard(props) {
   return (
   
-  <div>
+  <Card>
   
     <h3> {props.name} </h3>
     <p> Type: {props.type} </p>
@@ -12,7 +13,7 @@ export default function LocationCard(props) {
 
 
 
-  </div>
+  </Card>
 
 
 

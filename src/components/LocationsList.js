@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import LocationCard from './LocationCard.js';
+import { Card } from 'semantic-ui-react'
 
 
 
@@ -29,9 +30,9 @@ export default function LocationsList() {
 
     return (
 
-        <div>
+        <Card.Group>
     
-    <h2> {locationData.map(location => <LocationCard
+     {locationData.map(location => <LocationCard
     
                 name={location.name}
                 type={location.type}
@@ -40,10 +41,10 @@ export default function LocationsList() {
                 
                 
                 />
-            )} </h2>
+            )}
     
     
-        </div>
+        </Card.Group>
     
     
     
