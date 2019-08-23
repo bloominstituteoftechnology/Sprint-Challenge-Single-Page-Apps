@@ -11,7 +11,7 @@ export default function EpisodeCard (props) {
         <Card>
             <h3> {props.name} </h3>
             <h4>Episode: {props.number} </h4>
-            <p>Date Aired: {props.AirDate} </p>
+            <p>Date Aired: {props.airDate} </p>
 
         </Card>
             
