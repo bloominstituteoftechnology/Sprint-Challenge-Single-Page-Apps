@@ -21,8 +21,8 @@ export default function LocationsList() {
 
 return ( 
     <section className='episode-list grid-view'>
-        {location.map(loc  => {
-            return <LocationsCard key={loc.id} loc={loc} />;
+        {location.map(local  => {
+            return <LocationsCard key={local.id} local={local} />;
         })}
     </section>
 )
