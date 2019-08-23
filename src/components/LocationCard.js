@@ -7,7 +7,7 @@ export default function LocationCard({ props }) {
       <Card.Content>
       <Card.Header>{props.name}</Card.Header>
       <Card.Meta>{props.dimension}</Card.Meta>
-     <Card.Description> {props.created} </Card.Description>
+      <Card.Description> {props.created} </Card.Description>
       </Card.Content>
     </Card>
   )
