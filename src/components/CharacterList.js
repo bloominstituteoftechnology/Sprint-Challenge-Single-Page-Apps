@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 
 import axios from "axios";
-
-
+import { Route, NavLink } from "react-router-dom";
+import CharacterCard from "./components/CharacterCard";
+import {Link} from 'react-router-dom';
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
    
@@ -29,18 +30,24 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <section className="character-list grid-view">
-      {/* <h2>TODO: `array.map()` over your state here!Characters</h2> */}
-       {/* {characters.map(character => (
-        
-        
-        
-        
-        
+
     
-      ))}  */}
+
+    <section className="character-list grid-view">
+
+    <h2>Characters</h2>
+
+
+      {/* <h2>TODO: `array.map()` over your state here!Characters</h2> */}
+       {characters.map(character => (
+        
+        <Link to={`/components/${character.id}`}>
+       
+        </Link>
+     
+    
+      ))} 
 
     </section>
   );
 }
-

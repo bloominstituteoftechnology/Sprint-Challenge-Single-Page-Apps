@@ -3,8 +3,9 @@ import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import { Route, NavLink } from "react-router-dom";
 
+import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
-import CharacterCard from "./components/CharacterCard";
+
 import LocationList from "./components/LocationsList";
 import EpisodeList from "./components/EpisodeList";
 
@@ -32,15 +33,17 @@ export default function App() {
       
       {/* <NavLink exact path="/" render={props => <MovieList {...props} movies={MovieList}/>} /> */}
       <NavLink to="/">HOME</NavLink>
-      <NavLink to="/componets/characterlist">Characters</NavLink>
-      <NavLink to="/componets/locationlist">Locations</NavLink>
-      <NavLink to="/componets/episodelist">Episodes</NavLink>
+      <NavLink to="/character">Characters</NavLink>
+      <NavLink to="/location">Locations</NavLink>
+      <NavLink to="/episode">Episodes</NavLink>
 
       {/* <TabExampleBasicAll/> */}
-      <Header />
-      <CharacterList/>
-      <CharacterCard/>  
-      <LocationList/>
+      <Header/>
+
+      <Route exact path="/"   component={WelcomePage}/>
+      <Route path="/character" component={CharacterList}/>
+      <Route exact path="/location" component={LocationList}/>
+      <Route path="/episode" component={EpisodeList}/>
       {/* <TabNav /> */}
     </main>
   );
