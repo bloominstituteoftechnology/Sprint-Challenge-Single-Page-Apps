@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
+
 export default function EpisodeList() {
     //TODO: Add useState to track data from useEffect
      
@@ -12,7 +14,7 @@ export default function EpisodeList() {
         axios
         .get('https://rickandmortyapi.com/api/episode/')
         .then(response => {
-          setEpisode(response.data);
+          setEpisode(response.data.results);
           console.log(response);
         })
         .catch(error => {

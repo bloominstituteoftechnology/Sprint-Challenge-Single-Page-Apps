@@ -5,7 +5,6 @@ import { Route, NavLink } from "react-router-dom";
 
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
-
 import LocationList from "./components/LocationsList";
 import EpisodeList from "./components/EpisodeList";
 
@@ -42,6 +41,7 @@ export default function App() {
 
       <Route exact path="/"   component={WelcomePage}/>
       <Route path="/character" component={CharacterList}/>
+      
       <Route exact path="/location" component={LocationList}/>
       <Route path="/episode" component={EpisodeList}/>
       {/* <TabNav /> */}
