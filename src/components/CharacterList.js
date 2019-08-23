@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Card, Image} from 'semantic-ui-react';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -30,10 +31,10 @@ export default function CharacterList() {
 
 function CharacterDetails({character}){
   return(
-    <div className='char-card'>
-      <img src={character.image} alt='character-pic' />
-      <h1>{character.name}</h1>
+    <Card className='char-card'>
+      <Image src={character.image} alt='character-pic' />
+      <Card.Header>{character.name}</Card.Header>
       <p>Status: {character.status}</p>
-    </div>
+    </Card>
   );
 }

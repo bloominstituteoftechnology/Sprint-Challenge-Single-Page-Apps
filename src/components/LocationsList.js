@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Card} from 'semantic-ui-react';
 
 export default function LocationsList(props) {
     const [locations, setLocation] = useState([])
@@ -31,10 +32,9 @@ export default function LocationsList(props) {
 
 function LocationDetails({location}){
     return(
-        <div className='location-card'>
+        <Card className='location-card'>
             <h1>{location.name}</h1>
             <p>{location.type}</p>
-
-        </div>
+        </Card>
     );
 }

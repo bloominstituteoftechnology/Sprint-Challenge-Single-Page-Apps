@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {Card} from 'semantic-ui-react';
 
 export default function EpisodeList(props) {
     console.log(props);
@@ -31,10 +32,10 @@ export default function EpisodeList(props) {
 
 function EpisodeDetails({episode}){
     return (
-        <div className='episode-card'>
+        <Card className='episode-card'>
             <h1>{episode.name}</h1>
             <p>{episode.air_date}</p>
             <p>{episode.episode}</p>
-        </div>
+        </Card>
     )
 }

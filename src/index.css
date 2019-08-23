@@ -37,3 +37,20 @@ main {
 header h1 {
   text-align: center;
 }
+
+.episode-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  max-width: 80%;
+}
+
+
+.location-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  max-width: 80%
+}
