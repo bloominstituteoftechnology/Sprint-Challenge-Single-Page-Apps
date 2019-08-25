@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Pagination } from 'semantic-ui-react';
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 
-export default function LocationsList() {
-  const [locations, setLocations] = useState([]);
+export default function EpisodeList() {
+  const [episodes, setEpisodes] = useState([]);
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState();
 
   useEffect(() => {
     axios
-      .get(`xxxhttps://rickandmortyapi.com/api/location/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/episode/?page=${page}`)
       .then(res => {
         // console.log(res.data.results);
-        setLocations(res.data.results);
+        setEpisodes(res.data.results);
         setPageCount(res.data.info.pages);
       })
       .catch(err => console.log(err));
@@ -28,7 +28,7 @@ export default function LocationsList() {
       <Pagination
         activePage={page}
         boundaryRange={0}
-        siblingRange={3}
+        siblingRange={1}
         onPageChange={handlePaginationChange}
         totalPages={pageCount}
         ellipsisItem={null}
@@ -38,8 +38,8 @@ export default function LocationsList() {
         nextItem={null}
       />
       <div className='grid-view'>
-        {locations.map(location => {
-          return <LocationCard key={location.id} location={location} />;
+        {episodes.map(episode => {
+          return <EpisodeCard key={episode.id} episode={episode} />;
         })}
       </div>
     </section>

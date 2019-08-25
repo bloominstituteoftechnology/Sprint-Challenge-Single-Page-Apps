@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from 'react-router-dom';
+import Header from "./components/Header.js";
+import TabNav from "./components/TabNav.js";
+import WelcomePage from './components/WelcomePage';
+import CharacterList from './components/CharacterList';
+import LocationsList from './components/LocationsList';
+import EpisodeList from './components/EpisodeList';
+import SearchForm from './components/SearchForm';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <TabNav />
+
+      <Route exact path='/' component={WelcomePage} />
+      <Route path='/character' component={CharacterList} />
+      <Route path='/location' component={LocationsList} />
+      <Route path='/episode' component={EpisodeList} />
+      <Route path='/search' component={SearchForm} />
+    </main>
   );
 }
-
-export default App;

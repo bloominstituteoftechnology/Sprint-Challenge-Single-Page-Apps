@@ -10,7 +10,7 @@ export default function LocationsList() {
 
   useEffect(() => {
     axios
-      .get(`xxxhttps://rickandmortyapi.com/api/location/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/location/?page=${page}`)
       .then(res => {
         // console.log(res.data.results);
         setLocations(res.data.results);
