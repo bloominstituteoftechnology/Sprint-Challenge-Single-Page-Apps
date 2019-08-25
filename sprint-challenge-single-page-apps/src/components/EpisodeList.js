@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Pagination } from 'semantic-ui-react';
+
 import EpisodeCard from './EpisodeCard';
 
 export default function EpisodeList() {
@@ -24,24 +24,12 @@ export default function EpisodeList() {
   };
 
   return (
-    <section className='ui bottom attached segment active'>
-      <Pagination
-        activePage={page}
-        boundaryRange={0}
-        siblingRange={1}
-        onPageChange={handlePaginationChange}
-        totalPages={pageCount}
-        ellipsisItem={null}
-        firstItem={null}
-        lastItem={null}
-        prevItem={null}
-        nextItem={null}
-      />
+
       <div className='grid-view'>
         {episodes.map(episode => {
           return <EpisodeCard key={episode.id} episode={episode} />;
         })}
       </div>
-    </section>
+
   )
 }

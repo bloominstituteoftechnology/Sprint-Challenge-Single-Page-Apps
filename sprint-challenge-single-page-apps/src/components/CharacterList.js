@@ -1,6 +1,7 @@
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Pagination } from 'semantic-ui-react';
 import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
@@ -27,21 +28,13 @@ export default function CharacterList() {
   };
 
   return (
-    <section className='ui bottom attached segment active'>
-      <Pagination
-        activePage={page}
-        boundaryRange={0}
-        siblingRange={1}
-        onPageChange={handlePaginationChange}
-        totalPages={pageCount}
-        ellipsisItem={null}
-      />
+
       <div className='character-list grid-view'>
         {characters.map(character => {
           return <CharacterCard key={character.id} character={character}
          />;
         })}
       </div>
-    </section>
+    // </section>
   );
 }
