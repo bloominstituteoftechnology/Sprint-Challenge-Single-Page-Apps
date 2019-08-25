@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
 import EpisodeCard from './EpisodeCard';
 
 export default function EpisodeList() {
   const [episodes, setEpisodes] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageCount, setPageCount] = useState();
+
 
   useEffect(() => {
     axios
@@ -14,22 +13,16 @@ export default function EpisodeList() {
       .then(res => {
         // console.log(res.data.results);
         setEpisodes(res.data.results);
-        setPageCount(res.data.info.pages);
+
       })
       .catch(err => console.log(err));
   }, [page]);
 
-  const handlePaginationChange = (e, { activePage }) => {
-    setPage(activePage);
-  };
-
   return (
-
       <div className='grid-view'>
         {episodes.map(episode => {
           return <EpisodeCard key={episode.id} episode={episode} />;
         })}
       </div>
-
   )
 }

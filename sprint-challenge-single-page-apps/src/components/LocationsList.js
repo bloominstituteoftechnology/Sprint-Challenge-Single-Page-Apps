@@ -5,7 +5,7 @@ import LocationCard from './LocationCard';
 export default function LocationsList() {
   const [locations, setLocations] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageCount, setPageCount] = useState();
+
 
   useEffect(() => {
     axios
@@ -13,14 +13,11 @@ export default function LocationsList() {
       .then(res => {
         // console.log(res.data.results);
         setLocations(res.data.results);
-        setPageCount(res.data.info.pages);
+
       })
       .catch(err => console.log(err));
   }, [page]);
 
-  const handlePaginationChange = (e, { activePage }) => {
-    setPage(activePage);
-  };
 
   return (
       <div className='grid-view'>
