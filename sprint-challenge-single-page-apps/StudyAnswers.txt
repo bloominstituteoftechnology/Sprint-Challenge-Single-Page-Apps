@@ -1,0 +1,21 @@
+ Self-Study/Essay Questions
+
+Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
+
+- [ ] Explain benefit(s) using `client-side routing`?
+
+> Answer: It's faster and more efficient. Instead of reaching out to the server and reloading the whole page, you load on the client side and 
+only refresh items whose state has changed. 
+
+- [ ] What does AJAX stand for?
+
+
+> Answer: Stands for Asynchronous JavaScript And XML. 
+
+It's a way to set things up on the client side to grab data from an external source and take advantage of asynchronous tools in web applications, so that your app doesn't die waiting for a data response.
+	
+	
+- [ ] What are `controlled components` in React?
+
+
+> Answer:  In a controlled component, form data is handled by a React component. Otherwise, the data is handled by teh DOM, like when HTML handles state for forms.
