@@ -29,5 +29,4 @@ export default function TabNav() {
         Character Search
       </NavLink>
     </div>
-  )
-};
+  )}

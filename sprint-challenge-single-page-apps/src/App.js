@@ -6,7 +6,7 @@ import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
 import EpisodeList from './components/EpisodeList';
-// import SearchForm from './components/SearchForm';
+import SearchForm from './components/SearchForm';
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
       <Route path='/character' component={CharacterList} />
       <Route path='/location' component={LocationsList} />
       <Route path='/episode' component={EpisodeList} />
-    
+
     </main>
   );
 }
