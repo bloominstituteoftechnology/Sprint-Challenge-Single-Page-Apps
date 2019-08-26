@@ -1,32 +1,78 @@
-import React from "react";
-import { Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import CharacterCard from './CharacterCard';
 
-// TODO: Add missing tabs below
-// Take a look at React Semantic UI tabs
-// https://react.semantic-ui.com/modules/tab/
-export default function TabNav() {
+export default function SearchForm() {
+  // STRETCH TODO: Add stateful logic for query/form data
+  const [name, setName] = useState();
+  // const [search, setSearch] = useState();
+  const [search, setSearch] = useLocalStorage('search', '');
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://rickandmortyapi.com/api/character/?name=${search}`)
+      .then(res => {
+        console.log(res.data.results);
+        setData(res.data.results);
+      })
+      .catch(err => console.log(err));
+  }, [search])
+
+  const handleInputChange = event => {
+    setName(event.target.value);
+  }
+
+  const onSearch = event => {
+    event.preventDefault();
+    setSearch(name);
+  }
+
   return (
-    <div className='ui attached tabular menu'>
-      <NavLink exact to='/' className='item'>
-        <Icon name='home' />
-        Home Page
-      </NavLink>
-      <NavLink to='/character' className='item'>
-        <Icon name='users' />
-        Characters
-      </NavLink>
-      <NavLink to='/location' className='item'>
-        <Icon name='map outline' />
-        Locations
-      </NavLink>
-      <NavLink to='/episode' className='item'>
-        <Icon name='video' />
-        Episodes
-      </NavLink>
-      <NavLink to='/search' className='item'>
-        <Icon name='search' />
-        Character Search
-      </NavLink>
-    </div>
-  )}
+    <section className='search-form ui bottom attached segment active'>
+      <form onSubmit={onSearch}>
+        <div className='ui action input'>
+          <input
+            onChange={handleInputChange}
+            placeholder='name'
+            value={name}
+            name='name'
+          />
+          <button type='submit' className='ui icon button'>
+            <i className='search icon' />
+          </button>
+        </div>
+      </form>
+      <div className='grid-view'>
+        {data.map(character => {
+          return <CharacterCard key={character.id} character={character} />;
+        })}
+      </div>
+    </section>
+  );
+}
+
+const useLocalStorage = (key, initialValue) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (err) {
+      console.log(err);
+      return initialValue;
+    }
+  });
+
+  const setValue = value => {
+    try {
+      const valueToStore =
+        value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return [storedValue, setValue];
+}

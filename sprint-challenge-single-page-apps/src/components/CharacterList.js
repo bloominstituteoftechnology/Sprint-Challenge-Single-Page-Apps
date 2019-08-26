@@ -17,7 +17,7 @@ export default function CharacterList() {
       .then(res => {
         // console.log(res.data.info.pages);
         setCharacters(res.data.results);
-      
+
       })
       .catch(err => console.log(err));
   }, [page]);
