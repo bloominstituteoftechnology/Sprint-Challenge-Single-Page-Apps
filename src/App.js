@@ -7,7 +7,7 @@ export default function App() {
   return (
     <main>
       <Header />
-      {/* <TabNav /> */}
+      <TabNav />
     </main>
   );
 }
