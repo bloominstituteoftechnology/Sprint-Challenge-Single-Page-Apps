@@ -1,6 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+// import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 
 // TODO: Add missing menu/tabs/nav below
 
@@ -10,26 +11,71 @@ import { Link } from "react-router-dom";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
-const TabNav = () => {
-  return(
-    <div>
-      <div className="navBar">
-        <div>
+export default class MenuExampleBasic extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <Menu>
+        <Menu.Item
+          name='home'
+          active={activeItem === 'home'}
+          onClick={this.handleItemClick}
+        >
           <Link to='/'>Home</Link>
-        </div>
-        <div>
+        </Menu.Item>
+
+        <Menu.Item
+          name='characters'
+          active={activeItem === 'characters'}
+          onClick={this.handleItemClick}
+        >
           <Link to='/Characters'>Characters</Link>
-        </div>
-        <div>
+        </Menu.Item>
+
+        <Menu.Item
+          name='locations'
+          active={activeItem === 'locations'}
+          onClick={this.handleItemClick}
+        >
           <Link to='/Locations'>Locations</Link>
-        </div>
-        <div>
+        </Menu.Item>
+
+        <Menu.Item
+          name='episodes'
+          active={activeItem === 'episodes'}
+          onClick={this.handleItemClick}
+        >
           <Link to='/Episodes'>Episodes</Link>
-        </div>
-      </div>
-    </div>
-  )
+        </Menu.Item>
+      </Menu>
+    )
+  }
+}
 
-};
-
-export default TabNav;
+// export const TabNav {
+//
+//   // return(
+//   //   <div>
+//   //     <div className="navBar">
+//   //       <div>
+//   //         <Link to='/'>Home</Link>
+//   //       </div>
+//   //       <div>
+//   //         <Link to='/Characters'>Characters</Link>
+//   //       </div>
+//   //       <div>
+//   //         <Link to='/Locations'>Locations</Link>
+//   //       </div>
+//   //       <div>
+//   //         <Link to='/Episodes'>Episodes</Link>
+//   //       </div>
+//   //     </div>
+//   //   </div>
+//   // )
+//
+// };
