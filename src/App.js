@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage.js"
 import CharacterList from "./components/CharacterList.js"
 import LocationsList from "./components/LocationsList.js"
+import EpisodesList from "./components/EpisodesList.js"
 import axios from "axios"
 import { Route } from 'react-router-dom'
 
@@ -16,7 +17,7 @@ export default function App() {
       <Route exact path ='/' component = {WelcomePage}/>
       <Route path ='/Characters' component = {CharacterList}/>
       <Route path ='/Locations' component = {LocationsList}/>
-      <Route path ='/Episodes' />
+      <Route path ='/Episodes' component = {EpisodesList}/>
     </main>
   );
 }

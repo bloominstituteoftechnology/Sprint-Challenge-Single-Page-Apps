@@ -92,13 +92,13 @@ Create 3 page components to display data from 3 API endpoints:
 - You will need to add a EpisodeList and EpisodeCard component yourself.
 - [X] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
 - [ ] Create a component to show a grid of data from the API.
-  - [ ] Include `useState`, `useEffect`.
-  - [ ] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
+  - [X] Include `useState`, `useEffect`.
+  - [X] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
-  - [ ] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
-  - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
+  - [X] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
+  - [X] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
   - [ ] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)), etc.
-  - [ ] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
+  - [X] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
 
 > 💡**Reminder:** `git commit -am 'Card UI Loading Data Successfully'`
 
