@@ -1,12 +1,13 @@
 import React  from "react";
 import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 import CharacterList from './components/CharacterList';
 import LocationList from "./components/LocationsList.js";
 import EpisodeList from './components/EpisodeList';
+import WelcomePage from  './components/WelcomePage'
 
 
 
@@ -16,12 +17,11 @@ function App () {
     <main>
      <Header />
        <TabNav />
-         <Router>
-         <Route path="/characters" component={CharacterList}/>
-         <Route path="/locations" component={LocationList}/>
-         <Route path="/episodes" component={EpisodeList}/>
-         </Router>
-         
+          <Route exact path='/' component={WelcomePage} />
+         <Route path="/characters" component={CharacterList} />
+         <Route path="/locations" component={LocationList} />
+         <Route path="/episodes" component={EpisodeList} />
+       
     </main>
   );
 }

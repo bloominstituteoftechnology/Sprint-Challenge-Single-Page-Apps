@@ -9,7 +9,7 @@ import EpisodeCard from './EpisodeCard';
       
         const getEpisodeList = () => {
             axios
-                .get("https://rickandmortyapi.com/api/episode/")
+                .get("https://rickandmortyapi.com/api/episode")
                 .then(response => {
                     setEpisodeList(response.data.results);
                     console.log(response.data);
@@ -28,7 +28,6 @@ import EpisodeCard from './EpisodeCard';
             {episodeList.map(episode => (
                 <EpisodeCard key={episode.name} episode={episode} />
             ))}
-            <h2>Episode</h2>
         </section>
     );
 }

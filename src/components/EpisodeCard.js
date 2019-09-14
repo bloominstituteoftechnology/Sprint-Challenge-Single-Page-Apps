@@ -3,12 +3,14 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 
 function EpisodeCard (props) {
-     const {episode} =props;    
+     const { episode, air_date, name }=props.episode;    
     
     return (
-        <div className="episode-card">
-            {/* <h2>Episodes</h2> */}
-            <NavLink to='/episodes'> </NavLink>
+
+        <div>
+            <h4>Name: {name}</h4>
+            <h4>Air Date: {air_date}</h4>
+            <h4>Episode: {episode}</h4>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
 
 function TabNav () {
     const TabNav = () => <TabNav panes={panes} />
@@ -12,12 +13,12 @@ function TabNav () {
     ]
 
     return (
-        <div className="navbar">
-        <h4>Home</h4>
-        <h4>Characters</h4>
-        <h4>Locations</h4>
-        <h4>Episodes</h4>
-        </div>
+        <StyledNav className="navbar">
+        <NavLink to='/'>Home</NavLink>
+            <NavLink to='/characters' activeClassName="selected">Characters</NavLink>
+            <NavLink to='/locations' activeClassName="selected">Locations</NavLink>
+            <NavLink to='/episodes' activeClassName="selected">Episodes</NavLink>
+        </StyledNav>
     )
 };
 

@@ -3,18 +3,30 @@ import styled from 'styled-components';
 // import CharacterList from './components/CharacterList';
 
 function CharacterCard (props) {
-  const { name }=props.character;
+  const { name, image }=props.character;
+    
   
   return (
-    <span>Character:{name}</span>
-  )
-}
-
-export default CharacterCard
-
-
-  // const cardImg;
-
+    <>
+    <img src={image} alt={name} />
+    <StyledCharacterCard>Character:{name}</StyledCharacterCard>
+    </>
+    )
+  }
+  
+  const StyledCharacterCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin: 0 auto;
+  
+    `;
+  
+  export default CharacterCard
+  
+  
+    // const cardImg;
+  
   // < Card >
   // <img src="https://rickandmortyapi.com/api/character/avatar/" />
   // <Card.Content>
@@ -25,10 +37,4 @@ export default CharacterCard
   // </Card.Content>
   // </Card >
 
-  const StyledCharacterCard = styled.character`
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
-  margin: 0 auto;
-
-  `;
+ 
