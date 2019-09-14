@@ -1,5 +1,8 @@
 import React from "react";
+import CharacterList from './components/CharacterList';
 
-export default function CharacterCard() {
+function CharacterCard() {
   return <span>todo: character</span>;
 }
+
+export default CharacterCard;

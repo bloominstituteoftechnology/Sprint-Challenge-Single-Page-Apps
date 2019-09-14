@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import CharacterCard from './components/CharacterCard';
 
-export default function CharacterList(props) => {
+function CharacterList () {
   const [characterList, setCharacterList] = useState ([])
   // TODO: Add useState to track data from useEffect
 
@@ -14,17 +16,22 @@ export default function CharacterList(props) => {
           setCharacterList(response.data);
         })
         .catch(error => {
-          console.error('Server Error', error);
+          console.error(error);
         });
     }
 
-    getMovies();
+    getCharacterList();
   }, [name]);
 
 
   return (
     <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {characterList.map(character => (
+        <CharacterList key={character.name} character={character} />
+      ))}
+      <h2>Name: ${character.name}</h2>
     </section>
   );
 }
+
+export default CharacterList;
