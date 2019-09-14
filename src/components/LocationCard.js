@@ -7,7 +7,7 @@ function LocationCard(props) {
   return (
     <div>
         {name && type && dimension && residents}
-    <span>Location:{name}</span>
+    <span>Location:</span>
     </div>
   )
   }

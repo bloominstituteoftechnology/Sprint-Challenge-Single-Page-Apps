@@ -7,10 +7,12 @@ function EpisodeCard (props) {
     
     return (
         <div className="episode-card">
-            <h2>Episodes</h2>
-            <NavLink to={`/episodes/${episode.id + 1}`}>Next Episode</NavLink>
+            {/* <h2>Episodes</h2> */}
+            <NavLink to='/episodes'> </NavLink>
         </div>
     )
 }
 
 export default EpisodeCard;
+
+// ${episode.id + 1}`}>Next Episode

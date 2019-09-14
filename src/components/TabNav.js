@@ -11,12 +11,15 @@ function TabNav () {
     ]
 
     return (
-        <h4></h4>
-        
+        <div className="navbar">
+        <h4>Home</h4>
+        <h4>Characters</h4>
+        <h4>Locations</h4>
+        <h4>Episodes</h4>
+        </div>
     )
 };
 
-
-
-
 export default TabNav;
+
+// const 
