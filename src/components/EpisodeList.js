@@ -11,7 +11,8 @@ import EpisodeCard from './EpisodeCard';
             axios
                 .get("https://rickandmortyapi.com/api/episode/")
                 .then(response => {
-                    setEpisodeList(response.data);
+                    setEpisodeList(response.data.results);
+                    console.log(response.data);
                 })
                 .catch(error => {
                     console.error(error);

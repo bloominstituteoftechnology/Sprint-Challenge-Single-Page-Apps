@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
+import LocationCard from './LocationCard';
 
 function LocationList () {
     const [locationList, setLocationList] = useState([])
@@ -10,7 +11,8 @@ function LocationList () {
             axios
                 .get("https://rickandmortyapi.com/api/location")
                 .then(response => {
-                    setLocationList(response.data);
+                    setLocationList(response.data.results);
+                    console.log(response.data);
                 })
                 .catch(error => {
                     console.error(error);
@@ -18,7 +20,7 @@ function LocationList () {
         }
 
         getLocationList();
-    }, [name]);
+    }, []);
 
 
     return (

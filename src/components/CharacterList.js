@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import CharacterCard from './components/CharacterCard';
+import CharacterCard from './CharacterCard';
 
 function CharacterList () {
   const [characterList, setCharacterList] = useState ([])
@@ -11,9 +11,10 @@ function CharacterList () {
     //  Important: verify the 2nd `useEffect` parameter: the dependencies array!
     const getCharacterList = () => {
       axios
-        .get(`https://rickandmortyapi.com/api/character/${name}`)
+        .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
-          setCharacterList(response.data);
+          setCharacterList(response.data.results);
+          console.log(response.data);
         })
         .catch(error => {
           console.error(error);
@@ -21,15 +22,14 @@ function CharacterList () {
     }
 
     getCharacterList();
-  }, [name]);
+  }, []);
 
 
   return (
     <section className="character-list grid-view">
       {characterList.map(character => (
-        <CharacterList key={character.name} character={character} />
+        <CharacterCard key={character.name} character={character} />
       ))}
-      <h2>Name: ${character.name}</h2>
     </section>
   );
 }
