@@ -90,7 +90,7 @@ Create 3 page components to display data from 3 API endpoints:
 - `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
 - `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 - You will need to add a EpisodeList and EpisodeCard component yourself.
-- [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
+- [X] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
 - [ ] Create a component to show a grid of data from the API.
   - [ ] Include `useState`, `useEffect`.
   - [ ] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
@@ -108,10 +108,10 @@ Add a Router to this application using [React Router](https://reacttraining.com/
 
 > **Tip:** Review the [examples on the React Router site.](https://reacttraining.com/react-router/web/guides/quick-start)
 
-- [ ] Declare your routes with `<Route>` components (for each component created above.)
-  - [ ] Include `/character`, `/location` and `/episode` routes.
-- [ ] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
-- [ ] If you have any `<a>` tags, replace them with `<Link>` or `<NavLink>` components.
+- [X] Declare your routes with `<Route>` components (for each component created above.)
+  - [X] Include `/character`, `/location` and `/episode` routes.
+- [X] In your `App` component, add a navigation menu, [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic), or similar. (Hint: Make sure to use React Routers `NavLink` to link to your different pages.)
+- [X] If you have any `<a>` tags, replace them with `<Link>` or `<NavLink>` components.
 
 - [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
 

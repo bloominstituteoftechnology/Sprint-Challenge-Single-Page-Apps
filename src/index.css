@@ -37,3 +37,45 @@ main {
 header h1 {
   text-align: center;
 }
+
+.character{
+  width: 38%;
+  border: 1px solid grey;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.location{
+  width: 40%;
+  border: 1px solid grey;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.location h2 {
+  padding: 0px 10px;
+}
+
+.character img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.character-container, .locations-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.info-wrap{
+  padding: 5px 20px;
+}
