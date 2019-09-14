@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 // import CharacterList from './components/CharacterList';
 
 function CharacterCard (props) {
@@ -23,3 +24,11 @@ export default CharacterCard
 
   // </Card.Content>
   // </Card >
+
+  const StyledCharacterCard = styled.character`
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin: 0 auto;
+
+  `;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
+import styled from 'styled-components';
 
 function TabNav () {
     const TabNav = () => <TabNav panes={panes} />
@@ -22,4 +23,14 @@ function TabNav () {
 
 export default TabNav;
 
-// const 
+const StyledNav = styled.nav`
+display: flex;
+flex-direction: row;
+
+a {
+justify-content: center;
+align-items: center;
+padding: 15px;
+width: 1.5 rem;
+}
+ `;
