@@ -17,12 +17,12 @@ function App () {
     <main>
      <Header />
        <TabNav />
-          <Route exact path='/' component={WelcomePage} />
+         <Route exact path='/' component={WelcomePage} />
          <Route path="/characters" component={CharacterList} />
          <Route path="/locations" component={LocationList} />
          <Route path="/episodes" component={EpisodeList} />
        
-    </main>
+     </main>
   );
 }
 
@@ -31,7 +31,8 @@ export default App;
 // {...props } location = { location } 
 // {...props } episode = { episode }
 
-const AppContainer = styled.div`
-display: flex;
-flex-wrap: wrap; 
+const main = styled.div`
+width: 95%;
+marin: 0 auto;
+padding 10px;
 `;

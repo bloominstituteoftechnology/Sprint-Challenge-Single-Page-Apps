@@ -14,10 +14,20 @@ function TabNav () {
 
     return (
         <StyledNav className="navbar">
-        <NavLink to='/'>Home</NavLink>
-            <NavLink to='/characters' activeClassName="selected">Characters</NavLink>
-            <NavLink to='/locations' activeClassName="selected">Locations</NavLink>
-            <NavLink to='/episodes' activeClassName="selected">Episodes</NavLink>
+        <ul className="links">
+            <li>
+            <NavLink to='/'>Home </NavLink>
+            </li> 
+                <li>
+            <NavLink to='/characters' activeClassName="selected">Characters </NavLink>
+                </li>
+            <li>
+            <NavLink to='/locations' activeClassName="selected">Locations </NavLink>
+                </li>
+                <li>
+            <NavLink to='/episodes' activeClassName="selected">Episodes </NavLink>
+                </li>
+            </ul>
         </StyledNav>
     )
 };
@@ -27,11 +37,20 @@ export default TabNav;
 const StyledNav = styled.nav`
 display: flex;
 flex-direction: row;
-
-a {
 justify-content: center;
 align-items: center;
+align-content: flex-end;
 padding: 15px;
-width: 1.5 rem;
-}
- `;
+margin: 0 auto;
+list-style: none
+`;
+
+// const ul = styled.ul`
+// width: 1.5 rem;
+// color: #4285f4;
+// text-decoration: none;
+// padding: 5px;
+// `;
+
+
+

@@ -14,27 +14,18 @@ function CharacterCard (props) {
     )
   }
   
-  const StyledCharacterCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    margin: 0 auto;
-  
-    `;
-  
-  export default CharacterCard
-  
-  
-    // const cardImg;
-  
-  // < Card >
-  // <img src="https://rickandmortyapi.com/api/character/avatar/" />
-  // <Card.Content>
-  //   <Card.Header>{character.name}</Card.Header>
-  //   <Card.Meta>{location}</Card.Meta>
-  //   <Card.Episode>{episode}</Card.Episode>
+export default CharacterCard
+    
+const StyledCharacterCard = styled.div`
+    
+    padding: 10px 10px;
+    margin-bottom: 20px;
+      `;
 
-  // </Card.Content>
-  // </Card >
-
- 
+    //  const image =styled.img`
+    //   justify - content: center;
+    //   width: 45 %;
+    //   padding: 10px 20px;
+    //   margin: 0 auto;
+    // `;
+    
