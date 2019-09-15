@@ -1,5 +1,5 @@
 import React from "react";
-
+/* leave welcome page as is for now, added p tag with description of page */
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
@@ -11,6 +11,7 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      <p>Search for different characters, film locations, and episodes!</p>
     </section>
   );
-}
+};
