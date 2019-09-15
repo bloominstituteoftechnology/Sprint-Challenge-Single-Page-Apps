@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-export default function CharacterList() {
+const CharacterList = () => {
   // TODO: Add useState to track data from useEffect
+  const [characters, setCharacters] = useState([])
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -14,3 +15,5 @@ export default function CharacterList() {
     </section>
   );
 }
+
+export default CharacterList;
