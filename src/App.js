@@ -34,5 +34,5 @@ export default App;
 const main = styled.div`
 width: 95%;
 marin: 0 auto;
-padding 10px;
+padding 5px;
 `;

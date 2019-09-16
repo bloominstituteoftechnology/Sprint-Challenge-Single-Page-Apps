@@ -4,12 +4,14 @@ import styled from 'styled-components';
 
 function CharacterCard (props) {
   const { name, image }=props.character;
+  // const { images } =props.character;
     
   
   return (
     <>
     <img src={image} alt={name} />
-    <StyledCharacterCard>Character:{name}</StyledCharacterCard>
+    {/* <StyledImageCard>{image}</StyledImageCard> */}
+    <StyledCharacterCard>Character: {name}</StyledCharacterCard>
     </>
     )
   }
@@ -17,15 +19,20 @@ function CharacterCard (props) {
 export default CharacterCard
     
 const StyledCharacterCard = styled.div`
-    
-    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
     margin-bottom: 20px;
+    color: red;
       `;
 
-    //  const image =styled.img`
-    //   justify - content: center;
-    //   width: 45 %;
-    //   padding: 10px 20px;
-    //   margin: 0 auto;
-    // `;
+// const StyledImageCard =styled.img`
+//       justify-content: center;
+//       width: 45%;
+//       padding: 10px 20px;
+//       margin: 0 auto;
+//       border-radius: 5px;
+//     `;
     

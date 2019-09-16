@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
+import { Tab, MenuItem, Pane } from "semantic-ui-react";
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom'
 
@@ -37,6 +37,7 @@ export default TabNav;
 const StyledNav = styled.nav`
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 align-content: flex-end;
