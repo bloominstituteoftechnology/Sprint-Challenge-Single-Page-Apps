@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const EpisdoeList = () => {
+const EpisodeList = () => {
   return <span>TODO: episode list</span>
 }
 
+export default EpisodeList;

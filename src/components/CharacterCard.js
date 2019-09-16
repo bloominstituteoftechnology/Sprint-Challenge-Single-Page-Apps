@@ -1,7 +1,8 @@
 import React from "react";
+import CharacterList from "./CharacterList";
 
 const CharacterCard = () => {
-  return <span>todo: character</span>;
+  return <CharacterList />
 }
 
 
