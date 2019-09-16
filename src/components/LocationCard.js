@@ -1,11 +1,23 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import styled from 'styled-components'
 
-export default function LocationCard({ name, type, dimension, residents, id }) {
-  
+
+
+const StyledH2 = styled.h2`
+width: 100%;
+background-color: green;`
+
+export default function LocationCard(props) {
+  console.log("LC", props)
   return( 
-  <Link to ={`/location/${id}`}>
-  <span>todo: location</span>
-  </Link>
+  <div>
+   <StyledH2>{props.location.name}</StyledH2>
+   {props.location.type}-
+   {props.location.dimension}  {props.location.resident}
+
+            
+
+   </div>
+ 
   )
 }
