@@ -1,5 +1,23 @@
 import React from "react";
+import { Card } from 'semantic-ui-react';
+/* rendering UI using semantic card and of name type dimension and residents */
+export default function LocationCard(props) {
+  return(
+    <Card>
+      <Card.Content>
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
-}
+      <Card.Header>{props.name}</Card.Header>
+      
+      <Card.Description>
+          <span>  Planet: {props.type}  </span>
+          <span>  Dimension: {props.dimension}  </span>
+      </Card.Description>
+      
+      </Card.Content>
+      
+      <Card.Content extra>
+        Residents: {props.residents.length}
+      </Card.Content>
+    </Card>
+  );
+};
