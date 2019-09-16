@@ -37,3 +37,16 @@ main {
 header h1 {
   text-align: center;
 }
+.navigation{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around
+}
+.links{
+  style: none;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}

@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, Tab } from "semantic-ui-react";
 
 function CharacterCard({characters}) {
   console.log(characters)
+
   return(
     <Card>
       <Image src={characters.image} alt={characters.name}/>

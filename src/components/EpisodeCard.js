@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
+
 function EpisodeCard({episodes}) {
   console.log(episodes)
   return(
