@@ -9,7 +9,7 @@ export default function SearchForm({ onSearch }) {
         <div class="ui focus input">
         <input type="text" placeholder="Search..." />
         </div>
-        <button type="submit">Search</button>
+        <button class="ui inverted primary button" type="submit">Search</button>
 
     </section>
   );

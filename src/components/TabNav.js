@@ -18,6 +18,9 @@ const panes = [
     },
     {
       menuItem: { key: 'episodes', icon: 'file video', content: <NavLink to='/episodes'>Episodes</NavLink> },
+    },
+    {
+      menuItem: { key: 'search', icon: 'cog', content: <NavLink to='/search'>Search</NavLink> }
     }
   ];
 
