@@ -1,15 +1,15 @@
 import React from "react";
-
+import { Card, Icon, Image } from "semantic-ui-react";
 
 function LocationCard({locations}) {
   console.log(locations)
   return(
-    <div>
-      <h2>{locations.name}</h2>
-      <h3>Type: {locations.type}</h3>
-      <h4>Dimension: {locations.dimension}</h4>
+    <Card color='green'>
+      <Card.Header>{locations.name}</Card.Header>
+      <Card.Description>Type: {locations.type}</Card.Description>
+      <Card.Description>Dimension: {locations.dimension}</Card.Description>
       {console.log(locations)}
-    </div>
+    </Card>
   );
 }
 

@@ -1,16 +1,15 @@
 import React from "react";
-
+import { Card, Icon, Image } from "semantic-ui-react";
 
 function EpisodeCard({episodes}) {
   console.log(episodes)
   return(
-    <div>
-      <img src={episodes.img} alt={episodes.name}/>
-      <h2>{episodes.name}</h2>
-      <h3>Air Date: {episodes.air_date}</h3>
-      <h4>Episode: {episodes.episode}</h4>
+    <Card>
+      <Card.Header>{episodes.name}</Card.Header>
+      <Card.Meta>Air Date: {episodes.air_date}</Card.Meta>
+      <Card.Description>Episode: {episodes.episode}</Card.Description>
       {console.log(episodes)}
-    </div>
+    </Card>
   );
 }
 
