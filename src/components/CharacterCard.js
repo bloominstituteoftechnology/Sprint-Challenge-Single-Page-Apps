@@ -1,22 +1,20 @@
 import React from "react";
 import styled from 'styled-components';
-// import CharacterList from './components/CharacterList';
+
 
 function CharacterCard (props) {
   const { name, image }=props.character;
-  // const { images } =props.character;
-    
   
   return (
     <>
-    <img src={image} alt={name} />
-    {/* <StyledImageCard>{image}</StyledImageCard> */}
-    <StyledCharacterCard>Character: {name}</StyledCharacterCard>
-    </>
+    <Img src={image} alt={name} />
+    <StyledCharacterCard>Character Name : {name} </StyledCharacterCard>
+     </>
     )
   }
   
-export default CharacterCard
+export default CharacterCard;
+
     
 const StyledCharacterCard = styled.div`
     display: flex;
@@ -26,13 +24,19 @@ const StyledCharacterCard = styled.div`
     padding: 10px 5px;
     margin-bottom: 20px;
     color: red;
+    width: 22%;
       `;
 
-// const StyledImageCard =styled.img`
-//       justify-content: center;
-//       width: 45%;
-//       padding: 10px 20px;
-//       margin: 0 auto;
-//       border-radius: 5px;
-//     `;
+const Img = styled.img`
+      justify-content: center;
+      width: 22%;
+      padding: 10px 20px;
+      margin: 0 auto;
+      border-radius: 10px;
+    `;
     
+
+// <div>
+//   <image style={{ borderRadius: "15px", padding: "15px", marginBottom: "15px" }} />
+// </div>
+// <StyledImageCard>{image} </StyledImageCard>
