@@ -11,18 +11,18 @@ const CharacterList = () => {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
       .get('https://rickandmortyapi.com/api/character/')
-      .then(response => {
-        setCharacters(response.data.results)
+      .then(reschar => {
+        setCharacters(reschar.data.results)
       })
       .catch(error => {
-        console.log('Error', error)
+        console.log('Character Error', error)
       })
   }, []);
 
   return (
-    <section className="character-list grid-view">
+    <section className='character-list grid-view'>
       {characters.map(character => (
-        <div className='character-list' key={character.id}>
+        <div className='characters' key={character.id}>
           <img 
             className='character-img'
             src={character.image}

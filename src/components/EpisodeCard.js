@@ -1,7 +1,8 @@
 import React from 'react';
+import EpisodeList from './EpisodeList';
 
 const EpisodeCard = ({ name, air_date, episode, characters }) => {
-  return <span>TODO: episode</span>
+  return <EpisodeList />
 }
 
 export default EpisodeCard;

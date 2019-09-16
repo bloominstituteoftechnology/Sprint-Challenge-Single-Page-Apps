@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import LocationsList from './LocationsList';
 
 const LocationCard = ({ name, type, dimension, residents }) => {
-  return <span>todo: location</span>;
+  return <LocationsList />
 }
 
 export default LocationCard;
