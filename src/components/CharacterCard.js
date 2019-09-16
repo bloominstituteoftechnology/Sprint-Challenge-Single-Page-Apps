@@ -2,13 +2,14 @@ import React from "react";
 import styled from 'styled-components';
 
 
+
 function CharacterCard (props) {
   const { name, image }=props.character;
-  
+   
   return (
     <>
     <Img src={image} alt={name} />
-    <StyledCharacterCard>Character Name : {name} </StyledCharacterCard>
+    <StyledCharacterCard>Character Name: {name}</StyledCharacterCard>
      </>
     )
   }

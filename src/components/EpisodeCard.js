@@ -1,7 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-// import EpisodeList from './components/EpisodeList';
-import { NavLink } from 'react-router-dom';
 
 function EpisodeCard (props) {
      const { episode, air_date, name }=props.episode;    

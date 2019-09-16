@@ -7,7 +7,7 @@ function LocationCard(props) {
   const { name, type, dimension } =props.location;
   return (
     <>
-      <StyledLocationCard>Location: {name} {type} {dimension} </StyledLocationCard>
+      <StyledLocationCard>Location: {name} {type} {dimension}</StyledLocationCard>
     </>
    )
   }
