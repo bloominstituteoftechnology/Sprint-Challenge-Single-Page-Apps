@@ -25,15 +25,20 @@ main {
 }
 
 .grid-view div.card.ui {
-  margin: 1.25rem;
+  margin: 1.2rem;
 }
-/*
+
 .main-img {
   display: block;
-  border-radius: 100%;
+  border: 2px solid #aaa;
   margin: 0 auto;
-} */
+} 
 
 header h1 {
   text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-top: 1.5rem;
 }
