@@ -36,9 +36,4 @@ function CharacterList () {
 
 export default CharacterList;
 
-// const CharacterCards = styled.CharacterCards`
-//     width: 45%;
-//     margin: 0 auto;
-
-//  `;
 

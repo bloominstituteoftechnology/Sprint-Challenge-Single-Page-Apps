@@ -7,7 +7,6 @@ function EpisodeCard (props) {
     return (
 
         <div>
-            {/* <h4>Name: {name}</h4> */}
             <h4>Air Date: {air_date}</h4>
             <h4>Episode: {episode}</h4>
             <StyledEpisodeCard>Episode Name: {name} </StyledEpisodeCard>

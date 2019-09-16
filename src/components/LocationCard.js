@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-// import LocationList from './LocationsList';
 
 function LocationCard(props) {
   const { name, type, dimension } =props.location;
