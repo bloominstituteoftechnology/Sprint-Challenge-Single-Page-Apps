@@ -1,5 +1,16 @@
 import React from "react";
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
+
+function LocationCard({locations}) {
+  console.log(locations)
+  return(
+    <div>
+      <h2>{locations.name}</h2>
+      <h3>Type: {locations.type}</h3>
+      <h4>Dimension: {locations.dimension}</h4>
+      {console.log(locations)}
+    </div>
+  );
 }
+
+export default LocationCard;

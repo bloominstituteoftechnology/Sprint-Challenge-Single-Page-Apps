@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import LocationCard from './LocationCard.js'
+import EpisodeCard from './EpisodeCard.js'
 
 export default function EpisodeList() {
-  const [locations, setLocations] = useState([])
+  const [episodes, setEpisodes] = useState([])
 
   useEffect(() => {
-      axios.get('https://rickandmortyapi.com/api/location/')
+      axios.get('https://rickandmortyapi.com/api/episode/')
         .then(res => {
-          setLocations([...res.data.results]);
+          setEpisodes([...res.data.results]);
         })
         .catch(error => {
           console.log('error',error)
@@ -19,12 +19,11 @@ export default function EpisodeList() {
 
 
   return (
-    <section className="location-list grid-view">
-      <div>{locations.map(location => (
-        <LocationCard key={location.id} locations={location}/>
+    <section className="episode-list grid-view">
+      <div>{episodes.map(episode => (
+        <EpisodeCard key={episode.id} episodes={episode}/>
       ))}
       </div>
     </section>
   );
 }
-
