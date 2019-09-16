@@ -1,6 +1,7 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { NavLink } from "react-router-dom";
+
 
 // TODO: Add missing menu/tabs/nav below
 
