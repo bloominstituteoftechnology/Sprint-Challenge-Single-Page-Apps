@@ -15,7 +15,7 @@ const EpisodeList = () => {
       })
   }, [])
   return (
-    <section className='episode-list grid-view'>
+    <section className='episode-list'>
       {episodes.map(episode => (
         <div className='episode' key={episode.id}>
           <h2>{episode.name}</h2>

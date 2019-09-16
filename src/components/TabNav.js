@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
+import { Divider, Tab } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 // TODO: Add missing menu/tabs/nav below
@@ -10,6 +10,35 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
+// const color = 'violet'
+
+// const panes = [
+//   {
+//     menuItem: 'Home Page',
+//     render: () => <Tab.Pane attached={false}><NavLink to='/'>Home Page</NavLink></Tab.Pane>,
+//   },
+//   {
+//     menuItem: 'Characters',
+//     render: () => <Tab.Pane attached={false}><NavLink to='/character/'>Characters</NavLink></Tab.Pane>,
+//   },
+//   {
+//     menuItem: 'Locations ',
+//     render: () => <Tab.Pane attached={false}><NavLink to='/location/'>Locations</NavLink></Tab.Pane>,
+//   },
+//   {
+//     menuItem: 'Episodes',
+//     render: () => <Tab.Pane attached={false}></Tab.Pane>,
+//   }
+// ]
+
 export default function TabNav() {
+  return (
+    <div>
+      <NavLink to='/'>Home Page</NavLink>
+      <NavLink to='/character/'>Characters</NavLink>
+      <NavLink to='/location/'>Locations</NavLink>
+      <NavLink to='/episode/'>Episodes</NavLink>
+    </div>
+  )
 
 };

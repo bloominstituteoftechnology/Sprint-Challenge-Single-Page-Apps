@@ -16,7 +16,7 @@ const LocationsList = () => {
   }, []);
 
   return (
-    <section className='location-list grid-view'>
+    <section className='location-list'>
       {locations.map(location => (
         <div className='locations' key={location.id}>
           <h2>{location.name}</h2>
