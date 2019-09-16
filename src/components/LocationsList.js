@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import LocationCard from './LocationCard';
-/* set the locations to the location api data request and render state */
+/* set the locations to the location api data request and render */
 export default function LocationsList() {
     const [locations, setLocation] = useState([]);
 

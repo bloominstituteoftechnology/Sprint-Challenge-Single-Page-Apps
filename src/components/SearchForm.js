@@ -1,18 +1,18 @@
 import React, { useState } from "react";
+import { Input } from 'semantic-ui-react';
 
 export default function SearchForm({ onSearch }) {
-  // STRETCH TODO: Add stateful logic for query/form data
+  // STRETCH TODO: Add stateful logic for query/form data, *Added stretch MODAL component and search 
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(name)}>
-        <input
-          onChange={handleInputChange}
-          placeholder="name"
-          value={name}
-          name="name"
-        />
+
+        <div class="ui focus input">
+        <input type="text" placeholder="Search..." />
+        </div>
         <button type="submit">Search</button>
-      </form>
+
     </section>
   );
 }
+
+

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
-/* rendering UI using semantic card and of name type dimension and residents */
+/* rendering UI using semantic card and icons */
 export default function LocationCard(props) {
   return(
     <Card>
