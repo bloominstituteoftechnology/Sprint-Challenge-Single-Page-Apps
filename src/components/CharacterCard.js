@@ -9,7 +9,7 @@ function CharacterCard (props) {
   return (
     <>
     <Img src={image} alt={name} />
-    <StyledCharacterCard>Character Name: {name}</StyledCharacterCard>
+    <StyledCharacterCard>Character Name: {name} </StyledCharacterCard>
      </>
     )
   }

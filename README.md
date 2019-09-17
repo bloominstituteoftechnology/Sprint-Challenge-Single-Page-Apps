@@ -31,7 +31,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 > Answer: AJAX === Asynchronous JavaScript And XML.
 
 - [ ] What are `controlled components` in React?
-> Answer: The ability to control input throughout React using the virtual DOM. Example: Text in the input will change only if the state changes
+> Answer: The ability to control input throughout React using state to control the values of the form. 
+Example: Text in the input will change only if the state changes
 
 
 ## Project Set Up

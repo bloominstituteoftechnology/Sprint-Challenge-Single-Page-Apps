@@ -25,5 +25,5 @@ const StyledLocationCard = styled.div`
       padding: 15px;
       font-size: 1.4rem;
       line-spacing. 0.8;
-      color: lightgreen;
+      color: green;
       `;
