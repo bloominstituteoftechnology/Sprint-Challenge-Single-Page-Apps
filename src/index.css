@@ -40,7 +40,8 @@ header h1 {
 .navigation{
   padding-top: 1rem;
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+  margin-bottom: 2rem;
 }
 .links{
   style: none;

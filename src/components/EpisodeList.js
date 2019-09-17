@@ -20,10 +20,9 @@ export default function EpisodeList() {
 
   return (
     <section className="episode-list grid-view">
-      <div>{episodes.map(episode => (
+      {episodes.map(episode => (
         <EpisodeCard key={episode.id} episodes={episode}/>
       ))}
-      </div>
     </section>
   );
 }
