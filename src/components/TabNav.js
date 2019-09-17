@@ -22,13 +22,13 @@ export default function TabNav() {
     <Nav.Link href="/">Home</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link to = '/CharacterList' eventKey="link-1">Characters</Nav.Link>
+    <Nav.Link href= '/CharacterList' eventKey="link-1">Characters</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link to= '/LocationList' eventKey='link-2'>Location</Nav.Link>     
+    <Nav.Link href= '/LocationList' eventKey='link-2'>Location</Nav.Link>     
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link to= '/EpisodeList' eventKey='link-3'>Episodes</Nav.Link>     
+    <Nav.Link href= '/EpisodeList' eventKey='link-3'>Episodes</Nav.Link>     
   </Nav.Item>
 
 </Nav>

@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EpisodeCard from './EpisodeCard'
-import styled from 'styled-components'
 
 
 
 
-const StyledH2 = styled.h2`
-width: 40%;
-background-color: orange;`
 
 export default function EpisodeList() {
   
@@ -34,7 +30,7 @@ export default function EpisodeList() {
     <section className="character-list grid-view">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {episodes.map(episode =>(
-      <StyledH2><EpisodeCard key={episode.id} character={episode}  /></StyledH2>))}
+      <EpisodeCard key={episode.id} character={episode}  />))}
     </section>
   );
 }

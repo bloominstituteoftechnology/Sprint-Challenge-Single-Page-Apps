@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from './CharacterCard'
-import styled from 'styled-components'
 
 
 
 
-// const StyledH2 = styled.h2`
-// width: 50%;
-// display: flex;
-// flex-wrap: wrap;
 
-// `
+
 
 export default function CharacterList() {
   

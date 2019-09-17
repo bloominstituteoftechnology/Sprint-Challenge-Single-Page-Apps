@@ -1,11 +1,12 @@
 import React from "react";
 import TabNav from "./components/TabNav.js";
-import {Route, NavLink} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList'
 import LocationsList from "./components/LocationsList.js";
 import WelcomePage from './components/WelcomePage'
 import EpisodeList from './components/EpisodeList'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 export default function App() {
@@ -15,20 +16,8 @@ export default function App() {
 
       <Header />
       <WelcomePage />
-      <TabNav />
-
-
-
-
-      <NavLink exact to = '/'>Home</NavLink>
-      <NavLink  exact to = '/CharacterList'>Characters</NavLink>
-      <NavLink exact to = '/LocationList'>Location</NavLink>
-      <NavLink exact to = '/EpisodeList'>Episodes</NavLink>
-
-
-    
-    
-     
+      <TabNav/>
+ 
     
 
       <Route  exact path ='/' component={Header} />
