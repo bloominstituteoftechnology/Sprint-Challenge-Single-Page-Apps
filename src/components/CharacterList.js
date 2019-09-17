@@ -6,9 +6,12 @@ import styled from 'styled-components'
 
 
 
-const StyledH2 = styled.h2`
-width: 40%;
-background-color: orange;`
+// const StyledH2 = styled.h2`
+// width: 50%;
+// display: flex;
+// flex-wrap: wrap;
+
+// `
 
 export default function CharacterList() {
   
@@ -34,7 +37,7 @@ export default function CharacterList() {
     <section className="character-list grid-view">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {characters.map(character =>(
-      <StyledH2><CharacterCard key={character.id} character={character}  /></StyledH2>))}
+      <CharacterCard key={character.id} character={character}  />))}
     </section>
   );
 }

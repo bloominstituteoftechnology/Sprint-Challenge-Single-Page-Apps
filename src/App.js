@@ -1,5 +1,5 @@
 import React from "react";
-// import TabNav from "./components/TabNav.js";
+import TabNav from "./components/TabNav.js";
 import {Route, NavLink} from 'react-router-dom'
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList'
@@ -12,17 +12,24 @@ export default function App() {
   
   return (
     <main>
-      <NavLink to = '/'>Home Page</NavLink>
-      <NavLink to = '/CharacterList'>Characters</NavLink>
-      <NavLink to = '/LocationList'>Location</NavLink>
-      <NavLink to = '/EpisodeList'>Episodes</NavLink>
-
 
       <Header />
       <WelcomePage />
+      <TabNav />
+
+
+
+
+      <NavLink exact to = '/'>Home</NavLink>
+      <NavLink  exact to = '/CharacterList'>Characters</NavLink>
+      <NavLink exact to = '/LocationList'>Location</NavLink>
+      <NavLink exact to = '/EpisodeList'>Episodes</NavLink>
+
+
+    
     
      
-      {/* <TabNav /> */}
+    
 
       <Route  exact path ='/' component={Header} />
       <Route path = '/CharacterList' component={CharacterList } />
