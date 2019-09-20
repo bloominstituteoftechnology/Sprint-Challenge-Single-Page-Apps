@@ -5,12 +5,13 @@ const Card = styled.div`
 color:red;
 `;
 export default function CharacterCard(props) {
+  console.log('Characters', props);
   return (
     <Card>
         <div className="char-card">
-          <h2>Characters: {props.characters}</h2>
-          <p>Location: {props.location}</p>
-          <p>Episodes:{props.episodes}</p>
+          <h2>Name: {props.name}</h2>
+          <p>Status: {props.status}</p>
+          <p>Species:{props.species}</p>
         </div>
       </Card>
   )
