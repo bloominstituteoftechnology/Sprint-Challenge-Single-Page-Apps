@@ -37,3 +37,17 @@ main {
 header h1 {
   text-align: center;
 }
+
+
+.character-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
