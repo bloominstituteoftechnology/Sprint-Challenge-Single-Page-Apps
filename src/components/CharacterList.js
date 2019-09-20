@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 
 const CharacterListStyle = styled.div`
@@ -17,7 +18,7 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 
   const [Personnage, setPersonnage] = useState([]);
-  
+  const [initialPersonnage, setInitialPersonnage] = useState([]);
   
 
   useEffect(() => {
@@ -27,9 +28,7 @@ export default function CharacterList() {
       .get("https://rickandmortyapi.com/api/character/")
       .then(response  => {
       setPersonnage(response.data.results)
-  
-      // console.log(response.data.results);
-  
+      setInitialPersonnage(response.data.results)
       }, [])
   
       .catch(error => {
@@ -37,11 +36,22 @@ export default function CharacterList() {
       })
     }, []);
 
+    const filterName = event => {
+      let items = initialPersonnage;
+      items = items.filter(
+        item =>
+        item.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1
+      );
+      setPersonnage(items);
+    }
+
   return (
     <CharacterListStyle>
+    <SearchForm onSearch={filterName} />
     <section className="character-list">
       {Personnage.map((personnage) =>
         <CharacterCard
+          key={personnage.id}
           name={personnage.name}
           status={personnage.status}
           image={personnage.image}
