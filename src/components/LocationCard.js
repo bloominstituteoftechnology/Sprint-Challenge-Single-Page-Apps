@@ -2,7 +2,6 @@ import React from "react";
 
 
 
-
 const LocationCard = props => {
   return (
     <div className = "card" key = {jssPluginPropsSort.id}>

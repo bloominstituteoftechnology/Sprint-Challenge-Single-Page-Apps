@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 import CharacterCard from "./CharacterCard";
 
 // const CharacterContainer = styled.div `
 
 // `
+
+const CardContainer = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -25,10 +32,10 @@ export default function CharacterList() {
 
 
   return (
-  <div>
+  <CardContainer className = "card-container">
     {characters.map(object => {
-      return <CharacterCard key = {object.name} name = {object.name} status = {object.status} species = {object.species} gender = {object.gender} />;
+      return <CharacterCard key = {object.name} image = {object.image} name = {object.name} status = {object.status} species = {object.species} gender = {object.gender} />;
       })}
-  </div>
+  </CardContainer>
   );
 }
