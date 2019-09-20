@@ -20,7 +20,7 @@ width: 100%;
 `
 
 const CharacterName = styled.h1 `
-  
+  color: darkkhaki;
 `
 
 const CharacterInfo = styled.p `
