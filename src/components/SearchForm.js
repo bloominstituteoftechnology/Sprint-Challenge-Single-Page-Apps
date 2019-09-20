@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Button, Card } from 'react-bootstrap';
+import axios from 'axios';
 import "../index.css";
 import { StaticData } from './staticdata';
 import { array } from "prop-types";
+
+const apiLink='https://rickandmortyapi.com/api/character/';
 
 export default function SearchForm() {
   const [result, setResult] = useState([]);
   const [apiList, setList] = useState([]);
   const [searchError, setSearchError] = useState('');
+  const newResults = [];
 
   const initialSearchForm = { name: '' };
  
 
   const Search = (form) => {
-    const character = StaticData.results;
-    const newResults = [];
-    console.log(character);
+    const character=apiList;
     for(let i=character.length-1; i>=0; i--){
 
       const names = character[i].name.split(' ');
@@ -24,23 +26,26 @@ export default function SearchForm() {
       const firstName = names[0];
       const lastName = names[1];
       
-      // console.log(fullName, form.name);
+      //console.log(firstName === form.name);
       if(firstName === form.name || 
          lastName === form.name||
          fullName === form.name){
           
          newResults.push(character[i]);
-         if(i===0)setResult(newResults);
       }
+      if(i===0)setResult(newResults);
     } 
   }
 
   const CheckResult = () => {
-    console.log(result);
+    
     return result;
   }
 
   useEffect(() => {
+    axios.get(apiLink).then(res => {
+      setList(apiList.concat(res.data.results));
+    }).catch(e => console.log(e));
     CheckResult();
   }, [result]);
  
