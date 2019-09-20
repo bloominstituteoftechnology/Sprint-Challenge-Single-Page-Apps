@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Label } from 'semantic-ui-react';
 
- const LocationCard = ({ location }) => {
+ const LocationCard = ({ location }) =>{
   return (
     <Card>
       <Card.Content>

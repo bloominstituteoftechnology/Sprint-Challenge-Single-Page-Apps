@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import {icon} from 'semantic-ui'
+
+
 
 const SearchForm =(props) => {
  
   return (
+    
     <section className="search-form">
    <div class="ui search">
   <div class="ui icon input">

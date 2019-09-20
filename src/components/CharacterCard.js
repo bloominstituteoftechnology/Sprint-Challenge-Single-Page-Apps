@@ -18,10 +18,11 @@ export default function CharacterCard({ character }) {
       </Card.Content>
       <Card.Content extra>
           <NavLink to='/episode'>
-            <Icon name='video' />
-            {character.episode.length} Episode{character.episode.length > 1 && 's'}
+            {/* <Icon name='video' />
+            {character.episode.length} Episode{character.episode.length > 1 && 's'} */}
           </NavLink>
       </Card.Content>
     </Card>
   )
 }
+

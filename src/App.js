@@ -5,7 +5,7 @@ import TabNav from "./components/TabNav.js";
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
-import SearchForm from './components/SearchForm';
+
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
       <Route exact path='/' component={WelcomePage} />
       <Route path='/character' component={CharacterList} />
       <Route path='/location' component={LocationsList} />
-      <Route path='/search' component={SearchForm} />
+    
 
     </main>
   );

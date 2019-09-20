@@ -18,14 +18,14 @@ export default function Nav() {
         <Icon name='map outline' />
         Locations
       </NavLink>
-      <NavLink to='/episode' className='item'>
+      {/* <NavLink to='/episode' className='item'>
         <Icon name='video' />
         Episodes
-      </NavLink>
-      <NavLink to='/search' className='item'>
+      </NavLink> */}
+      {/* <NavLink to='/search' className='item'>
         <Icon name='search' />
         Character Search
-      </NavLink>
+      </NavLink> */}
     </div>
   )
 };
