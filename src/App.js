@@ -5,6 +5,7 @@ import { Route, Link } from "react-router-dom";
 import CharacterList from "./components/CharacterList";
 // import CharacterCard from "./components/CharacterCard";
 import WelcomePage from "./components/WelcomePage";
+import SearchForm from "./components/SearchForm";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Link to="/CharacterList">Characters</Link>
 
       <Header />
+      <SearchForm />
       <WelcomePage />
 
       {/* Route */}

@@ -5,9 +5,9 @@ export default function CharacterCard(props) {
 
   return (
     <div>
-      <img src={props.character.image} />
       <p>{props.character.name} </p>
-      <p>{props.character.origin}</p>
+      <p>{props.character.origin.name}</p>
+      <img src={props.character.image} />
     </div>
   );
 }
