@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 
-export default function SearchForm({ onSearch }) {
+//data.results.name
+
+ export default function SearchForm({ onSearch }) {
+
 
   const [person, setPerson] = useState({ name: ""});
   const handleInputChange = e => {
@@ -9,7 +12,8 @@ export default function SearchForm({ onSearch }) {
     setPerson({ ...person, [e.target.name]: e.target.value });
   };
 
-//data.results.name
+
+ 
 
   // STRETCH TODO: Add stateful logic for query/form data
   return (
@@ -25,4 +29,16 @@ export default function SearchForm({ onSearch }) {
       </form>
     </section>
   );
+
+  
 }
+
+// handleSubmit(values, { setStatus }) {
+//   axios
+//     // values = object with all our data.
+//     .post("https://rickandmortyapi/character/?name", values)
+//     .then(res => {
+//       setStatus(res.data);
+//     })
+//     .catch(err => console.log(err.response));
+// }
