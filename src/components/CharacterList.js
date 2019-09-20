@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-import axios from 'axios'
+import CharacterCard from "./CharacterCard";
+
+// const CharacterContainer = styled.div `
+
+// `
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
-
-
 
   useEffect(() => {
     axios
@@ -22,8 +25,10 @@ export default function CharacterList() {
 
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+  <div>
+    {characters.map(object => {
+      return <CharacterCard key = {object.name} name = {object.name} status = {object.status} species = {object.species} gender = {object.gender} />;
+      })}
+  </div>
   );
 }
