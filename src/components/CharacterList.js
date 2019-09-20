@@ -13,7 +13,8 @@ export default function CharacterList() {
     axios
       .get(`https://rickandmortyapi.com/api/character/`)
       .then(response => {
-        setCharacters(response.data);
+        setCharacters(response.data.results);
+        console.log(response);
       })
       .catch(error => {
         console.log("This is error", error);
@@ -40,6 +41,7 @@ export default function CharacterList() {
       {/* {characters.map(character => (
         <CharacterCard key={character.id} character={character} />
       ))} */}
+
       {characters.map(character => (
         <CharacterCard key={character.id} character={character} />
       ))}
