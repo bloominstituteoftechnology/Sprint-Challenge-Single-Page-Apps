@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import styled from 'styled-components';
 
 import CharacterCard from "./CharacterCard";
+
+
+const CharacterListStyle = styled.div`
+background-color: blue;
+display: flex;
+justify-content: center;
+`
+
 
 export default function CharacterList() {
 
@@ -29,6 +38,7 @@ export default function CharacterList() {
     }, []);
 
   return (
+    <CharacterListStyle>
     <section className="character-list">
       {Personnage.map((personnage) =>
         <CharacterCard
@@ -37,6 +47,7 @@ export default function CharacterList() {
           />
           )}
     </section>
+    </CharacterListStyle>
   );
 }
 
