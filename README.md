@@ -25,9 +25,8 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
-
-> Answer:
+- [ ]  Explain benefit(s) using `client-side routing`? 
+> Answer:Client side routing is beneficial because we don't have to wait for the server to respond like server-side routing does when it makes a request to the server. the data is just there. 
 
 ## Project Set Up
 
