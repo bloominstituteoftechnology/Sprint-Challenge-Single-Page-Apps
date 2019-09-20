@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm.js"
 
 // const CharacterContainer = styled.div `
 
@@ -12,6 +13,8 @@ const CardContainer = styled.div `
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: 30px;
+  margin-riight: 30px;
 `
 
 export default function CharacterList() {
