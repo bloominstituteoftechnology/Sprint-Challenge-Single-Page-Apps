@@ -1,28 +1,8 @@
 import React, { useState, useEffect } from "react";
+import CharacterCard from "./CharacterCard";
 
-export default function SearchForm() {
-  const characters = [
-    "Harry Potter",
-    "Luna Lovegood",
-    "Neville Longbottom",
-    "Hermione Granger",
-    "Ron Weasley",
-    "Ginny Weasley",
-    "Fred Weasley",
-    "George Weasley",
-    "Albus Dumbledore ",
-    "Aberforth Dumbledore ",
-    "Dudley Dursley ",
-    "Petunia Dursley ",
-    "Vernon Dursley",
-    "Cornelius Fudge",
-    "Rubeus Hagrid ",
-    "Viktor Krum ",
-    "Bellatrix Lestrange",
-    "Narcissa Malfoy",
-    "Draco Malfoy"
-  ];
-
+export default function SearchForm({peopleData}) {
+  const characters = peopleData;
 
   // searchTerm will save the data from the search input on every occurance of the change event.
   const [searchTerm, setSearchTerm] = useState("");
@@ -31,7 +11,7 @@ export default function SearchForm() {
 
   useEffect(() => {
     const results = characters.filter(character =>
-      character.toLowerCase().includes(searchTerm)
+      character.name.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
   }, [searchTerm]);
@@ -43,10 +23,6 @@ export default function SearchForm() {
   return (
     <div className="App">
       <form>
-        {/* We apply two-way data binding to the input field, which basically takes the value from the user and saves it into the state. */}
-        {/* Two-way binding just means that:
-        When properties in the model get updated, so does the UI.
-        When UI elements get updated, the changes get propagated back to the model. */}
         <label for="name">Search:</label>
         <input
           id="name"
@@ -60,7 +36,7 @@ export default function SearchForm() {
       <div className="character-list">
         <ul>
           {searchResults.map(character => (
-            <li>{character}</li>
+            <CharacterCard character={character}/>
           ))}
         </ul>
       </div>

@@ -5,8 +5,8 @@ import styled from 'styled-components';
 export default function CharacterCard(props) {
   
   const WrapperDiv = styled.div`
-  font-size: 73px;
-  color: white;
+  font-size: 16px;
+  color: red;
   `;
 
   if (!props.character.name) { 
@@ -18,8 +18,8 @@ export default function CharacterCard(props) {
   }
   return (
     <>
-      <div>{props.character.name}</div>
-      <div>{props.character.status}</div>
+      <WrapperDiv>{props.character.name}</WrapperDiv>
+      <WrapperDiv>{props.character.status}</WrapperDiv>
     </>
     )
   ;
