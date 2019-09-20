@@ -27,6 +27,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+Client side routing is very important, it allows us to access urls without refreshing the page, and saves the history.
+
 > Answer:
 
 ## Project Set Up
