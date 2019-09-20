@@ -5,10 +5,13 @@
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
+    "react-strap": "^0.0.1",
     "react-swipeable-views": "^0.13.3",
     "styled-components": "^4.3.2"
   },
