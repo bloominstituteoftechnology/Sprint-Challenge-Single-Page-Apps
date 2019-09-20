@@ -48,10 +48,12 @@ header h1 {
 
 nav{
   display: flex;
+  justify-content: center;
 }
 
-.test{
+h5{
   display: flex;
-  background: red;
-  margin: 0 15px 0 5px;
+  margin: 15px 25px 15px 25px;
+  color: black;
+
 }

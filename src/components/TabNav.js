@@ -10,22 +10,22 @@ export default function TabNav() {
 
         
 <nav>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
+    <h5>
+        <NavLink to="/">Home</NavLink>
+    </h5>
 
-        <li>
-            <NavLink to="/character">Characters</NavLink>
-       </li>
-       
-       <li>
+    <h5>
+        <NavLink to="/character">Characters</NavLink>
+    </h5>
+
+    <h5>
        <NavLink to="/location">Locations</NavLink>
-       </li>
+    </h5>
 
-       <li>
+    <h5>
        <NavLink to="/episode">Episodes</NavLink>
-       </li>
-       
+    </h5>
+
 </nav>
         
 
