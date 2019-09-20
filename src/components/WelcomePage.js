@@ -1,7 +1,16 @@
 import React from "react";
+import styled from 'styled-components';
+
+
+const HomePage = styled.div`
+display: flex;
+justify-content: center;
+
+`
 
 export default function WelcomePage() {
   return (
+    <HomePage>
     <section className="welcome-page">
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
@@ -12,5 +21,6 @@ export default function WelcomePage() {
         />
       </header>
     </section>
+    </HomePage>
   );
 }
