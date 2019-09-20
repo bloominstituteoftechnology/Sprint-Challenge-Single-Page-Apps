@@ -55,7 +55,6 @@ If the [main API service](https://rickandmortyapi.com/documentation) goes down, 
 You can still be locked out - watch your [chrome devtools' network panel](https://developers.google.com/web/tools/chrome-devtools/network/reference) to make sure you aren't making too many requests.
 </details>
 
-[Instructions to completing](https://www.notion.so/cglecturenotes/Get-Started-c15a2c7b6683423ab4e8459d41c57c6d?p=fad6413fe76141efaa5af8dbabf1aee7&showMoveTo=true#completing)
 
 ## Minimum Viable Product (MVP)
 
