@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 
 import axios from "axios";
-import { Route, NavLink } from "react-router-dom";
+//import { Route, NavLink } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 import {Link} from 'react-router-dom';
 export default function CharacterList() {

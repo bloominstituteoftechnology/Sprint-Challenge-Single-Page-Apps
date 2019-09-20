@@ -4,7 +4,7 @@ import TabNav from "./components/TabNav.js";
 //import TabNav2 from './components/TabNav2';
 
 import Header from "./components/Header.js";
-import { Route, NavLink } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
