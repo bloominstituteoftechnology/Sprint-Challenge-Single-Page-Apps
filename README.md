@@ -72,9 +72,6 @@ You can still be locked out - watch your [chrome devtools' network panel](https:
 1. Follow [each part](#part-1).
 1. Find design resources OR use your design skills make the application look professional.
 
-#### MVP Preview:
-
-![SPA-Sprint-Challenge-Preview](https://user-images.githubusercontent.com/397632/61949095-f1d05c80-af66-11e9-9712-80ce3da84675.gif)
 
 ### Part 1
 
