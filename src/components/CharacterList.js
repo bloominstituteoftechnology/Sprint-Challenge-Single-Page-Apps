@@ -15,6 +15,7 @@ export default function CharacterList() {
     axios.get(apiLink).then(results => {
       setCharacters(results.data.results);
     }).catch(error => console.log('You made a mistake fetching, stay calm.', error));
+    
   }, []);
 
   // console.log();

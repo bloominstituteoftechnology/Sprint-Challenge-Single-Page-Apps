@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card' //https://getbootstrap.com/docs/4.0/comp
 
 // props from CharacterList
 export default function CharacterCard(props) {
+  console.log(props)
   return (
   <div>
     <Card >
@@ -14,7 +15,7 @@ export default function CharacterCard(props) {
               <p>Gender: {props.gender}</p>
               <p>Species: {props.species}</p>
             </Card.Text>
-          <button>Look Up!</button>
+          <button>Look Up Character</button>
         </Card.Body>
       </Card>
   </div>
