@@ -1,31 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Route } from 'react-router-dom';
 import Header from "./components/Header.js";
-import axios from 'axios' 
+import Nav from "./components/Nav.js";
+import WelcomePage from './components/WelcomePage';
+import CharacterList from './components/CharacterList';
+// import LocationsList from './components/LocationsList';
+// import EpisodeList from './components/EpisodeList';
+// import SearchForm from './components/SearchForm';
 
- const App= ()=> {
-	const [characters, setCharacters] = useState(null);
+export default function App() {
+  return (
+    <main>
+      <Header />
+      <Nav />
 
-	useEffect(() => {
-		axios
-			.get("https://rickandmortyapi.com/api/character")
+      <Route exact path='/' component={WelcomePage} />
+      <Route path='/character' component={CharacterList} />
+      {/* <Route path='/location' component={LocationsList} />
+      <Route path='/episode' component={EpisodeList} /> */}
+       {/* <Route path='/search' component={SearchForm} /> */}
 
-			.then(response => {
-			
-				setCharacters(response);
-				console.log('App.js -> %cresponse:', 'color: limeGreen', response)
-
-				
-			})
-
-			.catch(error => {
-				console.error("Data's not coming through bro, check this out.", error);
-			});
-	}, []);
-
-	return (
-		<main>
-			<Header />
-		</main>
-	);
+    </main>
+  );
 }
-export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import Header from "./components/Header.js";
+// import CharacterCard from './components/CharacterCard'
+
+
+
+//  const App= ()=> {
+
+
+// 	return (
+// 		<main>
+// 			<Header />
+//       <CharacterCard/>
+// 		</main>
+// 	);
+// }
+// export default App
