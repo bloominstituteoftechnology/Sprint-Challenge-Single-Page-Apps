@@ -1,5 +1,6 @@
 import React from "react";
-
+import React,{Router} from 'react-router-dom';
+import SearchForm from './components/SearchForm.js'
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
