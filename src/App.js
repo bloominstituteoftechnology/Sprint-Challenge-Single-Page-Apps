@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from 'react-router-dom';
 import Header from "./components/Header.js";
-import Nav from "./components/Nav.js";
+import TabNav from "./components/TabNav.js";
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 // import LocationsList from './components/LocationsList';
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <main>
       <Header />
-      <Nav />
+      <TabNav />
 
       <Route exact path='/' component={WelcomePage} />
       <Route path='/character' component={CharacterList} />
