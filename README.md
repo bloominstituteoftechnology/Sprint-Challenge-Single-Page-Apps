@@ -73,7 +73,7 @@ _Add a Router to this application using [React Router](https://reacttraining.com
 - [ ]  Hook up the Welcome page(Home page) and a Characters page with React Router.
 - [ ]  Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
 
-_"Add 'Search by Name' feature."_
+_Add 'Search by Name' feature._
 
 - [ ]  Add the `<SearchForm />` component (see `./components/SearchForm.js`).
 - [ ]  Create a search form that will filter through the data displayed in the character list.
