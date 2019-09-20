@@ -69,7 +69,7 @@ Your finished project must include all of the following requirements:
 
 Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
 
-- [ ]  Create at least 2 pages, a Home page and a Character page and hook them up with React Router.
+- [ ]  Hook up the Welcome page(Home page) and a Characters page with React Router.
 - [ ]  Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
 
 "Add 'Search by Name' feature."
