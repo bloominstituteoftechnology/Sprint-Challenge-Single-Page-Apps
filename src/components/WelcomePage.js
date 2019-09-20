@@ -1,5 +1,6 @@
 import React from "react";
-import Characters from './Characters';
+import CharacterList from './CharacterList';
+
 
 export default function WelcomePage() {
   return (
@@ -11,6 +12,7 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
+        <CharacterList />
       </header>
     </section>
   );

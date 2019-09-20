@@ -9,30 +9,28 @@ const [chars, setChars] = useState([]);
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+
     axios
         .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
+          console.log("Testing", response);
           setChars(response.data);
         })
         .catch(error => {
           console.error('Where are the characters?', error);
         });
-
   }, []);
-
-  if (!chars) {
-    return <div>Loading character information...</div>;
-  }
-
+  
   return (
     <section className="character-list">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {chars.map(charList => {
         return (
           <CharacterCard 
-          characters={characters}
-          location={location}
-          episodes={episodes}
+          characters={charList.characters}
+          location={charList.location}
+          episodes={charList.episodes}
+            
             />
         )
       })}
