@@ -44,6 +44,7 @@ export default function CharacterList() {
         <CharacterCard
           name={personnage.name}
           status={personnage.status}
+          image={personnage.image}
           />
           )}
     </section>

@@ -17,13 +17,11 @@ export default function App() {
     <HeaderStyle>
     
     <main>
-    {/* <SearchForm> */}
     <Header />
     <Route exact path="/" component={WelcomePage}/> 
     <Route path="/CharacterList" component={CharacterList}/> 
     <Route path="/SearchForm" component={SearchForm}/>  
     <Navigation />
-     {/* </SearchForm> */}
     </main>
     </HeaderStyle>
   );

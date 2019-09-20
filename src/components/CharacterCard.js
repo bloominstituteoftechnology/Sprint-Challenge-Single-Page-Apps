@@ -30,6 +30,7 @@ justify-content: space-evenly;
 export default function CharacterCard(props) {
   return (
     <CardStyle>
+    {/* <img src={props.image}> */}
     <Title> {props.name} </Title> 
     <p>Name: {props.name}</p>
     <p>Status: {props.status}</p>

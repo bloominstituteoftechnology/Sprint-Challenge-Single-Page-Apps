@@ -78,7 +78,7 @@ _Add a Router to this application using [React Router](https://reacttraining.com
 
 _Add 'Search by Name' feature._
 
-- [ ]  Add the `<SearchForm />` component (see `./components/SearchForm.js`).
+- [x]  Add the `<SearchForm />` component (see `./components/SearchForm.js`).
 - [ ]  Create a search form that will filter through the data displayed in the character list.
 
 ### **Required best practices:**

@@ -26,8 +26,6 @@ const Navigation = () => {
         <div>
         <Link to="/searchform">Search</Link>
         </div>
-        
-
     </div>
     </NavContentStyle>
   );
