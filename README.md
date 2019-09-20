@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: While there is an initial increase in loading time, once the contents of the file are loaded, navigating across pages in the website is much faster.
 
 ## Project Set Up
 
