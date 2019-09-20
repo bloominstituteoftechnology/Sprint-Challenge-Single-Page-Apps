@@ -51,3 +51,11 @@ header h1 {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 3%;
+  justify-content: center;
+}
