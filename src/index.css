@@ -42,22 +42,39 @@ header h1 {
 
 }
 
- .uiCenter{
-   border: 2px solid black;
-  padding: 0 0 10px 0;
+ .ui-center{
+   
+  padding: 0 0 20px 0;
 } 
 
 
-/* NAVBAR - Home, char, locat, episode  */
+/* NAVBAR contains links - Home etc. */
+
 nav{
   display: flex;
   justify-content: center;
-  background: red;
 }
 
-h5{
-  display: flex;
-  margin: 0 25px 25px 25px;
+
+/* Home, char, locat, episode  */
+
+.navlink{
   color: black;
+  border: 2px solid black;
+  padding: 5px 10px 5px 10px;
+  margin: 0 25px 25px 25px; 
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.navlink:hover{
+ 
+  background: rgb(0, 187, 250);
+  color: white;
+}
+
+.search-form{
+display: flex;
+justify-content: center;
 
 }
