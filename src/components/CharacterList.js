@@ -7,7 +7,7 @@ import "../index.css";
 const apiLink='https://rickandmortyapi.com/api/character/';
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState(StaticData.results);
+  const [characters, setCharacters] = useState([]);
 
   // setCharacters(staticData);
 

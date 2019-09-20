@@ -6,15 +6,20 @@ import { StaticData } from './staticdata';
 import { array } from "prop-types";
 
 export default function SearchForm() {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState([]);
+  const [apiList, setList] = useState([]);
   const [searchError, setSearchError] = useState('');
 
   const initialSearchForm = { name: '' };
  
 
   const Search = (form) => {
-    StaticData.results.forEach(character => {
-      const names = character.name.split(' ');
+    const character = StaticData.results;
+    const newResults = [];
+    console.log(character);
+    for(let i=character.length-1; i>=0; i--){
+
+      const names = character[i].name.split(' ');
       const fullName = names[0]+' '+names[1];
       const firstName = names[0];
       const lastName = names[1];
@@ -23,11 +28,11 @@ export default function SearchForm() {
       if(firstName === form.name || 
          lastName === form.name||
          fullName === form.name){
-          debugger
-          setResult(character);
-          //console.log(character);
+          
+         newResults.push(character[i]);
+         if(i===0)setResult(newResults);
       }
-    });
+    } 
   }
 
   const CheckResult = () => {
@@ -50,20 +55,22 @@ export default function SearchForm() {
       <div  className='result'>
       {
         result
-          ? <div>
+          ? result.map(character => (
+            <div>
               <Card style={{ width: '18rem', margin: '2%' }}>
-                <Card.Img variant="top" src={result.image} />
+                <Card.Img variant="top" src={character.image} />
                   <Card.Body>
-                    <Card.Title>{result.name}</Card.Title>
+                    <Card.Title>{character.name}</Card.Title>
                     <Card.Text>
-                      <p>Status: {result.status}</p>
-                      <p>Gender: {result.gender}</p>
-                      <p>Species: {result.species}</p>
+                      <p>Status: {character.status}</p>
+                      <p>Gender: {character.gender}</p>
+                      <p>Species: {character.species}</p>
                     </Card.Text>
                   <Button variant="primary">Look Up!</Button>
                 </Card.Body>
               </Card>
             </div>
+          ))
           : 'No Results Yet!'
       }
       </div>

@@ -59,3 +59,10 @@ header h1 {
   min-height: 3%;
   justify-content: center;
 }
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
