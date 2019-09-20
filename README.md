@@ -26,6 +26,8 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ]  Explain benefit(s) using `client-side routing`?
+A client-side route happens when the route is handled internally by the JavaScript that is loaded on the page. When a user clicks on a link the URL changes but the request to the server is prevented. The whole page won’t refresh when using client-side routing. There are just some elements inside the application that will change.
+
 
 > Answer:
 
