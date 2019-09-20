@@ -1,58 +1,48 @@
 import React, { useState, useEffect } from "react";
 
-import axios from "axios";
+
+ export default function SearchForm( { onSearch }) {
+
+//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+    const [searchText, setSearchText] = useState("");
+   const [name, setName] = useState([]);
+   
+
+  const handleInputChange = e => {
+    console.log(e.target.value);
+    setSearchText(e.target.value);
+  };
 
 //data.results.name
 
- export default function SearchForm({ onSearch }) {
-
-
-  const [char, setChar] = useState({ name: ""});
-  const [searchRes, setSearchRes] = useState([]);
-  const handleInputChange = e => {
-    console.log(e.target.value);
-    //setChar({ ...char, [e.target.name]: e.target.value });
-    setChar(e.target.value);
-  };
-
 
   useEffect(() => {
-  axios
-  .get('https://rickandmortyapi.com/api/character/')
-  .then(response => {
-    setChar(response.data.results);
-    console.log(response);
-  })
-  .catch(error => {
-    console.error(error);
-  });
-
-
-
-}, []);
-
-
-  // useEffect(() => {
-  //   const results = char.filter(person1 =>
-  //     person1.toLowerCase().includes(char)
-  //   );
-  //   setSearchRes(results);
-  // }, [char]);
+    const results = name.filter(person =>
+      person.toLowerCase().includes(searchText)
+    );
+    setName(results);
+  }, [searchText]);
  
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
 
   // STRETCH TODO: Add stateful logic for query/form data
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(char.name)}>
+    <form onSubmit={() => onSearch(name)}>
         <input
           onChange={handleInputChange}
           placeholder="name"
-          value={char.name}
+          value={searchText}
           name="name"
         />
         <button type="submit">Search</button>
 
-        <ul>{searchRes.map(item => (
+        <ul>{name.map(item => (
           <li>{item}</li>
         ))}</ul>
         
@@ -63,12 +53,3 @@ import axios from "axios";
   
 }
 
-// handleSubmit(values, { setStatus }) {
-//   axios
-//     // values = object with all our data.
-//     .post("https://rickandmortyapi/character/?name", values)
-//     .then(res => {
-//       setStatus(res.data);
-//     })
-//     .catch(err => console.log(err.response));
-// }

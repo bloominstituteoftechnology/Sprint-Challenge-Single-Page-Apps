@@ -10,7 +10,8 @@ import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
 import LocationList from "./components/LocationsList";
 import EpisodeList from "./components/EpisodeList";
- import SearchForm from "./components/SearchForm";
+
+import SearchForm from "./components/SearchForm";
 
 
 
@@ -24,7 +25,8 @@ export default function App() {
      
       <Header/>
       <TabNav/>
-      <SearchForm/>
+     <SearchForm />
+      
 
       {/* <TabNav2/> */}
 
