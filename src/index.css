@@ -27,15 +27,12 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
-.main-img {
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto;
-} */
+
+
 
 header h1 {
   text-align: center;
+  
 }
 
 .nava{
@@ -45,15 +42,22 @@ header h1 {
 
 }
 
+ .uiCenter{
+   border: 2px solid black;
+  padding: 0 0 10px 0;
+} 
 
+
+/* NAVBAR - Home, char, locat, episode  */
 nav{
   display: flex;
   justify-content: center;
+  background: red;
 }
 
 h5{
   display: flex;
-  margin: 15px 25px 15px 25px;
+  margin: 0 25px 25px 25px;
   color: black;
 
 }

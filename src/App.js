@@ -43,7 +43,7 @@ export default function App() {
       
       <Route exact path="/location" component={LocationList}/>
       <Route path="/episode" component={EpisodeList}/>
-      {/* <TabNav /> */}
+     
     </main>
   );
 }
