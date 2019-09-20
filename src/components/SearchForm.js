@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Characters from './Characters';
 export default function SearchForm() {
  
   return (
