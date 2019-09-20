@@ -27,6 +27,15 @@ const [chars, setChars] = useState([]);
   return (
     <section className="character-list">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
+      {chars.map(charList => {
+        return (
+          <CharacterCard 
+          characters={characters}
+          location={location}
+          episodes={episodes}
+            />
+        )
+      })}
       
     </section>
   );
