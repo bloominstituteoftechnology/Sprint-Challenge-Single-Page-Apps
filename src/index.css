@@ -37,3 +37,21 @@ main {
 header h1 {
   text-align: center;
 }
+
+.nava{
+  display: flex;
+  margin: 5%;
+  background: red;
+
+}
+
+
+nav{
+  display: flex;
+}
+
+.test{
+  display: flex;
+  background: red;
+  margin: 0 15px 0 5px;
+}
