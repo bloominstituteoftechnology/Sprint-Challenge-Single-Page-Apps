@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard";
 import { StaticData } from "./staticdata";
+import { NavLink } from "react-router-dom";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
