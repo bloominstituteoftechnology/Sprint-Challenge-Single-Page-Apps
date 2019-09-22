@@ -1,10 +1,13 @@
 import React from "react";
-import Header from "./components/Header.js";
-import { Route } from 'react-router-dom';
-import CharacterList from "./components/CharacterList";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import WelcomePage from "./components/WelcomePage";
-import CharacterCard from "./components/CharacterCard.js";
-import SearchForm from "./components/SearchForm.js";
+import Header from "./components/Header";
+import SearchForm from "./components/SearchForm";
+import CharacterList from "./components/CharacterList";
+import LocationList from "./components/LocationsList";
+
+
 
 
 export default function App() {
@@ -12,10 +15,13 @@ export default function App() {
     <main>
       <Header />
       <WelcomePage />
-      <CharacterCard />
+      <CharacterList />
       <SearchForm />
-      {/* <CharacterList /> */}
-      {/* <Route path="/about" component={CharacterList} /> */}
+      <Route exact path="/" component={WelcomePage} />
+      <Router path="/characterlist" component={CharacterList} />
+      <Router path="/location-list" component={LocationList} />
+
+
     </main>
   );
 }

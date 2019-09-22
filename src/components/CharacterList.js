@@ -1,48 +1,29 @@
-// import React, { useEffect, useState } from "react";
-// // import CharacterCard from "./CharacterCard";
-// import axios from "axios";
+import React, { useEffect, useState } from "react"
+import axios from "axios";
 
-// const CharacterList = (props) => {
-//   // TODO: Add useState to track data from useEffect
-//   const [character, setCharacter] = useState([]);
+import CharacterCard from "./CharacterCard";
 
-//   useEffect(() => {
-//     // TODO: Add API Request here - must run in `useEffect`
-//     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-//     axios
-//       .get('https://rickandmortyapi.com/api/character/')
+export default function CharacterList() {
+  const [characters, setCharacters] = useState([]);
 
-//       .then(response => {
-//         setCharacter(response.data);
-//       })
-//       .catch(error => {
+  useEffect(() => {
+    axios
+      .get(`https://rickandmortyapi.com/api/character/`)
+      .then(res => {
+        console.log(res);
+        const person = res.data.results
+        setCharacters(person)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }, [])
 
-//       })
-//   }, []);
-
-//   return (
-//     <section className="character-list">
-
-//       {character.map(characters => {
-//         <CharacterDetails key={characters.id} characters={characters} />
-//       })}
-
-//     </section>
-//   );
-
-//   function CharacterDetails({ characters }) {
-//     const { name, status, species, type, gender } = characters
-//     return (
-//       < div classname="character-name" >
-//         Name: <em>{name}</em>
-//         <div>
-//           Status: <em>{status}</em>
-//         </div>
-//       </div >
-//     )
-
-//   }
-// }
-
-
-// export default CharacterList;
+  return (
+    <div className="card-container">
+      {characters.map(object => {
+        return <CharacterCard key={object.name} image={object.image} name={object.name} status={object.status} species={object.species} gender={object.gender} />;
+      })}
+    </div>
+  )
+}

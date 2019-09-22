@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Button } from 'reactstrap';
 
-const SearchForm = (props) => {
+export default function SearchForm() {
   return (
-    <div className="search">
-      <h2>{props.text}</h2>
+    <div className="search-form">
+      <form>
+        <input
+          className="search-field"
+          type="text"
+          name="search"
+          placeholder="Character Search"
+        />
+
+        <Button className="search-button">Search</Button>
+      </form>
     </div>
   )
 }
-
-export default SearchForm;

@@ -1,39 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
+import React from "react";
 
 
 const CharacterCard = props => {
-  const [character, setCharacter] = useState();
-
-  useEffect(() => {
-    const id = 1;
-    // const id = props.match.params.id;
-
-    axios
-      .get('https://rickandmortyapi.com/api/character/')
-      .then(response => {
-        setCharacter(response.data);
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }, [])
 
   return (
-    <span>
-      <h2>
-        {props.name}
-        {props.status}
-        {props.species}
-        {props.type}
-        {props.gender}
 
+    <div className="card" key={CharacterCard.id}>
+      <className src={props.image} alt="character Image" />
+      <h1 className="character-name">{props.name}</h1>
+      <p className="character-status">Status{props.status}</p>
+      <p className="character-species">Species{props.species}</p>
+      <p className="character-gender">Status{props.gender}</p>
+    </div>
 
-
-      </h2>
-    </span>
   )
 }
 
-export default CharacterCard;
+export default CharacterCard
+
