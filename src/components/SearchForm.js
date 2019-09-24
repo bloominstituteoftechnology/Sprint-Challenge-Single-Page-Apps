@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from 'styled-components';
 
-export default function SearchForm() {
- 
+const SearchStyled = styled.div`
+  width=50rem;
+  display: flex;
+  margin-top:5rem;
+  justify-content: space-evenly;
+`
+
+
+function Search(props) {
   return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
+    <SearchStyled>
+      <form>
+        <label>
+          Name : 
+          <input type="search" onChange={props.onSearch} />
+        </label>
+        <button> Find a character!</button>
+      </form>
+    </SearchStyled>
   );
 }
+
+export default Search;
