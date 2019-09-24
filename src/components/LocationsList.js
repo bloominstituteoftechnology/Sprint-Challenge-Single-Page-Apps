@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, Route } from "react-router-dom";
-import axios from "axios";
 import LocationCard from "./LocationCard"
-import { Button } from "reactstrap"
+import axios from "axios"
+
 
 export default function LocationsList() {
     const [locations, setLocations] = useState([]);
 
     useEffect(() => {
-
         axios
             .get(`https://rickandmortyapi.com/api/location/`)
             .then(res => {
@@ -18,16 +16,14 @@ export default function LocationsList() {
             })
             .catch(err => {
                 console.log(err)
-            }, []);
+            });
+    }, [])
 
-        return (
-
-            <div className="character-list">
-                {locations.map(object => {
-                    return <div key={object.name} name={object.name} type={object.type} dimension={object.dimension} />;
-                })}
-            </div>
-
-        );
-    })
+    return (
+        <div className="character-list">
+            {locations.map(object => {
+                return <LocationCard key={object.location} image={object.image} name={object.name} type={object.type} dimension={object.dimension} />;
+            })}
+        </div>
+    );
 }

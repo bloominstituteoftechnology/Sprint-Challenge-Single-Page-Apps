@@ -1,13 +1,17 @@
 import React from "react";
+import {
+  Card, CardImg, CardText, CardBody, Button
+} from "reactstrap";
 
 
 const LocationCard = props => {
   return (
     <div>
-      <h1 className="location-name">{props.name}</h1>
-      <p className="location-type">Status: {props.status}</p>
-      <p className="character-dimension">Species: {props.dimension}</p>
-
+      <Card>
+        <CardImg top width="50%" src={props.image} alt="Card image cap" />
+        <CardText>Name: {props.name}</CardText>
+        <CardText>Dimension: {props.dimension}</CardText>
+      </Card>
     </div>
   )
 }

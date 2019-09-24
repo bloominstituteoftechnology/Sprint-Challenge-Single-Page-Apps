@@ -14,14 +14,15 @@ export default function App() {
   return (
     <main>
       <Header />
-      <WelcomePage />
-      <CharacterList />
-      <SearchForm />
+      {/* <WelcomePage /> */}
+      {/* <CharacterList /> */}
+      {/* <SearchForm /> */}
       <Route exact path="/" component={WelcomePage} />
-      <Router path="/characterlist" component={CharacterList} />
-      <Router path="/location-list" component={LocationList} />
+      <Route exact path="/characterlist" component={CharacterList} />
+      <Route exact path="/location-list" component={LocationList} />
+      <Route exact path="/search-form" component={SearchForm} />
 
-
+      {/* <Route exact path="/" component={WelcomePage} /> */}
     </main>
   );
 }

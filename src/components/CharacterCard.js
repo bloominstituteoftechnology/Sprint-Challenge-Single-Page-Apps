@@ -1,20 +1,30 @@
 import React from "react";
+import {
+  Card, CardImg, CardText, CardBody, Button
+} from "reactstrap";
+
 
 
 const CharacterCard = props => {
 
   return (
-
-    <div className="card" key={CharacterCard.id}>
-      <className src={props.image} alt="character Image" />
-      <h1 className="character-name">{props.name}</h1>
-      <p className="character-status">Status{props.status}</p>
-      <p className="character-species">Species{props.species}</p>
-      <p className="character-gender">Status{props.gender}</p>
+    <div>
+      <div>
+        <Card>
+          <CardImg top width="50%" src={props.image} alt="Card image cap" />
+          <CardBody>
+            <CardText>Name: {props.name}</CardText>
+            <CardText>Status: {props.status}</CardText>
+            <CardText>Species: {props.species}</CardText>
+            <CardText>Gender: {props.gender}</CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+      </div>
     </div>
 
   )
 }
 
-export default CharacterCard
+export default CharacterCard;
 
