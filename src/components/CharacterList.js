@@ -28,7 +28,7 @@ function CharacterList () {
   return (
     <section className="character-list grid-view">
       {characterList.map(character => (
-        <CharacterCard key={character.name} character={character} />
+        <CharacterCard key={character.name} character={character} status={character.status} species={character.species} />
       ))}
     </section>
   );
