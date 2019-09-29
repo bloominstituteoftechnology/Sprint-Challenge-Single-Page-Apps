@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, Route } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
+import Character from "./Character";
 import SearchForm from "./SearchForm";
 
 function CharacterList(props) {
@@ -43,7 +44,13 @@ function CharacterList(props) {
         {/* ========= MAPPING OVER CHARACTERS GETTING DETAILS SENDING THEM TO PROPS OF THE CHARACTER
       COMPONENT ============= */}
         {characters.map(character => (
-          <CharacterCard {...props} key={character.id} character={character} />
+          <Link key={character.id} to={`/character-list/${character.id}`}>
+            <CharacterCard
+              {...props}
+              key={character.id}
+              character={character}
+            />
+          </Link>
         ))}
       </section>
     </div>

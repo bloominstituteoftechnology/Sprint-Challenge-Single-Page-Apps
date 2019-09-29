@@ -3,9 +3,8 @@ import { Route } from "react-router-dom";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import CharacterCard from "./components/CharacterCard";
-import Card from "./components/CharacterCard";
 import WelcomePage from "./components/WelcomePage";
-import axios from "axios";
+
 import "./App.css";
 
 export default function App() {
@@ -21,7 +20,7 @@ export default function App() {
         render={props => <CharacterList {...props} />}
       />
       <Route
-        path="/character-list/:id"
+        path="/charater-list/:id"
         render={props => <CharacterCard {...props} />}
       />
     </main>

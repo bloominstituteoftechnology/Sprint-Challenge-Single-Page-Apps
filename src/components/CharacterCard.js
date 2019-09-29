@@ -17,25 +17,22 @@ const Image = styled.img`
 
 export default function CharacterCard(props) {
   const { name, status, species, image, id, match } = props.character;
-
-  console.log(id);
+  console.log(props);
   return (
     <Card className="character-card">
-      <Link to={`/character-list/`}>
-        <div className="character-photo">
-          <Image src={image} alt="" />
-        </div>
+      <div className="character-photo">
+        <Image src={image} alt="" />
+      </div>
 
-        <h2>{name}</h2>
+      <h2>{name}</h2>
 
-        <div className="status">
-          Status: <em>{status}</em>
-        </div>
-        <div className="species">
-          Species: <em>{species}</em>
-        </div>
-        <span>todo: character</span>
-      </Link>
+      <div className="status">
+        Status: <em>{status}</em>
+      </div>
+      <div className="species">
+        Species: <em>{species}</em>
+      </div>
+      <span>todo: character</span>
     </Card>
   );
 }
