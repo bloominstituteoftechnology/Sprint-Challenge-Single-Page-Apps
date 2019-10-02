@@ -1,5 +1,19 @@
 import React from "react";
+import {
+  Card, CardImg, CardText, CardBody, Button
+} from "reactstrap";
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
+
+const LocationCard = props => {
+  return (
+    <div>
+      <Card>
+        <CardImg top width="50%" src={props.image} alt="Card image cap" />
+        <CardText>Name: {props.name}</CardText>
+        <CardText>Dimension: {props.dimension}</CardText>
+      </Card>
+    </div>
+  )
 }
+
+export default LocationCard;

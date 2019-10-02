@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Button } from 'reactstrap';
 
 export default function SearchForm() {
- 
   return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
-  );
+    <div className="search-form">
+      <form>
+        <input
+          className="search-field"
+          type="text"
+          name="search"
+          placeholder="Character Search"
+        />
+
+        <Button className="search-button">Search</Button>
+      </form>
+    </div>
+  )
 }
