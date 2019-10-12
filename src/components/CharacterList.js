@@ -25,14 +25,9 @@ export default function CharacterList() {
   return (
     <div className="char-list">
       {char.map(chars => (
-        <CharDetails key={chars.id} chars={char} />
+        <CharacterCard key={chars.id} character={chars} />
       ))}
     </div>
   );
 }
 
-function CharDetails({ chars }) {
-  return(
-    <CharacterCard chars={chars} />
-  );
-}
