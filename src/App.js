@@ -1,16 +1,19 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import WelcomePage from "./components/WelcomePage";
-import Header from "./components/Header.js";
-import CharacterList from "./components/CharacterList";
+import TabNav from './components/TabNav.js';
+import Header from './components/Header.js';
+import AppRouter from './components/AppRouter.js';
+import SearchForm from './components/SearchForm';
+import styled from 'styled-components';
+
 
 
 export default function App() {
   return (
     <main>
       <Header />
-      <Route exact path="/" component={WelcomePage} />
-      <Route exact path="/characterlist" component={CharacterList} />
+      <TabNav />
+      <AppRouter />
+      <SearchForm />
     </main>
   );
 }

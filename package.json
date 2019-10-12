@@ -10,7 +10,10 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
+    "react-strap": "^0.0.1",
     "react-swipeable-views": "^0.13.3",
+    "reactstrap": "^8.0.1",
+    "semantic-ui-react": "^0.88.1",
     "styled-components": "^4.3.2",
     "yup": "^0.27.0"
   },

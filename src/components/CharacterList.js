@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import CharcterCard from './CharacterCard';
+import CharacterCard from './CharacterCard';
 
 
 
@@ -9,15 +9,15 @@ import CharcterCard from './CharacterCard';
    // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
 
-const CharacterList = props => {
+export default function CharacterList() {
     const [character, setCharacter] = useState([])
   
     useEffect(() => {
       axios
         .get('https://rickandmortyapi.com/api/character/')
-        .then(response => {
-          console.log(response);
-          setCharacter(response.data.results);
+        .then(res => {
+          console.log('character data:', res.data.results);
+          setCharacter(res.data.results);
         })
         .catch(error => {
           console.error(error);
@@ -30,15 +30,11 @@ const CharacterList = props => {
 //       <h2>TODO: `array.map()` over your state here!</h2>
 //  
     return (
-      <div className ="char-card-box">
-      {character.map(character => {
-        return <CharcterCard
-        key = {character.id}
-        character = {character }
-        />
-      })}
+      <div>
+        {character.map(char=> {
+        return <CharacterCard key={char.id} char={char} />
+        })}
       </div>
-    )
-  }
-
-export default CharacterList;
+    );
+}
+  
