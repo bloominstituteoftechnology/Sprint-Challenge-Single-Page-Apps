@@ -5,10 +5,15 @@ import styled from "styled-components";
 
 const WrapperDiv = styled.div `
 display:flex;
-justify-content: space around;
-margin-left: 45%;
-padding-bottom: 2%;
-text-decoration: none;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding-bottom: 5%;
+font-family: The Wild Hammers;
+font-size: 20px;
+font-weight: bold;
+
+
 `
 
 const Navigation = () => {
