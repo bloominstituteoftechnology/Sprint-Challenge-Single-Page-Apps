@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  A single page application utilizing client side routing will take longer to load initially, so it can be a problem if the application is too big.  Though, as long as it isn't prohibitively big, you can save a lot of horsepower and space on your local server. The application will also run much smoother and have a much better user experience if you can keep everything on the user's device.
 
 ## Project Set Up
 
