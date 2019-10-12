@@ -1,9 +1,12 @@
 import React from "react";
-import TabNav from './components/TabNav.js';
+// import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Navigation from './components/Navigation.js';
+// import WelcomePage from "./components/WelcomePage";
 import Header from './components/Header.js';
+// import CharacterList from "./components/CharacterList";
 import AppRouter from './components/AppRouter.js';
 import SearchForm from './components/SearchForm';
-import styled from 'styled-components';
+
 
 
 
@@ -11,8 +14,9 @@ export default function App() {
   return (
     <main>
       <Header />
-      <TabNav />
-      <AppRouter />
+      <Navigation /> 
+       <AppRouter />
+      
       <SearchForm />
     </main>
   );

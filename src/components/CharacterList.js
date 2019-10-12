@@ -9,32 +9,35 @@ import CharacterCard from './CharacterCard';
    // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
 
-export default function CharacterList() {
-    const [character, setCharacter] = useState([])
+const CharacterList = (props) => {
+    const [characters, setCharacters] = useState([])
   
     useEffect(() => {
+
       axios
         .get('https://rickandmortyapi.com/api/character/')
         .then(res => {
           console.log('character data:', res.data.results);
-          setCharacter(res.data.results);
+          setCharacters(res.data.results);
         })
         .catch(error => {
           console.error(error);
         });
-    }, []);
+    }, [props.match.params.id]);
 
-
+ if (!characters) {
+    return <div>Loading character information...</div>;
+  }
 
 
 //       <h2>TODO: `array.map()` over your state here!</h2>
 //  
     return (
       <div>
-        {character.map(char=> {
-        return <CharacterCard key={char.id} char={char} />
-        })}
+        <CharacterCard characterData={characters} />
       </div>
     );
 }
+
+export default CharacterList
   
