@@ -117,7 +117,7 @@ Complete search component to your list views.
 > 💡Reminder: git commit -am 'Stretch Progress 💪'
 
 ## Completing
-
+ 
 > Follow these steps to complete your project:
 
 - [ ]  Submit a Pull Request to merge `<firstName-lastName>` branch into master (student's repo).
