@@ -10,6 +10,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
     "react-swipeable-views": "^0.13.3",
+    "reactstrap": "^8.0.1",
     "styled-components": "^4.3.2"
   },
   "scripts": {
