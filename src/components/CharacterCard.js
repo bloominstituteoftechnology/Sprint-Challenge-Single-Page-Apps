@@ -11,9 +11,11 @@ const CharacterCard = char => {
         <Link to={`/results/${id}`}>
           <h2>{name}</h2>
         </Link>
+        <Link to="/list">
         <div className="image">
           <img src={image} alt={`Photo of ${name}`} />
         </div>
+        </Link>
         <div className="species">
           Species: <strong>{species}</strong>
         </div>
