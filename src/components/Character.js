@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard';
 
 const Character = (props) => {
   const [char, setChar] = useState();
- console.log(props.match.params.id);
+  
   useEffect(() => {
     const id = props.match.params.id;
 
