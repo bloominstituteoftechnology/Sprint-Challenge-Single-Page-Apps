@@ -1,35 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import  { Link } from 'react-router-dom';
+import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const CharacterList = props => {
-	  const [Char, setChars] = useState([])
+	  const [characters, setCharacters] = useState([])
 
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    const getChars = () => {
+    useEffect(() => {
+      // TODO: Add AJAX/API Request here - must run in `useEffect`
       axios
-        .get('https://rickandmortyapi.com/api/character/')
+        .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
-          setChars(response.data);
+          // console.log("DATA:", response.data.results);
+          setCharacters(response.data.results);
         })
         .catch(error => {
-          console.error('Server Error', error);
+          console.log("ERROR", error);
         });
-    }
-    
-    getChars();
-  }, []);
-
-  return (
-    <section className="character-list">
-      {chars.map(char => (
-        <CharDetails key = {char.id} char = {char} />
-      ))}
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
-  );
-}
+      //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+    }, []);
+  
+    return (
+      <section className="character-list grid-view">
+        <CharacterCard characterData={characters} />
+      </section>
+    );
+  }

@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+//STYLE
+const WrapperDiv = styled.div`
+  width: 400px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: purple;
+  text-align: center;
+`;
+
 export default function CharacterCard(props) {
   const characterData = props.characterData;
   return (
