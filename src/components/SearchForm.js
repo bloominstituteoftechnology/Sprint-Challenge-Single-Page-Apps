@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
 margin-left: 37%;
 margin-top: 2%;
+
 `;
 
 export default function SearchForm({ onSearch }) {
