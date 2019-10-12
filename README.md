@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: While both server-sie and client-side routing have to do with the accessing of some information/resource, the benefit of client-side routing is that it manage a request much faster especially if a lot of informationis being requested. JavaScript maintains the satate of the page and tells the Browser how display the resource that is requested.
 
 ## Project Set Up
 
