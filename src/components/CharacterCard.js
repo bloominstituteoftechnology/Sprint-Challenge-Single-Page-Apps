@@ -18,11 +18,10 @@ const WrapperDiv= styled.div`
    box-shadow: 5px 5px 5px black;
   width:73%;
   padding:2%;
-
   background-color:white;
    `;
 
-export default function CharacterCard(props) {
+const CharacterCard = (props) => {
   const characterData = props.characterData;
 
   return (
@@ -30,9 +29,9 @@ export default function CharacterCard(props) {
       {characterData.map(character => {
         return (
           <WrapperDiv className="cards">
-        <Container>
-          <img src={character.image} alt ="character"/>
-          </Container>
+            <Container>
+            <img src={character.image} alt ="character"/>
+            </Container>
           <h1>Name:{character.name}</h1>
           <h2>Status: {character.status}</h2>
           <h2>Species: {character.species}</h2>
@@ -45,4 +44,4 @@ export default function CharacterCard(props) {
     </>
   );
 }
-
+export default CharacterCard;

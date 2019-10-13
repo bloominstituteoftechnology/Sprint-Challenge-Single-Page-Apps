@@ -4,14 +4,15 @@ import CharacterList from './CharacterList';
 import WelcomePage from './WelcomePage';
 
 
-export default function AppRouter() {
+const AppRouter = () => {
   return (
     <div>
-  <Switch>
-        <Route path='/characters' component={CharacterList} />
-         <Route component={WelcomePage} />
-    
-   </Switch>
-   </div>
+      <Switch>
+        <Route exact path = '/' component = {WelcomePage} /> 
+        <Route path ='/characters' component = {CharacterList} />
+     </Switch>
+    </div>
   );
 }
+
+export default AppRouter; 

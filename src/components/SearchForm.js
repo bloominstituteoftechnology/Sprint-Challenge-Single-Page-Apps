@@ -4,10 +4,9 @@ import styled from "styled-components";
 const Container = styled.div`
 margin-left: 37%;
 margin-top: 2%;
-
 `;
 
-export default function SearchForm({ onSearch }) {
+const SearchForm = ({ onSearch }) => {
   const [search, setSearch] = useState({ name: '' });
   const handleInputChange = event => {
     setSearch({ ...search, name: event.target.value });
@@ -15,20 +14,19 @@ export default function SearchForm({ onSearch }) {
  
   return (
     <Container>
-    <section className="search-form">
-    <form onSubmit={() => onSearch(search.name)}>
-    <input
-    onChange={handleInputChange}
-    placeholder='name'
-    value={search.name}
-    name='name'
-    />
+      <section className = "search-form">
+      <form onSubmit = {() => onSearch(search.name)}>
+        <input
+          onChange = {handleInputChange}
+          placeholder ='name'
+          value = {search.name}
+          name ='name'
+        />
 
-     
         <button className = "search-button">Search</button>
-        </form>
-      
-    </section>
+      </form>
+      </section>
     </Container>
   );
 }
+export default SearchForm; 

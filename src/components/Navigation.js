@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Tab, Menu, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
@@ -12,8 +11,6 @@ padding-bottom: 5%;
 font-family: The Wild Hammers;
 font-size: 20px;
 font-weight: bold;
-
-
 `
 
 const Navigation = () => {
@@ -25,7 +22,7 @@ const Navigation = () => {
       
 
         <div>
-          <Link to ="/characters">  Characters </Link>
+          <Link to ="/characters">Characters </Link>
         </div>
     </WrapperDiv>
   )};

@@ -11,12 +11,13 @@ margin-bottom: 1%;
 box-shadow: 2px 2px 2px slategrey;
 `;
 
-export default function Header() {
+const Header = () => {
   return (
     <WrapperDiv className = "header-ds">
-    <header className="ui centered">
-      <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
+    <header className = "ui centered">
+      <h1 className = "ui center">Rick &amp; Morty Fan Page</h1>
     </header>
     </WrapperDiv>
   );
 }
+export default Header; 

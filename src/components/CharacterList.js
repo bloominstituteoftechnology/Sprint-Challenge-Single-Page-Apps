@@ -29,9 +29,6 @@ const CharacterList = (props) => {
     return <div>Loading character information...</div>;
   }
 
-
-//       <h2>TODO: `array.map()` over your state here!</h2>
-//  
     return (
       <div>
         <CharacterCard characterData={characters} />

@@ -5,9 +5,7 @@ import AppRouter from './components/AppRouter.js';
 import SearchForm from './components/SearchForm';
 
 
-
-
-export default function App() {
+const App = () => {
   return (
     <main>
       <Header />
@@ -17,3 +15,4 @@ export default function App() {
     </main>
   );
 }
+export default App;
