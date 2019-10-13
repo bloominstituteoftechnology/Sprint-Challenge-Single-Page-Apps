@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  The request doesn't go to the server. Client-side routing requests everything on initial load, so it's slower to start up. Afterwards, it only requests what is needed so there isn't a constant refreshing of the entire page. Web crawlers can't process JS- only static HTML so it's not as good for SEO> 
 
 ## Project Set Up
 
