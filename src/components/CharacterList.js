@@ -32,6 +32,7 @@ export default function CharacterList() {
           <CharacterCard key ={character.id} character={character} />
         ))}
       </div>
+        
     </section>
   );
 }

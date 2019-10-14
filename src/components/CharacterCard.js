@@ -8,11 +8,12 @@ import{Link} from "react-router-dom";
    const { name, species, gender, status, id, image } = props.character;
   return (
     <div className ="character-card">
+      
       <Link to={`info/results/${id}`}> <h2>{name}</h2 ></Link>
       <div className="character-image">
         <img src={image} alt={`photo of ${name}`}/>
       </div>
-      <div className ="character-species">
+      <div className="bg-warning"className ="character-species">
         Species: <em>{species}</em>
       </div>
       <div className="character-gender">
@@ -22,6 +23,7 @@ import{Link} from "react-router-dom";
         <p>Status: {status}</p>
       </div>
     </div>
+    
 
    );  
   }
