@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: It is generally faster in rending a changed state because less data is being processed, it is also easy to animate transitions 
 
 ## Project Set Up
 
