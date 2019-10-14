@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: cadetblue;
+
 }
 
 main {
@@ -37,3 +39,14 @@ main {
 header h1 {
   text-align: center;
 }
+
+.character-list{
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.welcome-page{
+  background-color: blue;
+  text-align: center;
+}
+
