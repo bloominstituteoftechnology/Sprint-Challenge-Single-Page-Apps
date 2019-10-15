@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
+import CharacterCard from "./CharacterCard";
 import axios from 'axios';
 
 export default function CharacterList(props) {
@@ -15,27 +16,25 @@ export default function CharacterList(props) {
         .get('https://rickandmortyapi.com/api/character/')
         .then(response => {
           setCharacter(response.data.results);
-          console.log(props.handleInput);
         })
         .catch(error => {
           console.error('Server Error', error);
         });
     }
     getCharacters();
-  }, [characters]);
+  }, []);
 
-  function checkInput(){
-    return characters.name == props.handleInput
-  };
+//console.log(input);
 
 
   return (
     <section className="character-list">
       <SearchForm/>
         {characters.map(character => (
-        <h2>{character.filter(
-          checkInput
-        )}</h2>
+        <CharacterCard
+          name={character.name}
+          image={character.image}
+        />
       ))}
     </section>
   );

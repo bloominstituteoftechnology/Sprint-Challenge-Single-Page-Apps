@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 
+
+
 const Sinput = styled.input `
   padding: 1.5%;
   border-radius: 8px;
@@ -8,13 +10,15 @@ const Sinput = styled.input `
 `;
 
 export default function SearchForm() {
-  const [input, setInput] = useState();
+  
+  const [input, setInput] = useState({inputField: ""});
 
   const handleInput = function(event) {
     setInput({
-       input,  [event.target.name]: event.target.value
+       inputField: event.target.value
     })
 };
+
 
 //console.log(input);
  
@@ -23,9 +27,11 @@ export default function SearchForm() {
      <Sinput
         name="name" 
         type="text"
-  
         onChange={handleInput}    
      ></Sinput>
+
+     <h2>{input.inputField}</h2>
     </section>
   );
 }
+
