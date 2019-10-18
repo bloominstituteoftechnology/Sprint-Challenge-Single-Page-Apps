@@ -5,7 +5,7 @@ export default function CharacterCard({ character }) {
     return (
         <div className="movie-card">
             <img src={image} />
-            <h2>{name}</h2>
+            <h3>{name}</h3>
             <p>Species: {species}</p>
             <p>Gender: {gender}</p>
             <p>Status: {status}</p>
