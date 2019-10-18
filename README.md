@@ -65,8 +65,8 @@ You can still be locked out - watch your [chrome devtools' network panel](https:
 
 _Display Data from a Server API_
 
-- [ ] Fetch a list of characters from the Rick and Morty API's Characters endpoint *`https://rickandmortyapi.com/api/character/`* and render them to the screen.
-- [ ] You must display at least one element for each character.
+- [x] Fetch a list of characters from the Rick and Morty API's Characters endpoint *`https://rickandmortyapi.com/api/character/`* and render them to the screen.
+- [x] You must display at least one element for each character.
 
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
 
