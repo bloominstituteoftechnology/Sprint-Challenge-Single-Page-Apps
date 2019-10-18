@@ -23,6 +23,10 @@ const CharacterList = () => {
             <CharacterCard
             key = {char.id}
             name = {char.name}
+            hp = {char.hp}
+            url = {char.imageUrl}
+            
+
             />
           </div>
         )
