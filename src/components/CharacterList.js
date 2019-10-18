@@ -1,8 +1,28 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
 import axios from "axios";
+import styled from "styled-components";
 
 export default function CharacterList() {
+  // Styles
+  const CharacterContainer = styled.div``;
+  const SearchContainer = styled.div`
+    text-align: center;
+    margin: 2% 0;
+  `;
+  const CardContainer = styled.section`
+  display: flex
+  flex-wrap: wrap;
+  justify-content: space-around;
+  `;
+
+  const CharacterCards = styled.div`
+    box-shadow: 1px 3px 3px #000;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2%;
+  `;
+
   // TODO: Add useState to track data from useEffect
   // Sets state for character data and the search results
   const [characterData, setCharacterData] = useState([]);
@@ -32,26 +52,28 @@ export default function CharacterList() {
   }, [searchQuery]);
 
   return (
-    <div className="character-container">
+    <>
       <SearchForm
         placeholder="Search..."
         value={searchQuery}
         onChange={handleChange}
       />
 
-      <section className="character-list">
-        {characterData.map(character => {
-          return (
-            <div className="character-card" key={character.id}>
-              <img src={character.image} alt={character.name} />
-              <h3>{character.name}</h3>
-              <p>{character.gender}</p>
-              <p>{character.species}</p>
-              <p>{character.status}</p>
-            </div>
-          );
-        })}
-      </section>
-    </div>
+      <CharacterContainer>
+        <CardContainer>
+          {characterData.map(character => {
+            return (
+              <CharacterCards key={character.id}>
+                <img src={character.image} alt={character.name} />
+                <h3>{character.name}</h3>
+                <p>{character.gender}</p>
+                <p>{character.species}</p>
+                <p>{character.status}</p>
+              </CharacterCards>
+            );
+          })}
+        </CardContainer>
+      </CharacterContainer>
+    </>
   );
 }
