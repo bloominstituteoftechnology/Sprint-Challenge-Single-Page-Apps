@@ -7,9 +7,10 @@ const Card = styled.div`
 width: 20%;
 
 padding: 1%;
-margin: 1%;
+margin: 2%;
 border-radius: 5px;
 box-sizing: border-box;
+box-shadow: 0 0 5px 1px  black;
 &:hover{box-shadow: 0 0 20px 5px  orange;}
 h2 {
   font-size: 1.6rem;
