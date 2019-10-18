@@ -9,8 +9,11 @@ export default function App() {
   return (
     <main>
       <Header />
+      <Route exact path="/" component={WelcomePage}/>
+      <Route path="/CharacterList" component={CharacterList}/>
       <CharacterList/>
-      <Route path="/welcomepage/" component={WelcomePage}/>
     </main>
   );
 }
+
+
