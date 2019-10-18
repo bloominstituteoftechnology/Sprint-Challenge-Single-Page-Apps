@@ -3,6 +3,7 @@ import Character from './CharacterCard';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
