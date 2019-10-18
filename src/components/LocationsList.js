@@ -20,16 +20,16 @@ justify-content: center;
 
 const Button = styled.button`
 
-width: 10%;
+width: 15%;
 font-size: 1.3rem;
-color: #2c3cfb;
-background: #e9c47c;
+color: black;
+background: orange;
 border-radius: 8px;
 border: 2px solid black;
 margin: 5px;
 &:hover{
-  color: #e9c47c;
-  background: #2c3cfb;
+  color: orange;
+  background: black;
 }
 `;
 
@@ -44,7 +44,7 @@ const Container = styled.div`
         display: flex;
         Justify-content: center;
         flex-wrap: wrap;
-        height:100vh;
+        /* height:100vh; */
 
     }
 
