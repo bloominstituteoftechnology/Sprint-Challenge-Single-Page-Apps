@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Character from './CharacterCard';
 
 export default function CharacterList() {
