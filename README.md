@@ -29,6 +29,11 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+With client-side routing an App doesn’t have to continue to make API calls every time it routes to another part of the project. 
+
+Client-side Routing utilizes Browser Router, which when wrapped around the App, creates a history(memory of locations) and match(an avenue to reach different locations). 
+
+Browser Router(Router) uses the tools of Route and Link to make the magic happen. The Route component adds the path(way) to reach a certain location in the App, and the Link Component is created to help the User navigate through the paths.
 
 
 ## Project Set Up
