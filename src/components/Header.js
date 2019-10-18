@@ -20,7 +20,7 @@ const Box = styled.div`
 
     a{
       text-decoration: none;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       padding: 1%;
       width: 45%;
       border-radius: 8px;
