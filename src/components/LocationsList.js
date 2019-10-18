@@ -29,7 +29,7 @@ border: 2px solid black;
 margin: 5px;
 &:hover{
   color: orange;
-  background: black;
+  background: #2c3cfb;
 }
 `;
 
@@ -44,7 +44,7 @@ const Container = styled.div`
         display: flex;
         Justify-content: center;
         flex-wrap: wrap;
-        
+        /* height:100vh; */
 
     }
 

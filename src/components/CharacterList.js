@@ -26,7 +26,7 @@ justify-content: center;
 
 const Button = styled.button`
 
-width: 10%;
+width: 15%;
 font-size: 1.3rem;
 color: orange;
 background: black;

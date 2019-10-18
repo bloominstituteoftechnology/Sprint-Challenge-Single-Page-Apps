@@ -12,7 +12,7 @@ const Box = styled.div`
  }
 
  .linkBox {
-   width: 30%;
+   width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
