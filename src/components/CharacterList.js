@@ -3,11 +3,11 @@ import axios from "axios";
 import Character from './CharacterCard';
 import styled from "styled-components";
 
-const Grid = styled.div`
-width: 100%;
-display: flex;
-Justify-content: center;
-flex-wrap: wrap;
+const Input =styled.input`
+font-size:2rem;
+text-align: center;
+border: 2px solid black;
+border-radius: 8px;
 `;
 
 const BtnContainer = styled.div`
@@ -29,6 +29,13 @@ margin: 5px;
   color: black;
 background: orange;
 }
+`;
+
+const Grid = styled.div`
+width: 100%;
+display: flex;
+Justify-content: center;
+flex-wrap: wrap;
 `;
 
 export default function CharacterList() {
@@ -55,6 +62,18 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
+      <form>
+            <Input
+              type="text"
+              onChange={handleInputChange}
+              value={query}
+              name="name"
+              tabIndex="0"
+              className="prompt search-name"
+              placeholder="search by name"
+              autoComplete="off"
+            />
+        </form>
       <BtnContainer>
           <Button onClick={() => 
           (page > 2) ? setPage(page - 1): setPage(1)}
