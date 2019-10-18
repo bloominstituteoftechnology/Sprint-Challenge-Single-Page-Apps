@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Character from './CharacterCard';
+import styled from "styled-components";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
