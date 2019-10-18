@@ -66,9 +66,9 @@ export default function CharacterList() {
               <CharacterCards key={character.id}>
                 <img src={character.image} alt={character.name} />
                 <h3>{character.name}</h3>
-                <p>{character.gender}</p>
-                <p>{character.species}</p>
-                <p>{character.status}</p>
+                <p>Gender: {character.gender}</p>
+                <p>Species: {character.species}</p>
+                <p>Status: {character.status}</p>
               </CharacterCards>
             );
           })}
