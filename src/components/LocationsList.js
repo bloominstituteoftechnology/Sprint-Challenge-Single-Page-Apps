@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LocationCard from "./LocationCard";
+import SearchForm from './SearchForm';
 import styled from "styled-components";
 
-
-
-const Input =styled.input`
-font-size:2rem;
-text-align: center;
-border: 2px solid black;
-border-radius: 8px;
-`;
 
 const BtnContainer = styled.div`
 width: 100%;
@@ -50,10 +43,6 @@ const Container = styled.div`
 
 `;
 
-
-
-
-
 export default function LocationsList() {
     const [location , setLocation] = useState([])
     const [query, setQuery] = useState("");
@@ -82,18 +71,10 @@ export default function LocationsList() {
   return (
     <section className="character-list">
       
-      <form>
-            <Input
-              type="text"
-              onChange={handleInputChange}
-              value={query}
-              name="name"
-              tabIndex="0"
-              className="prompt search-name"
-              placeholder="search name"
-              autoComplete="off"
-            />
-        </form> 
+      <SearchForm 
+        handleInputChange={handleInputChange}
+        query={query}
+        />
        <BtnContainer>
           <Button onClick={() => 
           (page > 2) ? setPage(page - 1): setPage(1)}

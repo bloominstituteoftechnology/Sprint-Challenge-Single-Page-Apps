@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Character from './CharacterCard';
+import SearchForm from './SearchForm';
 import styled from "styled-components";
 import bgrnd from "../img/portal.png";
 
@@ -11,12 +12,6 @@ const Container = styled.div`
   background-position: center;
 `;
 
-const Input =styled.input`
-font-size:2rem;
-text-align: center;
-border: 2px solid black;
-border-radius: 8px;
-`;
 
 const BtnContainer = styled.div`
 width: 100%;
@@ -75,18 +70,11 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <Container>
-      <form>
-            <Input
-              type="text"
-              onChange={handleInputChange}
-              value={query}
-              name="name"
-              tabIndex="0"
-              className="prompt search-name"
-              placeholder="search name"
-              autoComplete="off"
-            />
-        </form>
+        <SearchForm 
+        handleInputChange={handleInputChange}
+        query={query}
+        />
+      
       <BtnContainer>
           <Button onClick={() => 
           (page > 2) ? setPage(page - 1): setPage(1)}
