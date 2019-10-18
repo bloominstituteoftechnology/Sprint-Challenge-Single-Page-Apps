@@ -24,6 +24,9 @@ export default function WelcomePage() {
         <h1>Welcome to the ultimate fan site!</h1>
         <Link to="/Characters"><Buttons>Characters
           </Buttons></Link>
+          <Link to="/Search"><Buttons>Search
+          </Buttons></Link>
+          
         <Img
           className="main-img"
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
