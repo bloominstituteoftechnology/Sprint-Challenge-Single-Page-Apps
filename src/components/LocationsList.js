@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LocationCard from "./LocationCard";
 import styled from "styled-components";
-import bgrnd from "../img/bgrnd.png";
+
 
 
 const Input =styled.input`
