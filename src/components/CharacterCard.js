@@ -10,7 +10,7 @@ padding: 1%;
 margin: 1%;
 border-radius: 5px;
 box-sizing: border-box;
-&:hover{box-shadow: 0 0 20px 1px  green;}
+&:hover{box-shadow: 0 0 20px 5px  orange;}
 h2 {
   font-size: 1.6rem;
   color: Black;}

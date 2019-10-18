@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Character from './CharacterCard';
 import styled from "styled-components";
+import bgrnd from "../img/portal.png";
+
+const Container = styled.div`
+ background-image: url(${bgrnd});
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+`;
 
 const Input =styled.input`
 font-size:2rem;
@@ -39,14 +47,13 @@ flex-wrap: wrap;
 `;
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+  
   const [info, setInfo] = useState([]);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array! 
+   
     axios
         .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
         .then(response => {
@@ -67,6 +74,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
+      <Container>
       <form>
             <Input
               type="text"
@@ -100,6 +108,11 @@ export default function CharacterList() {
             );
           })}
       </Grid>  
+
+
+      </Container>
+      
+
     </section>
   );
 }
