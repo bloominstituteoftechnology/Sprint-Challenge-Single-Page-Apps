@@ -5,11 +5,6 @@ import styled from "styled-components";
 
 export default function CharacterList() {
   // Styles
-  const CharacterContainer = styled.div``;
-  const SearchContainer = styled.div`
-    text-align: center;
-    margin: 2% 0;
-  `;
   const CardContainer = styled.section`
   display: flex
   flex-wrap: wrap;
@@ -59,21 +54,19 @@ export default function CharacterList() {
         onChange={handleChange}
       />
 
-      <CharacterContainer>
-        <CardContainer>
-          {characterData.map(character => {
-            return (
-              <CharacterCards key={character.id}>
-                <img src={character.image} alt={character.name} />
-                <h3>{character.name}</h3>
-                <p>Gender: {character.gender}</p>
-                <p>Species: {character.species}</p>
-                <p>Status: {character.status}</p>
-              </CharacterCards>
-            );
-          })}
-        </CardContainer>
-      </CharacterContainer>
+      <CardContainer>
+        {characterData.map(character => {
+          return (
+            <CharacterCards key={character.id}>
+              <img src={character.image} alt={character.name} />
+              <h3>{character.name}</h3>
+              <p>Gender: {character.gender}</p>
+              <p>Species: {character.species}</p>
+              <p>Status: {character.status}</p>
+            </CharacterCards>
+          );
+        })}
+      </CardContainer>
     </>
   );
 }

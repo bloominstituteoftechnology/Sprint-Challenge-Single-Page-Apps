@@ -7,7 +7,7 @@ export default function Header() {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 30%;
+    width: 40%;
   `;
 
   return (
@@ -19,6 +19,9 @@ export default function Header() {
         </Link>
         <Link className="link-items" to="/characters">
           Characters
+        </Link>
+        <Link className="link-items" to="/locations">
+          Locations
         </Link>
       </NavBar>
     </header>
