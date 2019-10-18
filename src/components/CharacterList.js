@@ -10,6 +10,12 @@ Justify-content: center;
 flex-wrap: wrap;
 `;
 
+const BtnContainer = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+`;
+
 const Button = styled.button`
 
 width: 10%;
@@ -49,11 +55,14 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <Button onClick={() => 
+      <BtnContainer>
+          <Button onClick={() => 
           (page > 2) ? setPage(page - 1): setPage(1)}
           >Previous</Button>
 
         <Button onClick={() => setPage(page + 1)}>Next</Button>
+      </BtnContainer>
+      
       <Grid>
       {info.map((item, id) => {
             return (
