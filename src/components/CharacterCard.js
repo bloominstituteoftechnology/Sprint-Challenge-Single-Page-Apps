@@ -4,6 +4,7 @@ import styled from "styled-components";
 const MainWrap = styled.div`
 display: inline-grid;
     padding: 10px;
+    width: 200px;
     
 `
 
@@ -11,17 +12,17 @@ const CardContainers = styled.div`
   display:flex;
   flex-direction:column;
   flex-flow: wrap;
-  width: 300px;
+  width: 200px;
 
 `
 
 const CharacterCard = (props) => {
   return (
-  <CardContainers>
-  <h1>Name: {props.name}</h1>
-  <p>HP: {props.hp}</p>
-  <img src= {props.url} alt="pokemon"/>
-  </CardContainers>
-  )
-}
+    
+		<MainWrap>
+			<h1>Name : {props.name}</h1>
+			<img src={props.url} />
+		</MainWrap>
+	);
+};
 export default CharacterCard;

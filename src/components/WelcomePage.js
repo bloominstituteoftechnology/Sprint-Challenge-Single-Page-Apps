@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import SearchForm from "./SearchForm";
 
 const MainContainer = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: cyan;
-  width 50%
-`
+  background-color: black;`
 
 const Button = styled.button`
   margin: 10px;
@@ -23,11 +20,10 @@ export default function WelcomePage() {
     <section className="welcome-page">
       <MainContainer>
         <header>
-          <h1>Welcome to the ultimate fan site of Pokeys Now!</h1>
+          <h1>Rick and Morty Kindof</h1>
           <Link to ="/CharacterList">
           <Button>Click here</Button>
           </Link>
-          <SearchForm/>
         </header>
       </MainContainer>
     </section>
