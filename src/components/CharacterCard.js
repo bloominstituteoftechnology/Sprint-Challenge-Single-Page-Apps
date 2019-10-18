@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+const MainWrap = styled.div`
+display: inline-grid;
+    padding: 10px;
+    
+`
+
 const CardContainers = styled.div`
   display:flex;
   flex-direction:column;

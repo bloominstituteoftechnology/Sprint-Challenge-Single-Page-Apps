@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import SearchForm from "./SearchForm";
 
 const MainContainer = styled.div`
   display:flex;
@@ -26,6 +27,7 @@ export default function WelcomePage() {
           <Link to ="/CharacterList">
           <Button>Click here</Button>
           </Link>
+          {/* <SearchForm/> */}
         </header>
       </MainContainer>
     </section>
