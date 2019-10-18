@@ -60,6 +60,10 @@ export default function CharacterList() {
     
   }, [page]);
 
+  const handleInputChange = event => {
+    setQuery(event.target.value);
+  };
+
   return (
     <section className="character-list">
       <form>
