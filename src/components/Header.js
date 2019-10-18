@@ -45,6 +45,7 @@ export default function Header() {
         <div className="linkBox">
           <Link to="/">Home</Link>
           <Link to="/character-list">Characters</Link>
+          <Link to="/location-list">Location</Link>
         </div>
        
       </Box>
