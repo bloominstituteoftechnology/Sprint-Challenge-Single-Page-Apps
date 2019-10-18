@@ -27,7 +27,7 @@ export default function WelcomePage() {
           <Link to ="/CharacterList">
           <Button>Click here</Button>
           </Link>
-          {/* <SearchForm/> */}
+          <SearchForm/>
         </header>
       </MainContainer>
     </section>
