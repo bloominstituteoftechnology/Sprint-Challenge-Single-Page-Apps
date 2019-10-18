@@ -13,8 +13,7 @@ const CharacterCard = props => {
   return (
     <>
     <Col xs="6" sm="4" key={props.id}></Col>
-    <Card className="character-page">
-      <h1>Character Page</h1>
+    <Card className="character-page">      
     <CardBody className="characterCard">
       <img className='character' alt="characterPicture" src={props.image}/>
       <CardText>{props.name}</CardText>

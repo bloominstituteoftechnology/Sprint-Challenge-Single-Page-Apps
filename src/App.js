@@ -4,15 +4,18 @@ import CharacterList from "./components/CharacterList";
 import CharacterCard from "./components/CharacterCard.js";
 import WelcomePage from "./components/WelcomePage";
 import {Route} from "react-router-dom";
+import SearchForm from "./components/SearchForm";
 
 
 export default function App() {
   return (
     <main>
-      {/* <Header /> */}
+      <Header />
       <Route exact path='/' className="welcome" component={WelcomePage} />
+      <Route path="/character-list/search" component={SearchForm}/>
       <Route path="/character-list" component={CharacterList} />
-      <Route path="character-card" component={CharacterCard} />
+      
+      <Route path="/character-card" component={CharacterCard} />
     </main>
   );
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import { Container, Row, Col } from "reactstrap";
+import {Link} from "react-router-dom";
 
 
 export default function CharacterList() {
@@ -20,7 +21,12 @@ export default function CharacterList() {
   }, []);
         console.log('this is characterlist', characterData);
   return (
-    <Container className="character-list">
+    <>
+  <nav>
+    <Link to={"/character-list/search"}>Search</Link>
+  </nav>
+
+    <Container className="character-list">      
       <Row className="entry">
         {characterData.map((charac => {
           return <CharacterCard key={charac.id} name={charac.name} status={charac.status} image={charac.image} species={charac.species}/>
@@ -28,5 +34,6 @@ export default function CharacterList() {
       }
       </Row>
     </Container>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import welcome from "../image/welcome.gif";
-import {Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const Welcome = styled.section`
@@ -18,6 +18,7 @@ export default function WelcomePage() {
           src={welcome}
           alt="rick"
         />
+        <Link to={'/character-list'}>View Characters</Link>
       </header>
     </Welcome>
   );

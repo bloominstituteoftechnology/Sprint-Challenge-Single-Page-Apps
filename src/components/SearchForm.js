@@ -1,56 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import CharacterCard from "./CharacterCard";
 
 export default function SearchForm() {
-
-  
-  function App() {
-    // searchTerm will save the data from the search input on every occurance of the change event.
-    const [searchTerm, setSearchTerm] = useState("");
-    // searchResults is used to set the search result.
-    const [searchResults, setSearchResults] = useState([]);
-  
+    const [data, setData] = useState([]);
+    const [query, setQuery] = useState("");
     useEffect(() => {
-      const results = characters.filter(character =>
-        character.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setSearchResults(results);
-    }, [searchTerm]);
-    // The handleChange method takes the event object as the arguement and sets the current value of the form to the searchTerm state using setSearchTerm
-    const handleChange = event => {
-      // console.log(event.target.value)
-      setSearchTerm(event.target.value);
+      axios
+        .get("https://rickandmortyapi.com/api/character/", {
+          params: {
+            key: "$2a$10$1sdw09jOfZCj0ChmG9I2g.Q1uMT30My2M/aNAqc.aV3JTyNxb4f2m"
+          }
+        })
+        .then(response => {
+          const characters = response.data.results.filter(character =>
+            character.name.toLowerCase().includes(query.toLowerCase())
+          );
+          setData(characters);
+        });
+    }, [query]);
+    
+
+    const handleInputChange = event => {
+      setQuery(event.target.value);
     };
     return (
-      <div className="App">
-        <form>
-          {/* We apply two-way data binding to the input field, which basically takes the value from the user and saves it into the state. */}
-          {/* Two-way binding just means that:
-          When properties in the model get updated, so does the UI.
-          When UI elements get updated, the changes get propagated back to the model. */}
-          <label htmlFor="name">Search:</label>
+      <div className="character">
+        <form className="search">        
           <input
-            id="name"
-            type="text"
-            name="textfield"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={handleChange}
-          />
-        </form>
-        <div className="character-list">
-          <ul>
-            {searchResults.map(character => (
-              <li key={character}>{character}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
-  }
+          id="name"
+          type="text"
+          name="textfield"
+          placeholder="Search"
+          value={query}
+          onChange={handleInputChange}/>
+          </form>
+          {data.map((charac => {          
+          return(
+            <CharacterCard key={charac.id}
+            name={charac.name}
+            image={charac.image}
+            species={charac.species}
+            status={charac.status}
+            />
+          )
+        })
+           ) }
+          </div>
+    )
  
-  return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
-  );
-}
+  
+          }
