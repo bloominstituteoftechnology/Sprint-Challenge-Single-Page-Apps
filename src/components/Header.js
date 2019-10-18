@@ -21,7 +21,8 @@ const Box = styled.div`
     a{
       text-decoration: none;
       font-size: 1.6rem;
-      padding: 1%;
+      padding: 2%;
+      margin: 2%;
       width: 45%;
       border-radius: 8px;
       color:yellow;
