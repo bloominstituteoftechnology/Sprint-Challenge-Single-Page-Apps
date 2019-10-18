@@ -18,10 +18,11 @@ export default function LocationsList(props) {
   `;
 
   const [episodeData, setEpisodeData] = useState([]);
+  const [pageControl, setPageControl] = useState(1);
 
   useEffect(() => {
     axios
-      .get("https://rickandmortyapi.com/api/episode/")
+      .get(`https://rickandmortyapi.com/api/episode/?page=${pageControl}`)
       .then(response => {
         // console.log(response.data.results);
         setEpisodeData(response.data.results);
@@ -29,19 +30,27 @@ export default function LocationsList(props) {
       .catch(error => {
         console.log("Error: ", error);
       });
-  }, []);
+  }, [pageControl]);
 
   return (
-    <CardContainer>
-      {episodeData.map(episode => {
-        return (
-          <CharacterCards key={episode.id}>
-            <h3>{episode.name}</h3>
-            <p>{episode.episode}</p>
-            <p>{episode.air_date}</p>
-          </CharacterCards>
-        );
-      })}
-    </CardContainer>
+    <>
+      <CardContainer>
+        {episodeData.map(episode => {
+          return (
+            <CharacterCards key={episode.id}>
+              <h3>{episode.name}</h3>
+              <p>{episode.episode}</p>
+              <p>{episode.air_date}</p>
+            </CharacterCards>
+          );
+        })}
+      </CardContainer>
+      <div className="button-container">
+        <button onClick={() => setPageControl(pageControl - 1)}>
+          Previous
+        </button>
+        <button onClick={() => setPageControl(pageControl + 1)}>Next</button>
+      </div>
+    </>
   );
 }

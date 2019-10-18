@@ -13,15 +13,17 @@ export default function CharacterList() {
 
   const CharacterCards = styled.div`
     box-shadow: 1px 3px 3px #000;
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin-bottom: 2%;
+    padding-top: 1%;
   `;
 
   // TODO: Add useState to track data from useEffect
   // Sets state for character data and the search results
   const [characterData, setCharacterData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [pageControl, setPageControl] = useState(1);
 
   const handleChange = event => {
     setSearchQuery(event.target.value);
@@ -32,7 +34,7 @@ export default function CharacterList() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
-      .get("https://rickandmortyapi.com/api/character/")
+      .get(`https://rickandmortyapi.com/api/character/?page=${pageControl}`)
       .then(response => {
         // console.log(response);
         // Sets the character variable to the response of the API when the results of the search matches the character name
@@ -44,7 +46,7 @@ export default function CharacterList() {
       .catch(error => {
         console.log("Error: ", error);
       });
-  }, [searchQuery]);
+  }, [searchQuery || pageControl]);
 
   return (
     <>
@@ -67,6 +69,12 @@ export default function CharacterList() {
           );
         })}
       </CardContainer>
+      <div className="button-container">
+        <button onClick={() => setPageControl(pageControl - 1)}>
+          Previous
+        </button>
+        <button onClick={() => setPageControl(pageControl + 1)}>Next</button>
+      </div>
     </>
   );
 }

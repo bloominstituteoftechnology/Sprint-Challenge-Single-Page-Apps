@@ -66,3 +66,26 @@ header h1 {
   color: #fff;
   border-radius: 5px;
 }
+
+.button-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.button-container button {
+  background-color: tomato;
+  color: #fff;
+  padding: 3%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.button-container button:hover {
+  text-decoration: underline;
+}
