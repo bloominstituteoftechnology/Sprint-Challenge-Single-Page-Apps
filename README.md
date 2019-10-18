@@ -101,9 +101,9 @@ _Note:_ The most difficult stretch goal(s) could take an expert an hour or more.
 Start with the most _familiar (or fun) sounding_ stretch goal.
 Complete search component to your list views.
 
-- [ ] Try adding 2 more components and display data from the episodes and locations end point.
+- [x] Try adding 2 more components and display data from the episodes and locations end point.
 - [x] https://rickandmortyapi.com/api/location/ - docs
-- [ ] https://rickandmortyapi.com/api/episode/ - docs
+- [x] https://rickandmortyapi.com/api/episode/ - docs
 
 - [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
 - [ ] Animate page transition and/or card loading.
