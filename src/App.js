@@ -9,8 +9,8 @@ export default function App() {
   return (
     <main>
       <Header />
-      <Welcome />
-      <CharacterList />
+      <Route exact path="/" component={Welcome} />
+      <Route path="/character-list" component={CharacterList} />
     </main>
   );
 }
