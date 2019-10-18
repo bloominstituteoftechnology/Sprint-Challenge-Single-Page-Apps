@@ -1,4 +1,5 @@
 import React from "react";
+import CharacterList from "./CharacterList";
 
 export default function WelcomePage() {
   return (
@@ -11,6 +12,9 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      <div>
+      <CharacterList />
+      </div>
     </section>
   );
 }
