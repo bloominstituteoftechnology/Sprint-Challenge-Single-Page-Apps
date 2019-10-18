@@ -8,7 +8,19 @@ export default function CharacterList() {
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+    //  Important: verify the 2nd `useEffect` parameter: the dependancies array! 
+    axios
+        .get(`https://rickandmortyapi.com/api/character/`)
+        .then(response => {
+          console.log("From CharacterCard:" , response.data.results)
+          const characterData = response.data.results
+
+          setInfo(characterData)
+        })
+        .catch(error => {
+          console.log("The data was not returned", error);
+        });
+    
   }, []);
 
   return (
