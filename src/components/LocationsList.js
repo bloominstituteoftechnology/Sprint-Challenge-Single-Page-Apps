@@ -12,7 +12,7 @@ export default function LocationsList(props) {
 
   const CharacterCards = styled.div`
     box-shadow: 1px 3px 3px #000;
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin-bottom: 2%;
   `;
