@@ -26,7 +26,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ]  Explain benefit(s) using `client-side routing`?
-
+Does not make a new request when a user clicks on a link.  The client-side routing understands that the page is a local page.  IF something has changed on the server, the app will request the new info.
 > Answer:
 
 ## Project Set Up
