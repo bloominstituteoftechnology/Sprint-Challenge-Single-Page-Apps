@@ -3,6 +3,13 @@ import axios from "axios";
 import Character from './CharacterCard';
 import styled from "styled-components";
 
+const Grid = styled.div`
+width: 100%;
+display: flex;
+Justify-content: center;
+flex-wrap: wrap;
+`;
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [info, setInfo] = useState([]);
@@ -26,7 +33,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      
+      <Grid>
       {info.map((item, id) => {
             return (
                 <Character 
@@ -38,6 +45,7 @@ export default function CharacterList() {
                 />
             );
           })}
+      </Grid>  
     </section>
   );
 }
