@@ -8,8 +8,9 @@ import bgrnd from "../img/portal.png";
 const Container = styled.div`
  background-image: url(${bgrnd});
   background-size: cover;
-  height: 100vh;
+  height: 110vh;
   background-position: center;
+  box-sizing: border-box;
 `;
 
 

@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  background: dodgerblue;
-  color: white;
+background: #0dd2f6;
+color: white;
 width: 22%;
 padding: 1%;
 margin: 2%;
