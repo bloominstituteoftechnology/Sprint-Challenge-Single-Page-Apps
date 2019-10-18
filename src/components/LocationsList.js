@@ -22,12 +22,14 @@ const Button = styled.button`
 
 width: 10%;
 font-size: 1.3rem;
-background: fuchsia;
+color: #2c3cfb;
+background: #e9c47c;
 border-radius: 8px;
 border: 2px solid black;
 margin: 5px;
 &:hover{
-  color: fuchsia;
+  color: #e9c47c;
+  background: #2c3cfb;
 }
 `;
 
@@ -65,7 +67,7 @@ export default function LocationsList() {
           const name = response.data.results.filter(character => 
             character.name.toLowerCase().includes(query.toLowerCase())
             );
-          setLocation(response.data.results)
+          setLocation(name)
         })
         .catch(error => {
           console.log("The data was not returned", error);

@@ -25,12 +25,13 @@ const Box = styled.div`
       margin: 2%;
       width: 45%;
       border-radius: 8px;
-      color:yellow;
-      background-color: green;
+      border: 1px solid #39259f;
+      color:#39259f;
+      background-color:#f423bc ;
 
         &:hover {
-          color:green;
-          background-color: yellow;
+          color: #f423bc;
+          background-color: #39259f;
         }
     }
  }
