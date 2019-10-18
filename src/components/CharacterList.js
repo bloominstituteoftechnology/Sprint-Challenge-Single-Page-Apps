@@ -41,6 +41,7 @@ flex-wrap: wrap;
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [info, setInfo] = useState([]);
+  const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -49,16 +50,16 @@ export default function CharacterList() {
     axios
         .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
         .then(response => {
-          console.log("From CharacterCard:" , response.data.results)
-          const characterData = response.data.results
-
-          setInfo(characterData)
+          const name = response.data.results.filter(character => 
+            character.name.toLowerCase().includes(query.toLowerCase())
+            );
+          setInfo(name)
         })
         .catch(error => {
           console.log("The data was not returned", error);
         });
     
-  }, [page]);
+  }, [query , page]);
 
   const handleInputChange = event => {
     setQuery(event.target.value);
@@ -74,7 +75,7 @@ export default function CharacterList() {
               name="name"
               tabIndex="0"
               className="prompt search-name"
-              placeholder="search by name"
+              placeholder="search name"
               autoComplete="off"
             />
         </form>
