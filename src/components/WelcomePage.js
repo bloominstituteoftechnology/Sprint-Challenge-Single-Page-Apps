@@ -12,7 +12,7 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
-      <Link to= {'/components/CharacterList/'}>
+      <Link to = {'/components/CharacterList/'}>
       <button>Meet The Toons</button>
       </Link>
     </section>
