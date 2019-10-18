@@ -22,15 +22,10 @@ export default function WelcomePage() {
     <section className="welcome-page">
       <MainContainer>
         <header>
-          <h1>Welcome to the ultimate fan site!</h1>
-          <Link to ="/CharactersList">
+          <h1>Welcome to the ultimate fan site of Pokeys Now!</h1>
+          <Link to ="/CharacterList">
           <Button>Click here</Button>
           </Link>
-          <img
-            className="main-img"
-            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-            alt="rick"
-          />
         </header>
       </MainContainer>
     </section>
