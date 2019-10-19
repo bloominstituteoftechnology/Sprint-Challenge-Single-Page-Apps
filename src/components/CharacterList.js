@@ -8,7 +8,6 @@ import bgrnd from "../img/portal.png";
 const Container = styled.div`
  background-image: url(${bgrnd});
   background-size: cover;
-  height: 110vh;
   background-position: center;
   box-sizing: border-box;
 `;
@@ -53,6 +52,7 @@ export default function CharacterList() {
     axios
         .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
         .then(response => {
+          console.log(response)
           const name = response.data.results.filter(character => 
             character.name.toLowerCase().includes(query.toLowerCase())
             );
@@ -70,6 +70,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
+      
       <Container>
         <SearchForm 
         handleInputChange={handleInputChange}
@@ -85,17 +86,17 @@ export default function CharacterList() {
       </BtnContainer>
       
       <Grid>
-      {info.map((item, id) => {
-            return (
-                <Character 
-                  key={id} 
-                  name={item.name} 
-                  status={item.status} 
-                  species={item.species} 
-                  type={item.type} 
-                />
-            );
-          })}
+        {info.map((item, id) => {
+              return (
+                  <Character 
+                    key={id} 
+                    image={item.image}
+                    name={item.name} 
+                    origin={item.origin}
+                    species={item.species} 
+                  />
+              );
+            })}
       </Grid>  
 
 
