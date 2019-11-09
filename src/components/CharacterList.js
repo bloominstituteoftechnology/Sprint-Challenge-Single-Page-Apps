@@ -1,50 +1,39 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import CharacterCard from "./CharacterCard.js";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
+export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const CharacterList = props => {
-    const [characters, setCharacters] = useState([])
+
+  const [character, setCharacter] = useState([]);
+
   useEffect(() => {
-    const getCharacters = () => {
-      axios
-        .get('https://rickandmortyapi.com/api/character/')
-        .then(response => {
-          setCharacters(response.results);
-        })
-        .catch(error => {
-          console.error('Server Error', error);
-        });
-    }
-    
-    getCharacters();
+    axios
+    .get('https://rickandmortyapi.com/api/character/')
+    .then((response) => {
+      setCharacter(response.results);
+      console.log(response);
+    })
+    .catch(error => {
+      console.error('Server Error', error);
+    });
   }, []);
 
   return (
-    <div className="character-list">
-      {characters.map(character => (
-        <CharacterDetails key={character.id} character={character} />
+    <section className="character-list">
+      <h2>TODO: `array.map()` over your state here!</h2>
+
+      <Link to="/"><Button>Home</Button></Link>
+
+      {character.map(character => (
+        <CharacterCard 
+        key={character.id} 
+        name={character.name} 
+        species={character.species} 
+        status={character.status} />
       ))}
-    </div>
+    </section>
   );
 }
-
-function CharacterDetails({ character }) {
-  const { name } = character;
-
-
-return (
-  <section className="character-list">
-        <div className="">
-        Name: <strong>{name}</strong>
-      </div>
-      {/* <h3>Actors</h3>
-      {stars.map(star => (
-        <div key={star} className="movie-star">
-          {star}
-        </div> */}
-  </section>
-);
-
-}
-
-export default CharacterList;

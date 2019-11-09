@@ -1,7 +1,14 @@
 import React from 'react';
+import Card from '@material-ui/core/Card'
 
-const CharacterCard = props => {
-  return;
-};
+export default function CharacterCard({ name, species, status}) {
+  return (
+    <Card>
 
-export default CharacterCard;
+      <h3>Name:{name}</h3>
+      <p>Species:{species}</p>
+      <p>Status:{status}</p>
+
+    </Card>
+
+)}
