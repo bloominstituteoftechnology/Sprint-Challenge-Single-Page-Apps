@@ -28,20 +28,21 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
+I believe the biggest benefits from client-side routing are how fluid the app/website feels.  Things just load almost as soon as your click them.  The initial loading may take longer than server side routing but I believe the initial wait time ultimately improves the user expierence. 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ]  Create a forked copy of this project.
+- [x]  Create a forked copy of this project.
 - [ ]  Add TL as collaborator on GitHub.
-- [ ]  Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ]  Implement the project on this branch, committing changes regularly.
+- [x]  Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x]  Implement the project on this branch, committing changes regularly.
 - [ ]  Push commits: `git push origin <firstName-lastName>`.
 - [ ]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ]  **RUN** `yarn start` or `npm start` to fire up your React application.
+- [x]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [x]  **RUN** `yarn start` or `npm start` to fire up your React application.
 
 ### Exceeded rate limits?
 
