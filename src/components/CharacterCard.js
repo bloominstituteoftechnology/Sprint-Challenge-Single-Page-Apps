@@ -1,38 +1,9 @@
-// import React from "react";
-// import styled from "styled-components";
-
-// const Cards = styled.div`
-//  border: 1px solid black;
-//  margin: 2%;
-//  background-color: lightblue;
-//  border-radius: 10px;
-//  padding: 3%;
-// `
-
-
-// export default function CharacterCard({ name, species, status}) {
-//   return (
-//     <Cards>
-
-//       <h3>Name:{name}</h3>
-//       <p>Species:{species}</p>
-//       <p>Status:{status}</p>
-
-
-
-//       </Cards>
-
-// )}
-
-
 import React from 'react';
 import Card from '@material-ui/core/Card'
 import { makeStyles } from '@material-ui/core/styles';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -46,7 +17,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function CharacterCard( { name, imageURL, species, status }) {
+export default function CharacterCard( { name, imageURL, species, status, gender }) {
   const classes = useStyles();
 
   return (
@@ -66,6 +37,9 @@ export default function CharacterCard( { name, imageURL, species, status }) {
             Species: {species}
             <br></br>
             Status: {status}
+            <br></br>
+            Gender: {gender}
+            <br></br>
           </Typography>
         </CardContent>
       </CardActionArea>
