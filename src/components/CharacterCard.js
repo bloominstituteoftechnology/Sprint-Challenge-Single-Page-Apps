@@ -1,26 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Container, Card, Image, Icon } from "semantic-ui-react";
-import Axios from "axios";
+import { Card, Image, Icon } from "semantic-ui-react";
+import { Link } from 'react-router-dom'
 
 export default function CharacterCard(props) {
-  const [rmData, setrmData] = useState([]);
-  const [newDataCall, setNewDataCall] = useState({});
-
-  useEffect(() => {
-    Axios.get("https://rickandmortyapi.com/api/character")
-      // .then(res => console.log(res.data.results))
-      .then(res => setrmData(res.data.results))
-      .catch(res => console.log(res));
-  }, []);
-
-  useEffect(() => {
-    
-  })
 
   return (
-    <div>
+    <Card.Group itemsPerRow={3}>
       {
-        rmData.map((item) => {
+        props.rmData.map((item) => {
         return (
           <Card>
             <Image src={item.image} wrapped ui={false} />
@@ -32,15 +19,15 @@ export default function CharacterCard(props) {
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a>
+              <Link>
                 <Icon name="user" />
                 {`I've been in ${item.episode.length} episodes`}
-              </a>
+              </Link>
             </Card.Content>
           </Card>
         );
       })
     }
-    </div>
+    </Card.Group>
   );
 }
