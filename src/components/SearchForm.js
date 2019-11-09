@@ -41,10 +41,12 @@ useEffect(() => {
 
         {data.map((char => {
         return (<CharacterCard 
-          key={char.id}
-          name={char.name}
-          status={char.status}
-          species={char.species}
+          key={char.id} 
+          name={char.name} 
+          species={char.species} 
+          status={char.status} 
+          imageURL={char.image} 
+          gender={char.gender} 
           />
         )})
         )}
