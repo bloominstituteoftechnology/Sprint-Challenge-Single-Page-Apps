@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharacterCard from "./CharacterCard.js";
+import CharacterCard from "./CharacterCard";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export default function CharacterList() {
     axios
     .get('https://rickandmortyapi.com/api/character/')
     .then((response) => {
-      setCharacter(response.results);
+      setCharacter(response.data.results);
       console.log(response);
     })
     .catch(error => {
@@ -21,19 +21,22 @@ export default function CharacterList() {
     });
   }, []);
 
+  
+
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-
       <Link to="/"><Button>Home</Button></Link>
+      <Link to="/search"><Button>Search</Button></Link>
 
       {character.map(character => (
         <CharacterCard 
         key={character.id} 
         name={character.name} 
         species={character.species} 
-        status={character.status} />
+        status={character.status} 
+        />
       ))}
     </section>
   );
+
 }
