@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import Axios from "axios";
 
 //Components
+import Nav from './components/Navigation'
 import Header from "./components/Header.js";
 import WelcomePage from './components/WelcomePage'
 import CharacterCard from "./components/CharacterCard";
@@ -23,6 +24,7 @@ export default function App() {
 
   return (
     <main>
+      <Nav />
       <Header />
       <WelcomePage/>
       <SearchForm />
