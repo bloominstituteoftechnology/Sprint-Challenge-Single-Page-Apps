@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom";
 
 //Axios Import
 import Axios from "axios";
 
 //Components
-import Nav from './components/Navigation'
 import Header from "./components/Header.js";
-import WelcomePage from './components/WelcomePage'
+import WelcomePage from "./components/WelcomePage";
 import CharacterCard from "./components/CharacterCard";
-import SearchForm from './components/SearchForm'
-import CharacterList from './components/CharacterList'
+import SearchForm from "./components/SearchForm";
+import CharacterList from "./components/CharacterList";
 
 export default function App() {
   const [rmData, setrmData] = useState([]);
@@ -25,10 +24,10 @@ export default function App() {
   return (
     <main>
       <Header />
-      <WelcomePage/>
+      <WelcomePage />
       <SearchForm />
-      <CharacterCard rmData={rmData}/>
-      <Route exact path='/charlist:id' component={CharacterList} />
+      <Route exact path='/' render={props => <CharacterCard {...props} rmData={rmData} />} />
+      <Route exact path='/:id' render={props => <CharacterList {...props} rmData={rmData} />} />
     </main>
   );
 }

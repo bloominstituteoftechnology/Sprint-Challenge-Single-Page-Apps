@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Card, Image, Icon } from "semantic-ui-react";
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ export default function CharacterCard(props) {
       {
         props.rmData.map((item) => {
         return (
-          <Card key={item.key}>
+          <Card key={item.id}>
             <Image src={item.image} wrapped ui={false} />
             <Card.Content>
         <Card.Header>{item.name}</Card.Header>
@@ -19,7 +19,7 @@ export default function CharacterCard(props) {
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <Link>
+              <Link to={`/${item.id}`}>
                 <Icon name="user" />
                 {`I've been in ${item.episode.length} episodes`}
               </Link>
