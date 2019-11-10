@@ -9,7 +9,7 @@ export default function CharacterCard(props) {
       {
         props.rmData.map((item) => {
         return (
-          <Card>
+          <Card key={item.key}>
             <Image src={item.image} wrapped ui={false} />
             <Card.Content>
         <Card.Header>{item.name}</Card.Header>
