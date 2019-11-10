@@ -19,7 +19,7 @@ export default function CharacterCard(props) {
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <Link to={`/${item.id}`}>
+              <Link to={`/characterlist/${item.id}`}>
                 <Icon name="user" />
                 {`I've been in ${item.episode.length} episodes`}
               </Link>

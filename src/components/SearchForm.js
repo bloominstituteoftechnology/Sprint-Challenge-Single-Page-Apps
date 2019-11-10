@@ -9,7 +9,7 @@ export default function SearchForm(props) {
     // </section>
     <Grid>
       <Grid.Column>
-        <Search size='large' style={{marginLeft: '40%', marginTop: '1%'}} />
+        <Search size='large' style={{marginLeft: '50%', marginTop: '1%'}} />
       </Grid.Column>
     </Grid>
   );

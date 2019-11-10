@@ -24,10 +24,9 @@ export default function App() {
   return (
     <main>
       <Header />
-      <WelcomePage />
-      <SearchForm />
-      <Route exact path='/' render={props => <CharacterCard {...props} rmData={rmData} />} />
-      <Route exact path='/:id' render={props => <CharacterList {...props} rmData={rmData} />} />
+      <Route exact path='/' render={props => <WelcomePage {...props} rmData={rmData} />} />
+      <Route path='/characterlist' render={props => <CharacterCard {...props} rmData={rmData} />} />
+      <Route path='/characterlist/:id' render={props => <CharacterList {...props} rmData={rmData} />} />
     </main>
   );
 }

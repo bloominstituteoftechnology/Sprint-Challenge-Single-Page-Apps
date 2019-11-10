@@ -1,14 +1,26 @@
 import React from "react";
-import { Card, Image, Icon } from "semantic-ui-react";
-import { Link } from 'react-router-dom'
+import { Container, Card, Image, List } from "semantic-ui-react";
+import Axios from "axios";
+import { async } from "q";
 
 export default function CharacterCard(props) {
-    const id = props.match.params.id
-    const character = props.rmData.find(character => `${character.id === id}`)
+  const id = props.match.params.id;
+  const character = props.rmData.find(char => `${char.id}` === id) || {};
 
   return (
-    <div>
-        {character.name}
-    </div>
+    <Container>
+      <Card
+        style={{
+          marginTop: "5%",
+          marginLeft: "35%"
+        }}
+      >
+        <Image src={character.image} size="large" />
+        <Card.Content>
+          <Card.Header>{character.name}</Card.Header>
+          <Card.Meta>Species:{character.species}</Card.Meta>
+        </Card.Content>
+      </Card>
+    </Container>
   );
 }
