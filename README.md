@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client side routing can reduce loading time, allow room for transition animation and provide better connection error handling. 
 
 ## Project Set Up
 
