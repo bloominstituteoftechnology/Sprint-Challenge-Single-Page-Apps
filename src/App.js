@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header.js";
-import {Route, Link} from "react-router-dom"
+import {Route} from "react-router-dom"
 import WelcomePage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
 
