@@ -5,11 +5,11 @@ export default function SearchForm(props) {
 
   const handleChanges = e => {
     setResults(e.target.value);
-    console.log(results);
   };
 
   const submitHandler = e => {
     e.preventDefault();
+    
     const filtered = props.characters.filter(char => {
       return char.name.toLowerCase().indexOf(results.toLowerCase()) !== -1;
     });
