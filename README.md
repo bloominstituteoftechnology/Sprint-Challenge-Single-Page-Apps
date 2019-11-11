@@ -25,10 +25,10 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
+- [x]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
-I believe the biggest benefits from client-side routing are how fluid the app/website feels.  Things just load almost as soon as your click them.  The initial loading may take longer than server side routing but I believe the initial wait time ultimately improves the user expierence. 
+I believe the biggest benefits from client-side routing are how fluid the app/website feels.  Things just load almost as soon as your click them.  The initial loading may take longer than server side routing but I believe the initial wait time ultimately improves the user expierence.
 
 ## Project Set Up
 
@@ -70,8 +70,8 @@ _Display Data from a Server API_
 
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
 
-- [ ]  Hook up the Welcome page(Home page) and a Characters page with React Router.
-- [x]  Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
+- [x]  Hook up the Welcome page(Home page) and a Characters page with React Router.
+- [x]  Use a styling or component library for part of or all of your application. (Pick at least 1 of: - [x](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
 
 _Add 'Search by Name' feature._
 
@@ -80,10 +80,10 @@ _Add 'Search by Name' feature._
 
 ### **Required best practices:**
 
-- [ ]  Consistent naming. Examples: variables, functions, Components, and file/folder organization.
-- [ ]  Consistent spacing. Examples: line breaks, around arguments and before/after functions.
-- [ ]  Consistent quotation usage.
-- [ ]  Spell-check.
+- [x]  Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x]  Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x]  Consistent quotation usage.
+- [x]  Spell-check.
 - [ ]  Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.

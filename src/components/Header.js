@@ -17,10 +17,10 @@ export default function Header() {
       <Button>Home</Button>
     </Link>
     <Link to='./characterlist'>
-      <Button>Character List</Button>
+      <Button style={{marginTop: '1%', marginBottom: '1%'}}>Character List</Button>
     </Link>
-    
+
     </div>
-    
+
   );
 }
