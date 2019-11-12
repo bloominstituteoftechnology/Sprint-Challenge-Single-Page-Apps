@@ -1,11 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+
+const CharacterDiv = styled.div ({
+  border: '1px solid white;',
+  width: '150px',
+  height: '200px',
+  margin: '1%',
+  padding: '2%;',
+  color: 'white'
+});
 
 export default function CharacterCard(props) {
-  const { name, species} = props;
   return (
-    <div className="character-card">
-      <h3>{name}</h3>
-      <p>{species}</p>
-    </div>
+      <CharacterDiv>
+        <h3>{props.character.name}</h3>
+        <p>{props.character.species}</p>
+      </CharacterDiv>
   );
 }
