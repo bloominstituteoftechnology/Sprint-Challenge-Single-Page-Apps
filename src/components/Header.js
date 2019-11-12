@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import {Button} from 'semantic-ui-react'
 import SearchForm from './SearchForm'
+import SearchForm2 from './SearchForm2'
 
 
 export default function Header(props) {
@@ -12,7 +13,8 @@ export default function Header(props) {
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
     </header>
-    <SearchForm />
+    {/* <SearchForm /> */}
+    <SearchForm2 />
     </nav>
     <Link to='/'>
       <Button>Home</Button>
