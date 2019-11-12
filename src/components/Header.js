@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export default function Header() {
 
-  const Heading = styled.h1`
+  const Heading = styled.h2`
     font-size: 20px;
     text-shadow: 2px 2px BlueViolet;
     text-align: center;
