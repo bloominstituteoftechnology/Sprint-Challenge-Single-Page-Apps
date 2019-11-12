@@ -12,8 +12,10 @@ export default function Header() {
   `
 
   return (
+    <div>
     <Heading className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
     </Heading>
+    </div>
   );
 }
