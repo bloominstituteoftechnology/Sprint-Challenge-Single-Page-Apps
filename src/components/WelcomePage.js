@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, List, Image } from "semantic-ui-react";
+import { Card} from "semantic-ui-react";
 
 export default function WelcomePage(props) {
   return (

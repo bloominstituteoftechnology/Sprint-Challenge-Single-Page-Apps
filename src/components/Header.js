@@ -4,7 +4,8 @@ import {Button} from 'semantic-ui-react'
 import SearchForm from './SearchForm'
 
 
-export default function Header() {
+export default function Header(props) {
+
   return (
     <div>
     <nav className="site_nav">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Image, List } from "semantic-ui-react";
+import { Container, Card, Image} from "semantic-ui-react";
 
 export default function CharacterCard(props) {
   const id = props.match.params.id;
