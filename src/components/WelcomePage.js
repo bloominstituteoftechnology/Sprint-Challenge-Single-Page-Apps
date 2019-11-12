@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from 'semantic-ui-react'
+import { Card, List, Image } from "semantic-ui-react";
 
 export default function WelcomePage(props) {
   return (
@@ -7,14 +7,10 @@ export default function WelcomePage(props) {
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
       </header>
-      <Card.Group itemsPerRow={5}>
-        {
-          props.rmData.map((image) => {
-            return(
-              <Card key={image.id} raised image={image.image}/>
-            )
-          })
-        }
+      <Card.Group itemsPerRow={5} >
+        {props.rmData.map(image => {
+          return <Card key={image.id} raised image={image.image} />;
+        })}
       </Card.Group>
     </section>
   );

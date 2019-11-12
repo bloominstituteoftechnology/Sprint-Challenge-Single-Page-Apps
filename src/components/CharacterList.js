@@ -1,7 +1,5 @@
 import React from "react";
 import { Container, Card, Image, List } from "semantic-ui-react";
-import Axios from "axios";
-import { async } from "q";
 
 export default function CharacterCard(props) {
   const id = props.match.params.id;

@@ -8,7 +8,6 @@ import Axios from "axios";
 import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage";
 import CharacterCard from "./components/CharacterCard";
-import SearchForm from "./components/SearchForm";
 import CharacterList from "./components/CharacterList";
 
 export default function App() {
@@ -25,8 +24,11 @@ export default function App() {
     <main>
       <Header />
       <Route exact path='/' render={props => <WelcomePage {...props} rmData={rmData} />} />
-      <Route path='/characterlist' render={props => <CharacterCard {...props} rmData={rmData} />} />
+      <Route exact path='/characterlist' render={props => <CharacterCard {...props} rmData={rmData} />} />
       <Route path='/characterlist/:id' render={props => <CharacterList {...props} rmData={rmData} />} />
     </main>
   );
 }
+
+
+// Need to do form validation
