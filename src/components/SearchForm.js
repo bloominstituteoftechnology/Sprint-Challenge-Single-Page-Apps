@@ -4,25 +4,25 @@ import CharacterCard from "./CharacterCard"
 
 
 export default function SearchForm() {
-//  const [searchNames, pushNames]=useState([]);
+ const [searchNames, pushNames]=useState([]);
  const [CurrentSearch, ChangeSearch]=useState('');
 
-//  useEffect(() => {
-//    axios.get('https://rickandmortyapi.com/api/character/')
-//    .then(res => {
-//      console.log(res.data.results);
-//      const characters= res.data.results;
-//      const characterresults=characters.filter(character => { 
-//        return character.name.toLowerCase().includes(CurrentSearch.toLowerCase());
-//       })
+  useEffect(() => {
+  axios.get('https://rickandmortyapi.com/api/character/')
+    .then(res => {
+      console.log(res.data.results);
+     const characters= res.data.results;
+      const characterresults=characters.filter(character => { 
+        return character.name.toLowerCase().includes(CurrentSearch.toLowerCase());
+      })
 
-//       pushNames(characterresults);
-//     })
-//    .catch(error=> {
-//      console.log(error);
-//    })
+       pushNames(characterresults);
+     })
+   .catch(error=> {
+      console.log(error);
+    })
 
-  //  }, [searchNames]);
+    }, [CurrentSearch]);
 
    const onSearchChange= e => {
      ChangeSearch(e.target.value);
@@ -34,9 +34,9 @@ export default function SearchForm() {
      return (searchResult = event.target.value)
    }
   return (
-    <section className="search-form">
+    <section>
      <form onSubmit={event => submit(event)}>
-       <input 
+       <input className="search-form" 
        id="name"
        type="text"
        placeholder="Search"
@@ -46,7 +46,7 @@ export default function SearchForm() {
      {
        searchNames.map((character, index) => {
          return(
-           <CharacterCard key={index} character={character} />
+           <CharacterCard key={index} char={character} />
          )
        })
      }

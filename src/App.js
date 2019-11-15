@@ -7,13 +7,13 @@ import SearchForm from "./components/SearchForm";
 import CharacterCard from "./components/CharacterCard";
 
 
-
 export default function App() {
   return (
     <main>
       <Header />
       <Route exact path="/" component={WelcomePage} />
       <Route path="/characters" component={CharacterList} />
+      <SearchForm/>
     </main>
   );
 }
