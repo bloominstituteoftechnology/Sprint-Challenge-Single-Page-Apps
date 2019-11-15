@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function CharacterCard({character}) {
-  const {image, name, species, gender, status, origin, episode} = character;
+  const {image, name, species, gender, status, episode} = character;
   return (
     <div className="movie-card">
     <img src={image} />
