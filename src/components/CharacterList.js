@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -24,12 +25,14 @@ export default function CharacterList(props) {
   }, []);
 
   return (
+    <Grid>
     <section className="character-list">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       <h2>
         {characters.map(character => (<Link to={`/character/${character.id}`}><CharacterDetails key={character} character={character} /></Link>))}
       </h2>
     </section>
+    </Grid>
   );
 }
 
@@ -51,3 +54,8 @@ function CharacterDetails({ character }) {
   )
 }
 
+const Grid = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;

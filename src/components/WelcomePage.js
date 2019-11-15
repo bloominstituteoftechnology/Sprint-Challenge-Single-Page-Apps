@@ -1,7 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 export default function WelcomePage() {
   return (
+    <Grid>
     <section className="welcome-page">
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
@@ -12,5 +14,12 @@ export default function WelcomePage() {
         />
       </header>
     </section>
+    </Grid>
   );
 }
+
+const Grid = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
