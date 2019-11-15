@@ -28,6 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
+Client-side routing allows the elements of a website to display more efficiently and perform subtly. React can load certain aspects or entire webpages without having to refresh an entire website by constantly receiving feedback server-side everytime something is clicked. 
 
 ## Project Set Up
 

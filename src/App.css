@@ -1,0 +1,12 @@
+*{
+  align-content: center;
+    color:indianred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3%
+}
+
+head{
+    display:none
+  }
