@@ -23,7 +23,7 @@ export default function CharacterList() {
     <section className="character-list">
       <h2>Names and Images :)</h2>
       {Character.map((char, id) => {
-        return <CharacterCard key={id} char={char} />;
+     return <CharacterCard key={id} char={char} />;
       })}
     </section>
   );
