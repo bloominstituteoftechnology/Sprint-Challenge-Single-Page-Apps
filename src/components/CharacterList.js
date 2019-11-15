@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import SearchForm from './SearchForm'
 
 function CharacterList() {
   const[toons, setToons] = useState([]);
@@ -28,17 +29,11 @@ function CharacterList() {
 
   return(
     <div className="searchForm">
-      <form>
-        <input
-        type="text"
-        onChange={changeHandler}
-        value={query}
-        name="name"
-        placeholder="search by name"
-        />
-      </form>
-    
 
+      <SearchForm 
+      changeHandler={changeHandler}
+      query={query}
+      />
 
     <section className="character-list">
           {toons.map(toon => {
