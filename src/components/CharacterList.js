@@ -1,16 +1,67 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from 'react-router-dom';
 
-export default function CharacterList() {
+const CharacterList = props => {
   // TODO: Add useState to track data from useEffect
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+   const getCharacters = () => {
+     axios
+       .get("https://rickandmortyapi.com/api/character/")
+       .then(response => {
+         setCharacters(response.data.results);
+       })
+       .catch(error => {
+         console.error("Server Error", error);
+       });
+   };
+
+   getCharacters();
+ }, []);
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+        {characters.map(character => (
+        <Link key={character.id} to={`/character/${character.id}`}>
+          <CharacterDetails key={character.id} character={character} />
+        </Link>
+      ))}
     </section>
   );
 }
+
+
+
+function CharacterDetails({ character }) {
+  const { name, status, gender, image, species, type } = character;
+  return (
+    <div className="char-card">
+      <h2>{name}</h2>
+      <div className="char-img">
+        <img src={image} alt='Rick and Morty Characters'/>
+      </div>
+      <div className="char-info">
+        <p>
+          Type: <strong>{type}</strong>
+        </p>
+        <p>
+          Gender: <strong>{gender}</strong>
+        </p>
+        <p>
+          Species: <strong>{species}</strong>
+        </p>
+        <p>
+          Status: <strong>{status}</strong>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default CharacterList;
+
+
+
+
