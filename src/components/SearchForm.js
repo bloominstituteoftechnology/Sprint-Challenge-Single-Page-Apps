@@ -3,20 +3,22 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 
-export default function SearchForm(props) {
 
-  const [data, setData] = useState([]);
+export default function SearchForm(props) {
+console.log(props)
+  const [charData, setCharData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/character/")
+    axios
+      .get(`https://rickandmortyapi.com/api/character/`)
       .then(response => {
         const characters = response.data.results.filter(char =>
-          char.name.toLowerCase().includes(searchTerm.toLowerCase()));
-        console.log('rick and morty characters', response.data.results);
-        setData(characters);
+          char.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setCharData(characters);
       });
-  }, [searchTerm])
+  }, [searchTerm]);
 
   const handleChange = e => {
     setSearchTerm(e.target.value);
@@ -32,33 +34,43 @@ export default function SearchForm(props) {
           name="name"
           placeholder="Search by name"
           autoComplete="off"
+          className="search-bar"
         />
       </form>
 
-      {data.map(data => (
-        <section className="character-list">
-          <div className="char-card">
-            <h2>{data.name}</h2>
-            <div className="char-img">
-              <img src={data.image} alt="Rick and Morty Characters" />
-            </div>
-            <div className="char-info">
-              <p>
-                Type: <strong>{data.type}</strong>
-              </p>
-              <p>
-                Gender: <strong>{data.gender}</strong>
-              </p>
-              <p>
-                Species: <strong>{data.species}</strong>
-              </p>
-              <p>
-                Status: <strong>{data.status}</strong>
-              </p>
-            </div>
-          </div>
-        </section>
-      ))}
+      <section className="character-list">
+        {charData.map(character => (
+          <Link key={character.id} to={`/character/${character.id}`}>
+            <CharacterDetails key={character.id} character={character} />;
+          </Link>
+        ))}
+      </section>
     </section>
+  );
+}
+
+function CharacterDetails({ character }) {
+  const { name, status, gender, image, species, type } = character;
+  return (
+    <div className="char-card">
+      <h2>{name}</h2>
+      <div className="char-img">
+        <img src={image} alt="Rick and Morty Characters" />
+      </div>
+      <div className="char-info">
+        <p>
+          Type: <strong>{type}</strong>
+        </p>
+        <p>
+          Gender: <strong>{gender}</strong>
+        </p>
+        <p>
+          Species: <strong>{species}</strong>
+        </p>
+        <p>
+          Status: <strong>{status}</strong>
+        </p>
+      </div>
+    </div>
   );
 }
