@@ -1,16 +1,33 @@
 import React, { useEffect, useState } from "react";
+import Axios from "axios";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+function CharacterList() {
+  const[toons, setToons] = useState([])
+
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+
+    Axios.get("https://rickandmortyapi.com/api/character/")
+    .then(res => {
+      setToons(res.data.results);
+    })
+    .catch(error => {
+      console.log(error)
+    })
+    
+  }, [toons])
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {toons.map(toon => {
+     return(
+      <div>
+        <h2>{toon.name} </h2>
+        
+      </div>
+     )
+      })}
     </section>
   );
 }
+export default CharacterList;
