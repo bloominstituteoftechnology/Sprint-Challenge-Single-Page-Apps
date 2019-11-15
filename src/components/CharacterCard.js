@@ -1,5 +1,14 @@
 import React from "react";
-import { Card, CardImg, CardBody, CardSubtitle, Col} from "reactstrap";
+import { 
+  Card, 
+  CardImg,
+  // CardText, 
+  CardBody,
+  // CardTitle, 
+  CardSubtitle,
+  // Button, 
+  Col} 
+  from "reactstrap";
 
 export default function CharacterCard(props) {
   return (
@@ -7,14 +16,16 @@ export default function CharacterCard(props) {
   <Card className="card-border">
       <CardImg className="card-img"
           top
-          width="300px"
-          src={`https://rickandmortyapi.com/api/character/${props.index}.jpg`}
+          width="200px"
+          src={`https://rickandmortyapi.com/api/character/avatar/${props.id}.jpeg`}
           // alt={props.name}
       />
       <CardBody className="card-body">
           <CardSubtitle>Name: {props.name}</CardSubtitle>
-          {/* <CardSubtitle>Birth year: {props.birth_year}</CardSubtitle>
-          <CardSubtitle>Eye Color: {props.eye_color}</CardSubtitle> */}
+          <CardSubtitle>Status: {props.status}</CardSubtitle>
+          <CardSubtitle>Species: {props.species}</CardSubtitle>
+          <CardSubtitle>Gender: {props.gender}</CardSubtitle>
+          <CardSubtitle>Type: {props.type}</CardSubtitle>
       </CardBody>
   </Card>
 </Col>
