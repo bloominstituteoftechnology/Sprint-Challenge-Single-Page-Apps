@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
+import Header from "./Header";
 
 const Navigation = () => {
   return (
-    <Router>
     <div>
+      <Header />
       <div className="navigation">
         <div>
           <Link to="/WelcomePage">Home</Link>
@@ -12,12 +13,8 @@ const Navigation = () => {
         <div>
           <Link to="/CharacterList">Character List</Link>
         </div>
-        {/* <div>
-          <Link to="/Contact">Contact</Link>
-        </div> */}
       </div>
     </div>
-    </Router>
   );
 };
 
