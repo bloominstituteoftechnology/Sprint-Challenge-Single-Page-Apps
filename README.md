@@ -27,7 +27,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: 
+
+Routing is handled internally by the JavaScript that is already on the page. The page won’t refresh. The data is there, displayed when we ask for it. When a user clicks on a requested resource, instead of the client asking for that resource from the server via a URL, JavaScript will prevent this. Using state to hold the data in the client side and just hiding or displaying depending on what is called for.
 
 ## Project Set Up
 
