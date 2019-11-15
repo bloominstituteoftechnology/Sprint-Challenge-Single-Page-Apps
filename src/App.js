@@ -10,7 +10,6 @@ export default function App() {
   return (
     <main>
       <Header />
-      <SearchForm/>
       <Route exact path="/" component={WelcomePage} />
       <Route path="/characterList" component={CharacterList} />
     </main>

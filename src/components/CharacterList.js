@@ -27,6 +27,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <Link to="/">Back to Home page</Link>
+      <SearchForm/>
       {character.map(character => (
                 <CharacterCard key={character.id} character={character} />
             ))}
