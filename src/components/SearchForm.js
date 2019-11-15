@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function SearchForm(props) {
  
   return (
-  <div>
+  <div className="formCont">
     <form>
         <input
         type="text"

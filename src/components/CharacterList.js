@@ -1,53 +1,67 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import SearchForm from './SearchForm'
+import {Link, NavLink, Route} from "react-router-dom"
+import CharacterCard from "./CharacterCard";
+import styled from "styled-components"
 
-function CharacterList() {
-  const[toons, setToons] = useState([]);
-  const[query, setQuery] = useState("");
+function CharacterList(props) {
 
-  useEffect(() => {
-
-    Axios.get("https://rickandmortyapi.com/api/character/")
-    .then(res => {
-
-      const toonQuery = res.data.results.filter(search =>
-        search.name.toLowerCase().includes(query.toLowerCase())
-      );
-
-      setToons(toonQuery);
-    })
-    .catch(error => {
-      console.log(error)
-    })
-    
-  }, [query]);
+  const Head = styled.h2 `
+  font-size: 300%;
+  `
+  const Card = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    margin: 5% 30% 5% 30%;
+    border: solid 5px black;
+    `
 
   const changeHandler = e =>{
-    setQuery(e.target.value);
+    props.setQuery(e.target.value);
+
+
+
   };
 
   return(
-    <div className="searchForm">
-
-      <SearchForm 
-      changeHandler={changeHandler}
-      query={query}
+    <div className="searchPage">
+      <Link to= {"/"}>
+      <button>Home</button>
+      </Link>
+      <section className="formSection">
+        <SearchForm 
+          changeHandler={changeHandler}
+          query={props.query}
       />
-
-    <section className="character-list">
-          {toons.map(toon => {
-        return(
-          <div>
-            <h2>{toon.name} </h2>
+      </section>
+      <section className="character-list">
+          {props.toons.map(toon => {
+          return(
             
-          </div>
-        )
+            <Card>
+              <section>
+               {/* <NavLink to ={`/characters/${toon.name}`}>
+              <h2>{toon.name} </h2>
+            </NavLink>  */}
+            <Head>{toon.name} </Head>
+            <p>{toon.location.name}</p>
+            <p>{toon.species}</p>
+              </section>
+
+            
+              
+              
+            </Card>
+            
+          )
           })}
         </section>
+        <Link to= {"/"}>
+      <button>Home</button>
+      </Link>
     </div>
   )
-
-
 }
 export default CharacterList;
