@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header.js";
 import {Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import CharacterList from "./components/CharacterList.js";
 
 
