@@ -47,7 +47,7 @@ header h1 {
   border-radius: 10px;
 }
 
-.card-img{
+.card-img, .main-img{
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .5),
   3px 3px 3px 3px rgba(0, 0, 0, .5),
   -3px -3px 3px 3px rgba(0, 0, 0, .5),
@@ -60,4 +60,8 @@ header h1 {
   background-color: rgba(119, 136, 153, 0.5);
   border-radius: 10px;
   padding: 10px 0
+}
+.main-img{
+  width: 50%;
+  margin: 0 25%;
 }

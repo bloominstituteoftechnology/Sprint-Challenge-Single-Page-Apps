@@ -1,6 +1,22 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
 // export default function SearchForm() {
+//     <div className="search-div">
+//       <form className="search">
+//         <input
+//           type="text"
+//           onChange={handleInputChange}
+//           value={query}
+//           name="name"
+//           tabIndex="0"
+//           className="prompt search-name"
+//           placeholder="search by name"
+//           autoComplete="off"
+//         />
+//       </form>
+//       </div>
+// }
+
 //  const [searchTerm, setSearchTerm] = useState("");
 //  const [searchResults, setSearchResults] = useState([]);
 //  const handleChange = event => {
@@ -8,7 +24,7 @@ import React, { useState, useEffect } from "react";
 //  };
 
 //  useEffect(() => {
-//   const results = [...props].filter(char =>
+//   const results = props.name.filter(char =>
 //     char.toLowerCase().includes(searchTerm)
 //   );
 //   setSearchResults(results);
