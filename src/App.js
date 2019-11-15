@@ -5,10 +5,11 @@ import { WelcomePage, Header, Navigation, CharacterList} from "./components";
 export default function App() {
   return (
     <main>
-      <Header />
       <Navigation />
-      <Route exact path="Home" component={WelcomePage} />
-      <Route exact path="Character_List" component={CharacterList} />
+      <Header />
+      <WelcomePage />
+      <Route exact path="WelcomePage" component={WelcomePage} />
+      <Route path="CharacterList" component={CharacterList} />
 
       
       {/* <Route path="Character List" component={CharacterList} /> */}

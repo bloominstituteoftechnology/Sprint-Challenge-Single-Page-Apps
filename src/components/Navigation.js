@@ -7,14 +7,14 @@ const Navigation = () => {
     <div>
       <div className="navigation">
         <div>
-          <Link to="/">Home</Link>
+          <Link to="/WelcomePage">Home</Link>
         </div>
         <div>
           <Link to="/CharacterList">Character List</Link>
         </div>
-        <div>
+        {/* <div>
           <Link to="/Contact">Contact</Link>
-        </div>
+        </div> */}
       </div>
     </div>
     </Router>
