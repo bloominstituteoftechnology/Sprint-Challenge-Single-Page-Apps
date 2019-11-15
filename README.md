@@ -46,7 +46,9 @@ Follow these steps to set up and work on your project:
 ### Exceeded rate limits?
 
 <details>
-<summary>⚠️ Expand for alternate API URL</summary>
+<summary>⚠️
+
+ Expand for alternate API URL</summary>
 
 If the [main API service](https://rickandmortyapi.com/documentation) goes down, or you exceed rate limits, try the following URL:
 

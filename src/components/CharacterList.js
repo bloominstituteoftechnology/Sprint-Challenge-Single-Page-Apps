@@ -1,16 +1,66 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import CharacterCard from "./CharacterCard";
+import {Container, Row} from "reactstrap";
+// import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+  const [characters, setCharacters] = useState([]);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+    axios
 
-  return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+    .get("https://rickandmortyapi.com/api/character/")
+
+    .then (response => {
+      const chars = response.data.results.filter(person => person.name.toLowerCase().includes(query.toLowerCase())
+      );
+      console.log(response.data.results)
+      setCharacters(chars);   //(response.data.results)
+    })
+
+    .catch(error => {
+      console.log("The requested data was not returned!", error);
+    });
+
+  }, [query]);
+  const handleInputChange = event => {
+    setQuery(event.target.value);
+  };
+  return(
+    <div className="search-div">
+      <form className="search">
+        <input
+          type="text"
+          onChange={handleInputChange}
+          value={query}
+          name="name"
+          tabIndex="0"
+          className="prompt search-name"
+          placeholder="search by name"
+          autoComplete="off"
+        />
+      </form>
+      <div>
+        <Container>
+          <Row>
+            {characters.map((character) => {
+              return (
+                <CharacterCard
+                key={character.id}
+                id={character.id}
+                name={character.name}
+                status={character.status}
+                species={character.species}
+                // type={character.type}
+                gender={character.gender}
+                />
+              );
+            })}
+          </Row>
+        </Container>
+      </div>
+    </div>
   );
 }
