@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import {Container, Row} from "reactstrap";
-import SearchForm from "./SearchForm";
+// import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -53,7 +53,7 @@ export default function CharacterList() {
                 name={character.name}
                 status={character.status}
                 species={character.species}
-                type={character.type}
+                // type={character.type}
                 gender={character.gender}
                 />
               );

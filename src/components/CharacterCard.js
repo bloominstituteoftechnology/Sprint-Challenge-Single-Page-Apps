@@ -16,7 +16,7 @@ export default function CharacterCard(props) {
   <Card className="card-border">
       <CardImg className="card-img"
           top
-          width="200px"
+          width="250px"
           src={`https://rickandmortyapi.com/api/character/avatar/${props.id}.jpeg`}
           // alt={props.name}
       />
@@ -25,7 +25,7 @@ export default function CharacterCard(props) {
           <CardSubtitle>Status: {props.status}</CardSubtitle>
           <CardSubtitle>Species: {props.species}</CardSubtitle>
           <CardSubtitle>Gender: {props.gender}</CardSubtitle>
-          <CardSubtitle>Type: {props.type}</CardSubtitle>
+          {/* <CardSubtitle>Type: {props.type}</CardSubtitle> */}
       </CardBody>
   </Card>
 </Col>
