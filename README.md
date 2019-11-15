@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: client side routing loads faster through not having so many html files that need constant reloading. Apps seem quicker and look cleaner
 
 ## Project Set Up
 
