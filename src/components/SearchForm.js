@@ -12,7 +12,7 @@ export default function SearchForm() {
       .get("https://rickandmortyapi.com/api/character/")
       .then(response => {
         const results = response.data.results.filter(characters =>
-          characters.name.toLowerCase().includes(dataResults.toLowerCase())
+          characters.name.toLowerCase().includes(data.toLowerCase())
         );
         dataSearch(results);
       })
@@ -28,33 +28,31 @@ export default function SearchForm() {
   return (
     <section className="search-form">
       <form>
-        <label htmlfor="searchField">Search:</label>
+        <label htmlFor="searchField">Search:</label>
         <input
+          onChange={handleChange}
           id="name"
           type="text"
-          name="serachField"
+          name="searchField"
           placeholder="Search"
-          onchange={handleChange}
-          value={data}
-        />
-
-        <Link to="/">
-          <button>Home</button>
-        </Link>
+          value={dataResults}
+        ></input>
       </form>
 
-      {dataResults.map(characters => {
-        return (
-          <CharacterCard
-            key={characters.id}
-            name={characters.name}
-            img={characters.image}
-            gender={characters.gender}
-            species={characters.species}
-            status={characters.status}
-          />
-        );
-      })}
+      {/* <div className="search-results">
+        {dataResults.map(characters => {
+          return (
+            <CharacterCard
+              key={characters.id}
+              name={characters.name}
+              img={characters.image}
+              gender={characters.gender}
+              species={characters.species}
+              status={characters.status}
+            />
+          );
+        })}
+      </div> */}
     </section>
   );
 }
