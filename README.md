@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: The data is loaded at once! It makes the app run faster by having the client do the routing, rather than the servr.
 
 ## Project Set Up
 
