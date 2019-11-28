@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "./components/Header.js";
-import axios from "axios";
-
-const initialCharacterList = []
-const url = "https://rickandmortyapi.com/api/character/";
+import CharacterList from './components/CharacterList';
 
 
 export default function App() {
-  const [charactersList, setCharactersList] = useState(initialCharacterList)
-
-  useEffect(() => {
-    axios.get(url)
-    .then(res => {
-      setCharactersList(res.data.results);
-    })
-    .catch(err => {
-      console.log(err.message);
-    })
-  }, [])
+  
   return (
     <main>
       <Header />
-      
+      <CharacterList />      
     </main>
   );
 }
