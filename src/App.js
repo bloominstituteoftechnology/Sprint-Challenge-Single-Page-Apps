@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
@@ -31,6 +32,15 @@ export default function App() {
   }, []);
 
   return (
+    <div>
+      <nav>
+        <ul>
+          <li>
+          <Link to="/">Home</Link>
+          </li>
+        </ul>
+      </nav>
+    
     <main>
       <div>
         <Header />
@@ -40,5 +50,6 @@ export default function App() {
       <WelcomePage />
       <CharacterList charactersList={charactersList} />
     </main>
+    </div>
   );
 }
