@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
@@ -36,20 +36,27 @@ export default function App() {
       <nav>
         <ul>
           <li>
-          <Link to="/">Home</Link>
+            <Link to="/welcome">Welcome</Link>
+          </li>
+          <li>
+            <Link to="/characters">Characters</Link>
           </li>
         </ul>
       </nav>
-    
-    <main>
-      <div>
-        <Header />
-        <SearchForm />
-      </div>
 
-      <WelcomePage />
-      <CharacterList charactersList={charactersList} />
-    </main>
+      <main>
+        <div>
+          <Header />
+          <SearchForm />
+        </div>
+        <Route path="/welcome">
+          <WelcomePage />
+        </Route>
+
+        <Route path="/characters">
+          <CharacterList charactersList={charactersList} />
+        </Route>
+      </main>
     </div>
   );
 }
