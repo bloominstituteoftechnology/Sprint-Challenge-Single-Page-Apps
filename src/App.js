@@ -47,7 +47,7 @@ export default function App() {
       <main>
         <div>
           <Header />
-          <SearchForm />
+          <SearchForm search={search}/>
         </div>
         <Route path="/welcome">
           <WelcomePage />
