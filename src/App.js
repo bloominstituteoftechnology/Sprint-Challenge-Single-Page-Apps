@@ -36,7 +36,7 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/welcome">Welcome</Link>
+            <Link to="/">Welcome</Link>
           </li>
           <li>
             <Link to="/characters">Characters</Link>
