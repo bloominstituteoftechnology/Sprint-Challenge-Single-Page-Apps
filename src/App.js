@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
 import SearchForm from "./components/SearchForm";
 import axios from "axios";
+import "../src/index.css";
 
 const initialCharacterList = [];
 const url = "https://rickandmortyapi.com/api/character/";
@@ -36,10 +42,14 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Welcome</Link>
+            <NavLink exact activeClassName="active-nav" to="/welcome">
+              Welcome
+            </NavLink>
           </li>
           <li>
-            <Link to="/characters">Characters</Link>
+            <NavLink activeClassName="active-nav" to="/characters">
+              Characters
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -47,14 +57,11 @@ export default function App() {
       <main>
         <div>
           <Header />
-          <SearchForm search={search}/>
         </div>
-        <Route path="/welcome">
-          <WelcomePage />
-        </Route>
+        <Route path="/welcome" component={WelcomePage} />
 
         <Route path="/characters">
-          <CharacterList charactersList={charactersList} />
+          <CharacterList charactersList={charactersList} search={search} />
         </Route>
       </main>
     </div>

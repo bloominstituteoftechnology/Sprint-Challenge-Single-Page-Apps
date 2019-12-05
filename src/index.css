@@ -37,3 +37,8 @@ main {
 header h1 {
   text-align: center;
 }
+
+.active-nav {
+  background-color: blue;
+  color: white;
+}
