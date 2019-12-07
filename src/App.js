@@ -1,29 +1,53 @@
 import React, { useEffect, useState } from "react";
+import styles from 'styled-components';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   NavLink
 } from "react-router-dom";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
-import SearchForm from "./components/SearchForm";
 import axios from "axios";
 import "../src/index.css";
 
 const initialCharacterList = [];
 const url = "https://rickandmortyapi.com/api/character/";
 
+const Nav = styles.nav`
+position: relative;
+right: 200px;
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  li {
+    margin: 20px;
+    list-style: none;   
+    font-size: 20px;
+     
+  }
+  a {
+    text-decoration: none; 
+  }
+}
+`
+const StyleNavLink = styles.nav`
+background-color: #a7a09d;
+color: white;
+`
+
 export default function App() {
   const [charactersList, setCharactersList] = useState(initialCharacterList);
+  const [searchResults, setSearchResults] = useState("");
 
   const search = e => {
-    const searchedItem = e.target.value;
+    const searchedItem = e.target.value.toUpperCase();
+    const len = searchedItem.length;
     const searched = charactersList.filter(
-      character => character.name === searchedItem
+      character => (searchedItem === character.name.slice(0, len).toUpperCase()) 
     );
-    setCharactersList(searched);
+    setSearchResults(searched);
   };
 
   useEffect(() => {
@@ -39,7 +63,7 @@ export default function App() {
 
   return (
     <div>
-      <nav>
+      <Nav>
         <ul>
           <li>
             <NavLink exact activeClassName="active-nav" to="/welcome">
@@ -52,7 +76,7 @@ export default function App() {
             </NavLink>
           </li>
         </ul>
-      </nav>
+      </Nav>
 
       <main>
         <div>
@@ -61,7 +85,7 @@ export default function App() {
         <Route path="/welcome" component={WelcomePage} />
 
         <Route path="/characters">
-          <CharacterList charactersList={charactersList} search={search} />
+          <CharacterList charactersList={ searchResults ? searchResults : charactersList} search={search} />
         </Route>
       </main>
     </div>
