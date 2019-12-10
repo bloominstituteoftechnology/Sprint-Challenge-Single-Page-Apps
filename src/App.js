@@ -85,7 +85,7 @@ export default function App() {
         <Route path="/welcome" component={WelcomePage} />
 
         <Route path="/characters">
-          <CharacterList charactersList={ searchResults ? searchResults : charactersList} search={search} />
+          <CharacterList charactersList={ searchResults ? searchResults : charactersList} search={search} count={searchResults.length}/>
         </Route>
       </main>
     </div>
