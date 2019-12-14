@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from'axios'
+import CharacterCard from "./CharacterCard"
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -21,10 +22,11 @@ const [characters, setCharacters] = useState([]);
   return (
     <section className="character-list">
       {characters.map(item =>(
-       <div key ={item.id}>
-         <img className="character-image" src={item.image} alt={item.image} />
-          <h1>{item.name}</h1>
-       </div>
+        <CharacterCard key ={item.id} item={item}/>
+      //  <div key ={item.id}>
+      //    <img className="character-image" src={item.image} alt={item.image} />
+      //     <h1>{item.name}</h1>
+      //  </div>
       ))}
     </section>
   );
