@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from'axios'
 import CharacterCard from "./CharacterCard"
+import SearchForm from './SearchForm'
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 const [characters, setCharacters] = useState([]);
+ const APIurl = 'https://rickandmortyapi.com/api/character'
+
+ const setSearchArray = someString => {
+  const items = characters.filter(term =>
+    term.name.toLowerCase().includes(someString.toLowerCase())
+  );
+  setCharacters(items);
+};
+  
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   axios
-  .get('https://rickandmortyapi.com/api/character')
+  .get(APIurl)
   .then(response => {
-    console.log("DATA", response.data.results)
     setCharacters(response.data.results)
   })
   .catch(error =>{
@@ -20,13 +27,12 @@ const [characters, setCharacters] = useState([]);
   }, []);
 
   return (
+    
     <section className="character-list">
+      <SearchForm characters={characters}
+      SearchArray={setSearchArray}/>
       {characters.map(item =>(
         <CharacterCard key ={item.id} item={item}/>
-      //  <div key ={item.id}>
-      //    <img className="character-image" src={item.image} alt={item.image} />
-      //     <h1>{item.name}</h1>
-      //  </div>
       ))}
     </section>
   );
