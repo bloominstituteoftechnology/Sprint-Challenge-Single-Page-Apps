@@ -6,6 +6,7 @@ export default function App() {
   return (
     <main>
       <Header />
+      
     </main>
   );
 }
