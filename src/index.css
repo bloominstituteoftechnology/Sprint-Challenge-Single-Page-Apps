@@ -27,13 +27,23 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
+}
+
+.character-card {
+  width: 30%;
+  border-radius: 8px;
+  border: solid black 1px;
+  padding: 1rem;
+  background-color: lightgray;
+  margin: 3%;
+  box-shadow: 10px 10px 8px #888888;
 }
