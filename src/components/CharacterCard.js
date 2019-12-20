@@ -14,6 +14,7 @@ export default function CharacterCard({ name, image, species}) {
       <img src={image} alt='rick and morty characters'/>
       <h3>Name: {name}</h3>
       <p>Species:{species}</p>
+      {/* <p>Gender: {gender}</p> */}
     </card>
   );
 }

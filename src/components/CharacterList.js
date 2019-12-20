@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
-import { Router, Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -29,9 +29,9 @@ export default function CharacterList() {
         setCharacters.map(characters => (
         <CharacterCard
           url={characters.image}
-          names={characters.name}
+          name={characters.name}
           gender={characters.gender}
-          local={characters.location.name}
+          // local={characters.location.name}
           species={characters.species}
           status={characters.status}
         />
