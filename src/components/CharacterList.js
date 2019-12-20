@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard"
 import axios from "axios";
-
+import SearchForm from "./SearchForm";
 
 const listStyle = {
   display: "grid", 
@@ -13,7 +13,7 @@ const listStyle = {
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -24,25 +24,44 @@ export default function CharacterList() {
         console.log(`SUCCESSFUL RESPONSE`, response)
       
         setData(response.data.results)
+
+        const characters=response.data.filter(
+          character =>
+            character.name
+            .toLowerCase()
+            .includes(search.toLowerCase())
+        )
+        setData(characters)
       })
       .catch(error =>{
         console.log(`FAILED RESPONSE`, error)
 
       })
 
-  }, []);
+  }, [search]);
 
+  
+  const handleChange = event => {
+    setSearch(event.target.value);
+  }
+  
+  
+    
 
   if(!data){
     return <div>Loading...</div>
   } else {
 
   return (
-      <div className="character-list" style={listStyle}> {
+    <div> 
+        <SearchForm handleChange={handleChange} search={search}/> 
+      <div className="character-list" style={listStyle}>
+        {
         data.map(character => 
         {
           
           return (
+
           <CharacterCard 
             key={character.id}
             name={character.name}
@@ -51,6 +70,9 @@ export default function CharacterList() {
           );    
       })}
       </div>
+    </div>
+
     );
   }
+  
 }
