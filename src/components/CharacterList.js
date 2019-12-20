@@ -22,9 +22,7 @@ export default function CharacterList() {
       .then(response => {
         console.log(`SUCCESSFUL RESPONSE`, response)
       
-        setData(response.data.results)
-
-        const characters = response.data.filter(
+        const characters = response.data.results.filter(
           character =>
             character.name
             .toLowerCase()
