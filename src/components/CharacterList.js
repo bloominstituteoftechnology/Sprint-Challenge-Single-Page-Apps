@@ -36,6 +36,7 @@ export default function CharacterList() {
   } else {
     return (
       <div> 
+        <h2>Characters</h2>
           <SearchForm  
             data={data}
             handleChange={handleChange}
