@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SearchForm from "./SearchForm";
 
-
-  
-
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
@@ -21,7 +18,6 @@ export default function CharacterList() {
       .get("https://rickandmortyapi.com/api/character/")
       .then(response => {
         console.log(`SUCCESSFUL RESPONSE`, response)
-      
         const characters = response.data.results.filter(
           character =>
             character.name
@@ -38,15 +34,13 @@ export default function CharacterList() {
   if(!data){
     return <div>Loading...</div>
   } else {
-
     return (
       <div> 
           <SearchForm  
             data={data}
             handleChange={handleChange}
           />     
-      </div>  
-
+      </div> 
     );
   }
   

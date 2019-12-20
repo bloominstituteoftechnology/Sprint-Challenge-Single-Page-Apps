@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CharacterCard from "./CharacterCard";
 
 export default function SearchForm(props) {
@@ -8,7 +8,6 @@ export default function SearchForm(props) {
     gridGap: "2%",
     gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr)",
     padding: "2%"}
-
     
   return (
     <section className="search-form">
@@ -24,9 +23,7 @@ export default function SearchForm(props) {
      </form>
 
      <div className="character-list" style={listStyle}>
-        {
-        props.data.map(character => {
-          
+        {props.data.map(character => {
           return (
             <CharacterCard 
               key={character.id}
@@ -37,10 +34,6 @@ export default function SearchForm(props) {
           })
         }
       </div>
-
-
-
-    </section>
-    
+    </section> 
   );
 }

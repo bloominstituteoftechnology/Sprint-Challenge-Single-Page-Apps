@@ -1,15 +1,15 @@
 import React from "react";
 import { Card, CardTitle, CardText, CardImg } from 'reactstrap';
 
-const CharacterCard = props => {
-  const imgStyle = { maxWidth: "100%", border: "solid 1px gray"}
-  const cardStyle = {
+//styling
+const imgStyle = { maxWidth: "100%", border: "solid 1px gray"}
+const cardStyle = {
     width: "100%", 
     border: "solid 1px gray", 
-   
-  }
-  const textStyle = {textAlign: "center"}
+}
+const textStyle = {textAlign: "center"}
 
+const CharacterCard = props => {
   return (
     <Card style={cardStyle}>
       <CardImg style={imgStyle} src={props.image}/>
@@ -18,6 +18,5 @@ const CharacterCard = props => {
     </Card>
   )
 }
-
 
 export default CharacterCard
