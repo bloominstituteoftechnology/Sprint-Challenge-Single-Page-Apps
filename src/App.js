@@ -6,7 +6,6 @@ import { Route } from 'react-router-dom';
 import SearchForm from "./components/SearchForm.js";
 
 
-
 export default function App() {
   return (
     <main>
