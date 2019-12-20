@@ -1,5 +1,16 @@
 import React from "react";
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
+const LocationCard = props => { 
+  return (
+    <div className ="grid-view">
+      <div className="location-card">
+        <h1>{props.name}</h1>
+        <p>{props.type}</p>
+        <p>{props.dimension}</p>
+       
+      </div>
+    </div>
+  )
+  
 }
+export default LocationCard;
