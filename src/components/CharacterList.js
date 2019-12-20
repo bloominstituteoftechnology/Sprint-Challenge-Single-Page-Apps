@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard"
 import axios from "axios";
 
+
+const listStyle = {
+  display: "grid", 
+  gridGap: "2%",
+  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr)",
+  padding: "2%"}
+  
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
@@ -30,14 +38,16 @@ export default function CharacterList() {
   } else {
 
   return (
-      <div className="character-list"> {
-        data.map((character, index) => 
+      <div className="character-list" style={listStyle}> {
+        data.map(character => 
         {
           
           return (
           <CharacterCard 
-            key={index}
-            name={character.name}/>
+            key={character.id}
+            name={character.name}
+            image={character.image}
+            species={character.species}/>
           );    
       })}
       </div>
