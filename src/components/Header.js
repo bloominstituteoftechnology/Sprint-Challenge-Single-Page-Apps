@@ -1,4 +1,6 @@
 import React from "react";
+import SearchForm from "./SearchForm";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (

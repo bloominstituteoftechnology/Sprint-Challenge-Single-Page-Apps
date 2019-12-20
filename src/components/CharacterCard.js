@@ -1,13 +1,13 @@
 import React from "react";
-import {Card, CardHeader, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import {Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 
 function CharacterCard(props) {
 
-const {name, species, image, gender, status} = props.character; 
+const {name, species, gender, status} = props.character; 
 return (
   <div>
-    <Card>
-      <CardHeader>{image}</CardHeader>
+    <Card style={{width: "50%"}}>
+    <CardImg top width="50%" src={props.character.image} />
       <CardTitle>{name}</CardTitle>
       <CardBody>
         <CardSubtitle>{gender}</CardSubtitle>
