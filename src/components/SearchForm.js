@@ -2,36 +2,36 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const SearchForm = (props) => {
-  const [character, setCharacters] = useState([]);
+
+  const [character, setCharacter] = useState([]);
   const [search, setSearch] = useState('');
-     
-    useEffect(() => {
-      axios
-      .get("https://rickandmortyapi.com/api/character/")
+
+  useEffect(() => {
+    axios
+      .get(`https://rickandmortyapi.com/api/character/?name=${search}`)
       .then(response => {
-        console.log(response.data.results);
-        setCharacters(response.data.results);
+        console.log(response.data.results)
+        setCharacter(response.data.results)
       })
-          .catch(err => console.log(err));
-    }, []);
+      .catch(error => {
+        console.log(error)
+      })
+  }, [search])
     
     const handleChange = e => {
-      setSearch(e.target.vaule);
+      e.preventDefault(e.target.value);
+      setSearch(e.target.value);
     };
-  return (
-    <section className="search-form">
-     <form>
-       <label htmlFor="search">
-         Search: 
-       </label>
+    return (
+      <section className="search-form">
+        <form>
           <input
-            type="text"
-            onChange={props.handleChange} />
-        <button type="submit">
-          Search
-        </button>
-     </form>
-    </section>
-  );
-}
+            placeholder="Search Your Favorite Character"
+            value={props.search}
+            onChange={handleChange}
+          />
+        </form>
+      </section>
+    )
+  }
 export default SearchForm;
