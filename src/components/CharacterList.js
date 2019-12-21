@@ -50,7 +50,7 @@ export default function CharacterList(props) {
     // </form>
     
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>Characters</h2>
       {state.map(character => {
         return <CharacterCard
         key={character.id}

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactDom from 'react-dom';
 
+
 export default function SearchForm(props) {
+  console.log(props)
 
   
 
@@ -9,7 +11,7 @@ export default function SearchForm(props) {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    const results = props.character.filter(character =>
+    const results = props.characters.filter(character =>
       
       character.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -22,7 +24,7 @@ export default function SearchForm(props) {
  
   return (
     <section className="search-form">
-     // Add a search form here
+     
      <form>
         <label htmlFor="name">Search:</label>
         <input
