@@ -4,7 +4,6 @@ import Header from "./components/Header.js";
 import SearchForm from "./components/SearchForm.js";
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
-import axios from "axios";
 
 export default function App() {
 
