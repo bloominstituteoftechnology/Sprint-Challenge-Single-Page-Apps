@@ -1,23 +1,39 @@
 import React from "react";
-import jssPluginPropsSort from "jss-plugin-props-sort";
-import styles from "styled-components";
+import styled from "styled-components"
 
-const card = styles.div`
-border: 2px dotted black;
-margin: 2%;
-padding: 3%;
-`;
 
-export default function CharacterCard({ name, image, species}) {
-  return (
-    <card>
-      <img src={image} alt='rick and morty characters'/>
-      <h3>Name: {name}</h3>
-      <p>Species:{species}</p>
-      {/* <p>Gender: {gender}</p> */}
-    </card>
-  );
+export default function CharacterCard(props) {
+
+    const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #A8CB59;  
+    // text-shadow: 4px 1px 0px limegreen;
+    background-color: #18280D;
+    border: 2px ridge;
+    border-radius: 25%;
+    box-shadow: inset 0 0 8px;
+    `
+
+
+
+
+    const Header = styled.h2`
+    font-size: 35px;
+    `
+
+
+return(
+  <Card>
+
+  <Header>{props.name}</Header>
+  {/* <img className="character-image" src={character.img} alt={character.name} /> */}
+    <p>Species: {props.species}</p>
+    <p>Status: {props.status}</p>
+    <p>Location: {props.location}</p>
+
+  </Card>
+
+  )
 }
-
-
-

@@ -1,58 +1,59 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import {Link} from "react-router-dom";
 
-export default function SearchForm(props) {
-  const [characters, setCharacters] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(" ");
-  const [searchResults, setSearchResults] = useState([]);
 
-  const handleChange = e => {
-    setSearchTerm(e.target.value);
-  };
 
-  const submitHandler = e => {
-    e.preventDefault();
+export default function SearchForm() {
 
-    const filter = props.characters.filter(characters => {
-      return characters.name.indexOf(searchResults) !== -1;
-    });
 
-    props.search(filter);
-  };
 
-  useEffect(() => {
-    axios
-      .get("https://rickandmortyapi.com/api/character/")
-      .then(characters => {
-        setCharacters(characters.characters.results);
-      })
-      .catch(error => {
-        console.log("Houston, we have a problem", error);
-      });
-  }, [searchTerm]);
+  const [data, setData] = useState([]);
+  const [query, setQuery] = useState("");
 
-  return (
-    <section className='search-form'>
-      <form onSubmit={submitHandler}>
-        <label htmlFor='title'>Search</label>
-        <input
-          id='title'
-          type='text'
-          name='title'
-          onChange={handleChange}
-          placeholder='Search for your favorite character...'
-          value={searchTerm}
-        />
-      </form>
-      {searchResults.map(char => (
-        <CharacterCard
-          url={characters.image}
-          name={characters.name}
-          gender={characters.gender}
-          species={characters.species}
-        />
-      ))}
-    </section>
-  );
+useEffect(()=>{
+  axios.get("https://rickandmortyapi.com/api/character/")
+  .then (response =>{
+    const characters = response.data.results.filter(char =>
+    char.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setData (characters);
+  });
+},[query]);
+
+
+const handleInputChange = event => {
+  setQuery(event.target.value);
+};
+return (
+  <div >
+    <form >
+      <input
+      id="name" 
+      type="text" 
+      name="textfield" 
+      placeholder="Search"
+      value={query} 
+      onChange={handleInputChange}
+      />
+    <Link to="/">
+      <button>Home</button>
+    </Link>
+    </form>
+
+    {data.map((char => {
+  return(
+  <CharacterCard 
+  // <img alt="character-picture" src={char.image} />
+  key={char.id} 
+  name={char.name} 
+  species ={char.species} 
+  status={char.status}
+  />)
 }
+))}
+
+</div>
+)} 

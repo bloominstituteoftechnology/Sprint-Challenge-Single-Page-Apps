@@ -1,42 +1,38 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import CharacterCard from "./CharacterCard";
-import SearchForm from "./SearchForm";
-import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import {Link} from "react-router-dom";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState([]);
 
+export default function CharacterList(props) {
+
+  const [character, setCharacter] = useState([]);
   useEffect(() => {
-    const getCharacters = () => {
-      axios
-        .get(`https://rickandmortyapi.com/api/character/`)
-        .then(data => {
-          setCharacters(data.data.results);
-        })
-        .catch(error => {
-          console.log("You're killing me Smalls", error);
-        });
-    };
-    getCharacters();
+
+  axios
+    .get('https://rickandmortyapi.com/api/character/')
+    .then((response) => {
+    setCharacter(response.data.results);
+  console.log(response);
+
+    })
+    .catch(error => {
+    console.error('Server Error', error);
+    });
   }, []);
-  console.log(characters);
 
   return (
-    <div>
-      <section className='character-list'>
-        setCharacters.map(characters => (
-        <CharacterCard
-          url={characters.image}
-          name={characters.name}
-          gender={characters.gender}
-          // local={characters.location.name}
-          species={characters.species}
-          status={characters.status}
-        />
-        ))}
-      </section>
-    </div>
+    <section className="character-list">      
+      <Link to= "/"><button>Home</button></Link>
+      <Link to="/Search"><button>Search
+      </button>
+      </Link>
+      {character.map(ind => (
+      <CharacterCard  key={ind.id} name={ind.name}
+      species={ind.species} status={ind.status} />
+      // <img src={character.thumbnail} alt={character.name} />
+      ))}
+    </section>
+
   );
 }
