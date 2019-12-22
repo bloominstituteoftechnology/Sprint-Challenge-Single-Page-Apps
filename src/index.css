@@ -27,12 +27,28 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
+.main-buttons {
+  font-size: 1.3rem;
+  color: #EFED72;
+  background-color: #77bf43;
+}
+
+.main-buttons: hover{
+  background-color: limegreen;
+}
+
 .main-img {
-  display: block;
-  border-radius: 100%;
+  display: inline;
+  border-radius: 35%;
   margin: 0 auto;
-} */
+  border: dashed limegreen;
+  width: 20%;
+} 
+header {
+  background-color: green;
+  color: lime;
+}
 
 header h1 {
   text-align: center;

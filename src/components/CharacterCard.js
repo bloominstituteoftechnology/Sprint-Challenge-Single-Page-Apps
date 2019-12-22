@@ -31,8 +31,7 @@ return(
   {/* <img className="character-image" src={character.img} alt={character.name} /> */}
     <p>Species: {props.species}</p>
     <p>Status: {props.status}</p>
-    <p>Location: {props.location}</p>
-
+    <p>Location: {props.location}</p>    
   </Card>
 
   )
