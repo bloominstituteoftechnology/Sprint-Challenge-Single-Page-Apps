@@ -30,13 +30,13 @@ main {
 
 .main-buttons {
   font-size: 1.3rem;
-  color: #EFED72;
+  color: #efed72;
   background-color: #77bf43;
 }
 
-.main-buttons: hover{
+/* .main-buttons: hover {
   background-color: limegreen;
-}
+} */
 
 .main-img {
   display: inline;
@@ -44,7 +44,7 @@ main {
   margin: 0 auto;
   border: dashed limegreen;
   width: 20%;
-} 
+}
 header {
   background-color: green;
   color: lime;

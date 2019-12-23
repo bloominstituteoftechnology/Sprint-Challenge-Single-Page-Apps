@@ -47,10 +47,10 @@ return (
   return(
   <CharacterCard 
   // <img alt="character-picture" src={char.image} />
-  key={char.id} 
-  name={char.name} 
-  species ={char.species} 
-  status={char.status}
+  // key={char.id} 
+  // name={char.name} 
+  // species ={char.species} 
+  // gender={char.gender}
   />)
 }
 ))}

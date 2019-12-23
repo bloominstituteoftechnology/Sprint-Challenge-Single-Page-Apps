@@ -10,10 +10,10 @@ export default function CharacterList(props) {
       .get("https://rickandmortyapi.com/api/character/")
       .then(response => {
         setCharacter(response.data.results);
-        console.log(response);
+        console.log(response.data.results);
       })
       .catch(error => {
-        console.error("Server Error", error);
+        console.error("You're killing me Smalls!", error);
       });
   }, []);
 
@@ -25,12 +25,10 @@ export default function CharacterList(props) {
       <Link to='/Search'>
         <button>Search</button>
       </Link>
-      {character.map(ind => (
+      {character.map(char => (
         <CharacterCard
-          key={ind.id}
-          name={ind.name}
-          species={ind.species}
-          status={ind.status}
+        character={char}
+          
         />
         // <img src={character.thumbnail} alt={character.name} />
       ))}
