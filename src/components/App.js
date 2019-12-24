@@ -5,10 +5,10 @@ import {
   Switch
 } from "react-router-dom";
 
-import CharacterList from "./components/CharacterList"
-import WelcomePage from "./components/WelcomePage"
-import Episodes from "./components/Episodes";
-import Location from "./components/Location";
+import CharacterList from "./Character/CharacterList"
+import WelcomePage from "./WelcomePage"
+import EpisodeList from "./Episodes/EpisodeList";
+import Location from "./Location/Location";
 
 const navStyle={display: "flex", justifyContent: "space-evenly"}
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
             <CharacterList />
           </Route>
           <Route path="/episodes">
-            <Episodes />
+            <EpisodeList />
           </Route>
           <Route path="/location">
             <Location />

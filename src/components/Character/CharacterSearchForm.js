@@ -1,7 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 
-export default function SearchForm(props) {
+export default function CharacterSearchForm(props) {
   
   const listStyle = {
     display: "grid", 
@@ -29,7 +29,8 @@ export default function SearchForm(props) {
               key={character.id}
               name={character.name}
               image={character.image}
-              species={character.species}/>
+              species={character.species}
+            />
             );    
           })
         }
