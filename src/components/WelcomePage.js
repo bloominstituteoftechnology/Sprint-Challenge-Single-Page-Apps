@@ -5,7 +5,9 @@ export default function WelcomePage() {
     <section className="welcome-page">
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
-        
+        <div>
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8c9a4232133393.5670691c3aec5.gif"/>
+        </div>
       </header>
     </section>
   );
