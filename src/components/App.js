@@ -8,7 +8,7 @@ import {
 import CharacterList from "./Character/CharacterList"
 import WelcomePage from "./WelcomePage"
 import EpisodeList from "./Episodes/EpisodeList";
-import Location from "./Location/Location";
+import LocationSearchForm from "./Location/LocationSearchForm";
 
 const navStyle={display: "flex", justifyContent: "space-evenly"}
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
             <EpisodeList />
           </Route>
           <Route path="/location">
-            <Location />
+            <LocationSearchForm />
           </Route>
           <Route path="/">
             <WelcomePage />

@@ -26,7 +26,7 @@ function EpisodeList() {
             .includes(search.toLowerCase())
         )
         setEpisode(epis)          
-        console.log(` this is epis: `, epis)
+      
 
       })
       .catch(error =>{
@@ -40,14 +40,13 @@ function EpisodeList() {
     return (
       <div> 
         <h2>Episodes</h2>
-      <EpisodeSearchForm 
-        handleChangeEp={handleChangeEp}
-        episode={episode}
-      />
+        <EpisodeSearchForm 
+          handleChange={handleChangeEp}
+          episode={episode}
+        />
       </div> 
     );
-  }
-  
+  }  
 }
 
 
