@@ -1,38 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import axios from 'axios';
 import CharacterCard from './CharacterCard';
 import SearchForm from './SearchForm';
-import axios from 'axios';
 
-const url = 'https://rickandmortyapi.com/api/character/'
+const url = 'https://rickandmortyapi.com/api/character/';
 
 export default function CharacterList(props) {
   const [state, setState] = useState([]);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
-    axios
-        .get(url)
-        .then(response => {
-          // console.log(response.data.results)
-          const characters= response.data.results
-          // const characters = response.results.filter(
-          //   character =>
-          //   character.name
-          //   .toLowerCase()
-          //   .includes(query.toLowerCase())
-          // );
-          setState(characters)
-        });
+    axios.get(url).then(response => {
+      // Console.log(response.data.results)
+      const characters = response.data.results;
+      // Const characters = response.results.filter(
+      //   character =>
+      //   character.name
+      //   .toLowerCase()
+      //   .includes(query.toLowerCase())
+      // );
+      setState(characters);
+    });
 
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
-  // const handleInputChange = event => {
+  // Const handleInputChange = event => {
   //   setQuery(event.target.value);
   // };
-
 
   return (
     // <div>
@@ -48,22 +45,24 @@ export default function CharacterList(props) {
     //     autoComplete="off"
     //     />
     // </form>
-    
+
     <section className="character-list">
       <h2>Characters</h2>
       {state.map(character => {
-        return <CharacterCard
-        key={character.id}
-        name={character.name}
-        species={character.species}
-        />
+        return (
+          <CharacterCard
+            key={character.id}
+            name={character.name}
+            species={character.species}
+          />
+        );
       })}
     </section>
     // </div>
   );
 }
 
-// useEffect(() => {
+// UseEffect(() => {
 //   axios
 //       .get(url)
 //       .then(response => {
