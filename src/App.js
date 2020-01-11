@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link, } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header.js';
 import CharacterList from './components/CharacterList';
 import SearchForm from './components/SearchForm';
+import WelcomePage from './components/WelcomePage'
 
 const url = 'https://rickandmortyapi.com/api/character/';
 
@@ -21,26 +22,48 @@ export default function App() {
       setState(characters);
     });
   }, []);
-  
   return (
-    <main>
-      <Header />
+    <Router>
       <div>
-        <div>
-          <SearchForm
-            state={state}
-            setState={setState}
-            characters={characters}
-            setCharacters={setCharacters}
-          />
-        </div>
-        <CharacterList
-          state={state}
-          setState={setState}
-          characters={characters}
-          setCharacters={setCharacters}
-        />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">WelcomePage</Link>
+            </li>
+            <li>
+              <Link to="/CharacterList">Characters</Link>
+            </li>
+            
+          </ul>
+        </nav>
+
+       <Header>
+       </Header>
+        <Switch>
+          <Route path="/CharacterList">
+            <CharacterList />
+          </Route>
+          
+          <Route path="/">
+            <WelcomePage />
+          </Route>
+        </Switch>
+        
       </div>
-    </main>
+    </Router>
   );
+    // <main>
+    //   <Header />
+    //   <div>
+    
+    //     <WelcomePage />
+    //     <CharacterList
+    //       state={state}
+    //       setState={setState}
+    //       characters={characters}
+    //       setCharacters={setCharacters}
+    //     />
+    //   </div>
+    // </main>
+  // );
 }

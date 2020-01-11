@@ -14,7 +14,7 @@ export default function CharacterList(props) {
   useEffect(() => {
     axios.get(url).then(response => {
       // Console.log(response.data.results)
-      const characters = response.data.results;
+      const characters = response.data.results.filter((character) => character.name.toLowerCase().includes(query.toLowerCase()));
       // Const characters = response.results.filter(
       //   character =>
       //   character.name
@@ -26,30 +26,20 @@ export default function CharacterList(props) {
 
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+  }, [query]);
   // Const handleInputChange = event => {
   //   setQuery(event.target.value);
   // };
 
   return (
-    // <div>
-    // <form className="search">
-    //   <input
-    //     type="text"
-    //     onChange={handleInputChange}
-    //     value={query}
-    //     name="name"
-    //     tabIndex="0"
-    //     className="prompt search-name"
-    //     placeholder="search by name"
-    //     autoComplete="off"
-    //     />
-    // </form>
+    
 
     <section className="character-list">
       <h2>Characters</h2>
+      <SearchForm query={query} setQuery={setQuery} />
       {state.map(character => {
         return (
+          
           <CharacterCard
             key={character.id}
             name={character.name}
@@ -62,29 +52,4 @@ export default function CharacterList(props) {
   );
 }
 
-// UseEffect(() => {
-//   axios
-//       .get(url)
-//       .then(response => {
-//         console.log(response.data)
-//         const characters = response.data.results;
-//         setState(characters)
-//       })
 
-//   // TODO: Add API Request here - must run in `useEffect`
-//   //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-// }, []);
-
-// return (
-//   <section className="character-list">
-//     <h2>TODO: `array.map()` over your state here!</h2>
-//     {state.map(character => {
-//       return <CharacterCard
-//       key={character.id}
-//       name={character.name}
-//       species={character.species}
-//       />
-//     })}
-//   </section>
-// );
-// }
