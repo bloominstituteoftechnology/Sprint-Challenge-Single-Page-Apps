@@ -1,7 +1,5 @@
 import React from "react";
 
-import Path from './Path';
-
 import styled from "styled-components";
 import bgrnd from "../img/intergalactic.jpg";
 
@@ -19,7 +17,7 @@ export default function WelcomePage() {
           <h1>Welcome to the ultimate fan site!</h1>
         </header>
       <Img />
-      <Path />
+      
     </section>
   );
 }
