@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from "./CharacterCard";
+import styled from 'styled-components'
+
+const InfoWrap = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px;
+    padding-left 3%;
+    justify-content: space-between;
+`
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -20,11 +30,11 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list">
-      <div>
+      <InfoWrap>
         {data.map((character,idx) =>{
         return <CharacterCard key ={idx} character={character} />
         })}
-      </div>
+      </InfoWrap>
     </section>
   );
 }
