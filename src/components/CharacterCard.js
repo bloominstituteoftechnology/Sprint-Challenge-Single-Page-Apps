@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Card = styled.div `
 display: flex;
-width: 25%;
-padding 2px;
+width: 30%;
+padding 1px;
 flex-direction: column;
 align-items: center;
 flex-wrap: wrap;

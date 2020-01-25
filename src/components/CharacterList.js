@@ -18,7 +18,7 @@ export default function CharacterList(props) {
 
   useEffect(() => {
     axios
-      .get('https://rickandmortyapi.com/api/character/')
+      .get(`http://rickandmortyapi.com/api/character/`)
       .then (res => {
         console.log(res)
         setData(res.data.results)
@@ -31,7 +31,7 @@ export default function CharacterList(props) {
   return (
     <section className="character-list">
       <InfoWrap>
-        {data.map((character,idx) =>{
+        {data.map((character,idx) => {
         return <CharacterCard key ={idx} character={character} />
         })}
       </InfoWrap>
