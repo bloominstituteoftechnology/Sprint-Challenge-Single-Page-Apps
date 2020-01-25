@@ -1,4 +1,4 @@
-# Sprint Challenge: Single Page Applications
+# Sprint Challenge: Single Page Applications Christian Berumen
 
 ## Rick & Morty Edition
 
