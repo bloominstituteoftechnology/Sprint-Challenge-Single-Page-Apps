@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 62.5%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +16,7 @@ main {
   margin: 35px auto;
   background: #fff;
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px #0dd2f6, 0 15px 12px #0dd2f6;
 }
 
 .grid-view {
@@ -36,4 +41,5 @@ main {
 
 header h1 {
   text-align: center;
+  font-size: 3.5rem;
 }
