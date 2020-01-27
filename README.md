@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client-side routing seems smoother and quicker. The page does not need to refresh in order to go to different components. So, everything is easily accessable once the inital load is completed!
 
 ## Project Set Up
 
