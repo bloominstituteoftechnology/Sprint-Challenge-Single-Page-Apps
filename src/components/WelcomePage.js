@@ -1,9 +1,10 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
       <header>
+        <Link to='/characters'>Characters</Link>
         <h1>Welcome to the ultimate fan site!</h1>
         <img
           className="main-img"
