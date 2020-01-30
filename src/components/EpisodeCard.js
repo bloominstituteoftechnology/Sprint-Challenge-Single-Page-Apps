@@ -18,17 +18,18 @@ const Card = styled.div`
 
 `;
 
-const LocationCard = props => { 
+
+const EpisodeCard = props => { 
   return (
     <div className ="grid-view">
       <Card>
         <h1>{props.name}</h1>
-        <p>{props.type}</p>
-        <p>{props.dimension}</p>
+        <p>{props.air_date}</p>
+        <p>{props.episode}</p>
        
       </Card>
     </div>
   )
   
 }
-export default LocationCard;
+export default EpisodeCard;
