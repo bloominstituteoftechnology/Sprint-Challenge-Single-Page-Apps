@@ -7,6 +7,7 @@ import React, { useState } from "react";
     setResult(event.target.value);
 
   };
+  
   const submitHandler = event => {
     event.preventDefault();
 
