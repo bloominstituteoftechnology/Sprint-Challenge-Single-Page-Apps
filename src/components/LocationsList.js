@@ -23,8 +23,9 @@ export default function LocationsList() {
       <Link to="/">
         <button>Home</button>
       </Link>
-      <Link to="/Search">
-        <button>Search Characters</button>
+
+      <Link to="/Characters">
+        <button>Characters</button>
       </Link>
       {data.map((data, i) => (
         <LocationCard data={data} key={i} />

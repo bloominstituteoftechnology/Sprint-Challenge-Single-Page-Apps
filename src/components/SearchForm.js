@@ -38,13 +38,14 @@ export default function SearchForm() {
         </Link>
       </form>
 
-      {data.map(char => {
+      {data.map(character => {
         return (
           <CharacterCard
-            key={char.id}
-            name={char.name}
-            species={char.species}
-            status={char.status}
+            key={character.id}
+            image={character.image}
+            name={character.name}
+            species={character.species}
+            status={character.status}
           />
         );
       })}

@@ -32,6 +32,7 @@ export default function CharacterList() {
       {data.map(character => (
         <CharacterCard
           key={character.id}
+          image={character.image}
           name={character.name}
           species={character.species}
           status={character.status}
