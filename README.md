@@ -29,6 +29,16 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+With traditional server-side rendering, the server responds by generating and returning a completely new page for every interaction. This often slows load time,uses more bandwidth, and creates a less responsive user experience.
+
+Client-side rendering avoids making unnecessary requests for a full page when only a portion of the page has changed. This is especially helpful in a world that’s increasingly browsing via mobile networks with high latency.
+
+Client-side rendering supports lazy loading sections of your application to save bandwidth & speed initial load. For example, you can load additional records, images, and ads as the user scrolls down, or as the user changes their search parameters, all without performing a full postback.
+
+Client-side rendering supports rich, animated interactions, transformations, and transitions. Fade a row out on delete, or fade a dialog into view. Sure, you can sprinkle such goodness into a server-rendered application, but this often leads to maintaining the same template on both the client and the server, or managing the complexity of weaving JavaScript interactions in with a server-side framework.
+
+Static files are easy to deploy. You don’t necessarily need to perform a monolithic build to generate new binaries when a small change occurs. And with some of the aforementioned services like Surge and Netlify, you can easily create automated deployments via their provided CLIs. When you do so, you don’t risk breaking any of your back-end - it’s handled completely separately.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
