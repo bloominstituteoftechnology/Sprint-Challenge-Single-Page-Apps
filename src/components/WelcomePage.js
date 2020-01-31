@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1)
+    }
+  }
+}));
 
 export default function WelcomePage() {
   const Page = styled.div`
@@ -15,17 +25,26 @@ export default function WelcomePage() {
     margin-top: 10%;
     margin-left: 15%;
   `;
-
+  const classes = useStyles();
   return (
     <Page>
       <section className="welcome-page">
         <header>
           <h1>Welcome to the ultimate fan site!</h1>
           <Link to="/Characters">
-            <button>Characters</button>
+            <Button variant="outline" color="primary">
+              Characters
+            </Button>
           </Link>
           <Link to="/Search">
-            <button>Search</button>
+            <Button variant="outline" color="primary">
+              Search
+            </Button>
+          </Link>
+          <Link to="/Locations">
+            <Button variant="outlined" color="primary">
+              Locations
+            </Button>
           </Link>
           <Img
             className="main-img"
