@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function SearchForm(props) {
 
   const [query, setQuery]= useState()
@@ -11,17 +12,12 @@ export default function SearchForm(props) {
     setQuery(e.target.value)
   }
 
-  const submitForm =e =>{
-    e.preventDefault();
-    setData(props.data)
-
-  }
- 
   return (
     <section className="search-form">
+     // Add a search form here
      {/* Add a search form here */}
 
-     <form onSubmit = {submitForm}>
+     <form>
        <label htmlFor = "search">Search here</label>
        <input
        id = "search"
@@ -29,15 +25,10 @@ export default function SearchForm(props) {
        name = "search"
        onChange = {handleChanges}
        placeholder = "Type here"
-       value = {query} 
+      //  value = {props.name} 
        />
        <button type ="submit">Search</button>
      </form>
-
-     
-
-
-
 
     </section>
   );
