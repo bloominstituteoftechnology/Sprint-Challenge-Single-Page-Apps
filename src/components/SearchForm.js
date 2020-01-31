@@ -1,10 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function SearchForm() {
- 
+export default function SearchForm({ onChangeKeyword }) {
+  const [keyword, setKeyword] = useState('');
+
+  const handleChange = event => {
+    setKeyword(event.target.value);
+  };
+
+    useEffect(() => {
+      onChangeKeyword(keyword);
+    }, [keyword]);
+
   return (
     <section className="search-form">
-     // Add a search form here
+      <form>
+      <label htmlFor="name">Find Your Character: </label>
+        <input
+          id="name"
+          type="text"
+          name="searchField"
+          placeholder="Search"
+          value={keyword}
+          onChange={handleChange}
+          />
+          </form>
     </section>
   );
 }
