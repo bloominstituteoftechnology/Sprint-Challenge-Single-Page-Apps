@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 
 export default function SearchForm() {
- 
   return (
     <section className="search-form">
-     // Add a search form here
+      <form>
+      <label htmlFor={search}></label>
+        <input
+          type="text"
+          className="input"
+          id="addInput"
+          placeholder="Search"
+        />
+      </form>
     </section>
   );
 }
