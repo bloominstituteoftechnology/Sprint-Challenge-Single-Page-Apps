@@ -5,35 +5,29 @@ import Header from './components/Header.js';
 import CharacterList from './components/CharacterList';
 import SearchForm from './components/SearchForm';
 import WelcomePage from './components/WelcomePage'
+import LocationList from './components/LocationsList';
+import EpisodeList from './components/EpisodeList'
 
-const url = 'https://rickandmortyapi.com/api/character/';
 
 export default function App() {
-  const [state, setState] = useState([]);
-  const [characters, setCharacters] = useState([]);
-  const [query, setQuery] = useState('');
-  // TODO: Add useState to track data from useEffect
-
-  useEffect(() => {
-    axios.get(url).then(response => {
-      // Console.log(response.data.results)
-      const characters = response.data.results;
-
-      setState(characters);
-    });
-  }, []);
+  
   return (
     <Router>
       <div>
         <nav>
           <ul>
             <li>
-              <Link to="/">WelcomePage</Link>
+              <Link to="/">Welcome Page</Link>
             </li>
             <li>
               <Link to="/CharacterList">Characters</Link>
             </li>
-            
+            <li>
+              <Link to="/LocationList">Locations</Link>
+            </li>
+            <li>
+              <Link to="/EpisodeList">Episodes</Link>
+            </li>
           </ul>
         </nav>
 
@@ -43,7 +37,12 @@ export default function App() {
           <Route path="/CharacterList">
             <CharacterList />
           </Route>
-          
+          <Route path="/LocationList">
+            <LocationList />
+          </Route>
+          <Route path="/EpisodeList">
+            <EpisodeList />
+          </Route>
           <Route path="/">
             <WelcomePage />
           </Route>
@@ -52,18 +51,5 @@ export default function App() {
       </div>
     </Router>
   );
-    // <main>
-    //   <Header />
-    //   <div>
     
-    //     <WelcomePage />
-    //     <CharacterList
-    //       state={state}
-    //       setState={setState}
-    //       characters={characters}
-    //       setCharacters={setCharacters}
-    //     />
-    //   </div>
-    // </main>
-  // );
 }
