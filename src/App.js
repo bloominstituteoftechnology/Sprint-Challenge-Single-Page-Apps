@@ -9,23 +9,20 @@ import SearchForm from './components/SearchForm'
 
 export default function App() {
   return (
-    <main>
-      <nav>
-        <ul>
-          
-        <li>
-            <Link to = "/">Welcome Page</Link>
-           {/* <SearchForm /> */}
-          </li>         
-          <li>
-            <Link to = "/CharacterList">Character list</Link>
-           {/* <SearchForm /> */}
-          </li>         
-          
-         
+    <Router>
+    <main className ="app">
+      <nav> 
+        <ul className ="nav">
           
           <li>
-          {/* <SearchForm /> */}
+            <Link to = "/">Welcome Page</Link>           
+          </li> 
+
+          <li>
+            <Link to = "/CharacterList">Character list</Link>           
+          </li>        
+          
+          <li>          
           <Link to = "/SearchForm"> Search Here</Link>          
           </li>
 
@@ -48,6 +45,6 @@ export default function App() {
       </Route>
 
       
-    </main>
+    </main></Router>
   );
 }

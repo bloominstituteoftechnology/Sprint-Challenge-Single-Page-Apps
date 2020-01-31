@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   padding: 0;
@@ -37,6 +39,9 @@ main {
 header h1 {
   text-align: center;
 }
+.app{
+  background: #ffe6ff;
+}
 
 .character-list{
   display: flex;
@@ -50,5 +55,14 @@ header h1 {
   margin: 2%;
   width: 25%;
   padding: 2%;
+  border-radius: 15px;
 
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  background: #ccffff;
+  padding:2%;
+  text-decoration: none;
 }
