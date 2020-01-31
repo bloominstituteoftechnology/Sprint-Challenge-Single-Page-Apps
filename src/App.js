@@ -6,6 +6,7 @@ import CharacterList from './components/CharacterList';
 import CharacterCard from "./components/CharacterCard.js";
 import WelcomePage from './components/WelcomePage';
 import AppRouter from './appRouter';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function App() {
