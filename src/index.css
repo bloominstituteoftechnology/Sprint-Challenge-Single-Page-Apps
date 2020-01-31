@@ -37,3 +37,18 @@ main {
 header h1 {
   text-align: center;
 }
+
+.character-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.CharcterCard{
+  background: #ccffff;
+  border: black 1px solid;
+  margin: 2%;
+  width: 25%;
+  padding: 2%;
+
+}
