@@ -23,7 +23,13 @@ export default function WelcomePage() {
 
   const Img = styled.img`
     margin-top: 10%;
-    margin-left: 15%;
+    margin-left: 10%;
+  `;
+
+  const Nav = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   `;
   const classes = useStyles();
   return (
@@ -31,21 +37,23 @@ export default function WelcomePage() {
       <section className="welcome-page">
         <header>
           <h1>Welcome to the ultimate fan site!</h1>
-          <Link to="/Characters">
-            <Button variant="outline" color="primary">
-              Characters
-            </Button>
-          </Link>
-          <Link to="/Search">
-            <Button variant="outline" color="primary">
-              Search
-            </Button>
-          </Link>
-          <Link to="/Locations">
-            <Button variant="outlined" color="primary">
-              Locations
-            </Button>
-          </Link>
+          <Nav>
+            <Link to="/Characters">
+              <Button variant="outlined" color="primary">
+                Characters
+              </Button>
+            </Link>
+            <Link to="/Search">
+              <Button variant="outlined" color="primary">
+                Search
+              </Button>
+            </Link>
+            <Link to="/Locations">
+              <Button variant="outlined" color="primary">
+                Locations
+              </Button>
+            </Link>
+          </Nav>
           <Img
             className="main-img"
             src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
