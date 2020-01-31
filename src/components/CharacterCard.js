@@ -1,4 +1,9 @@
 import React from "react";
+import styled from 'styled-components';
+
+const h2 = styled.h2 `
+    align-content: center;
+    `;
 
 export default function CharacterCard(props) {
   console.log(props)

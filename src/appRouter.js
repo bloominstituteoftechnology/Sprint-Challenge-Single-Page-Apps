@@ -5,6 +5,7 @@ import Axios from "axios";
 import CharacterList from './components/CharacterList';
 import CharacterCard from "./components/CharacterCard.js";
 import WelcomePage from './components/WelcomePage';
+import FormikSearchForm from './components/SearchForm';
 
 function AppRouter() {
   return (

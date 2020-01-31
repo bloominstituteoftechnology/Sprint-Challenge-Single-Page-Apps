@@ -27,18 +27,15 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+  align-content: center;
+}
 
 header h1 {
   text-align: center;
 }
 
-/* CharacterList {
-  align-content: center;
-  border: 2px solid green;
-} */

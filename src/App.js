@@ -7,6 +7,9 @@ import CharacterCard from "./components/CharacterCard.js";
 import WelcomePage from './components/WelcomePage';
 import AppRouter from './appRouter';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchForm from './components/SearchForm';
+import styled from 'styled-components';
+
 
 
 export default function App() {
