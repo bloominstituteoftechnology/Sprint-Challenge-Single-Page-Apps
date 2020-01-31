@@ -29,26 +29,28 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
 }
 .app{
   background: #ffe6ff;
+  width:100%;
+  min-height:200vh;
 }
 
 .character-list{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
-}
+ }
+
 .CharcterCard{
   background: #ccffff;
   border: black 1px solid;
@@ -65,4 +67,19 @@ header h1 {
   background: #ccffff;
   padding:2%;
   text-decoration: none;
+}
+
+
+.character-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form{
+  margin:1%;
+}
+
+.input{
+  padding:1%;
 }

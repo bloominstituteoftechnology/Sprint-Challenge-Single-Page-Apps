@@ -27,44 +27,45 @@ export default function CharacterList() {
  
    
 
-  const handleChanges = (e) => {
-    setQuery(e.target.value)
+  const handleInputChange = event => {
+    setQuery(event.target.value)
   }
 
   return (
-    <div className="character-list">
-      <div>
-
-     <form class = "form" >
+    <div className="character-div">
+      
+    
+     <form className = "search" >
        {/* <label htmlFor = "search">Search here</label> */}
-       <input
+       <input className ="input"
        id = "search"
        type ="text"
        name = "name"
-       tabIndex = "0"
-       onChange = {handleChanges}
+       tabIndex = "0"      
+       onChange = {handleInputChange}
        placeholder = "Type here"
        value = {query} 
        autoComplete ="off"
        />
        {/* <button type ="submit">Search</button> */}
      </form>
-     </div>
+     
 
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {/* <h2>map here</h2> */}
 
-     <div>
-      {data.map(character =>(
-
+     <div class ="character-list">
+      {data.map(character =>{
+       return(
+         
         <CharacterCard key = {character.id}
         name ={character.name}
         gender ={character.gender}
         species ={character.species}
         type ={character.type}       
 
-        />  
-      ))}
+        /> 
+      )})}
       </div>
 
      {/* <SearchForm data={data}/> */}
