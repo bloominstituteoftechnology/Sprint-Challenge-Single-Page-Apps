@@ -53,7 +53,7 @@ export default function CharacterList() {
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {/* <h2>map here</h2> */}
 
-     <div class ="character-list">
+     <div className ="character-list">
       {data.map(character =>{
        return(
          
