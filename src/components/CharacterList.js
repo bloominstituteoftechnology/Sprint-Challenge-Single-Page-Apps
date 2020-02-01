@@ -32,11 +32,11 @@ export default function CharacterList() {
   }
 
   return (
-    <div className="character-div">
+    <div className="character-div">    
+     
       
-    
-     <form className = "search" >
-       {/* <label htmlFor = "search">Search here</label> */}
+     <div>
+     <form className = "search" >     
        <input className ="input"
        id = "search"
        type ="text"
@@ -46,10 +46,9 @@ export default function CharacterList() {
        placeholder = "Type here"
        value = {query} 
        autoComplete ="off"
-       />
-       {/* <button type ="submit">Search</button> */}
+       />      
      </form>
-     
+     </div>
 
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {/* <h2>map here</h2> */}
@@ -67,6 +66,7 @@ export default function CharacterList() {
         /> 
       )})}
       </div>
+     
 
      {/* <SearchForm data={data}/> */}
     </div>
