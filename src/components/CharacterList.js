@@ -1,5 +1,39 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+//styled components
+let CharacterCard = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+background: rgba(36, 239, 249, 0.2);
+// justify-content: center:
+// content-align: center;
+align-items: center;
+// align-self: center;
+`;
+let NewCharacterCard = styled.div`
+width: 50%;
+display: flex;
+flex-direction: column;
+// justify-content: center:
+// content-align: center;
+// align-items: center;
+text-align: center;
+border: 20px solid rgba(82, 249, 36, 0.51);
+`;
+let CharacterImg = styled.img`
+width: 50%;
+`;
+
+let DivImgContainer = styled.div`
+width: 100%;
+display: flex;
+flex-direction; column;
+justify-content: center;
+`;
+
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -21,20 +55,23 @@ export default function CharacterList() {
 
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-      <div>
+      <CharacterCard>
       {character.map(character =>{
         return (
-          <div>
-            <h2>{character.name}</h2>
-            <h2>{character.species}</h2>
-          </div>
+          <NewCharacterCard key={character.id}className='character-card'>
+            <DivImgContainer>
+            <CharacterImg src={character.image}/>
+            </DivImgContainer>
+            <div className='card-info'>
+              <h3>Name: {character.name}</h3>
+              <h5>Species: {character.species}</h5>
+              <h5>Gender: {character.gender}</h5>
+              <h5>Origin: {character.origin.name}</h5>
+            </div>
+          </NewCharacterCard>
         )
       })}
-      </div>
-
-    </section>
+      </CharacterCard>
   );
 }
 // import React, { useEffect, useState } from "react";
