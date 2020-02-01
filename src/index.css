@@ -4,14 +4,17 @@ body {
   font-family: sans-serif;
 }
 
-main {
+.App {
   width: 85vw;
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: #fff;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background-image: url("https://media.giphy.com/media/i2dE5VvBNxBw4/giphy.gif");
+  background-position-y: bottom;
+  background-repeat: no-repeat ;
+  background-size: 400px 200px;
 }
 
 .grid-view {
@@ -33,9 +36,24 @@ main {
   border-radius: 100%;
   margin: 0 auto;
   align-content: center;
+  border: 6px solid rgb(6, 241, 26);
 }
 
 header h1 {
+  color: rgb(6, 241, 26);
   text-align: center;
 }
+
+.character-card {
+ color: rgb(6, 241, 26);
+ text-align: center;
+}
+.mainNav {
+  color: rgb(6, 241, 26);
+  justify-content: left;
+  text-decoration-color: rgb(6, 241, 26);
+}
+
+
+
 

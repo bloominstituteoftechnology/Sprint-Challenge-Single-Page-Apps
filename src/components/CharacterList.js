@@ -25,6 +25,7 @@ export default function CharacterList() {
         {char.map(item => (
         <CharacterCard info={item}/>
         ))}
+
     </section>
   );
 }
