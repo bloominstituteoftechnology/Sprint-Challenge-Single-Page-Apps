@@ -11,7 +11,8 @@ export default function CharacterCard(props) {
         <h3> Name : {props.name}</h3>  
         <p>Gender: {props.gender}</p>
         <p>Species:{props.species}</p>
-        <p>Type: {props.type}</p>
+        {/* <p>Type: {props.type}</p> */}
+        <img src= {props.image}/>
 
   </div>
 

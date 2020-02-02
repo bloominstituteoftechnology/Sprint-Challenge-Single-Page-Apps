@@ -61,7 +61,8 @@ export default function CharacterList() {
         name ={character.name}
         gender ={character.gender}
         species ={character.species}
-        type ={character.type}       
+        // type ={character.type} 
+        image ={character.image}      
 
         /> 
       )})}
