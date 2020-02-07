@@ -1,29 +1,54 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import CharacterCard from "./CharacterCard";
+import { Link } from "react-router-dom";
 
-export default function SearchForm({ onChangeKeyword }) {
-  const [keyword, setKeyword] = useState('');
+export default function SearchForm() {
+  const [data, setData] = useState([]);
+  const [query, setQuery] = useState("");
 
-  const handleChange = event => {
-    setKeyword(event.target.value);
+
+  useEffect(() => {
+    axios.get("https://rickandmortyapi.com/api/character/").then(response => {
+      const characters = response.data.results.filter(char =>
+        char.name.toLowerCase().includes(query.toLowerCase())
+      );
+      setData(characters);
+    });
+  }, [query]);
+
+
+  const handleInputChange = event => {
+    setQuery(event.target.value);
   };
 
-    useEffect(() => {
-      onChangeKeyword(keyword);
-    }, [keyword]);
 
   return (
-    <section className="search-form">
+    <div>
       <form>
-      <label htmlFor="name">Find Your Character: </label>
         <input
           id="name"
           type="text"
-          name="searchField"
-          placeholder="Search"
-          value={keyword}
-          onChange={handleChange}
+          name="textfield"
+          placeholder="Search..."
+          value={query}
+          onChange={handleInputChange}
+        />
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+      </form>
+
+      {data.map(char => {
+        return (
+          <CharacterCard
+            key={char.id}
+            name={char.name}
+            species={char.species}
+            status={char.status}
           />
-          </form>
-    </section>
+        );
+      })}
+    </div>
   );
 }
