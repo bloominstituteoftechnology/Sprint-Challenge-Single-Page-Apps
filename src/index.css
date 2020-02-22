@@ -37,3 +37,33 @@ main {
 header h1 {
   text-align: center;
 }
+
+.card { 
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:center;
+}
+
+.searchFrom{
+  display: flex;
+
+  justify-content:center;
+
+}
+
+
+.main-img{
+width: 100%
+
+}
+
+
+.nav-links{
+  display: flex;
+  justify-content:center;
+  padding: 1%;
+  margin: 2%;
+}
+
+
