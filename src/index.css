@@ -11,10 +11,10 @@ body {
   margin: 35px auto;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  background-image: url("https://media.giphy.com/media/f6xuEiq0zVNCNIVuxq/giphy-downsized.gif");
-  background-position-y: bottom;
+  background-image: url("https://media.giphy.com/media/Lfa0tFqDoHzd6/200w_d.gif");
+  background-position: right;
   background-repeat: no-repeat ;
-  background-size: 400px 300px;
+  background-size: 400px 400px;
 }
 
 .grid-view {
