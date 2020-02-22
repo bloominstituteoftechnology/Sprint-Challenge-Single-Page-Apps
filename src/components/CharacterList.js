@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { Pagination } from 'semantic-ui-react';
+import { Route } from "react-router-dom";
 
 import SearchForm from "./SearchForm";
+import CharacterCard from "./CharacterCard";
+import CharacterSubRoute from "./CharacterSubRoute";
 
 const Name = styled.p`
   font-family: 'Nanum Gothic Coding';
@@ -68,6 +71,7 @@ export default function CharacterList() {
     const results = characters.filter((character) => character.name.toLowerCase().includes(search.toLocaleLowerCase()))
     setSaveSearch(search)
     setSearchResults(results)
+    setPage(results.slice(0, 5))
   }
 
   const handlePageChange = (e=undefined, { activePage } = 1) => {
@@ -81,7 +85,8 @@ export default function CharacterList() {
     <section className="character-list">
       <CharacterListHeader>LIST OF CHARACTERS: </CharacterListHeader>
       <SearchForm search={search} setSearch={setSearch} activateSearch={activateSearch} setStatus={setStatus} />
-      {page.map((character) => <Name key={character.id}>{character.name.toUpperCase()}</Name>)}
+      <Route path="/characters/:name" component={CharacterSubRoute} />
+      {page.map((character) => <CharacterCard key={character.id} {...character} />)}
       <Pagination onPageChange={handlePageChange} defaultActivePage={1} totalPages={Math.floor(searchResults.length/5)} />
     </section>
   );
