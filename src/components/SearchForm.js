@@ -24,7 +24,7 @@ export default function SearchForm() {
       <form>
         <input
           type="text"
-          value={query}
+          value={query} 
           name="query"
           id="query"
           placeholder="search"
