@@ -17,8 +17,8 @@ export default function SearchForm(props) {
   }, [search]);
 
   return (
-    <section className="search-form">
-       <label htmlFor="filter">Filter by Name: </label>
+    <section className="pos-fix">
+       <label htmlFor="filter">Filter by Name:  </label><span> </span>
        <input
         type="text"
         placeholder="Search"

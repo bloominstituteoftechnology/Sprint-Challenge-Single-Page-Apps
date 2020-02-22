@@ -4,6 +4,7 @@ import CharacterCard from "./CharacterCard.js";
 import SearchForm from './SearchForm'
 import { Link } from "react-router-dom";
 
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [ characterList, setCharacterList ] = useState([]);
@@ -30,9 +31,13 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <SearchForm characterList={characterList} searchResults={searchResults} setSearchResults={setSearchResults} />
-      <h2>{searchResults.map((character, index) => (
+      <div className="grid-view">  
+        {searchResults.map((character, index) => (
           <CharacterCard character={character} key={index} />
-        ))}</h2>
+        ))}
+        
+      </div>
+      
     </section>
   );
 }
