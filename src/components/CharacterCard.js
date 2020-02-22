@@ -1,6 +1,11 @@
 import React from "react";
+import styled from 'styled-components';
 
-export default function CharacterCard(character) {
-  console.log(character);
-  return <p>{character.name}</p>;
+const Items = styled.p`
+  color: red;
+
+`
+export default function CharacterCard(props) {
+
+  return <Items>{props.name}</Items>;
 }

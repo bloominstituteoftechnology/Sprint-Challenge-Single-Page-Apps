@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
+import SearchForm from './SearchForm';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   //hook statement for putting characters in the array, initial state set to an empty array.
-  const [characterList, characterListSet] = useState([])
+  const [characterList, characterListSet] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const getCharacters = () => {
@@ -18,12 +20,20 @@ export default function CharacterList() {
     }
     getCharacters();
   }, []);
+
+
+  useEffect(() => {
+
+setSearchResults(characterList)
+
+  },[characterList]);
 //statement converts characterList.lenght to true false statement, then evaluates the .map() if the boolian is true.
   return (
     <section className="character-list">
 
-{!!characterList.length&& characterList.map(character => {
-  return CharacterCard(character)
+<SearchForm data = {searchResults} setdata ={setSearchResults}/>
+{!!searchResults.length&& searchResults.map(character => {
+  return <CharacterCard key={character.id} name= {character.name}/>
 })}
 
   </section>);

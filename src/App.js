@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "./components/Header.js";
-import CharacterList from "./components/CharacterList.js";
-import CharacterCard from "./components/CharacterCard.js";
+import Header from "./components/Header";
+import CharacterList from "./components/CharacterList";
+import WelcomePage from "./components/WelcomePage";
+import {Route} from 'react-router-dom';
 
 export default function App() {
-  return (<main>
-
+  return (
+  <main>
     <Header/>
-    <CharacterList/>
+    <Route exact path = "/" component = {WelcomePage} />
+    <Route path = "/character" component = {CharacterList} />
   </main>);
 }
