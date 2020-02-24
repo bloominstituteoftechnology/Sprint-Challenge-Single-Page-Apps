@@ -18,11 +18,11 @@ export default function CharacterList() {
       .catch(error => {
         console.log(error);
       });
-  }, [characters]);
+  }, [setCharacters]);
 
   return (
-    <section className="character-list">
+    <div className="character-list">
       <SearchForm characters={characters} />
-    </section>
+    </div>
   );
 }

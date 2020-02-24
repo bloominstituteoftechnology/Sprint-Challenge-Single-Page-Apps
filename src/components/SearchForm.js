@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function SearchForm({ characters }) {
   let list = ["someones", "pat", "joe", "bill", "percy", "yeahhh"];
   const [searchTerm, setSearchTerms] = useState("");
-  const [searchResults, setSearchResults] = useState(characters);
+  const [searchResults, setSearchResults] = useState([]);
   console.log(characters);
 
   useEffect(() => {
