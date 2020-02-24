@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-export default function SearchForm({ characters }) {
+export default function SearchForm(props) {
   let list = ["someones", "pat", "joe", "bill", "percy", "yeahhh"];
   const [searchTerm, setSearchTerms] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-  console.log(characters);
+  const [searchResults, setSearchResults] = useState(props.characters);
+  // console.log(props.characters);
 
   useEffect(() => {
-    const results = characters.filter(person => {
-      return person.toLowerCase().includes(searchTerm.toLowerCase());
+    const results = props.characters.filter(character => {
+      character.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
     setSearchResults(results);
-  }, [searchTerm]);
+  }, [props.characters, searchTerm]);
 
   const handleChange = event => {
     setSearchTerms(event.target.value);
@@ -31,7 +31,7 @@ export default function SearchForm({ characters }) {
       </form>
       <div>
         {searchResults.map(character => {
-          return <h1>{character}</h1>;
+          return <h1>{character.name}</h1>;
         })}
       </div>
     </section>
