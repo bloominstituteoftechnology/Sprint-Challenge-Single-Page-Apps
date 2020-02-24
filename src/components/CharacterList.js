@@ -13,8 +13,11 @@ export default function CharacterList() {
       .get("https://rickandmortyapi.com/api/character/")
       .then(response => {
         setCharacters(response.data.results);
-        // console.log(response.data.results);
-      })
+        console.log(
+          "this is from the effect call in Character List",
+          response.data.results
+        );
+      }, [])
       .catch(error => {
         console.log(error);
       });
@@ -23,6 +26,7 @@ export default function CharacterList() {
   return (
     <div className="character-list">
       <SearchForm characters={characters} />
+      {console.log("this is from the div in characterList", characters)}
     </div>
   );
 }

@@ -4,7 +4,7 @@ export default function SearchForm(props) {
   let list = ["someones", "pat", "joe", "bill", "percy", "yeahhh"];
   const [searchTerm, setSearchTerms] = useState("");
   const [searchResults, setSearchResults] = useState(props.characters);
-  // console.log(props.characters);
+  console.log("this is from the searchForm component", props.characters);
 
   useEffect(() => {
     const results = props.characters.filter(character => {
