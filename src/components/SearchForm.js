@@ -14,7 +14,6 @@ export default function SearchForm({ characters }) {
     let results = characters.filter(character =>
       character.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
     setSearchResult(results);
   }, [searchTerm, characters]);
 
