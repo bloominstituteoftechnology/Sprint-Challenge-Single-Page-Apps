@@ -4,18 +4,18 @@ import CharacterCard from "./CharacterCard";
 
 export default function SearchForm({people}) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState({people});
+  const [searchResults, setSearchResults] = useState(people);
 
 
 
   useEffect(() => {
-    const results = people.filter(people => {
+    const results = people.filter(char => {
     
-      return people.toLowerCase().includes(searchTerm.toLowerCase());
+      return char.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
     setSearchResults(results);
-  }, [searchTerm]);
+  }, [people, searchTerm]);
 
   const handleChange = event => {
     setSearchTerm(event.target.value);
@@ -29,14 +29,18 @@ export default function SearchForm({people}) {
         <input
           id="name"
           type="text"
-          name="textfield"
+          name="text-field"
           placeholder="Search"
           value={searchTerm}
           onChange={handleChange}
         />
       </form>
-      
-      
+     <div>
+     {searchResults.map(people =>{
+       return <CharacterCard people={people} key={people.id}/>
+     })}
+
+     </div>
 
 
     </section>

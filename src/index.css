@@ -38,11 +38,14 @@ header h1 {
   text-align: center;
 }
 
-.card { 
+.car-box { 
   margin-top: 35px;
+
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
   justify-content:center;
+ 
 }
 
 .searchFrom{
@@ -54,8 +57,11 @@ header h1 {
 
 
 .main-img{
-width: 100%
-
+display: flex;
+  border-radius: 50%;
+width:50%;
+ justify-content: center;
+ margin-left: 15rem;
 }
 
 
@@ -65,5 +71,4 @@ width: 100%
   padding: 1%;
   margin: 2%;
 }
-
 

@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList.js";
-import CharacterCard from "./components/CharacterCard.js";
-import SearchForm from "./components/SearchForm";
+import { Nav, NavItem, NavLink } from 'reactstrap';
+
 export default function App() {
   return (
     <main>
@@ -14,10 +14,13 @@ export default function App() {
       
        <div className="nav-links">
         <nav>
-        <Link to="/">Home</Link>
-        <br></br>
-        <Link to="/Character/:id">Characters</Link>
-        </nav>
+        <NavItem>
+        <NavLink><Link to="/">Home</Link></NavLink> 
+        </NavItem>
+        <NavItem>
+        <NavLink><Link to="/Character/:id">Characters</Link> </NavLink>
+        </NavItem>
+       </nav>
         </div>
         <Route path = "/Character/:id" 
           component={CharacterList}

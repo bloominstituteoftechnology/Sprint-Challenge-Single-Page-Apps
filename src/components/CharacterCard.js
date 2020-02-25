@@ -10,10 +10,12 @@ export default function CharacterCard({people}) {
   return (
     <div className= "car-box">
          
-        <Card>
+        <Card className="card">
         <CardBody>
           <CardTitle>Name: {people.name}</CardTitle>
-          <img width="110%" src={people.image} alt="character-pic" />
+          
+          <img  width="80%"  src={people.image} alt="character-pic" />
+          
           <CardSubtitle>status: {people.status} </CardSubtitle>
           <CardText>species: {people.species}</CardText>
           <CardText>type: {people.type}</CardText>
