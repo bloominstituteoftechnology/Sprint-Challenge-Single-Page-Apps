@@ -5,7 +5,7 @@ export default function CharacterList() {
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+    //  Important: verify the 2nd `useEffect` parameter: the dependencies array!
   }, []);
 
   return (
