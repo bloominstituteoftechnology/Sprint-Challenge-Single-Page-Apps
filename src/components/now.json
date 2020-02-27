@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "Sprint-Challenge-Single-Page-Apps",
+    "builds": [
+      { 
+       "src": "Sprint-Challenge-Single-Page-Apps/package.json", 
+       "use": "@now/static-build", 
+       "config": {
+          "distDir": "build"
+          } 
+       }
+      ],
+    "routes": [
+        { 
+           "src": "/(.*)", 
+           "dest": "Sprint-Challenge-Single-Page-Apps/$1" 
+        }
+    ]
+}
