@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   padding: 0;
@@ -27,13 +29,72 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
+}
+.app{
+  background: #145252;
+  width:100%;
+  min-height:200vh;
+}
+
+.character-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+.CharcterCard{
+  background: #ccffff;
+  border: black 1px solid;
+  margin: 2%;
+  width: 25%;
+  padding: 2%;
+  border-radius: 15px;
+
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  background: #ccffff;
+  padding:2%;
+  text-decoration: none;
+}
+
+
+.character-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.form{
+  margin:1%; 
+}
+
+.input{
+  padding:3%;
+  border-radius: 10px;
+}
+
+img{
+  width:50%;
+  border-radius: 55px;
+}
+h1{
+  color:white;
+}
+nav a{
+  color:black;
+  text-decoration: none;
 }

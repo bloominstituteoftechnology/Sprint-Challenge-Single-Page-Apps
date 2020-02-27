@@ -27,7 +27,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client side routing does not need to keep make request to the server, it just does it once when the application is being loaded into the browser. Any other navigation or page change is just being rendered from the already saved application.
+
+So, the benefits are, it perfoms better in rendering the different pages of the application after initial loading (unlike to server side routing where page reloads each time).
+In addition, client side application can still function without the internet as long as it has already being loaded in with the internet.
 
 ## Project Set Up
 
