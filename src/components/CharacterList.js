@@ -17,35 +17,28 @@ const Navagation = styled.div`
 
 export default function CharacterList() {
 
-    //Data from axios
+    //API Data
     const [characters, setCharacters] = useState([]);
-
-    //Search functionality
-    const [searchBar, setSearchBar] = useState([]);
-    const searchListener = text => {
-        setSearchBar(text);
-    }
 
     useEffect(() => {
     Axios.get("https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/")
         .then(res => {
-
-            //console.log(res);
+            console.log(res.data.results);
             setCharacters(res.data.results);
-            setSearchBar(res.data.results);
-
         })
         .catch(err => {
             console.log("API Request failed ~ ", err);
         })
     }, []);
 
+    console.log(characters);
+
     return (
     <section className="character-list">
         <Navagation>
             <Link className="nav" to={"/"}>Home</Link>
         </Navagation>
-        <Search  searchListener={searchListener} characters={characters} />
+        <Search characters={characters} />
 
         
         <CardStyle>
