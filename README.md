@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+Client side routing is when the whole website or web-app is loaded upon the first request. This may make the initial load of a webpage a little slower, but it comes with some great benefits. Mainly, because once loaded, there is much less data needed to be processed, so routing between pages in a website is super fast. This allows for smooth and seamless transitions between pages.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:

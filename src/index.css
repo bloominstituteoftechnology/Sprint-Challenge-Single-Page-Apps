@@ -27,13 +27,52 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
-  border-radius: 100%;
+  border-radius: 1%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
+}
+
+.card {
+  max-width: 400px!important;
+  margin: 10px 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.btn {
+  margin: 0 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.btn a {
+  background: #6c757d;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.btn a:hover {
+  background: #5a6168;
+  text-decoration: none;
+  color: white;
+}
+
+.pos-fix {
+  margin-left: 3%;
 }
