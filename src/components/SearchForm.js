@@ -34,9 +34,6 @@ export default function SearchForm() {
           value={query}
           onChange={handleInputChange}
         />
-        <Link to="/">
-          <button>Home</button>
-        </Link>
       </form>
 
       {data.map(char => {
