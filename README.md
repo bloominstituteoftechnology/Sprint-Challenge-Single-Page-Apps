@@ -26,6 +26,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ]  Explain benefit(s) using `client-side routing`?
+Client side routing processes less data, so the page and its routes load faster.
 
 > Answer:
 
@@ -33,15 +34,15 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up and work on your project:
 
-- [ ]  Create a forked copy of this project.
+- [ x]  Create a forked copy of this project.
 - [ ]  Add TL as collaborator on GitHub.
-- [ ]  Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x ]  Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [ x]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
 - [ ]  Implement the project on this branch, committing changes regularly.
 - [ ]  Push commits: `git push origin <firstName-lastName>`.
-- [ ]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ]  **RUN** `yarn start` or `npm start` to fire up your React application.
+- [x ]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x ]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [x ]  **RUN** `yarn start` or `npm start` to fire up your React application.
 
 ### Exceeded rate limits?
 
