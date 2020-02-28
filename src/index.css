@@ -37,3 +37,38 @@ main {
 header h1 {
   text-align: center;
 }
+
+.car-box { 
+  margin-top: 35px;
+
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content:center;
+ 
+}
+
+.searchFrom{
+  display: flex;
+
+  justify-content:center;
+
+}
+
+
+.main-img{
+display: flex;
+  border-radius: 50%;
+width:50%;
+ justify-content: center;
+ margin-left: 15rem;
+}
+
+
+.nav-links{
+  display: flex;
+  justify-content:center;
+  padding: 1%;
+  margin: 2%;
+}
+
