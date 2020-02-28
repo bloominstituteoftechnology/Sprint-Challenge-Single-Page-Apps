@@ -5,16 +5,18 @@ import WelcomePage from './components/WelcomePage';
 import {Route} from 'react-router-dom'
 import CharacterCard from "./components/CharacterCard.js";
 import SearchForm from './components/SearchForm';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
     <div>
-      <WelcomePage exact path='/'/>
-
+      <Route exact path='/'>
+        <WelcomePage />
+      </Route>
+   
       <Route path='/characters/'>
         <Header />
-        <SearchForm/>
+        
       </Route>
 
       <Route exact path ='/characters/'>
@@ -22,7 +24,7 @@ export default function App() {
       </Route>
 
       <Route path='/characters/:characterID'>
-        <CharacterCard></CharacterCard>
+        <CharacterCard/>
       </Route>
     </div>
    
