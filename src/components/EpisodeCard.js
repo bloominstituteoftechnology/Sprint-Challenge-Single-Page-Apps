@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Card,
   CardText,
@@ -13,10 +13,10 @@ export default function LocationCard(props) {
     <>
       <Col xs="6" md="4" xl="4">
         <Card>
-          <CardBody>
+          <CardBody id="episodeCard">
             <CardTitle>{props.name}</CardTitle>
-            <CardSubtitle>{props.type}</CardSubtitle>
-            <CardText>Dimension: {props.dimension}</CardText>
+            <CardSubtitle>{props.episode}</CardSubtitle>
+            <CardText>Air Date: {props.airDate}</CardText>
           </CardBody>
         </Card>
       </Col>

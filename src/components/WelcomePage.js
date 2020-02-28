@@ -4,10 +4,10 @@ export default function WelcomePage() {
   return (
     <section className="welcome-page">
       <header>
-        <h1>Welcome to the ultimate fan site!</h1>
+        <h1>I'm Ants in my eyes Johnson and welcome to my fansite!</h1>
         <img
           className="main-img"
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          src="https://rickandmortyapi.com/api/character/avatar/20.jpeg"
           alt="rick"
         />
       </header>
