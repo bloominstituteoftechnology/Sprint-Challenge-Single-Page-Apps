@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
-import LocationCard from "./LocationCard";
+import EpisodeCard from "./EpisodeCard";
 import Axios from "axios";
 import { Container, Row } from "reactstrap";
 
-export default function LocationList() {
+export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
-  const [location, setLocation] = useState([]);
-  const [LocationQuery, setLocationQuery] = useState("");
+  const [episode, setEpisode] = useState([]);
+  const [episodeQuery, setEpisodeQuery] = useState("");
 
   const handleChange = event => {
-    setLocationQuery(event.target.value);
+    setEpisodeQuery(event.target.value);
   };
 
   useEffect(() => {
-    Axios.get("https://rickandmortyapi.com/api/location/")
+    Axios.get("https://rickandmortyapi.com/api/episode/")
       .then(res => {
         console.log(res.data);
-        const locations = res.data.results.filter(a =>
-          a.name.toLowerCase().includes(LocationQuery.toLowerCase())
+        const episodes = res.data.results.filter(a =>
+          a.name.toLowerCase().includes(episodeQuery.toLowerCase())
         );
-        setLocation(locations);
-        console.log(locations);
+        setEpisode(episodes);
+        console.log(episodes);
       })
       .catch(err => console.log(err.response));
-  }, [LocationQuery]);
+  }, [episodeQuery]);
 
   return (
     <Container>
@@ -31,22 +31,22 @@ export default function LocationList() {
         <input
           type="text"
           onChange={handleChange}
-          value={LocationQuery}
+          value={episodeQuery}
           name="name"
           tabIndex="0"
           className="prompt search-name"
-          placeholder="search by location"
+          placeholder="search by episode"
           autoComplete="off"
         />
       </form>
 
       <Row>
-        {location.map(a => {
+        {episode.map(a => {
           return (
-            <LocationCard
+            <EpisodeCard
               name={a.name}
-              type={a.type}
-              dimension={a.dimension}
+              airDate={a.air_date}
+              episode={a.episode}
               id={a.episidode}
             />
           );

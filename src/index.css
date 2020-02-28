@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Trade+Winds&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: white;
 }
 
 main {
@@ -27,13 +30,67 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+  margin-bottom: 3rem;
+}
 
 header h1 {
   text-align: center;
+  margin: 3rem 0;
+  font-family: "Luckiest Guy";
+}
+
+.activeLink {
+  background: rgb(97, 255, 136);
+  padding: 1rem;
+  color: white;
+}
+
+nav a {
+  color: #01b0c8;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #01b0c8;
+}
+
+#navbar {
+  padding: 0.5rem 3rem;
+}
+
+.logo-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80%;
+}
+
+.card-title {
+  font-family: "Luckiest Guy";
+  font-size: 1.5rem;
+}
+
+.card-subtitle {
+  font-weight: 600;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.searchBar {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#episodeCard {
+  background: rgb(199, 199, 199);
 }
