@@ -8,12 +8,6 @@ export default function CharacterList() {
   const [page,setPage] = useState(1);
   const [data,setData] = useState([]);
   const [query, setQuery] = useState("");
-  
-  //Apis in case smth breaks
-    // https://rickandmortyapi.com/api/character/?page=${page} 
-    //https://swapi.co/api/people/?page=${page}
-    //https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/
-
 
 useEffect(() => {
 axios
