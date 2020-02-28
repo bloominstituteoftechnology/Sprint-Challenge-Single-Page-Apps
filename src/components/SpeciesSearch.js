@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 
-export default function SearchForm() {
+export default function SpeciesSearch() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -10,14 +10,14 @@ export default function SearchForm() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
-      .get(`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`)
+      .get(`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/species/`)
       .then(response => {
         console.log(response.data.results);
-        const characters = response.data.results.filter(character =>
-          character.name.toLowerCase().includes(query.toLowerCase())
+        const species = response.data.results.filter(species =>
+          species.species.toLowerCase().includes(query.toLowerCase())
         );
         
-        setData(characters);
+        setData(species);
       })
       .catch(error => {
         console.log(error, "axios error")
@@ -38,10 +38,10 @@ export default function SearchForm() {
           type="text"
           onChange={handleInputChange}
           value={query}
-          name="name"
+          name="species"
           tabIndex="0"
           className="prompt search-name"
-          placeholder="Search By Name"
+          placeholder="Search By Species"
           autoComplete="off"
            />
         </StyledInput>
