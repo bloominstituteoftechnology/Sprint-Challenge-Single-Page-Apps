@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const StyledCharacters = styled.div`
+font-family: "Source Sans Pro", sans-serif;
+background: #fff;
+color: #263650;
+padding: 10px;
+min-height: 350px;
+border-radius: 4px;
+box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+`;
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -47,12 +59,12 @@ export default function CharacterList() {
         </form>
          {data.map(data => {
            return (
-         <div key={data.id}>
-            <h3 className="capital">Name: {data.name}</h3>
+         <StyledCharacters key={data.id}>
+            <h2 className="capital">Name: {data.name}</h2>
             <h3 className="capital">Status: {data.status}</h3>
             <h3 className="capital">Species: {data.species}</h3>
             <h3 className="capital">Gender: {data.gender}</h3>
-          </div>
+          </StyledCharacters>
           );
         })}
       </div>
