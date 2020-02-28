@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import CharacterCard from './CharacterCard';
+import EpisodeCard from './EpisodeCard'
 import SearchForm from './SearchForm';
 
-const url = 'https://rickandmortyapi.com/api/character/';
 
-export default function CharacterList(props) {
+const url = 'https://rickandmortyapi.com/api/episode/';
+
+export default function EpisodeList(props) {
   const [state, setState] = useState([]);
   const [query, setQuery] = useState('');
   // TODO: Add useState to track data from useEffect
@@ -14,9 +15,9 @@ export default function CharacterList(props) {
   useEffect(() => {
     axios.get(url).then(response => {
       // Console.log(response.data.results)
-      const characters = response.data.results.filter((character) => character.name.toLowerCase().includes(query.toLowerCase()));
+      const episodes = response.data.results.filter((episode) => episode.name.toLowerCase().includes(query.toLowerCase()));
       
-      setState(characters);
+      setState(episodes);
     });
 
     // TODO: Add API Request here - must run in `useEffect`
@@ -27,17 +28,17 @@ export default function CharacterList(props) {
   return (
     
 
-    <section className="character-list">
-      <h2>Characters</h2>
+    <section className="location-list">
+      <h2>Episodes</h2>
       <SearchForm query={query} setQuery={setQuery} />
-      {state.map(character => {
+      {state.map(episode => {
         return (
           
-          <CharacterCard
-            key={character.id}
-            name={character.name}
-            species={character.species}
-            status={character.status}
+          <EpisodeCard
+            key={episode.id}
+            name={episode.name}
+            air_date={episode.air_date}
+            episode={episode.episode}
           />
         );
       })}
@@ -46,3 +47,6 @@ export default function CharacterList(props) {
 }
 
 
+
+
+// export default function LocationsList() {}
