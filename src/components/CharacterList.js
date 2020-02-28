@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
 import axios from "axios";
-import SpeciesSearch from "./SpeciesSearch";
+
 
 
 
@@ -30,10 +30,8 @@ export default function CharacterList() {
     <section className="character-list">
       <div>
         <SearchForm />
-        <SpeciesSearch />
       </div>
-
-
+     
 
     </section>
   );
