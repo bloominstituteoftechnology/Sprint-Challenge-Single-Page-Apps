@@ -6,9 +6,8 @@ import {fadeIn } from 'react-animations';
 let fadeAnimation = keyframes`${fadeIn}`;
 let bounceAnimation = keyframes`${rotateIn}`;
 const Card = styled.div`
-animation:10s ${fadeIn}
  animation: 10s ${bounceAnimation};
- 
+ animation:10s ${fadeIn}
  width: 30%;
   border-radius: 8px;
   border: solid black 1px;
@@ -20,17 +19,17 @@ animation:10s ${fadeIn}
 `;
 
 
-
-const CharacterCard = props => {
+const EpisodeCard = props => { 
   return (
     <div className ="grid-view">
       <Card>
         <h1>{props.name}</h1>
-        <p>{props.status}</p>
-        <p>{props.species}</p>
-        <p>{props.gender}</p>
+        <p>{props.air_date}</p>
+        <p>{props.episode}</p>
+       
       </Card>
     </div>
   )
+  
 }
-export default CharacterCard;
+export default EpisodeCard;

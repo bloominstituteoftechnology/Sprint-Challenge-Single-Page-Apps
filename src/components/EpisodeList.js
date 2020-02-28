@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import LocationCard from "./LocationCard"
+import EpisodeCard from "./EpisodeCard"
 import SearchForm from "./SearchForm";
 
-export default function LocationList(props) {
+export default function EpisodeList(props) {
   // TODO: Add useState to track data from useEffect
-  const [locations, setLocations] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
   const [dataIsFiltered, dataIsUpdated] = useState([]);
 
-  const searching = alllocations => {
-    dataIsUpdated(alllocations)
+  const searching = allepisodes => {
+    dataIsUpdated(allepisodes)
   }
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
-    .get(`https://rickandmortyapi.com/api/location/`)
+    .get(`https://rickandmortyapi.com/api/episode/`)
     .then(response => {
-      setLocations(response.data.results);
+      setEpisodes(response.data.results);
       dataIsUpdated(response.data.results);
     })
     .catch(error => {
@@ -30,16 +30,16 @@ export default function LocationList(props) {
   }, []);
 
   return (
-    <section className="location-list">
+    <section className="episode-list">
       <Link className='links' to ={'/'}>Home</Link>
-      <SearchForm searching={searching} location={locations}/>
+      <SearchForm searching={searching} episodes={episodes}/>
 
-{dataIsFiltered.map(location => (
-  <LocationCard
-    key={location.id}
-    name={location.name}
-    type={location.type}
-    dimension={location.dimension}
+{dataIsFiltered.map(episode => (
+  <EpisodeCard
+    key={episode.id}
+    name={episode.name}
+    air_date={episode.air_date}
+    episode={episode.episode}
     
   />
      ))}
