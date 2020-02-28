@@ -27,13 +27,109 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+  margin-bottom: 50px;
+}
 
 header h1 {
   text-align: center;
+}
+
+.centered {
+  border-bottom: 2px dashed silver;
+}
+
+.centered h1 {
+  margin: 0;
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.welcome-page h1 {
+  font-family: 'Monaco';
+  font-size: 30px;
+  margin: 30px 0px;
+}
+
+.to-characters,
+.to-home {
+  text-decoration: none;
+  background: rgb(114, 128, 209);
+  color: rgb(232, 224, 185);
+  font-size: 20px;
+}
+
+.to-characters {
+  padding: 10px 20px;
+}
+
+.to-home {
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 90%;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.to-characters:hover,
+.to-home:hover {
+  background: rgb(151, 163, 216);
+  color: rgb(226, 219, 219);
+  text-decoration: none;
+}
+
+.character-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 230px;
+  margin-bottom: 20px;
+}
+
+.card-title h1 {
+  font-size: 28px;
+  font-family: cursive;
+}
+
+.card-subtitle {
+  display: flex;
+}
+
+.card-subtitle span,
+.card-subtitle p {
+  margin: 7px 0;
+}
+
+.card-subtitle span {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #1d273e;
+  font-family: unset;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.search-form span {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+.search-form input {
+  padding: 1px 8px;
+  font-size: 20px;
+  width: 250px;
+  border: 1px solid rgb(187, 185, 182);
 }
