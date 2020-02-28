@@ -9,9 +9,7 @@ export default function CharacterCard(props) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lime;
-    margin: 5% 20%
-    border: solid 5px black;`;
+    margin: 5% 20%`
 
   return (
     <Card>
