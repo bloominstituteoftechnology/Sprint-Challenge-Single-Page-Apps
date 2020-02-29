@@ -3,11 +3,13 @@ import Header from "./components/Header.js";
 import {Route} from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
-import CharacterCard from './components/CharacterCard';
+// import CharacterCard from './components/CharacterCard';
+// import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
+
   return (
-    <main>
+    <main style={{backgroundColor: 'lightgreen'}}>
       <Header />
       <Route exact path='/'>
         <WelcomePage/>
@@ -17,9 +19,12 @@ export default function App() {
         <CharacterList/>
       </Route>
       
-      <Route path='character/:id'>
+      {/* <Route>
+        <SearchForm/>
+      </Route> */}
+      {/* <Route path='/character/:id'>
         <CharacterCard/>
-      </Route>
+      </Route> */}
     </main>
   );
 }
