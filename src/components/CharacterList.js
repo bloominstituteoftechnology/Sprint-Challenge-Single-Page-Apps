@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from './CharacterCard.js';
+
+import { Link } from "react-router-dom";
 // import { useParams } from 'react-router-dom';
 
 export default function CharacterList() {
@@ -28,13 +30,20 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   },[]);
 
-  console.log('characters',characters.results);
-      
-  return (
-    <section className="character-list">
-      {characters.results.map(character =>{
-       return <CharacterCard character={characters}/>
-      })}
-    </section>
-  );
+  console.log('characters',characters);
+    if(characters.length<= 0){
+      return <h1>loading..</h1>
+    }else{
+      return (
+        <Link to={`/characters/${characters.results.id}`}>
+        <section className="character-list">
+          
+          {characters.results.map(character =>{
+           return <CharacterCard key={character.id} character={character}/>
+          })}
+        </section>
+        </Link>
+      );
+    }
+ 
 }
