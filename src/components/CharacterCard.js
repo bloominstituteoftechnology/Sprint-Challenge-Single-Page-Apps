@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+// import axios from 'axios';
+// import { useParams } from 'react-router-dom';
 
 export default function CharacterCard() {
-  return <span>todo: character</span>;
+  let [character, setCharacter] = useState();
+
+  return (
+    <div>
+      <h3>Name: </h3>
+    </div>
+  );
 }
