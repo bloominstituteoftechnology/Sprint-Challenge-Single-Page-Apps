@@ -28,6 +28,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
+I think the main convenience of using client side routing is for
+the faster loading times after the intial phase. It saves us time
+by minimizing server request on every new page. 
 
 ## Project Set Up
 
