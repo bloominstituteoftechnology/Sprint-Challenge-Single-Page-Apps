@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
 export default function SearchForm() {
- 
+
   return (
     <section className="search-form">
-     // Add a search form here
+      <div>
+        <form>
+          <h2>Add Your Search></h2>
+          <input>Search</input>
+        </form>
+      </div>
     </section>
   );
 }
