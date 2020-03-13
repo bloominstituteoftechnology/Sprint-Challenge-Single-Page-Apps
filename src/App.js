@@ -5,6 +5,7 @@ import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
 import EpisodesList from './components/EpisodesList';
 import { Route } from 'react-router-dom';
+import TabNav from "./components/TabNav"
 
 export default function App() {
   return (

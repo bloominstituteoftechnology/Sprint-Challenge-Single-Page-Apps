@@ -13,6 +13,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-swipeable-views": "^0.13.9",
+    "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.0.1"
   },
   "scripts": {
