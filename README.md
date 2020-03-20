@@ -27,7 +27,14 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:Execute quickly because they do not require a trip to the server.
+
+May improve the usability of Web sites for users whose browsers support scripts.
+
+Can give developers more control over the look and behaviour of their Web widgets.
+
+Can be substituted with alternatives (for example, HTML) if users’ browsers do not support scripts
+Are reusable and obtainable from many free resources.
 
 ## Project Set Up
 
