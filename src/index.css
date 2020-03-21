@@ -31,3 +31,18 @@ main {
 header h1 {
   text-align: center;
 }
+
+
+.search-field {
+  width: 400px;
+  height:25px;
+  border: 1px solid grey;
+  font-size: 15px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.search-button{
+  height: 36px;
+  font-size: 15px;
+}
