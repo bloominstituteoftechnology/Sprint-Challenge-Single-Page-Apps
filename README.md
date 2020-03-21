@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Less data is processed and smooth transitions, routing between views are generally faster.
 
 ## Project Set Up
 
