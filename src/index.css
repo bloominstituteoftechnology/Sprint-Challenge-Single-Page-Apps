@@ -31,3 +31,10 @@ main {
 header h1 {
   text-align: center;
 }
+
+.search-form{
+border: 1px solid red;
+width: 120px;
+height: 60px;
+text-align: center;
+}
