@@ -29,6 +29,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+ So, the benefits are, it perfoms better in rendering the different pages of the application after initial loading (unlike to server side routing where page reloads each time).
+ In addition, client side application can still function without the internet as long as it has already being loaded in with the internet.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
