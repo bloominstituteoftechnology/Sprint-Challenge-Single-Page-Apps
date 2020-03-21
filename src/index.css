@@ -1,3 +1,5 @@
+@import './components/TabNav.css';
+
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +27,7 @@ main {
 }
 
 .grid-view div.card.ui {
-  margin: 1.25rem;
+  margin: 2%;
 }
 
 header h1 {
