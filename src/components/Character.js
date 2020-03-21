@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styled from "styled-components";
 
-export default function SearchForm() {
+export default function Characters() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   useEffect(() => {
     axios
-      .get(`https://rickandmortyapi.com/api/character/`, {
+      .get(`https://www.potterapi.com/v1/characters/`, {
         params: {
           key: "$2a$10$1sdw09jOfZCj0ChmG9I2g.Q1uMT30My2M/aNAqc.aV3JTyNxb4f2m"
         }
       })
       .then(response => {
-        const characters = response.data.results.filter(character =>
+        const characters = response.data.filter(character =>
           character.name.toLowerCase().includes(query.toLowerCase())
         );
-        console.log("Rick and Morty characters", response);
+        console.log("harry potter characters", response);
         setData(characters);
       });
   }, [query]);
@@ -24,7 +23,6 @@ export default function SearchForm() {
     setQuery(event.target.value);
   };
   return (
-    <Grid>
     <div className="spells">
       <form className="search">
         <input
@@ -43,24 +41,26 @@ export default function SearchForm() {
           return (
             <div className="character-list " key={data._id}>
               <h2>
+                <span aria-label="witch" role="img">
+                  🧙
+                </span>
                 {data.name}
               </h2>
-              <h3 className="capital">Name: {data.name}</h3>
-              <h3 className="capital">Status: {data.status}</h3>
-              <h3 className="capital">Species: {data.species}</h3>
-              <h3 className="capital">Gender: {data.gender}</h3>
+              <h3 className="capital">Role: {data.role}</h3>
+              <h3 className="capital">House: {data.house}</h3>
+              <h3 className="capital">Wand: {data.wand}</h3>
+              <h3 className="capital">Patronus: {data.patronus}</h3>
+              <h3 className="capital">Blood Status: {data.bloodStatus}</h3>
             </div>
           );
         })}
       </div>
     </div>
-    </Grid>
   );
 }
 
-const Grid = styled.div`
+const Grid = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
-
