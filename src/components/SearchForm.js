@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
 function SearchForm(props) {
 
@@ -14,7 +13,7 @@ function SearchForm(props) {
     const charSearch = props.characters.filter(char => {
       return char.name.toLowerCase().indexOf(props.results.toLowerCase()) !== -1;
     });
-
+    
     props.search(charSearch);
     console.log(charSearch);
   };
@@ -32,7 +31,6 @@ function SearchForm(props) {
         >
         </input>
       </form>
-      <Link to={`/characters/${props.id}`}><button type='submit'> Submit </button> </ Link>
     </section>
   );
 }
