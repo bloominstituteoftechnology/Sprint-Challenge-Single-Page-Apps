@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Nav = styled.div`
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 25px;
 `
 
 const Button = styled.button`
@@ -14,7 +15,7 @@ const Button = styled.button`
   color: green;
   font-size: 20px;
   padding:10px;
-  margin:10px
+  margin:50px;
   &&:hover{
   background: red;
   color:white

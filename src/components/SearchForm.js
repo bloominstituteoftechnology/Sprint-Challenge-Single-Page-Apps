@@ -34,6 +34,7 @@ const Search = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px;
+  
 `
 
 const Results = styled.div`
@@ -53,7 +54,7 @@ const Header3 = styled.h3`
 `
 
 const Info = styled.div`
-  width: auto;
+  width: 100%;
   padding: 5px;
 `
 
