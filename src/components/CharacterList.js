@@ -14,9 +14,8 @@ export default function CharacterList() {
         // response.data.results has the list
         setList(response.data.results)
       })
-    }, []);
-    
-  console.log(list)
+      .catch(error => console.log(error))
+  }, []);
   
   return (
     <section className="character-list">
