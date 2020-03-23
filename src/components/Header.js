@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
+import { Route } from 'react-router-dom'
 
 import styled, { css } from 'styled-components'
 
@@ -37,6 +39,12 @@ export default function Header() {
 
   return (
     <TheHead>
+      <form>
+        <Route exact path="/Header/SearchForm">
+        <label htmlFor="search">Search:</label>
+        <input type="text" name="search" placeholder="Search Character Value" />
+        </Route>
+      </form>
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
       {character.map(card => (
@@ -51,6 +59,8 @@ export default function Header() {
         </>
       ))}
     </header>
+
+    <SearchForm />
     </TheHead>
   );
 }
