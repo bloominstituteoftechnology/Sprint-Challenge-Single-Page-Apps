@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
 
 function SearchForm(props) {
-  const [results, setResults] = useState();
+
 
   const handleChanges = e => {
-    setResults(e.target.value);
+    props.setResults(e.target.value);
   };
 
   const submitHandler = e => {
     e.preventDefault();
 
     const charSearch = props.characters.filter(char => {
-      return char.name.toLowerCase().indexOf(results.toLowerCase()) !== -1;
+      return char.name.toLowerCase().indexOf(props.results.toLowerCase()) !== -1;
     });
+
     props.search(charSearch);
     console.log(charSearch);
   };
@@ -30,6 +32,7 @@ function SearchForm(props) {
         >
         </input>
       </form>
+      <Link to={`/characters/${props.id}`}><button type='submit'> Submit </button> </ Link>
     </section>
   );
 }

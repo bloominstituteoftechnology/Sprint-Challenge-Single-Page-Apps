@@ -1,17 +1,47 @@
-import React from "react";
+import React, { useEffect, useState} from 'react';
+import axios from 'axios';
 import SearchForm from './components/SearchForm'
 import Header from "./components/Header.js";
-import CharacterCard from './components/CharacterCard';
+import CharacterList from './components/CharacterCard';
+import CharacterCard from './components/CharacterList';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import WelcomePage from './components/WelcomePage'
+import WelcomePage from './components/WelcomePage';
 
 export default function App() {
+
+  const [ characters, setCharacters ]  = useState([]) 
+  const [ results, setResults ] = useState();
+  const [ filteredData, updateData ] = useState([])
+
+
+  const search = charSearch => {
+    updateData(charSearch)
+  };
+
+useEffect(() => {
+  axios
+  .get(`https://rickandmortyapi.com/api/character/`)
+  .then(response => {
+    setCharacters(response.data.results)
+
+  })
+  .catch(err => {
+    console.log(err)
+  })
+  }, []);
+  const id = characters.id;
+
+
   return (
     <Router>
       <Header />
-      <SearchForm />
+      <SearchForm results={results} setResults={setResults} characters={characters} search={search} id={filteredData.id}/>
+
       <Route exact path='/' component={WelcomePage} />
-      <Route exact path='/characters' component={CharacterCard} />
+
+      <Route exact path='/characters' render={(props) =>{return <CharacterList {...props} characters={characters} />}} />
+
+      <Route exact path='/characters/:id' render={(props) => {return  <CharacterCard {...props} id={id} filteredData={filteredData} />}} />
     </Router>
   );
 }

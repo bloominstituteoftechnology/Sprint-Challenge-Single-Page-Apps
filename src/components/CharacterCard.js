@@ -1,48 +1,23 @@
-import React from "react";
-import axios from 'axios';
-import styled from 'styled-components';
-import { useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export default function CharacterCard(props) {
 
-const [ characters, setCharacters ]  = useState([]) 
-useEffect(() => {
-  //const id = characters.id;
-  axios
-  .get(`https://rickandmortyapi.com/api/character/`)
-  .then(response => {
-    console.log(response.data.results)
-    setCharacters(response.data.results)
-  })
-  .catch(err => {
-    console.log(err)
-  })
-  }, []);
-
-  const CharCard = styled.div `
-    background: lightgrey;
-    width: 29%;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-    justify-content: space-around;
-  `
-
-  console.log(characters);
-
   return (
-    <span>  
-      <Link to='/'>Home</Link>
-      {characters.map((character, i) => {
+    <section className="character-list">
+      <h2>Character List</h2>
+      <Link className="main-buttons" to={`/`}>
+        Home
+      </Link>
+      {props.filteredData.map(char => {
         return (
-        <CharCard key={i} value={character.name}>
-          <h2>{character.name}</h2>
-          <img src={character.image} alt={character.name}/>
-        </CharCard>
-        )
-      })
-      }
-    </span>
-  )
+          <div>
+            <h1>{char.name}</h1>
+          </div>
+        );
+      })}
+
+    </section>
+  );
 }
