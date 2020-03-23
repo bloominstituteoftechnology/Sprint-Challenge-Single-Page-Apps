@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios'
+import React from "react";
 import CharacterCard from "./CharacterCard";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
-  const [list, setList] = useState([])
+export default function CharacterList(props) {
+  // I am refactoring to pull out the state and axios call into a Characters component which will wrap this one, so that I can have the search feature pass a filtered list more easily into this component, which will be strictly for displaying the list given to it via props
 
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    axios
-      .get("https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/")
-      .then(response => {
-        // response.data.results has the list
-        setList(response.data.results)
-      })
-      .catch(error => console.log(error))
-  }, []);
-  
   return (
     <section className="character-list">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
-      {list.map(char => (
+      {props.list.map(char => (
         <CharacterCard key={char.id} name={char.name}/>
       ))}
     </section>
