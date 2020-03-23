@@ -19,8 +19,10 @@ export default function Characters() {
       .catch(error => console.log(error))
   }, []);
 
+  // as the content of the search bar changes, the search string is updated in state
   const searchHandleChange = e => setSearch(e.target.value)
 
+  // the list to be passed to CharacterList to be displayed is filtered according to the characters whose names contain the search string. "toLowerCase" makes the search case-insensitive
   const filteredList = list.filter(character => 
     character.name.toLowerCase().includes(search.toLowerCase())
   )
