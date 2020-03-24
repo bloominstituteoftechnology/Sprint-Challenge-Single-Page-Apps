@@ -6,6 +6,7 @@ import LocationsList from './components/LocationsList';
 import EpisodesList from './components/EpisodesList';
 import { Route } from 'react-router-dom';
 import TabNav from "./components/TabNav"
+import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
       <Route exact path='/characters' component={CharacterList}/>
       <Route exact path='/locations' component={LocationsList}/>
       <Route exact path='/episodes' component={EpisodesList}/>
+      <Route exact path='/Search' component={SearchForm}/>
     </main>
   );
 }
+

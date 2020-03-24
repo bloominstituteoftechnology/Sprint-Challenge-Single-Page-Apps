@@ -10,6 +10,7 @@ export default function TabNav() {
             <Link to='/characters'><Button>Characters</Button></Link>
             <Link to='/locations'><Button>Locations</Button></Link>
             <Link to='/episodes'><Button>Episodes</Button></Link>
+            <Link to='/Search'><Button>Search</Button></Link>
         </Menu>
     )
 };
