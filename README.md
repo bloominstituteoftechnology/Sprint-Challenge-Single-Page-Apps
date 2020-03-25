@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: The benifits of client side routing are less https requests to the server. Transitions are smoother and easier to implement and display without an entire page refresh each time an animation runs or data changes on the page.
 
 ## Project Set Up
 
