@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
-import { Route } from 'react-router-dom'
 
 import styled, { css } from 'styled-components'
 
@@ -24,43 +24,39 @@ const TheHead = styled.header`
     `};
 `
 
+const WorkingSearch = styled.div`
+text-align: center;
+font-size: 2em;
+color: #333;
+`
+
 export default function Header() {
-  const [character, setCharacter] = useState([])
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
 
     axios
       .get('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/')
-      .then(res => setCharacter(res.data.results))
+      .then(res => {
+        console.log(res)
+        
+        const filtered = res.data.results.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        setDisplayData(filtered);
+      })
       .catch(err => console.log(err))
-  }, [])
-
-  console.log('CHARACTER: ', character)
+  }, [searchTerm])
 
   return (
     <TheHead>
-      <form>
-        <Route exact path="/Header/SearchForm">
-        <label htmlFor="search">Search:</label>
-        <input type="text" name="search" placeholder="Search Character Value" />
-        </Route>
-      </form>
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
-      {character.map(card => (
-        <>
-        <CharacterCard
-        key={card.id} 
-        name={card.name}
-        status={card.status}
-        species={card.species}
-        type={'No data exists' || card.type}
-        />
-        </>
+      {displayData.map(card => (
+        <CharacterCard card={card} key={card.id}/>
       ))}
+      <Route exact path="/Header/SearchForm"><WorkingSearch><div> --- PLEASE USE THIS SEARCH --- <span><br />(I don't know how to get rid of the other one)</span> </div></WorkingSearch></Route>
+      <SearchForm setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
     </header>
-
-    <SearchForm />
     </TheHead>
   );
 }

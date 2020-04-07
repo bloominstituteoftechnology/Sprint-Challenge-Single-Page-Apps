@@ -1,12 +1,12 @@
 import React from "react";
 
-const CharacterCard = (props) => {
+const CharacterCard = ({card}) => {
   return (
-  <div>
-    <p>Name: {props.name}</p>
-    <p>Status: {props.status}</p>
-    <p>Species: {props.species}</p>
-    <p>Type: {props.type}</p> 
+  <div key={card.id}>
+    <p>Name: {card.name}</p>
+    <p>Status: {card.status}</p>
+    <p>Species: {card.species}</p>
+    <p>Type: {card.type}</p> 
   </div>
   );
 }
