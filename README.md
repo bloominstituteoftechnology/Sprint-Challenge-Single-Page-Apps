@@ -27,7 +27,13 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  
+
+-Routing between components is fast bc the amount of data that renders is less - the rest of the data is rendered by the DOM very quickly- including when there's tons of HTML and CSS to render.
+
+-For better user experience, animations and transitions can be easily implemented when switching between different components.
+
+-No separate pages are rendered, and the current page doesn't refresh to load a new view.
 
 ## Project Set Up
 

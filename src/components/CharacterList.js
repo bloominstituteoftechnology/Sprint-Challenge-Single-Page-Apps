@@ -1,16 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+import styled from 'styled-components';
 
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+import SearchForm from './SearchForm';
+import CharacterCard from "./CharacterCard";
 
-  return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
-  );
-}
+const CharacterList = props => {
+   const List = styled.section`
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   `;
+
+   const Characters = styled.div`
+     width: 90%;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     align-items: center;
+     margin: 10px 5% 10px 5%;
+     
+   `;
+
+   const [characters, setCharacters] = useState([]);
+
+   const [searchedChar, setSearchChar] = useState([]);
+
+   const search = characters => {
+      setSearchChar(characters);
+   };
+
+   useEffect(() => {
+      axios.get(`https://rickandmortyapi.com/api/character/`)
+         .then(response => {
+            // console.log(response.data);
+            setCharacters(response.data.results);
+            setSearchChar(response.data.results);
+         })
+         .catch(error => {
+            console.log(error);
+         })
+   }, []);
+
+   return (
+      <List>
+         <Characters>
+            <List>
+               <h2>Characters</h2>
+               <SearchForm {...props} search={search} characters={characters} />
+               {searchedChar.map(character => {
+                  return (
+                     <CharacterCard {...props} character={character} />
+                  )
+               })}
+            </List>
+         </Characters>
+      </List>
+   )
+};
+
+export default CharacterList;
+
