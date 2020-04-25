@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   font-family: sans-serif;
   background:black
@@ -10,7 +10,7 @@ main {
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: grey;
+  background: rgb(119, 119, 119);
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -33,8 +33,28 @@ main {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
+  
 } 
 
 header h1 {
   text-align: center;
+}
+
+img {
+  border-radius: 10%;
+  box-shadow: 5px 5px 10px black;
+  max-width: 30%;
+  min-height: 30%;
+}
+
+.Nav{
+display: flex;
+flex-direction: column;
+
+justify-content: space-between
+}
+
+a.links {
+  font-size: large;
+color: blue;
 }

@@ -19,6 +19,7 @@ export default function CharacterList(props) {
     axios
     .get(`https://rickandmortyapi.com/api/character/`)
     .then(response => {
+      
       setCharacters(response.data.results);
       dataIsUpdated(response.data.results);
     })
@@ -28,6 +29,11 @@ export default function CharacterList(props) {
 
 
   }, []);
+
+  
+
+
+  
 
   return (
     <section className="character-list">
@@ -41,6 +47,7 @@ export default function CharacterList(props) {
     status={character.status}
     species={character.species}
     gender={character.gender}
+    image={character.image}
   />
      ))}
     </section>
