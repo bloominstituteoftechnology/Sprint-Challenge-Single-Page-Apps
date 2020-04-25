@@ -6,8 +6,8 @@ import {fadeIn } from 'react-animations';
 let fadeAnimation = keyframes`${fadeIn}`;
 let bounceAnimation = keyframes`${rotateIn}`;
 const Card = styled.div`
+ animation:10s ${fadeAnimation};
  animation: 10s ${bounceAnimation};
- animation:10s ${fadeIn}
  width: 30%;
   border-radius: 8px;
   border: solid black 1px;

@@ -4,7 +4,7 @@ import {hinge} from "react-animations";
 
 let Break = keyframes`${hinge}`;
 const Head =styled.h1`
-animation:5s ${Break};
+animation:3s ${Break};
 `;
 
 export default function Header() {
