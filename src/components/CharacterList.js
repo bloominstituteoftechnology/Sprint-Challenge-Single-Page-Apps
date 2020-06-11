@@ -18,7 +18,9 @@ export default function CharacterList(props) {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
     .get(`https://rickandmortyapi.com/api/character/`)
-    .then(response => {
+    
+    
+        .then(response => {
       
       setCharacters(response.data.results);
       dataIsUpdated(response.data.results);
