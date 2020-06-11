@@ -1,57 +1,88 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import CharacterCard from "./CharacterCard"
-import SearchForm from "./SearchForm";
+import Character from "./character"
 
-export default function CharacterList(props) {
-  // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState([]);
-  const [dataIsFiltered, dataIsUpdated] = useState([]);
+function CharacterList() {
+  const [url] = useState("https://rickandmortyapi.com/api/character/")
+  const [info, setInfo] = useState({})
+  const [results, setResults] = useState([])
+  const [search, setSearch] = useState("")
+  const [page, setPage] = useState(1)
 
-  const searching = allcharacters => {
-    dataIsUpdated(allcharacters)
-  }
+
+  useEffect(()=> {
+    console.log('url: ', url)
+    console.log('info: ', info)
+    console.log('results: ', results)
+    console.log('search: ', search)
+  }, [url, info, results, search])
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    axios
-    .get(`https://rickandmortyapi.com/api/character/`)
-    
-    
-        .then(response => {
-      
-      setCharacters(response.data.results);
-      dataIsUpdated(response.data.results);
-    })
-    .catch(error => {
-      console.error(error);
-    });
+    axios.get(`${url}?page=${page}&name=${search}`)
+      .then((result)=>{
+        setInfo(result.data.info)
+        setResults(result.data.results)
+      })
+      .catch((error)=> {
+        setPage(1)
+        console.log(error)
+      })
+  }, [search, page])
 
+  const nextHandler = (event) => {
+    event.preventDefault()
+    if(page <= info.pages){
+      setPage(page + 1)
+    }else{
+      setPage(1)
+    }
+  } 
 
-  }, []);
-
-  
+  const prevHandler = (event) => {
+    event.preventDefault()
+    if(page>1){
+      setPage(page -1)
+    }else{
+      setPage(info.pages)
+    }
+  }
 
 
   
 
   return (
-    <section className="character-list">
-      <Link className='links' to ={'/'}>Home</Link>
-      <SearchForm searching={searching} character={characters}/>
-
-{dataIsFiltered.map(character => (
-  <CharacterCard
-    key={character.id}
-    name={character.name}
-    status={character.status}
-    species={character.species}
-    gender={character.gender}
-    image={character.image}
-  />
-     ))}
-    </section>
-  );
+    <>
+      <header className="second">
+        <div className="nav">
+        <Link className='home' to ={'/'}>Home</Link>
+        </div>
+        <div className="buttons">
+        <button
+          onClick={(event) => prevHandler(event)}
+        >-</button>
+        <p>{page}/{info.pages}</p>
+        <button
+          onClick={(event) => nextHandler(event)}
+        >+</button>
+        </div>
+        <div className="search">
+        <p >Search</p><input onChange={(e)=>{
+          setSearch(e.target.value)
+        }} 
+        value={search}
+        type="text"/>
+        </div>
+      </header>
+      <main>
+        <section className="characters"> 
+          {results.map((result, index)=> (
+            <Character key={index} result={result} />
+          ))}
+        </section>
+      </main>
+    </>
+  );     
 }
+ 
+export default CharacterList

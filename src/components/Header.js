@@ -1,15 +1,18 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
-import {hinge} from "react-animations";
+import {fadeIn} from "react-animations";
 
-let Break = keyframes`${hinge}`;
+let Break = keyframes`${fadeIn}`;
 const Head =styled.h1`
+font-weight: bold;
+color:#448;
+font-size:4rem;
 animation:3s ${Break};
 `;
 
 export default function Header() {
   return (
-    <header className="ui centered">
+    <header>
       <Head className="ui center">Rick &amp; Morty Fan Page</Head>
     </header>
   );

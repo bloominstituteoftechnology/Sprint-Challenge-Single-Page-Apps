@@ -1,0 +1,104 @@
+body{
+    box-sizing: border-box;
+  }
+
+  a.links{
+    font-size: 2rem;
+    color: #349032;
+    font-weight: bold;
+  }
+
+  a.home{
+    color:black;
+    
+    
+  }
+  
+  .mine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  img.main-img{
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+    padding-bottom: 1rem;
+    width:60%;
+    margin: auto;
+  }
+  
+  img{
+   width: 100%;  
+  }
+  
+  header{
+    display: flex;
+    justify-content: center;
+    background-color: #349032
+  }
+
+  .links{
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome-page{
+    background-color: #448;
+  }
+  .second{
+    color: #202329;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #202329;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    margin:0 ;
+    p{
+      margin: 0;
+    }
+  }
+
+  .buttons{
+    display:flex;
+    justify-content:center;
+  }
+  
+  
+  main{
+    background-color: #202329;
+    color: white;
+    .characters{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .card{
+        margin: 1rem;
+        background-color: #363738;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 300px;
+        img{
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+ .search{
+   display: flex;
+   flex-direction: row;
+  font-size: 1rem;
+  font-weight: bold;
+ }
+
+ .Nav{
+   padding-bottom: 1rem;
+ }
+
+ .nav{
+   font-weight: bold;
+ }

@@ -10,13 +10,13 @@ let fadeAnimation = keyframes`${fadeIn}`;
 
 
 const Fadediv = styled.div`
-animation:3s ${fadeAnimation};
+animation:5s ${fadeAnimation};
 `;
 const BouncyDiv = styled.h1`
   animation: 2s ${bounceAnimation};
   text-align: center;
-color: blue;
-font-size:55px
+  color:#349032
+font-size:50px
 `;
 
 
@@ -37,13 +37,12 @@ export default function WelcomePage() {
    </header>
         <BouncyDiv>Welcome to the ultimate fan site!</BouncyDiv>
         <div className='Nav'>
-        <Link className='links' to={'/characters'}> Character </Link>
-        <Link className='links' to={'/locations'}> Location </Link>
-        <Link className='links' to={'/episodes'}> Episodes </Link>
+        <Link className='links' to={'/characters'}> Characters </Link>
+        
         </div>
         <Fadediv><img
           className="main-img"
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          src="https://www.adweek.com/wp-content/uploads/2018/07/rick-morty-hulu-CONTENT-2018.jpg"
           alt="rick"
         /></Fadediv>
         
