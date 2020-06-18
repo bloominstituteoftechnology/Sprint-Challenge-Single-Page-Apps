@@ -2,19 +2,20 @@ import React, {useState} from 'react'
 
 const Character = (props) => {
 
-  const [displayToggle, setDisplayToggle] = useState(false)
+  const [click, setClick] = useState(false)
 
   return (
     <article className="card">
-      <button
-        onClick={(event)=>{
-          event.preventDefault()
-          setDisplayToggle(!displayToggle)
+      <button className="click"
+        onClick={event => {
+          setClick(!click)
+          event.preventDefault() 
         }}
       >
         <img src={props.result.image} alt={`${props.result.name}`} />
-      </button>
-      {displayToggle && (<>
+
+     </button>
+      {click && (<>
         <p>Name: {props.result.name}</p>
         <p>Origin: {props.result.origin.name}</p>
         <p>Location: {props.result.location.name}</p>
@@ -22,6 +23,7 @@ const Character = (props) => {
         <p>Status: {props.result.status}</p>
         <p>Type: {props.result.type}</p>
         </>)}
+         
     </article>
   )
 }

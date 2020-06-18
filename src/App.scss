@@ -1,5 +1,30 @@
 body{
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e94c32d0-ae33-4efd-9716-83ebd0652503/dahrw5w-2b763c27-5dad-460f-8356-7c3919f52f23.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTk0YzMyZDAtYWUzMy00ZWZkLTk3MTYtODNlYmQwNjUyNTAzXC9kYWhydzV3LTJiNzYzYzI3LTVkYWQtNDYwZi04MzU2LTdjMzkxOWY1MmYyMy5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.jcaFQMn3X0uSBLm_WAFFmmD3T09LMs1rbcq4n1PgB4I');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-animation: backgroundScroll 30s linear 1;
+  -webkit-animation-fill-mode: both;
+  animation: backgroundScroll linear 30s 1;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate-reverse;
+  }
+  @keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -200px 0px;}
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -200px 0px;}
   }
 
   a.links{
@@ -9,7 +34,9 @@ body{
   }
 
   a.home{
-    color:black;
+    color:#349032;
+    font-weight: bold;
+    font-size: 1.5rem;
     
     
   }
@@ -23,9 +50,9 @@ body{
   img.main-img{
     display: flex;
     justify-content: center;
-    border-radius: 10rem;
+    border-radius: 25rem;
     padding-bottom: 1rem;
-    width:60%;
+    width:35%;
     margin: auto;
   }
   
@@ -36,7 +63,8 @@ body{
   header{
     display: flex;
     justify-content: center;
-    background-color: #349032
+    background-color: #34903200;
+    font-family: 'Permanent Marker', cursive;
   }
 
   .links{
@@ -45,19 +73,24 @@ body{
   }
 
   .welcome-page{
-    background-color: #448;
+    background-color: rgba(68, 68, 136, 0);
+    h1{
+      font-family:'Permanent Marker', cursive;
+    }
   }
   .second{
-    color: #202329;
+    color: #349032;
     font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #202329;
+    border-bottom: 2px solid #349032;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.3rem;
     
     align-items: center;
-    margin:0 ;
+    
     p{
       margin: 0;
     }
@@ -65,25 +98,29 @@ body{
 
   .buttons{
     display:flex;
-    justify-content:center;
+    margin-left: 300px;
+    p{
+      font-size: 1.5rem;
+    }
   }
   
   
   main{
-    background-color: #202329;
-    color: white;
+    background-color: #00000000;
+    color: #349032;
     .characters{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
       .card{
         margin: 1rem;
-        background-color: #363738;
+        background-color: #000000d5;
+        font-weight: bold;
         padding: 1rem;
         border-radius: 1rem;
-        width: 300px;
+        width: 350px;
         img{
-          border-radius: 1rem;
+          border-radius: 2rem;
         }
       }
     }
@@ -93,6 +130,11 @@ body{
    flex-direction: row;
   font-size: 1rem;
   font-weight: bold;
+  p{
+    font-size:1.5rem;
+    
+
+  }
  }
 
  .Nav{
@@ -101,4 +143,23 @@ body{
 
  .nav{
    font-weight: bold;
+   color:#349032
  }
+
+ input{
+   text-align: center;
+   font-size:1.5rem;
+   font-weight: bold;
+   background-color: rgba(128, 128, 128, 0.151);
+   color:#349032
+ }
+
+ button{
+   background-color:#349032;
+   border-radius: 1rem;
+   border: 1px black;
+ }
+.click{
+     background-color:black;
+     border-radius: 2rem;
+   }

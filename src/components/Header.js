@@ -5,7 +5,7 @@ import {fadeIn} from "react-animations";
 let Break = keyframes`${fadeIn}`;
 const Head =styled.h1`
 font-weight: bold;
-color:#448;
+color:#349032;
 font-size:4rem;
 animation:3s ${Break};
 `;
