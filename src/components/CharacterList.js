@@ -59,12 +59,12 @@ function CharacterList() {
         </div>
         <div className="buttons">
         <button
-          onClick={(event) => nextHandler(event)}
-        > + </button>
-        <p>{page}/{info.pages}</p>
-        <button
           onClick={(event) => prevHandler(event)}
         > - </button>
+        <p>{page}/{info.pages}</p>
+        <button
+          onClick={(event) => nextHandler(event)}
+        > + </button>
         </div>
         <div className="search">
         <p > Search </p> <input onChange={(e)=>{

@@ -5,6 +5,7 @@ const Character = (props) => {
   const [click, setClick] = useState(false)
 
   return (
+    <div>
     <article className="card">
       <button className="click"
         onClick={event => {
@@ -25,6 +26,7 @@ const Character = (props) => {
         </>)}
          
     </article>
+    </div>
   )
 }
 
