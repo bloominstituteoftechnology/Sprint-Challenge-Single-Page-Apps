@@ -1,0 +1,1343 @@
+@charset "UTF-8";
+/*!
+ *  Devicons 1.8.0 made by Theodore Vorillas / http://vorillaz.com 
+ */
+@font-face {
+  font-family: "devicons";
+  src: url("../fonts/devicons.eot?xqxft6");
+  src: url("../fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../fonts/devicons.woff?xqxft6") format("woff"), url("../fonts/devicons.ttf?xqxft6") format("truetype"), url("../fonts/devicons.svg?xqxft6#devicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.devicons {
+  font-family: "devicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.devicons-git:before {
+  content: "";
+}
+
+.devicons-git_compare:before {
+  content: "";
+}
+
+.devicons-git_branch:before {
+  content: "";
+}
+
+.devicons-git_commit:before {
+  content: "";
+}
+
+.devicons-git_pull_request:before {
+  content: "";
+}
+
+.devicons-git_merge:before {
+  content: "";
+}
+
+.devicons-bitbucket:before {
+  content: "";
+}
+
+.devicons-github_alt:before {
+  content: "";
+}
+
+.devicons-github_badge:before {
+  content: "";
+}
+
+.devicons-github:before {
+  content: "";
+}
+
+.devicons-github_full:before {
+  content: "";
+}
+
+.devicons-java:before {
+  content: "";
+}
+
+.devicons-ruby:before {
+  content: "";
+}
+
+.devicons-scala:before {
+  content: "";
+}
+
+.devicons-python:before {
+  content: "";
+}
+
+.devicons-go:before {
+  content: "";
+}
+
+.devicons-ruby_on_rails:before {
+  content: "";
+}
+
+.devicons-django:before {
+  content: "";
+}
+
+.devicons-markdown:before {
+  content: "";
+}
+
+.devicons-php:before {
+  content: "";
+}
+
+.devicons-mysql:before {
+  content: "";
+}
+
+.devicons-streamline:before {
+  content: "";
+}
+
+.devicons-database:before {
+  content: "";
+}
+
+.devicons-laravel:before {
+  content: "";
+}
+
+.devicons-javascript:before {
+  content: "";
+}
+
+.devicons-angular:before {
+  content: "";
+}
+
+.devicons-backbone:before {
+  content: "";
+}
+
+.devicons-coffeescript:before {
+  content: "";
+}
+
+.devicons-jquery:before {
+  content: "";
+}
+
+.devicons-modernizr:before {
+  content: "";
+}
+
+.devicons-jquery_ui:before {
+  content: "";
+}
+
+.devicons-ember:before {
+  content: "";
+}
+
+.devicons-dojo:before {
+  content: "";
+}
+
+.devicons-nodejs:before {
+  content: "";
+}
+
+.devicons-nodejs_small:before {
+  content: "";
+}
+
+.devicons-javascript_shield:before {
+  content: "";
+}
+
+.devicons-bootstrap:before {
+  content: "";
+}
+
+.devicons-sass:before {
+  content: "";
+}
+
+.devicons-css3_full:before {
+  content: "";
+}
+
+.devicons-css3:before {
+  content: "";
+}
+
+.devicons-html5:before {
+  content: "";
+}
+
+.devicons-html5_multimedia:before {
+  content: "";
+}
+
+.devicons-html5_device_access:before {
+  content: "";
+}
+
+.devicons-html5_3d_effects:before {
+  content: "";
+}
+
+.devicons-html5_connectivity:before {
+  content: "";
+}
+
+.devicons-ghost_small:before {
+  content: "";
+}
+
+.devicons-ghost:before {
+  content: "";
+}
+
+.devicons-magento:before {
+  content: "";
+}
+
+.devicons-joomla:before {
+  content: "";
+}
+
+.devicons-jekyll_small:before {
+  content: "";
+}
+
+.devicons-drupal:before {
+  content: "";
+}
+
+.devicons-wordpress:before {
+  content: "";
+}
+
+.devicons-grunt:before {
+  content: "";
+}
+
+.devicons-bower:before {
+  content: "";
+}
+
+.devicons-npm:before {
+  content: "";
+}
+
+.devicons-yahoo_small:before {
+  content: "";
+}
+
+.devicons-yahoo:before {
+  content: "";
+}
+
+.devicons-bing_small:before {
+  content: "";
+}
+
+.devicons-windows:before {
+  content: "";
+}
+
+.devicons-linux:before {
+  content: "";
+}
+
+.devicons-ubuntu:before {
+  content: "";
+}
+
+.devicons-android:before {
+  content: "";
+}
+
+.devicons-apple:before {
+  content: "";
+}
+
+.devicons-appstore:before {
+  content: "";
+}
+
+.devicons-phonegap:before {
+  content: "";
+}
+
+.devicons-blackberry:before {
+  content: "";
+}
+
+.devicons-stackoverflow:before {
+  content: "";
+}
+
+.devicons-techcrunch:before {
+  content: "";
+}
+
+.devicons-codrops:before {
+  content: "";
+}
+
+.devicons-css_tricks:before {
+  content: "";
+}
+
+.devicons-smashing_magazine:before {
+  content: "";
+}
+
+.devicons-netmagazine:before {
+  content: "";
+}
+
+.devicons-codepen:before {
+  content: "";
+}
+
+.devicons-cssdeck:before {
+  content: "";
+}
+
+.devicons-hackernews:before {
+  content: "";
+}
+
+.devicons-dropbox:before {
+  content: "";
+}
+
+.devicons-google_drive:before {
+  content: "";
+}
+
+.devicons-visualstudio:before {
+  content: "";
+}
+
+.devicons-unity_small:before {
+  content: "";
+}
+
+.devicons-raspberry_pi:before {
+  content: "";
+}
+
+.devicons-chrome:before {
+  content: "";
+}
+
+.devicons-ie:before {
+  content: "";
+}
+
+.devicons-firefox:before {
+  content: "";
+}
+
+.devicons-opera:before {
+  content: "";
+}
+
+.devicons-safari:before {
+  content: "";
+}
+
+.devicons-swift:before {
+  content: "";
+}
+
+.devicons-symfony:before {
+  content: "";
+}
+
+.devicons-symfony_badge:before {
+  content: "";
+}
+
+.devicons-less:before {
+  content: "";
+}
+
+.devicons-stylus:before {
+  content: "";
+}
+
+.devicons-trello:before {
+  content: "";
+}
+
+.devicons-atlassian:before {
+  content: "";
+}
+
+.devicons-jira:before {
+  content: "";
+}
+
+.devicons-envato:before {
+  content: "";
+}
+
+.devicons-snap_svg:before {
+  content: "";
+}
+
+.devicons-raphael:before {
+  content: "";
+}
+
+.devicons-google_analytics:before {
+  content: "";
+}
+
+.devicons-compass:before {
+  content: "";
+}
+
+.devicons-onedrive:before {
+  content: "";
+}
+
+.devicons-gulp:before {
+  content: "";
+}
+
+.devicons-atom:before {
+  content: "";
+}
+
+.devicons-cisco:before {
+  content: "";
+}
+
+.devicons-nancy:before {
+  content: "";
+}
+
+.devicons-clojure:before {
+  content: "";
+}
+
+.devicons-clojure_alt:before {
+  content: "";
+}
+
+.devicons-perl:before {
+  content: "";
+}
+
+.devicons-celluloid:before {
+  content: "";
+}
+
+.devicons-w3c:before {
+  content: "";
+}
+
+.devicons-redis:before {
+  content: "";
+}
+
+.devicons-postgresql:before {
+  content: "";
+}
+
+.devicons-webplatform:before {
+  content: "";
+}
+
+.devicons-jenkins:before {
+  content: "";
+}
+
+.devicons-requirejs:before {
+  content: "";
+}
+
+.devicons-opensource:before {
+  content: "";
+}
+
+.devicons-typo3:before {
+  content: "";
+}
+
+.devicons-uikit:before {
+  content: "";
+}
+
+.devicons-doctrine:before {
+  content: "";
+}
+
+.devicons-groovy:before {
+  content: "";
+}
+
+.devicons-nginx:before {
+  content: "";
+}
+
+.devicons-haskell:before {
+  content: "";
+}
+
+.devicons-zend:before {
+  content: "";
+}
+
+.devicons-gnu:before {
+  content: "";
+}
+
+.devicons-yeoman:before {
+  content: "";
+}
+
+.devicons-heroku:before {
+  content: "";
+}
+
+.devicons-debian:before {
+  content: "";
+}
+
+.devicons-travis:before {
+  content: "";
+}
+
+.devicons-dotnet:before {
+  content: "";
+}
+
+.devicons-codeigniter:before {
+  content: "";
+}
+
+.devicons-javascript_badge:before {
+  content: "";
+}
+
+.devicons-yii:before {
+  content: "";
+}
+
+.devicons-msql_server:before {
+  content: "";
+}
+
+.devicons-composer:before {
+  content: "";
+}
+
+.devicons-krakenjs_badge:before {
+  content: "";
+}
+
+.devicons-krakenjs:before {
+  content: "";
+}
+
+.devicons-mozilla:before {
+  content: "";
+}
+
+.devicons-firebase:before {
+  content: "";
+}
+
+.devicons-sizzlejs:before {
+  content: "";
+}
+
+.devicons-creativecommons:before {
+  content: "";
+}
+
+.devicons-creativecommons_badge:before {
+  content: "";
+}
+
+.devicons-mitlicence:before {
+  content: "";
+}
+
+.devicons-senchatouch:before {
+  content: "";
+}
+
+.devicons-bugsense:before {
+  content: "";
+}
+
+.devicons-extjs:before {
+  content: "";
+}
+
+.devicons-mootools_badge:before {
+  content: "";
+}
+
+.devicons-mootools:before {
+  content: "";
+}
+
+.devicons-ruby_rough:before {
+  content: "";
+}
+
+.devicons-komodo:before {
+  content: "";
+}
+
+.devicons-coda:before {
+  content: "";
+}
+
+.devicons-bintray:before {
+  content: "";
+}
+
+.devicons-terminal:before {
+  content: "";
+}
+
+.devicons-code:before {
+  content: "";
+}
+
+.devicons-responsive:before {
+  content: "";
+}
+
+.devicons-dart:before {
+  content: "";
+}
+
+.devicons-aptana:before {
+  content: "";
+}
+
+.devicons-mailchimp:before {
+  content: "";
+}
+
+.devicons-netbeans:before {
+  content: "";
+}
+
+.devicons-dreamweaver:before {
+  content: "";
+}
+
+.devicons-brackets:before {
+  content: "";
+}
+
+.devicons-eclipse:before {
+  content: "";
+}
+
+.devicons-cloud9:before {
+  content: "";
+}
+
+.devicons-scrum:before {
+  content: "";
+}
+
+.devicons-prolog:before {
+  content: "";
+}
+
+.devicons-terminal_badge:before {
+  content: "";
+}
+
+.devicons-code_badge:before {
+  content: "";
+}
+
+.devicons-mongodb:before {
+  content: "";
+}
+
+.devicons-meteor:before {
+  content: "";
+}
+
+.devicons-meteorfull:before {
+  content: "";
+}
+
+.devicons-fsharp:before {
+  content: "";
+}
+
+.devicons-rust:before {
+  content: "";
+}
+
+.devicons-ionic:before {
+  content: "";
+}
+
+.devicons-sublime:before {
+  content: "";
+}
+
+.devicons-appcelerator:before {
+  content: "";
+}
+
+.devicons-asterisk:before {
+  content: "";
+}
+
+.devicons-aws:before {
+  content: "";
+}
+
+.devicons-digital-ocean:before {
+  content: "";
+}
+
+.devicons-dlang:before {
+  content: "";
+}
+
+.devicons-docker:before {
+  content: "";
+}
+
+.devicons-erlang:before {
+  content: "";
+}
+
+.devicons-google-cloud-platform:before {
+  content: "";
+}
+
+.devicons-grails:before {
+  content: "";
+}
+
+.devicons-illustrator:before {
+  content: "";
+}
+
+.devicons-intellij:before {
+  content: "";
+}
+
+.devicons-materializecss:before {
+  content: "";
+}
+
+.devicons-openshift:before {
+  content: "";
+}
+
+.devicons-photoshop:before {
+  content: "";
+}
+
+.devicons-rackspace:before {
+  content: "";
+}
+
+.devicons-react:before {
+  content: "";
+}
+
+.devicons-redhat:before {
+  content: "";
+}
+
+.devicons-scriptcs:before {
+  content: "";
+}
+
+.devicons-sqllite:before {
+  content: "";
+}
+
+.devicons-vim:before {
+  content: "";
+}
+
+.html,
+.body,
+#root {
+  font-family: "Orbitron", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 1350px;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 90vh;
+}
+.html .main-wrapper,
+.body .main-wrapper,
+#root .main-wrapper {
+  min-height: 85vh;
+  min-width: 85vw;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 5% auto;
+  background-color: #454040;
+  color: #27c208;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.html .main-wrapper header,
+.body .main-wrapper header,
+#root .main-wrapper header {
+  width: 100%;
+}
+.html .main-wrapper header .view-characters-btn,
+.body .main-wrapper header .view-characters-btn,
+#root .main-wrapper header .view-characters-btn {
+  margin: 5%;
+  width: 30%;
+}
+.html h4,
+.body h4,
+#root h4 {
+  margin-top: 1rem;
+}
+.html .ui-center,
+.body .ui-center,
+#root .ui-center {
+  font-family: "Orbitron", sans-serif;
+  margin-top: 1rem;
+}
+.html .grid-view,
+.body .grid-view,
+#root .grid-view {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  height: auto;
+}
+.html .main-img,
+.body .main-img,
+#root .main-img {
+  border: 8px solid black;
+  display: block;
+  border-radius: 100%;
+  margin: 2rem auto;
+}
+.html .list-wrap,
+.body .list-wrap,
+#root .list-wrap {
+  height: auto;
+  max-width: 1360px;
+  min-width: 90vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: center;
+  background-color: #454040;
+  color: #27c208;
+  padding: 0 7%;
+  padding-bottom: 2rem;
+}
+.html .list-wrap .results-display,
+.body .list-wrap .results-display,
+#root .list-wrap .results-display {
+  display: flex;
+  align-items: center;
+}
+.html .list-wrap .results-display h4,
+.body .list-wrap .results-display h4,
+#root .list-wrap .results-display h4 {
+  margin-right: 1rem;
+}
+.html .list-wrap .results-display h3,
+.body .list-wrap .results-display h3,
+#root .list-wrap .results-display h3 {
+  color: #ffffff;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+}
+.html .list-wrap h1,
+.body .list-wrap h1,
+#root .list-wrap h1 {
+  font-size: 50pt;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.html .character-list,
+.body .character-list,
+#root .character-list {
+  width: 100%;
+  max-width: 30rem;
+  max-height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.html .location-list,
+.body .location-list,
+#root .location-list {
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+}
+.html .location-list .residents-display,
+.body .location-list .residents-display,
+#root .location-list .residents-display {
+  height: auto;
+}
+.html .home-btn,
+.body .home-btn,
+#root .home-btn {
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  align-self: flex-start;
+}
+.html .home-btn :hover,
+.body .home-btn :hover,
+#root .home-btn :hover {
+  border: none;
+}
+.html .home-btn a,
+.body .home-btn a,
+#root .home-btn a {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+.html .search-form-wrap,
+.body .search-form-wrap,
+#root .search-form-wrap {
+  width: 100%;
+}
+.html .search-form-wrap form,
+.body .search-form-wrap form,
+#root .search-form-wrap form {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  max-height: 6rem;
+  width: 100%;
+  padding: 1rem 7rem;
+}
+.html .search-form-wrap form .search-bar,
+.body .search-form-wrap form .search-bar,
+#root .search-form-wrap form .search-bar {
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  margin-right: 2rem;
+  margin-left: 4rem;
+}
+.html .search-form-wrap form .search-button,
+.body .search-form-wrap form .search-button,
+#root .search-form-wrap form .search-button {
+  border-radius: 10px;
+  height: fit-content;
+}
+.html .card,
+.body .card,
+#root .card {
+  display: inline-flex;
+  border: 35px solid #131512;
+  height: auto;
+  min-height: 38rem;
+  width: 38rem;
+  margin-top: 1rem;
+  border-radius: 25%;
+  text-align: left;
+}
+.html .card .card-img,
+.body .card .card-img,
+#root .card .card-img {
+  border-radius: 20%;
+}
+.html .card .card-img-overlay,
+.body .card .card-img-overlay,
+#root .card .card-img-overlay {
+  border-radius: 20%;
+  background-color: #00000031;
+}
+.html .card .card-img-overlay .card-body,
+.body .card .card-img-overlay .card-body,
+#root .card .card-img-overlay .card-body {
+  padding: 2.5rem 2rem 0 0;
+}
+.html .card .card-img-overlay .card-body h2,
+.body .card .card-img-overlay .card-body h2,
+#root .card .card-img-overlay .card-body h2 {
+  font-size: 28pt;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.276);
+}
+.html .card .card-img-overlay .card-body .card-text-h3,
+.body .card .card-img-overlay .card-body .card-text-h3,
+#root .card .card-img-overlay .card-body .card-text-h3 {
+  margin-top: 0;
+  color: #bfdfb8;
+  background-color: rgba(0, 0, 0, 0.276);
+  font-weight: bold;
+}
+.html .spinner-center,
+.body .spinner-center,
+#root .spinner-center {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.html .spinner-center .spinner,
+.body .spinner-center .spinner,
+#root .spinner-center .spinner {
+  height: 700px;
+}
+
+@media screen and (max-width: 800px) {
+  .html,
+.body,
+#root {
+    font-family: "Orbitron", sans-serif;
+    margin: 0 auto;
+    max-width: 1350px;
+    min-height: 100vh;
+    max-height: 90vh;
+  }
+  .html .main-wrapper,
+.body .main-wrapper,
+#root .main-wrapper {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5% auto;
+    background: #454040;
+    color: #27c208;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+  .html .main-wrapper h1,
+.body .main-wrapper h1,
+#root .main-wrapper h1 {
+    font-family: "Orbitron", sans-serif;
+  }
+  .html .main-wrapper .grid-view,
+.body .main-wrapper .grid-view,
+#root .main-wrapper .grid-view {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    height: auto;
+  }
+  .html .main-wrapper .main-img,
+.body .main-wrapper .main-img,
+#root .main-wrapper .main-img {
+    display: block;
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+  .html .character-list-wrap,
+.body .character-list-wrap,
+#root .character-list-wrap {
+    height: auto;
+    max-width: 1360px;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: #454040;
+    color: #27c208;
+  }
+  .html .character-list-wrap .home-btn,
+.body .character-list-wrap .home-btn,
+#root .character-list-wrap .home-btn {
+    margin: 2rem 0;
+    border-radius: 10px;
+    height: fit-content;
+  }
+  .html .character-list-wrap h1,
+.body .character-list-wrap h1,
+#root .character-list-wrap h1 {
+    font-size: 50pt;
+    margin-bottom: 2rem;
+  }
+  .html .character-list-wrap .search-form-wrap form,
+.body .character-list-wrap .search-form-wrap form,
+#root .character-list-wrap .search-form-wrap form {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    max-height: 6rem;
+    width: 100%;
+    padding: 2rem 7rem;
+  }
+  .html .character-list-wrap .search-form-wrap form .search-bar,
+.body .character-list-wrap .search-form-wrap form .search-bar,
+#root .character-list-wrap .search-form-wrap form .search-bar {
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin-right: 2rem;
+  }
+  .html .character-list-wrap .search-form-wrap form .search-button,
+.body .character-list-wrap .search-form-wrap form .search-button,
+#root .character-list-wrap .search-form-wrap form .search-button {
+    border-radius: 10px;
+    height: fit-content;
+  }
+  .html .character-list-wrap .character-list,
+.body .character-list-wrap .character-list,
+#root .character-list-wrap .character-list {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+  }
+  .html .character-list-wrap .character-list .card,
+.body .character-list-wrap .character-list .card,
+#root .character-list-wrap .character-list .card {
+    display: inline-flex;
+    border: 10px solid #131512;
+    flex-basis: 20rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: auto;
+    width: 95%;
+    margin-top: 1rem;
+    font-size: 29pt;
+    font-weight: 600;
+  }
+  .html .character-list-wrap .character-list .card .card-img,
+.body .character-list-wrap .character-list .card .card-img,
+#root .character-list-wrap .character-list .card .card-img {
+    transform: scale(0.95);
+  }
+  .html .character-list-wrap .character-list .card .card-img .card-img-overlay,
+.body .character-list-wrap .character-list .card .card-img .card-img-overlay,
+#root .character-list-wrap .character-list .card .card-img .card-img-overlay {
+    display: flex;
+    flex-basis: inherit;
+    flex-shrink: 1;
+    flex-flow: column;
+    justify-content: flex-end;
+  }
+  .html .spinner-center,
+.body .spinner-center,
+#root .spinner-center {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .html .spinner,
+.body .spinner,
+#root .spinner {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .html,
+.body,
+#root {
+    font-family: "Orbitron", sans-serif;
+    margin: 0 auto;
+    max-width: 1350px;
+    min-height: 100vh;
+    max-height: 90vh;
+  }
+  .html .main-wrapper,
+.body .main-wrapper,
+#root .main-wrapper {
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5% auto;
+    background-color: #454040;
+    color: #27c208;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+  .html .main-wrapper h1,
+.body .main-wrapper h1,
+#root .main-wrapper h1 {
+    font-family: "Orbitron", sans-serif;
+  }
+  .html .main-wrapper .grid-view,
+.body .main-wrapper .grid-view,
+#root .main-wrapper .grid-view {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    height: auto;
+  }
+  .html .main-wrapper .main-img,
+.body .main-wrapper .main-img,
+#root .main-wrapper .main-img {
+    display: block;
+    border-radius: 0;
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+  }
+  .html .main-wrapper .view-characters-btn,
+.body .main-wrapper .view-characters-btn,
+#root .main-wrapper .view-characters-btn {
+    margin-top: 5%;
+  }
+  .html .character-list-wrap,
+.body .character-list-wrap,
+#root .character-list-wrap {
+    height: auto;
+    max-width: 1360px;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: #454040;
+    color: #27c208;
+  }
+  .html .character-list-wrap .home-btn,
+.body .character-list-wrap .home-btn,
+#root .character-list-wrap .home-btn {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+  }
+  .html .character-list-wrap h1,
+.body .character-list-wrap h1,
+#root .character-list-wrap h1 {
+    font-size: 50pt;
+    margin-bottom: 2rem;
+  }
+  .html .character-list-wrap .search-form-wrap,
+.body .character-list-wrap .search-form-wrap,
+#root .character-list-wrap .search-form-wrap {
+    width: 100%;
+  }
+  .html .character-list-wrap .search-form-wrap form,
+.body .character-list-wrap .search-form-wrap form,
+#root .character-list-wrap .search-form-wrap form {
+    display: inline-flex;
+    flex-flow: column;
+    height: auto;
+    width: 100%;
+    padding: 2rem 7rem;
+  }
+  .html .character-list-wrap .search-form-wrap form .search-bar,
+.body .character-list-wrap .search-form-wrap form .search-bar,
+#root .character-list-wrap .search-form-wrap form .search-bar {
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .html .character-list-wrap .search-form-wrap form .search-button,
+.body .character-list-wrap .search-form-wrap form .search-button,
+#root .character-list-wrap .search-form-wrap form .search-button {
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 1rem;
+  }
+  .html .character-list-wrap .character-list,
+.body .character-list-wrap .character-list,
+#root .character-list-wrap .character-list {
+    width: 100%;
+    max-width: 30rem;
+    max-height: auto;
+    margin-right: 4rem;
+  }
+  .html .character-list-wrap .character-list .card,
+.body .character-list-wrap .character-list .card,
+#root .character-list-wrap .character-list .card {
+    display: inline-flex;
+    border: 35px solid #131512;
+    flex-basis: 20rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 15rem;
+    width: 15rem;
+    margin-top: 2rem;
+    border-radius: 25%;
+  }
+  .html .character-list-wrap .character-list .card .card-img,
+.body .character-list-wrap .character-list .card .card-img,
+#root .character-list-wrap .character-list .card .card-img {
+    border-radius: 20%;
+  }
+  .html .character-list-wrap .character-list .card .card-img .card-img-overlay,
+.body .character-list-wrap .character-list .card .card-img .card-img-overlay,
+#root .character-list-wrap .character-list .card .card-img .card-img-overlay {
+    display: flex;
+    flex-basis: inherit;
+    flex-shrink: 1;
+  }
+  .html .spinner-center,
+.body .spinner-center,
+#root .spinner-center {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .html .spinner,
+.body .spinner,
+#root .spinner {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 450px) {
+  html .card,
+body .card,
+#root .card {
+    height: auto;
+    display: flex;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  html .card .card-img-overlay,
+body .card .card-img-overlay,
+#root .card .card-img-overlay {
+    font-size: 13pt;
+    margin-top: 2rem;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

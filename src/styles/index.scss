@@ -1,0 +1,527 @@
+@import "devicons";
+// @import "getSchwifty";
+// Attempted to implement local font with Rick and Morty lettering
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome page responsive styling - dynamic: smooth scaling but not very performant on chrome
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.html,
+.body,
+#root {
+  font-family: "Orbitron", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 1350px;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 90vh;
+
+  ///////////////////////////////////////////////////////////////
+  // These styles are responsive down to the smallest screen size
+  //////////////////////////////////////////////////////////////
+  .main-wrapper {
+    min-height: 85vh;
+    min-width: 85vw;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5% auto;
+    background-color: rgb(69, 64, 64);
+    color: #27c208;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+    header {
+      width: 100%;
+      .view-characters-btn {
+        margin: 5%;
+        width: 30%;
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 1rem;
+  }
+
+  .ui-center {
+    font-family: "Orbitron", sans-serif;
+    margin-top: 1rem;
+  }
+
+  .grid-view {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    height: auto;
+  }
+
+  .main-img {
+    border: 8px solid black;
+    display: block;
+    border-radius: 100%;
+    margin: 2rem auto;
+  }
+
+  .list-wrap {
+    height: auto;
+    max-width: 1360px;
+    min-width: 90vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(69, 64, 64);
+    color: #27c208;
+    padding: 0 7%;
+    padding-bottom: 2rem;
+
+    .results-display {
+      display: flex;
+      align-items: center;
+
+      h4 {
+        margin: {
+          right: 1rem;
+        }
+      }
+
+      h3 {
+        color: #ffffff;
+        margin-bottom: 0;
+        margin-top: 0.2rem;
+      }
+    }
+
+    h1 {
+      font-size: 50pt;
+      margin: {
+        top: 2rem;
+        bottom: 0.5rem;
+      }
+    }
+  }
+
+  .character-list {
+    width: 100%;
+    max-width: 30rem;
+    max-height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .location-list {
+    // width: auto;
+    // min-width: 90vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+
+    .residents-display {
+      height: auto;
+    }
+  }
+
+  .home-btn {
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    border: {
+      bottom: 5px solid black;
+      right: 5px solid black;
+    }
+    align-self: flex-start;
+
+    :hover {
+      border: none;
+    }
+
+    a {
+      width: 100%;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  .search-form-wrap {
+    width: 100%;
+
+    form {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      max-height: 6rem;
+      width: 100%;
+      padding: 1rem 7rem;
+
+      .search-bar {
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        margin-right: 2rem;
+        margin-left: 4rem;
+      }
+
+      .search-button {
+        border-radius: 10px;
+        height: fit-content;
+      }
+    }
+  }
+
+  .card {
+    display: inline-flex;
+    border: 35px solid #131512;
+    height: auto;
+    min-height: 38rem;
+    width: 38rem;
+    margin-top: 1rem;
+    border-radius: 25%;
+    text-align: left;
+
+    .card-img {
+      border-radius: 20%;
+    }
+
+    .card-img-overlay {
+      border-radius: 20%;
+      background-color: #00000031;
+
+      .card-body {
+        padding: 2.5rem 2rem 0 0;
+
+        h2 {
+          font-size: 28pt;
+          font-weight: 600;
+          margin-bottom: 0.4rem;
+          background-color: rgba(0, 0, 0, 0.276);
+        }
+
+        .card-text-h3 {
+          margin-top: 0;
+          color: #bfdfb8;
+          background-color: rgba(0, 0, 0, 0.276);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .spinner-center {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+    .spinner {
+      height: 700px;
+    }
+  }
+}
+
+//////////////////////////////////////
+// responsive styles for tablets
+/////////////////////////////////////
+
+@media screen and (max-width: 800px) {
+  .html,
+  .body,
+  #root {
+    font-family: "Orbitron", sans-serif;
+    margin: 0 auto;
+    max-width: 1350px;
+    min-height: 100vh;
+    max-height: 90vh;
+
+    .main-wrapper {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin: 5% auto;
+      background: rgb(69, 64, 64);
+      color: #27c208;
+      display: flex;
+      flex-flow: column;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+      h1 {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .grid-view {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        height: auto;
+      }
+
+      .main-img {
+        display: block;
+        border-radius: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    .character-list-wrap {
+      height: auto;
+      max-width: 1360px;
+      display: flex;
+      flex-flow: column;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      background: rgb(69, 64, 64);
+      color: #27c208;
+
+      .home-btn {
+        margin: 2rem 0;
+        border-radius: 10px;
+        height: fit-content;
+      }
+
+      h1 {
+        font-size: 50pt;
+        margin-bottom: 2rem;
+      }
+
+      .search-form-wrap {
+        form {
+          display: inline-flex;
+          flex-flow: row nowrap;
+          max-height: 6rem;
+          width: 100%;
+          padding: 2rem 7rem;
+
+          .search-bar {
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+            margin-right: 2rem;
+          }
+
+          .search-button {
+            border-radius: 10px;
+            height: fit-content;
+          }
+        }
+      }
+
+      .character-list {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+
+        .card {
+          display: inline-flex;
+          border: 10px solid #131512;
+          flex-basis: 20rem;
+          flex-grow: 1;
+          flex-shrink: 1;
+          height: auto;
+          width: 95%;
+          margin-top: 1rem;
+          font-size: 29pt;
+          font-weight: 600;
+
+          .card-img {
+            transform: scale(0.95);
+            .card-img-overlay {
+              display: flex;
+              flex-basis: inherit;
+              flex-shrink: 1;
+              flex-flow: column;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+
+    .spinner-center {
+      height: auto;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .spinner {
+      height: 700px;
+    }
+  }
+}
+
+//////////////////////////////////////////
+// responsive styles for mobile devices
+/////////////////////////////////////////
+
+@media screen and (max-width: 500px) {
+  .html,
+  .body,
+  #root {
+    font-family: "Orbitron", sans-serif;
+    margin: 0 auto;
+    max-width: 1350px;
+    min-height: 100vh;
+    max-height: 90vh;
+
+    .main-wrapper {
+      height: auto;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin: 5% auto;
+      background-color: rgb(69, 64, 64);
+      color: #27c208;
+      display: flex;
+      flex-flow: column;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+      h1 {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .grid-view {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        height: auto;
+      }
+
+      .main-img {
+        display: block;
+        border-radius: 0;
+        width: 100%;
+        border: {
+          top: 2px solid black;
+          bottom: 2px solid black;
+        }
+        margin: 0 auto;
+      }
+
+      .view-characters-btn {
+        margin-top: 5%;
+      }
+    }
+
+    .character-list-wrap {
+      height: auto;
+      max-width: 1360px;
+      display: flex;
+      flex-flow: column;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      background: rgb(69, 64, 64);
+      color: #27c208;
+
+      .home-btn {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        height: fit-content;
+      }
+
+      h1 {
+        font-size: 50pt;
+        margin-bottom: 2rem;
+      }
+
+      .search-form-wrap {
+        width: 100%;
+
+        form {
+          display: inline-flex;
+          flex-flow: column;
+          height: auto;
+          width: 100%;
+          padding: 2rem 7rem;
+
+          .search-bar {
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+
+          .search-button {
+            border-radius: 10px;
+            height: fit-content;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .character-list {
+        width: 100%;
+        max-width: 30rem;
+        max-height: auto;
+        margin-right: 4rem;
+
+        .card {
+          display: inline-flex;
+          border: 35px solid #131512;
+          flex-basis: 20rem;
+          flex-grow: 1;
+          flex-shrink: 1;
+          height: 15rem;
+          width: 15rem;
+          margin-top: 2rem;
+          border-radius: 25%;
+
+          .card-img {
+            border-radius: 20%;
+
+            .card-img-overlay {
+              display: flex;
+              flex-basis: inherit;
+              flex-shrink: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .spinner-center {
+      height: auto;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .spinner {
+      height: 700px;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+// breakpoint to handle smallest screen sizes. flip phones, etc.
+/////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 450px) {
+  html,
+  body,
+  #root {
+    .card {
+      height: auto;
+      display: flex;
+      margin: {
+        left: 0.5rem;
+        right: 0.5rem;
+      }
+
+      .card-img-overlay {
+        font-size: 13pt;
+        margin-top: 2rem;
+        margin: 0;
+      }
+    }
+  }
+}

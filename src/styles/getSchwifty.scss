@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "get_schwiftyregular";
+    src: local("get-schwifty-webfont.woff2") url("../fonts/get-schwifty-webfont.woff2") format("woff2"),
+        local("get-schwifty-webfont.woff") url("../fonts/get-schwifty-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.get_schwiftyregular {
+    font-family: "get_schwiftyregular";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

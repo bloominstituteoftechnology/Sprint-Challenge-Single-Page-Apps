@@ -1,10 +1,25 @@
-import React from "react";
-import Header from "./components/Header.js";
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
-export default function App() {
-  return (
-    <main data-testid='app'>
-      <Header />
-    </main>
-  );
+import WelcomePage from './components/WelcomePage'
+import CharacterList from './components/characters/CharacterList'
+import LocationsList from './components/locations/LocationsList'
+import NoRoute from './components/NoRoute'
+
+import './styles/index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const App = () => {
+	return (
+		<main>
+			<Switch>
+				<Route exact path='/' component={WelcomePage} />
+				<Route path='/characters' component={CharacterList} />
+				<Route path='/locations' component={LocationsList} />
+				<Route component={NoRoute} />
+			</Switch>
+		</main>
+	)
 }
+
+export default App
