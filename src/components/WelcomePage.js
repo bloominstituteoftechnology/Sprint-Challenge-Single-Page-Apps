@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function WelcomePage(props) {
-  console.log('Welcome', props)
   return (
     <section className="welcome-page">
       <header>
