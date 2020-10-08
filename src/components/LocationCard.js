@@ -20,12 +20,16 @@ const StyledP = styled.p`
 	font-size: 1.25rem;
 `;
 const StyledB = styled.div`
-	background-color: lightgray;
+	background-color: #e8e8e8;
 	border-radius: .5rem;
 	color: white;
 	height: 2rem;
-	width: 20%;
+	width: 40%;
 	float: right;
+	color: black;
+	font-size: 1.25rem;
+	box-sizing: border-box;
+	padding: 2px;
 `;
 
 export default function LocationCard(props) {
@@ -36,7 +40,7 @@ export default function LocationCard(props) {
 				{props.location.type}-{props.location.dimension}
 			</StyledH3>
 			<StyledP>{props.location.resident}</StyledP>
-			<StyledB variant="gray">{props.residents.length}</StyledB>
+			<StyledB variant="gray">{props.residents.length} residents</StyledB>
 		</Card>
 	);
 }

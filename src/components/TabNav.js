@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Icon } from 'semantic-ui-react';
 import { Nav } from 'react-bootstrap';
 
 // TODO: Add missing menu/tabs/nav below
