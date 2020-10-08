@@ -12,7 +12,6 @@ export default function EpisodeList() {
 			.get('https://rickandmortyapi.com/api/episode/')
 			.then((res) => {
 				setEpisodes(res.data.results);
-				console.log(res.data);
 			})
 			.catch((err) => {
 				console.log(err.response);

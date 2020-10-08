@@ -29,7 +29,6 @@ const StyledB = styled.div`
 `;
 
 export default function LocationCard(props) {
-	console.log('LC', props);
 	return (
 		<Card style={{ width: '30rem', margin: 5, borderRadius: 4 }}>
 			<StyledH2>{props.location.name}</StyledH2>

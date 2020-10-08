@@ -20,7 +20,6 @@ const StyledP = styled.p`
 `;
 
 export default function CharacterCard(props) {
-	console.log('CC', props);
 	return (
 		<Card style={{ width: '30rem', margin: 15, padding: 10 }}>
 			<Card.Img variant="top" src={props.character.image} alt={props.character.name} />
