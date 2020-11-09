@@ -85,6 +85,7 @@ body{
     margin-bottom: 1rem;
     border-bottom: 2px solid #349032;
     display: flex;
+    
     justify-content: space-between;
     font-weight: bold;
     font-size: 1.3rem;
@@ -163,3 +164,21 @@ body{
      background-color:black;
      border-radius: 2rem;
    }
+
+   @media (max-width: 1200px){
+    header.second{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin:auto;
+    
+      
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      margin:auto;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    }
