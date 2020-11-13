@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: When Routing is handled internally, we get what is called Client-side routing. Client-side routing can be useful to display data that is already on the page without needing to refreshing it. This allows for less data to be processed and to switch between views generally faster, as well as providing smooth transitions between animations, pages and other already rendered states.
 
 ## Project Set Up
 
