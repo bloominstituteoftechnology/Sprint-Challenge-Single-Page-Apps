@@ -21,7 +21,7 @@ main {
 }
 
 .page-view {
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .grid-view div.card.ui {
@@ -30,4 +30,17 @@ main {
 
 header h1 {
   text-align: center;
+}
+
+
+button{
+  background-color:black;
+  color: white;
+  padding: 10px;
+  display:flex;
+  width: 90px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
 }

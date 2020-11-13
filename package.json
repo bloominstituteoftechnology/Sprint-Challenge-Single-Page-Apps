@@ -10,10 +10,10 @@
     "axios": "^0.19.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.0",
     "react-swipeable-views": "^0.13.9",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
