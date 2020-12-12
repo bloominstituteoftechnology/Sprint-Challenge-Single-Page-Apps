@@ -50,9 +50,11 @@ body{
   img.main-img{
     display: flex;
     justify-content: center;
-    border-radius: 25rem;
+    // border-radius: 25rem;
     padding-bottom: 1rem;
-    width:35%;
+    width:500px;
+    height: 500px;
+    border-radius: 600px ;
     margin: auto;
   }
   
