@@ -4,6 +4,7 @@ import styled, {keyframes} from "styled-components"
 import {lightSpeedIn } from 'react-animations';
 import {fadeIn} from 'react-animations';
 import Alert from './audio';
+import Gif from '../assets/portal.gif'
 
 let bounceAnimation = keyframes`${lightSpeedIn}`;
 let fadeAnimation = keyframes`${fadeIn}`;
@@ -42,7 +43,7 @@ export default function WelcomePage() {
         </div>
         <Fadediv><img
           className="main-img"
-          src="https://www.adweek.com/wp-content/uploads/2018/07/rick-morty-hulu-CONTENT-2018.jpg"
+          src={Gif}
           alt="rick"
         /></Fadediv>
         
